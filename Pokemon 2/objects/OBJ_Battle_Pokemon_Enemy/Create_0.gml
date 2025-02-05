@@ -6,7 +6,7 @@ scale_factor = 3;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 
-pokmemon_health = 100;
+pokemon_health = 100;
 hb_x1 = x - 500
 hb_y1 = y - sprite_height/2
 

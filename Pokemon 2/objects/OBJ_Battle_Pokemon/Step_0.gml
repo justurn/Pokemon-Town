@@ -7,7 +7,6 @@ if roll > 970
 
 if global.pokemon_health <= 0
 {
-	global.wild_pokemon_counter += 1;
 	global.wild_pokemon_id = 0;
 	room_goto(RM_Town)
 }

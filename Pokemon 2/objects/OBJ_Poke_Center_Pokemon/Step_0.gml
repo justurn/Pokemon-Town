@@ -5,7 +5,7 @@ if roll > 900
 	global.pokemon_health = global.pokemon_health + 5;
 }
 
-if global.pokemon_health >= 100
+if global.pokemon_health >= global.pokemon_health_max
 {
 	room_goto(RM_Town)
 }

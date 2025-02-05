@@ -11,10 +11,9 @@ function SCR_Plots_Spawn()
     var plot_x = global.plot_segments[global.plot_count];
 	
     global.plot_count += 1; // Move to the next segment
-	show_debug_message("Plots count: " + string(global.plot_count));
 	
     instance_create_layer(plot_x, global.plot_y, "Instances", OBJ_Plot);
-    show_debug_message("Plot placed at: " + string(plot_x));
+	show_debug_message("Plot #" + string(global.plot_count) + " placed at: " + string(plot_x));
 	
 	SCR_Trees_Spawn()
 

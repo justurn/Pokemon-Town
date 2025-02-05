@@ -6,8 +6,7 @@ SCR_Pokedex();
 
 need_plot_segments = true;
 
-// Wild Pokemon
-
+// Generate a shuffled array of valid wild pokemon to use
 SCR_Wild_Pokemon();
 
 

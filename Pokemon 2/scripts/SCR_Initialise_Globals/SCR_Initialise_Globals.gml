@@ -22,61 +22,56 @@ function SCR_Initialise_Globals()
 	global.pokemon_speed = 0.9 * global.player_speed
 	global.wild_pokemon_id = 0;
 	global.wild_pokemon_counter = 0;
-	global.pokemon_health = 100;
+	global.wild_pokemon_x = -1;
+	global.pokemon_health_max = 100;
+	global.pokemon_health = global.pokemon_health_max;
 	global.pokemon_experience = 0;
 
 	// Tips
 	global.tip_string ="";
 	
-	//Eggs
-	i = 0;
+	
+	i = 0; //Eggs item ID
 	global.item_name[i] = "Eggs";
 	global.item_sprite[i] = SPR_Egg;
 	global.item_hidden[i] = 3;	
 	global.egg_types = [0,0,0];
 	global.chosen_egg_type = -1;
 	
-	// Crates
-	i = 1;
+	
+	i = 1; // Crates item ID
 	global.item_name[i] = "Crates";
 	global.item_sprite[i] = SPR_Crate;
-	global.item_hidden[i] = 5;	
 	
-	// Meds
-	i = 2;
+	
+	i = 2; // Meds item ID
 	global.item_name[i] = "Meds";
 	global.item_sprite[i] = SPR_Med_Kit;
-	global.item_hidden[i] = 4;
 	
-	// Gears
-	i = 3;
+	
+	i = 3; // Gears item ID
 	global.item_name[i] = "Gears";
 	global.item_sprite[i] = SPR_Gear;
-	global.item_hidden[i] = 5;
 	
-	// Burgers
-	i = 4;
+	
+	i = 4; // Burgers item ID
 	global.item_name[i] = "Burger";
 	global.item_sprite[i] = SPR_Burger;
-	global.item_hidden[i] = 6;
 	
-	// Coins
-	i = 5;
+	
+	i = 5; // Coins item ID
 	global.item_name[i] = "Coin";
 	global.item_sprite[i] = SPR_Coin;
-	global.item_hidden[i] = 7;
 	
-	// Coffees
-	i = 6;
+	
+	i = 6; // Coffees item ID
 	global.item_name[i] = "Coffee";
 	global.item_sprite[i] = SPR_Coffee;
-	global.item_hidden[i] = 8;
 	
-	// Noodles
-	i = 7;
+	
+	i = 7; // Noodles item ID
 	global.item_name[i] = "Noodles";
 	global.item_sprite[i] = SPR_Noodles;
-	global.item_hidden[i] = 9;
 
 	// Set all item found counts to 0
 	for (i = 0; i < array_length(global.item_name); i++)
@@ -160,45 +155,46 @@ function SCR_Initialise_Globals()
 	i = 1;
 	global.building_name[i] = "Lab";
 	global.building_sprites[i] = SPR_Lab;
-	global.building_cost[i] = i + 5;
+	global.building_cost[i] = i + 1;
 	global.building_room[i] = RM_Lab;
 	
 	//Poke Center
 	i = 2;
 	global.building_name[i] = "Poke Center";
 	global.building_sprites[i] = SPR_Poke_Center;
-	global.building_cost[i] = i + 5;
+	global.building_cost[i] = i + 1;
 	global.building_room[i] = RM_Poke_Center;
 	
 	// Factory
 	i = 3;
 	global.building_name[i] = "Factory";
 	global.building_sprites[i] = SPR_Factory;
-	global.building_cost[i] = i + 5;
+	global.building_cost[i] = i + 1;
+	global.building_room[i] = RM_Factory;
 	
 	// Burger Shop
 	i = 4;
 	global.building_name[i] = "Burger Shop";
 	global.building_sprites[i] = SPR_Burger_Shop;
-	global.building_cost[i] = i + 5;	
+	global.building_cost[i] = i + 1;	
 	
 	// Bank;
 	i = 5;
 	global.building_name[i] = "Bank";
 	global.building_sprites[i] = SPR_Bank;
-	global.building_cost[i] = i + 5;	
+	global.building_cost[i] = i + 1;	
 	
 	// Cafe;
 	i = 6;
 	global.building_name[i] = "Cafe";
 	global.building_sprites[i] = SPR_Cafe;
-	global.building_cost[i] = i + 5;
+	global.building_cost[i] = i + 1;
 	
 	// Noodle Shop
 	i = 7;
 	global.building_name[i] = "Noodle Shop";
 	global.building_sprites[i] = SPR_Noodle_Shop;
-	global.building_cost[i] = i + 5;	
+	global.building_cost[i] = i + 1;	
 	
 	for (i = 0; i < array_length(global.building_sprites); i++)
 	{

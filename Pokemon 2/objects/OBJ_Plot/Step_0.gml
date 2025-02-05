@@ -29,7 +29,7 @@ if (OBJ_Player.x  >= plot_left && OBJ_Player.x  <= plot_right)
 		
 			var building_name = global.building_name[global.building_count]
 		
-			show_debug_message(string(building_name) + " X: " + string(global.buildings_x[global.building_count]))
+			show_debug_message("Built " + string(building_name) + " at X: " + string(global.buildings_x[global.building_count]))
 
 			if (global.building_count < array_length(global.building_sprites) - 1)
 			{

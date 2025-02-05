@@ -1,5 +1,6 @@
 function SCR_Wild_Pokemon_Spawn(pokemon_id)
 {
+	
 	var pokemon_y = global.player_y;
 	
 	// Minimum distance pokemons must be away from the player and other pokemons
@@ -28,6 +29,11 @@ function SCR_Wild_Pokemon_Spawn(pokemon_id)
 		{
 			valid_position = false;
 		}
+	}
+	
+	if (global.wild_pokemon_x != -1)
+	{
+		pokemon_x = global.wild_pokemon_x
 	}
 	
 	// Create the item instance

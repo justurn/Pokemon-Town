@@ -11,6 +11,8 @@ if room == RM_Town
 		// Rebuild any buildings from stored data
 		SCR_Buildings_Restore();
 	}
+	
+	global.wild_pokemon_id = 0;
 }
 if room = RM_Menu
 {

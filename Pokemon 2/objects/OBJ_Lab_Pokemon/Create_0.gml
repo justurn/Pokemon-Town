@@ -17,4 +17,4 @@ image_xscale = scale_factor;
 
 show_debug_message("pokemon object created")
 
-global.pokemon_health = 100;
+global.pokemon_health = global.pokemon_health_max;

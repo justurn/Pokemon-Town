@@ -5,6 +5,7 @@ function SCR_Items_Spawn(item_id,quantity)
 	var i = item_id
 	var item_count = quantity;
 	var item_y = global.player_y;
+	var item_name = global.item_name[i];
 	
 	// Minimum distance items must be away from the player and other items
 	var min_distance = 300;
@@ -80,6 +81,5 @@ function SCR_Items_Spawn(item_id,quantity)
 		array_push(item_positions, item_x);
 	}
 			
-	show_debug_message("Spawned Item: " + string(global.item_name[i]))
-	show_debug_message("Item Locations: " + string(item_positions))
+	show_debug_message("Spawned " + string(item_name) + " at : " + string(item_positions));
 }

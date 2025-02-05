@@ -2,11 +2,11 @@ function SCR_Hatching_Pokemon()
 {
     if need_sprite == true
     {
-		show_debug_message("pokemon needs a sprite");
         var selected_type = global.types[global.chosen_egg_type]; // Get the egg's type
-		show_debug_message("Selected Type is:")
-		show_debug_message(selected_type);
+		show_debug_message("Selected Type is: " + string(selected_type))
         var matching_pokemon = []; // Array to hold Pokémon matching the selected type
+		var matching_pokemon_names = [];
+		var name_string = "";
 
         // Iterate through the Dex to find Pokémon with the matching type
         for (var i = 1; i < array_length(global.Dex_Primary_Types); i++) 
@@ -14,11 +14,12 @@ function SCR_Hatching_Pokemon()
             if (global.Dex_Primary_Types[i] == selected_type && global.Dex_Hatching[i] = true)
             {
                 array_push(matching_pokemon, i); // Add Pokémon ID to the list
+				name_string = global.Dex_Names[i];
+				array_push(matching_pokemon_names, name_string); // Add Pokémon ID to the list
             }
         }
 		
-		show_debug_message("Matching Pokemon are:");
-		show_debug_message(matching_pokemon);
+		show_debug_message("Valid Hatching Pokemon: " + string(matching_pokemon_names));
 
         // Select a random Pokémon from the matching list
         if (array_length(matching_pokemon) > 0)
