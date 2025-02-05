@@ -1,0 +1,18 @@
+if (item_id = 0)
+{
+	var egg_colour = global.type_colors[type_id]
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, egg_colour, image_alpha);
+}
+
+else
+{
+	draw_self();
+}
+
+
+
+
+
+
+
+
