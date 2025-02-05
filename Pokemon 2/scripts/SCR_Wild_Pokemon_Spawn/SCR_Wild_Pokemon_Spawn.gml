@@ -14,8 +14,6 @@ function SCR_Wild_Pokemon_Spawn(pokemon_id)
 	var pokemon_sprite = global.Dex_Sprites[pokemon_id];
 	var pokemon_name = global.Dex_Names[pokemon_id];
 	
-	show_debug_message("Wild Pokemon: " + string(pokemon_name));
-
 	// Find a valid position for the pokemon
 	while (!valid_position)
 	{
@@ -35,5 +33,5 @@ function SCR_Wild_Pokemon_Spawn(pokemon_id)
 	// Create the item instance
 	var pokemon_instance = instance_create_layer(pokemon_x, pokemon_y, "Instances", OBJ_Town_Pokemon_Wild);
 
-	show_debug_message(string(pokemon_name) + " Location: " + string(pokemon_x))
+	show_debug_message("Wild " + string(pokemon_name) + " Spawned at Location: " + string(pokemon_x))
 }

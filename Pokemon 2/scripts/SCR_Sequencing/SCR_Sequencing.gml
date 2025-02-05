@@ -30,7 +30,7 @@ function SCR_Sequencing()
 	if (global.item_held[i] = -1 && global.pokemon_ID = 0)
 	{
 		global.item_held[i] = 0;
-		SCR_Items_Spawn(i);
+		SCR_Items_Spawn(i, global.item_hidden[i]);
 	}
 	if (global.item_held[i] != global.item_hidden[i] && global.pokemon_ID = 0)
 	{
@@ -43,26 +43,29 @@ function SCR_Sequencing()
 	i = 1;
 	if (global.building_count = i && global.item_held[i] = -1)
 	{
-		SCR_Items_Spawn(i);
+		SCR_Items_Spawn(i, global.building_cost[i]);
 		global.item_held[i] = 0
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Crates Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.building_count = i)
+	if (global.building_count = i && global.item_held[1] >= global.building_cost[i])
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Lab";	
 		return;
 	}
-	if (global.pokemon_ID = 0)
+	if (global.pokemon_ID = 0 || (global.building_count = 2 && global.pokemon_health <= 0))
 	{
 		global.entry_allowed[i] = true;
 		global.tip_string = "Enter Lab";
+		
+		// reset the chosen egg type and let the player hatch a new egg if their pokemon is out of HP
+		global.chosen_egg_type = -1; 
 		return;
 	}
 
@@ -71,17 +74,16 @@ function SCR_Sequencing()
 	i = 2;
 	if (global.building_count = i && global.item_held[i] = -1)
 	{
-		SCR_Items_Spawn(i);
 		global.item_held[i] = 0
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Meds Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.item_held[i] = global.item_hidden[i] && global.building_count = i)
+	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Poke Center";
@@ -113,12 +115,12 @@ function SCR_Sequencing()
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Gears Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.item_held[i] = global.item_hidden[i] && global.building_count = i)
+	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Factory";
@@ -139,12 +141,12 @@ function SCR_Sequencing()
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Burgers Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.item_held[i] = global.item_hidden[i] && global.building_count = i)
+	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Burger Shop";
@@ -165,12 +167,12 @@ function SCR_Sequencing()
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Coins Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.item_held[i] = global.item_hidden[i] && global.building_count = i)
+	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Bank";
@@ -191,12 +193,12 @@ function SCR_Sequencing()
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Coffees Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.item_held[i] = global.item_hidden[i] && global.building_count = i)
+	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Cafe";
@@ -217,12 +219,12 @@ function SCR_Sequencing()
 		global.tip_string = "";
 		return;
 	}
-	if (global.item_held[i] < global.item_hidden[i])
+	if (global.building_count = i && global.item_held[1] < global.building_cost[i])
 	{
-		global.tip_string = "Udon Left: " + string(global.item_hidden[i] - global.item_held[i]);
+		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		return;
 	}
-	if (global.item_held[i] = global.item_hidden[i] && global.building_count = i)
+	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
 	{
 		global.build_allowed[i] = true;
 		global.tip_string = "Build Noodle Shop";

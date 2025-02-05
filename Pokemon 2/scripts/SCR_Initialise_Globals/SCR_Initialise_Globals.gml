@@ -158,38 +158,45 @@ function SCR_Initialise_Globals()
 	
 	// Lab
 	i = 1;
+	global.building_name[i] = "Lab";
 	global.building_sprites[i] = SPR_Lab;
 	global.building_cost[i] = i + 5;
 	global.building_room[i] = RM_Lab;
 	
 	//Poke Center
 	i = 2;
+	global.building_name[i] = "Poke Center";
 	global.building_sprites[i] = SPR_Poke_Center;
 	global.building_cost[i] = i + 5;
 	global.building_room[i] = RM_Poke_Center;
 	
 	// Factory
 	i = 3;
+	global.building_name[i] = "Factory";
 	global.building_sprites[i] = SPR_Factory;
 	global.building_cost[i] = i + 5;
 	
 	// Burger Shop
 	i = 4;
+	global.building_name[i] = "Burger Shop";
 	global.building_sprites[i] = SPR_Burger_Shop;
 	global.building_cost[i] = i + 5;	
 	
 	// Bank;
 	i = 5;
+	global.building_name[i] = "Bank";
 	global.building_sprites[i] = SPR_Bank;
 	global.building_cost[i] = i + 5;	
 	
 	// Cafe;
 	i = 6;
+	global.building_name[i] = "Cafe";
 	global.building_sprites[i] = SPR_Cafe;
 	global.building_cost[i] = i + 5;
 	
 	// Noodle Shop
 	i = 7;
+	global.building_name[i] = "Noodle Shop";
 	global.building_sprites[i] = SPR_Noodle_Shop;
 	global.building_cost[i] = i + 5;	
 	

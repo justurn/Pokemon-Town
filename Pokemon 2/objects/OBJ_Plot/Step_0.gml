@@ -20,11 +20,16 @@ if (OBJ_Player.x  >= plot_left && OBJ_Player.x  <= plot_right)
 			new_building.y = y + sprite_height/2;
 			new_building.x = x;
 			new_building.building_id = global.building_count;
+			
+			// Subtract the cost of bulding crates
+			global.item_held[1] -= global.building_cost[global.building_count]
 		
 			global.buildings_x[global.building_count] = new_building.x;
 			global.buildings_y[global.building_count] = new_building.y;
 		
-			show_debug_message("Building X:" + string(global.buildings_x[global.building_count]))
+			var building_name = global.building_name[global.building_count]
+		
+			show_debug_message(string(building_name) + " X: " + string(global.buildings_x[global.building_count]))
 
 			if (global.building_count < array_length(global.building_sprites) - 1)
 			{

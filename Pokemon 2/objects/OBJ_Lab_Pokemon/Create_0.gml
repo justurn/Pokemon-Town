@@ -16,3 +16,5 @@ image_yscale = scale_factor;
 image_xscale = scale_factor;
 
 show_debug_message("pokemon object created")
+
+global.pokemon_health = 100;

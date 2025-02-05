@@ -21,4 +21,4 @@ scale_factor = 1.2;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 
-show_debug_message("pokemon object created")
+show_debug_message("Tamed " + string(pokemon_name) + " Spawned")

@@ -1,9 +1,9 @@
-function SCR_Items_Spawn(item_id)
+function SCR_Items_Spawn(item_id,quantity)
 {
 	
 	// Number of items to spawn
 	var i = item_id
-	var item_count = global.item_hidden[i];
+	var item_count = quantity;
 	var item_y = global.player_y;
 	
 	// Minimum distance items must be away from the player and other items
