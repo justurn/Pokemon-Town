@@ -344,8 +344,8 @@ function SCR_Pokedex()
 	global.Dex_Primary_Types[32] = "Poison"; // Nidoran♂
 	global.Dex_Primary_Types[33] = "Poison"; // Nidorino
 	global.Dex_Primary_Types[34] = "Poison"; // Nidoking
-	global.Dex_Primary_Types[35] = "Fairy";  // Clefairy
-	global.Dex_Primary_Types[36] = "Fairy";  // Clefable
+	global.Dex_Primary_Types[35] = "Normal";  // Clefairy
+	global.Dex_Primary_Types[36] = "Normal";  // Clefable
 	global.Dex_Primary_Types[37] = "Fire";   // Vulpix
 	global.Dex_Primary_Types[38] = "Fire";   // Ninetales
 	global.Dex_Primary_Types[39] = "Normal"; // Jigglypuff
@@ -615,4 +615,508 @@ function SCR_Pokedex()
 	global.Dex_Hatching[150] = "False"; // Mewtwo
 	global.Dex_Hatching[151] = "False"; // Mew
 	
+	// Bulbasaur
+	global.Dex_Health[1] = 45;
+	global.Dex_Attack[1] = 49;
+	global.Dex_Defence[1] = 49;
+	global.Dex_SPattack[1] = 65;
+	global.Dex_SPdefence[1] = 65;
+	global.Dex_Speed[1] = 45;
+
+	// Charmander
+	global.Dex_Health[4] = 39;
+	global.Dex_Attack[4] = 52;
+	global.Dex_Defence[4] = 43;
+	global.Dex_SPattack[4] = 60;
+	global.Dex_SPdefence[4] = 50;
+	global.Dex_Speed[4] = 65;
+
+	// Squirtle
+	global.Dex_Health[7] = 44;
+	global.Dex_Attack[7] = 48;
+	global.Dex_Defence[7] = 65;
+	global.Dex_SPattack[7] = 50;
+	global.Dex_SPdefence[7] = 64;
+	global.Dex_Speed[7] = 43;
+
+	// Caterpie
+	global.Dex_Health[10] = 45;
+	global.Dex_Attack[10] = 30;
+	global.Dex_Defence[10] = 35;
+	global.Dex_SPattack[10] = 20;
+	global.Dex_SPdefence[10] = 20;
+	global.Dex_Speed[10] = 45;
+
+	// Weedle
+	global.Dex_Health[13] = 40;
+	global.Dex_Attack[13] = 35;
+	global.Dex_Defence[13] = 30;
+	global.Dex_SPattack[13] = 20;
+	global.Dex_SPdefence[13] = 20;
+	global.Dex_Speed[13] = 50;
+
+	// Pidgey
+	global.Dex_Health[16] = 40;
+	global.Dex_Attack[16] = 45;
+	global.Dex_Defence[16] = 40;
+	global.Dex_SPattack[16] = 35;
+	global.Dex_SPdefence[16] = 35;
+	global.Dex_Speed[16] = 56;
+
+	// Rattata
+	global.Dex_Health[19] = 30;
+	global.Dex_Attack[19] = 56;
+	global.Dex_Defence[19] = 35;
+	global.Dex_SPattack[19] = 25;
+	global.Dex_SPdefence[19] = 35;
+	global.Dex_Speed[19] = 72;
+
+	// Spearow
+	global.Dex_Health[21] = 40;
+	global.Dex_Attack[21] = 60;
+	global.Dex_Defence[21] = 30;
+	global.Dex_SPattack[21] = 31;
+	global.Dex_SPdefence[21] = 31;
+	global.Dex_Speed[21] = 70;
+
+	// Ekans
+	global.Dex_Health[23] = 35;
+	global.Dex_Attack[23] = 60;
+	global.Dex_Defence[23] = 44;
+	global.Dex_SPattack[23] = 40;
+	global.Dex_SPdefence[23] = 54;
+	global.Dex_Speed[23] = 55;
+
+	// Pikachu
+	global.Dex_Health[25] = 35;
+	global.Dex_Attack[25] = 55;
+	global.Dex_Defence[25] = 40;
+	global.Dex_SPattack[25] = 50;
+	global.Dex_SPdefence[25] = 50;
+	global.Dex_Speed[25] = 90;
+
+	// Sandshrew
+	global.Dex_Health[27] = 50;
+	global.Dex_Attack[27] = 75;
+	global.Dex_Defence[27] = 85;
+	global.Dex_SPattack[27] = 20;
+	global.Dex_SPdefence[27] = 30;
+	global.Dex_Speed[27] = 40;
+
+	// Nidoran♀
+	global.Dex_Health[29] = 55;
+	global.Dex_Attack[29] = 47;
+	global.Dex_Defence[29] = 52;
+	global.Dex_SPattack[29] = 40;
+	global.Dex_SPdefence[29] = 50;
+	global.Dex_Speed[29] = 41;
+
+	// Nidoran♂
+	global.Dex_Health[32] = 46;
+	global.Dex_Attack[32] = 57;
+	global.Dex_Defence[32] = 40;
+	global.Dex_SPattack[32] = 40;
+	global.Dex_SPdefence[32] = 50;
+	global.Dex_Speed[32] = 50;
+
+	// Clefairy
+	global.Dex_Health[35] = 70;
+	global.Dex_Attack[35] = 45;
+	global.Dex_Defence[35] = 48;
+	global.Dex_SPattack[35] = 60;
+	global.Dex_SPdefence[35] = 65;
+	global.Dex_Speed[35] = 35;
+
+	// Vulpix
+	global.Dex_Health[37] = 38;
+	global.Dex_Attack[37] = 41;
+	global.Dex_Defence[37] = 40;
+	global.Dex_SPattack[37] = 50;
+	global.Dex_SPdefence[37] = 65;
+	global.Dex_Speed[37] = 65;
+
+	// Jigglypuff
+	global.Dex_Health[39] = 115;
+	global.Dex_Attack[39] = 45;
+	global.Dex_Defence[39] = 20;
+	global.Dex_SPattack[39] = 45;
+	global.Dex_SPdefence[39] = 25;
+	global.Dex_Speed[39] = 20;
+
+	// Zubat
+	global.Dex_Health[41] = 40;
+	global.Dex_Attack[41] = 45;
+	global.Dex_Defence[41] = 35;
+	global.Dex_SPattack[41] = 30;
+	global.Dex_SPdefence[41] = 40;
+	global.Dex_Speed[41] = 55;
+
+	// Oddish
+	global.Dex_Health[43] = 45;
+	global.Dex_Attack[43] = 50;
+	global.Dex_Defence[43] = 55;
+	global.Dex_SPattack[43] = 75;
+	global.Dex_SPdefence[43] = 65;
+	global.Dex_Speed[43] = 30;
+
+	// Paras
+	global.Dex_Health[46] = 35;
+	global.Dex_Attack[46] = 70;
+	global.Dex_Defence[46] = 55;
+	global.Dex_SPattack[46] = 45;
+	global.Dex_SPdefence[46] = 55;
+	global.Dex_Speed[46] = 25;
+
+	// Venonat
+	global.Dex_Health[48] = 60;
+	global.Dex_Attack[48] = 55;
+	global.Dex_Defence[48] = 50;
+	global.Dex_SPattack[48] = 40;
+	global.Dex_SPdefence[48] = 55;
+	global.Dex_Speed[48] = 45;
+
+	// Diglett
+	global.Dex_Health[50] = 10;
+	global.Dex_Attack[50] = 55;
+	global.Dex_Defence[50] = 25;
+	global.Dex_SPattack[50] = 35;
+	global.Dex_SPdefence[50] = 45;
+	global.Dex_Speed[50] = 95;
+
+	// Meowth
+	global.Dex_Health[52] = 40;
+	global.Dex_Attack[52] = 45;
+	global.Dex_Defence[52] = 35;
+	global.Dex_SPattack[52] = 40;
+	global.Dex_SPdefence[52] = 40;
+	global.Dex_Speed[52] = 90;
+
+	// Psyduck
+	global.Dex_Health[54] = 50;
+	global.Dex_Attack[54] = 52;
+	global.Dex_Defence[54] = 48;
+	global.Dex_SPattack[54] = 65;
+	global.Dex_SPdefence[54] = 50;
+	global.Dex_Speed[54] = 55;
+
+	// Mankey
+	global.Dex_Health[56] = 40;
+	global.Dex_Attack[56] = 80;
+	global.Dex_Defence[56] = 35;
+	global.Dex_SPattack[56] = 35;
+	global.Dex_SPdefence[56] = 45;
+	global.Dex_Speed[56] = 70;
+
+	// Growlithe
+	global.Dex_Health[58] = 55;
+	global.Dex_Attack[58] = 70;
+	global.Dex_Defence[58] = 45;
+	global.Dex_SPattack[58] = 70;
+	global.Dex_SPdefence[58] = 50;
+	global.Dex_Speed[58] = 60;
+
+	// Poliwag
+	global.Dex_Health[60] = 40;
+	global.Dex_Attack[60] = 50;
+	global.Dex_Defence[60] = 40;
+	global.Dex_SPattack[60] = 40;
+	global.Dex_SPdefence[60] = 40;
+	global.Dex_Speed[60] = 90;
+
+	// Abra
+	global.Dex_Health[63] = 25;
+	global.Dex_Attack[63] = 20;
+	global.Dex_Defence[63] = 15;
+	global.Dex_SPattack[63] = 105;
+	global.Dex_SPdefence[63] = 55;
+	global.Dex_Speed[63] = 90;
+
+	// Machop
+	global.Dex_Health[66] = 70;
+	global.Dex_Attack[66] = 80;
+	global.Dex_Defence[66] = 50;
+	global.Dex_SPattack[66] = 35;
+	global.Dex_SPdefence[66] = 35;
+	global.Dex_Speed[66] = 35;
+
+	// Bellsprout
+	global.Dex_Health[69] = 50;
+	global.Dex_Attack[69] = 75;
+	global.Dex_Defence[69] = 35;
+	global.Dex_SPattack[69] = 70;
+	global.Dex_SPdefence[69] = 30;
+	global.Dex_Speed[69] = 40;
+
+	// Tentacool
+	global.Dex_Health[72] = 40;
+	global.Dex_Attack[72] = 40;
+	global.Dex_Defence[72] = 35;
+	global.Dex_SPattack[72] = 50;
+	global.Dex_SPdefence[72] = 100;
+	global.Dex_Speed[72] = 70;
+
+	// Geodude
+	global.Dex_Health[74] = 40;
+	global.Dex_Attack[74] = 80;
+	global.Dex_Defence[74] = 100;
+	global.Dex_SPattack[74] = 30;
+	global.Dex_SPdefence[74] = 30;
+	global.Dex_Speed[74] = 20;
+
+	// Ponyta
+	global.Dex_Health[77] = 50;
+	global.Dex_Attack[77] = 85;
+	global.Dex_Defence[77] = 55;
+	global.Dex_SPattack[77] = 65;
+	global.Dex_SPdefence[77] = 50;
+	global.Dex_Speed[77] = 90;
+
+	// Slowpoke
+	global.Dex_Health[79] = 90;
+	global.Dex_Attack[79] = 65;
+	global.Dex_Defence[79] = 65;
+	global.Dex_SPattack[79] = 40;
+	global.Dex_SPdefence[79] = 40;
+	global.Dex_Speed[79] = 15;
+
+	// Magnemite
+	global.Dex_Health[81] = 25;
+	global.Dex_Attack[81] = 35;
+	global.Dex_Defence[81] = 70;
+	global.Dex_SPattack[81] = 95;
+	global.Dex_SPdefence[81] = 55;
+	global.Dex_Speed[81] = 45;
+
+	// Farfetch'd
+	global.Dex_Health[83] = 52;
+	global.Dex_Attack[83] = 65;
+	global.Dex_Defence[83] = 55;
+	global.Dex_SPattack[83] = 58;
+	global.Dex_SPdefence[83] = 50;
+	global.Dex_Speed[83] = 60;
+
+	// Doduo
+	global.Dex_Health[84] = 35;
+	global.Dex_Attack[84] = 85;
+	global.Dex_Defence[84] = 45;
+	global.Dex_SPattack[84] = 35;
+	global.Dex_SPdefence[84] = 35;
+	global.Dex_Speed[84] = 75;
+
+	// Seel
+	global.Dex_Health[86] = 65;
+	global.Dex_Attack[86] = 45;
+	global.Dex_Defence[86] = 55;
+	global.Dex_SPattack[86] = 45;
+	global.Dex_SPdefence[86] = 50;
+	global.Dex_Speed[86] = 45;
+
+	// Grimer
+	global.Dex_Health[88] = 80;
+	global.Dex_Attack[88] = 80;
+	global.Dex_Defence[88] = 50;
+	global.Dex_SPattack[88] = 40;
+	global.Dex_SPdefence[88] = 50;
+	global.Dex_Speed[88] = 25;
+
+	// Shellder
+	global.Dex_Health[90] = 30;
+	global.Dex_Attack[90] = 65;
+	global.Dex_Defence[90] = 100;
+	global.Dex_SPattack[90] = 45;
+	global.Dex_SPdefence[90] = 25;
+	global.Dex_Speed[90] = 40;
+
+	// Gastly
+	global.Dex_Health[92] = 30;
+	global.Dex_Attack[92] = 35;
+	global.Dex_Defence[92] = 30;
+	global.Dex_SPattack[92] = 100;
+	global.Dex_SPdefence[92] = 35;
+	global.Dex_Speed[92] = 80;
+
+	// Onix
+	global.Dex_Health[95] = 35;
+	global.Dex_Attack[95] = 45;
+	global.Dex_Defence[95] = 160;
+	global.Dex_SPattack[95] = 30;
+	global.Dex_SPdefence[95] = 45;
+	global.Dex_Speed[95] = 70;
+
+	// Drowzee
+	global.Dex_Health[96] = 60;
+	global.Dex_Attack[96] = 48;
+	global.Dex_Defence[96] = 45;
+	global.Dex_SPattack[96] = 43;
+	global.Dex_SPdefence[96] = 90;
+	global.Dex_Speed[96] = 42;
+
+	// Krabby
+	global.Dex_Health[98] = 30;
+	global.Dex_Attack[98] = 105;
+	global.Dex_Defence[98] = 90;
+	global.Dex_SPattack[98] = 25;
+	global.Dex_SPdefence[98] = 25;
+	global.Dex_Speed[98] = 50;
+
+	// Voltorb
+	global.Dex_Health[100] = 40;
+	global.Dex_Attack[100] = 30;
+	global.Dex_Defence[100] = 35;
+	global.Dex_SPattack[100] = 55;
+	global.Dex_SPdefence[100] = 35;
+	global.Dex_Speed[100] = 100;
+
+	// Exeggcute
+	global.Dex_Health[102] = 60;
+	global.Dex_Attack[102] = 40;
+	global.Dex_Defence[102] = 80;
+	global.Dex_SPattack[102] = 60;
+	global.Dex_SPdefence[102] = 45;
+	global.Dex_Speed[102] = 40;
+
+	// Cubone
+	global.Dex_Health[104] = 50;
+	global.Dex_Attack[104] = 50;
+	global.Dex_Defence[104] = 95;
+	global.Dex_SPattack[104] = 40;
+	global.Dex_SPdefence[104] = 50;
+	global.Dex_Speed[104] = 35;
+
+	// Lickitung
+	global.Dex_Health[108] = 90;
+	global.Dex_Attack[108] = 55;
+	global.Dex_Defence[108] = 75;
+	global.Dex_SPattack[108] = 60;
+	global.Dex_SPdefence[108] = 75;
+	global.Dex_Speed[108] = 30;
+
+	// Koffing
+	global.Dex_Health[109] = 40;
+	global.Dex_Attack[109] = 65;
+	global.Dex_Defence[109] = 95;
+	global.Dex_SPattack[109] = 60;
+	global.Dex_SPdefence[109] = 45;
+	global.Dex_Speed[109] = 35;
+
+	// Rhyhorn
+	global.Dex_Health[111] = 80;
+	global.Dex_Attack[111] = 85;
+	global.Dex_Defence[111] = 95;
+	global.Dex_SPattack[111] = 30;
+	global.Dex_SPdefence[111] = 30;
+	global.Dex_Speed[111] = 25;
+
+	// Chansey
+	global.Dex_Health[113] = 250;
+	global.Dex_Attack[113] = 5;
+	global.Dex_Defence[113] = 5;
+	global.Dex_SPattack[113] = 35;
+	global.Dex_SPdefence[113] = 105;
+	global.Dex_Speed[113] = 50;
+
+	// Tangela
+	global.Dex_Health[114] = 65;
+	global.Dex_Attack[114] = 55;
+	global.Dex_Defence[114] = 115;
+	global.Dex_SPattack[114] = 100;
+	global.Dex_SPdefence[114] = 40;
+	global.Dex_Speed[114] = 60;
+
+	// Horsea
+	global.Dex_Health[116] = 30;
+	global.Dex_Attack[116] = 40;
+	global.Dex_Defence[116] = 35;
+	global.Dex_SPattack[116] = 70;
+	global.Dex_SPdefence[116] = 25;
+	global.Dex_Speed[116] = 60;
+
+	// Goldeen
+	global.Dex_Health[118] = 45;
+	global.Dex_Attack[118] = 67;
+	global.Dex_Defence[118] = 60;
+	global.Dex_SPattack[118] = 35;
+	global.Dex_SPdefence[118] = 50;
+	global.Dex_Speed[118] = 63;
+
+	// Staryu
+	global.Dex_Health[120] = 30;
+	global.Dex_Attack[120] = 45;
+	global.Dex_Defence[120] = 50;
+	global.Dex_SPattack[120] = 70;
+	global.Dex_SPdefence[120] = 55;
+	global.Dex_Speed[120] = 85;
+
+	// Scyther
+	global.Dex_Health[123] = 70;
+	global.Dex_Attack[123] = 110;
+	global.Dex_Defence[123] = 80;
+	global.Dex_SPattack[123] = 55;
+	global.Dex_SPdefence[123] = 80;
+	global.Dex_Speed[123] = 105;
+
+	// Pinsir
+	global.Dex_Health[127] = 65;
+	global.Dex_Attack[127] = 125;
+	global.Dex_Defence[127] = 100;
+	global.Dex_SPattack[127] = 55;
+	global.Dex_SPdefence[127] = 70;
+	global.Dex_Speed[127] = 85;
+
+	// Tauros
+	global.Dex_Health[128] = 75;
+	global.Dex_Attack[128] = 100;
+	global.Dex_Defence[128] = 95;
+	global.Dex_SPattack[128] = 40;
+	global.Dex_SPdefence[128] = 70;
+	global.Dex_Speed[128] = 110;
+
+	// Magikarp
+	global.Dex_Health[129] = 20;
+	global.Dex_Attack[129] = 10;
+	global.Dex_Defence[129] = 55;
+	global.Dex_SPattack[129] = 15;
+	global.Dex_SPdefence[129] = 20;
+	global.Dex_Speed[129] = 80;
+
+	// Eevee
+	global.Dex_Health[133] = 55;
+	global.Dex_Attack[133] = 55;
+	global.Dex_Defence[133] = 50;
+	global.Dex_SPattack[133] = 45;
+	global.Dex_SPdefence[133] = 50;
+	global.Dex_Speed[133] = 55;
+
+	// Porygon
+	global.Dex_Health[137] = 65;
+	global.Dex_Attack[137] = 60;
+	global.Dex_Defence[137] = 70;
+	global.Dex_SPattack[137] = 85;
+	global.Dex_SPdefence[137] = 75;
+	global.Dex_Speed[137] = 40;
+
+	// Omanyte
+	global.Dex_Health[138] = 35;
+	global.Dex_Attack[138] = 40;
+	global.Dex_Defence[138] = 100;
+	global.Dex_SPattack[138] = 90;
+	global.Dex_SPdefence[138] = 55;
+	global.Dex_Speed[138] = 35;
+
+	// Kabuto
+	global.Dex_Health[140] = 30;
+	global.Dex_Attack[140] = 40;
+	global.Dex_Defence[140] = 50;
+	global.Dex_SPattack[140] = 35;
+	global.Dex_SPdefence[140] = 55;
+	global.Dex_Speed[140] = 55;
+
+	// Dratini
+	global.Dex_Health[147] = 41;
+	global.Dex_Attack[147] = 64;
+	global.Dex_Defence[147] = 45;
+	global.Dex_SPattack[147] = 50;
+	global.Dex_SPdefence[147] = 50;
+	global.Dex_Speed[147] = 50;
+
 }

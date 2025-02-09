@@ -15,17 +15,26 @@ function SCR_Initialise_Globals()
 	// Player
 	global.player_x = 2000;
 	global.player_y = 770;
-	global.player_speed = 25
+	global.player_speed = 10;
 	
 	// Pokemon
 	global.pokemon_ID = 0;
-	global.pokemon_speed = 0.9 * global.player_speed
+	global.pokemon_move_speed = 0.9 * global.player_speed
 	global.wild_pokemon_id = 0;
 	global.wild_pokemon_counter = 0;
 	global.wild_pokemon_x = -1;
 	global.pokemon_health_max = 100;
 	global.pokemon_health = global.pokemon_health_max;
+	
+	global.iv_health = 0;
+	global.iv_attack = 0;
+	global.iv_SPattack = 0;
+	global.iv_defence = 0;
+	global.iv_SPdefence = 0;
+	global.iv_speed = 0 ;
+	
 	global.pokemon_experience = 0;
+	global.pokemon_level = 10;
 
 	// Tips
 	global.tip_string ="";
@@ -40,12 +49,12 @@ function SCR_Initialise_Globals()
 	
 	
 	i = 1; // Crates item ID
-	global.item_name[i] = "Crates";
+	global.item_name[i] = "Crate";
 	global.item_sprite[i] = SPR_Crate;
 	
 	
 	i = 2; // Meds item ID
-	global.item_name[i] = "Meds";
+	global.item_name[i] = "Med Kit";
 	global.item_sprite[i] = SPR_Med_Kit;
 	
 	
@@ -59,18 +68,28 @@ function SCR_Initialise_Globals()
 	global.item_sprite[i] = SPR_Burger;
 	
 	
-	i = 5; // Coins item ID
-	global.item_name[i] = "Coin";
-	global.item_sprite[i] = SPR_Coin;
-	
-	
-	i = 6; // Coffees item ID
+	i = 5; // Coffees item ID
 	global.item_name[i] = "Coffee";
 	global.item_sprite[i] = SPR_Coffee;
 	
 	
-	i = 7; // Noodles item ID
-	global.item_name[i] = "Noodles";
+	i = 6; // Book item ID
+	global.item_name[i] = "Book";
+	global.item_sprite[i] = SPR_Book;
+	
+	
+	i = 7; // Battery item ID
+	global.item_name[i] = "Battery";
+	global.item_sprite[i] = SPR_Battery;	
+	
+	
+	i = 8; // Coins item ID
+	global.item_name[i] = "Coin";
+	global.item_sprite[i] = SPR_Coin;
+	
+	
+	i = 9; // Noodles item ID
+	global.item_name[i] = "Noodle";
 	global.item_sprite[i] = SPR_Noodles;
 
 	// Set all item found counts to 0
@@ -129,6 +148,72 @@ function SCR_Initialise_Globals()
 	//global.types[15] = "ice";
 	//global.types[16] = "steel";
 	//global.types[17] = "flying"; // Removed because Flying is not a primary type in Gen 1
+	
+	// Define a 2D array for type effectiveness
+	for (i = 0; i < 13; i++)
+	{
+		for (var k = 0; k < 13; k++)
+		{
+			global.type_chart[i][k] = 1;
+		}
+	}
+
+	// Super Effective (2x)
+	global.type_chart[1][3] = 2.0; // Fire -> Grass
+	global.type_chart[1][6] = 2.0; // Fire -> Bug
+	global.type_chart[2][1] = 2.0; // Water -> Fire
+	global.type_chart[2][9] = 2.0; // Water -> Rock
+	global.type_chart[2][11] = 2.0; // Water -> Ground
+	global.type_chart[3][2] = 2.0; // Grass -> Water
+	global.type_chart[3][9] = 2.0; // Grass -> Rock
+	global.type_chart[3][11] = 2.0; // Grass -> Ground
+	global.type_chart[4][2] = 2.0; // Electric -> Water
+	global.type_chart[6][5] = 2.0; // Bug -> Psychic
+	global.type_chart[6][3] = 2.0; // Bug -> Grass
+	global.type_chart[8][9] = 2.0; // Fighting -> Rock
+	global.type_chart[8][0] = 2.0; // Fighting -> Normal
+	global.type_chart[9][1] = 2.0; // Rock -> Fire
+	global.type_chart[9][6] = 2.0; // Rock -> Bug
+	global.type_chart[9][17] = 2.0; // Rock -> Flying
+	global.type_chart[11][1] = 2.0; // Ground -> Fire
+	global.type_chart[11][4] = 2.0; // Ground -> Electric
+	global.type_chart[11][9] = 2.0; // Ground -> Rock
+	global.type_chart[11][6] = 2.0; // Ground -> Bug
+	global.type_chart[12][3] = 2.0; // Poison -> Grass
+	global.type_chart[5][8] = 2.0; // Psychic -> Fighting
+	global.type_chart[5][12] = 2.0; // Psychic -> Poison
+	global.type_chart[7][7] = 2.0; // Dragon -> Dragon
+
+	// Not Very Effective (0.5x)
+	global.type_chart[0][9] = 0.5; // Normal -> Rock
+	global.type_chart[1][2] = 0.5; // Fire -> Water
+	global.type_chart[2][3] = 0.5; // Water -> Grass
+	global.type_chart[2][4] = 0.5; // Water -> Electric
+	global.type_chart[3][1] = 0.5; // Grass -> Fire
+	global.type_chart[3][6] = 0.5; // Grass -> Bug
+	global.type_chart[3][12] = 0.5; // Grass -> Poison
+	global.type_chart[4][9] = 0.5; // Electric -> Rock
+	global.type_chart[5][5] = 0.5; // Psychic -> Psychic
+	global.type_chart[8][5] = 0.5; // Fighting -> Psychic
+	global.type_chart[8][7] = 0.5; // Fighting -> Flying
+	global.type_chart[9][11] = 0.5; // Rock -> Ground
+	global.type_chart[9][8] = 0.5; // Rock -> Fighting
+	global.type_chart[11][3] = 0.5; // Ground -> Grass
+	global.type_chart[11][6] = 0.5; // Ground -> Bug
+	global.type_chart[12][12] = 0.5; // Poison -> Poison
+	global.type_chart[12][9] = 0.5; // Poison -> Rock
+	global.type_chart[12][10] = 0.5; // Poison -> Ghost
+
+	// Immunities (0x)
+	global.type_chart[0][10] = 0.0; // Normal -> Ghost (no effect)
+	global.type_chart[4][11] = 0.0; // Electric -> Ground (no effect)
+	global.type_chart[8][10] = 0.0; // Fighting -> Ghost (no effect)
+	global.type_chart[10][0] = 0.0; // Ghost -> Normal (no effect)
+	global.type_chart[11][17] = 0.5; // Ground -> Flying (no effect)
+
+
+
+
 
 	// Define an array for the colors that correspond to each type (only Gen 1 primary types included)
 	global.type_colors[0] = global.c_normal;
@@ -155,46 +240,72 @@ function SCR_Initialise_Globals()
 	i = 1;
 	global.building_name[i] = "Lab";
 	global.building_sprites[i] = SPR_Lab;
-	global.building_cost[i] = i + 1;
+	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Lab;
-	
+		
 	//Poke Center
 	i = 2;
 	global.building_name[i] = "Poke Center";
 	global.building_sprites[i] = SPR_Poke_Center;
-	global.building_cost[i] = i + 1;
+	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Poke_Center;
 	
-	// Factory
+	// Factory - Augments Defence
 	i = 3;
 	global.building_name[i] = "Factory";
 	global.building_sprites[i] = SPR_Factory;
-	global.building_cost[i] = i + 1;
+	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Factory;
-	
-	// Burger Shop
+
+	// Burger Shop - Augments HP
 	i = 4;
 	global.building_name[i] = "Burger Shop";
 	global.building_sprites[i] = SPR_Burger_Shop;
-	global.building_cost[i] = i + 1;	
+	global.building_cost[i] = 2;	
+	global.building_room[i] = RM_Burger_Shop;
 	
-	// Bank;
+	// Cafe - Augments Speed
 	i = 5;
-	global.building_name[i] = "Bank";
-	global.building_sprites[i] = SPR_Bank;
-	global.building_cost[i] = i + 1;	
-	
-	// Cafe;
-	i = 6;
 	global.building_name[i] = "Cafe";
 	global.building_sprites[i] = SPR_Cafe;
-	global.building_cost[i] = i + 1;
+	global.building_cost[i] = 2;
+	global.building_room[i] = RM_Cafe;
+	
+	// Library - Augments SP Defence
+	i = 6;
+	global.building_name[i] = "Library";
+	global.building_sprites[i] = SPR_Library;
+	global.building_cost[i] = 2;
+	global.building_room[i] = RM_Library;
+	
+	// Power Station - Augements SP Attack
+	i = 7;
+	global.building_name[i] = "Power Station";
+	global.building_sprites[i] = SPR_Power_Station;
+	global.building_cost[i] = 2;
+	global.building_room[i] = RM_Power_Station;
+	
+	// Bank
+	i = 8;
+	global.building_name[i] = "Bank";
+	global.building_sprites[i] = SPR_Bank;
+	global.building_cost[i] = 2;
+	global.building_entry_condition[i] = false
 	
 	// Noodle Shop
-	i = 7;
+	i = 9;
 	global.building_name[i] = "Noodle Shop";
 	global.building_sprites[i] = SPR_Noodle_Shop;
-	global.building_cost[i] = i + 1;	
+	global.building_cost[i] = 2;	
+	global.building_entry_condition[i] = false
+	
+	// Library (Augments SP Defence) 
+	// Power Station (Augments SP Attack)
+	// Potion Shop for combat heals?
+	// Sushi shop for ???
+	// Fruit or flower shop?
+	// Expedition Camp? for adventures out of town...
+	// NEED A SOURCE FOR CRIT AND ATTACK...
 	
 	for (i = 0; i < array_length(global.building_sprites); i++)
 	{

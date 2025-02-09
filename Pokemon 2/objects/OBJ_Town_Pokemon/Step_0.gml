@@ -8,7 +8,7 @@ if (abs(pokemon_x - player_x) > follow_distance)
     // Move toward the player
     if (pokemon_x < player_x) 
 	{
-        x += global.pokemon_speed;  // Move right
+        x += global.pokemon_move_speed;  // Move right
         if (last_direction == -1) 
 		{
             image_xscale = -scale_factor;  // Face right
@@ -17,7 +17,7 @@ if (abs(pokemon_x - player_x) > follow_distance)
     } 
 	else if (pokemon_x > player_x) 
 	{
-        x -= global.pokemon_speed;  // Move left
+        x -= global.pokemon_move_speed;  // Move left
         if (last_direction == 1) 
 		{
             image_xscale = scale_factor;  // Face left
@@ -51,4 +51,6 @@ else
     // If close to the player, align vertically with the player
     y = pokemon_y;
 }
+
+global.pokemon_x = x;
 

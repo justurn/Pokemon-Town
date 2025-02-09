@@ -9,6 +9,5 @@ function SCR_Wild_Pokemon()
 			array_push(valid_wild_pokemon, i)
 		}
 	}
-
 	SCR_Shuffle_Array(valid_wild_pokemon);
 }

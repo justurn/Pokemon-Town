@@ -22,3 +22,11 @@ image_yscale = scale_factor;
 image_xscale = scale_factor;
 
 show_debug_message("Tamed " + string(pokemon_name) + " Spawned")
+
+if global.pokemon_experience >= 100
+{
+	instance_create_layer(x,y - 100,"Instances", OBJ_Level_Up);
+	global.pokemon_level += 1;
+	global.pokemon_experience = 0;
+	show_debug_message(string(pokemon_name) + " has reached level: " + string(global.pokemon_level))
+}

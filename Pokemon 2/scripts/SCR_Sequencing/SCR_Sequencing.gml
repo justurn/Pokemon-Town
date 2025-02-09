@@ -1,13 +1,55 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+
+// don't spawn wild pokemon whilst you are eligible to build.
+// don't spawn wild pokemon whilst your pokemon has no health
+// add space to the enter binding
+
 function SCR_Sequencing()
 {
 	global.tip_string = "Game Completed";
+	var max_buildings = array_length(global.building_sprites);
 	
-	for (var i = 0; i < array_length(global.building_sprites); i++)
+	// Entry Conditions
+	
+	// Reset
+	for (i = 1; i < max_buildings; i++)
 	{
 		global.entry_allowed[i] = false;
 	}
+	
+	// Lab
+	i = 1
+	global.building_entry_condition[i] = (global.pokemon_ID == 0 || global.pokemon_health <= 0)
+	// Poke Center
+	i = 2
+	global.building_entry_condition[i] = (global.pokemon_health < global.pokemon_health_max && global.item_held[i] > 0)
+	// Factory
+	i = 3
+	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Burger Shop
+	i = 4
+	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Cafe
+	i = 5
+	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Library
+	i = 6
+	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Power Station
+	i = 7
+	global.building_entry_condition[i] = global.item_held[i] > 0
+	
+	// Entry Permission Checks
+    for (i = 1; i < max_buildings; i++)
+    {
+        if (global.building_count > i && global.building_entry_condition[i])
+        {
+            global.entry_allowed[i] = true;
+            global.tip_string = "Enter " + string(global.building_name[i]);
+        }
+    }
 	
 	// Pokemon
 	// Summon your Pokemon if you have one.
@@ -26,7 +68,6 @@ function SCR_Sequencing()
 		}
 		global.wild_pokemon_id = valid_wild_pokemon[global.wild_pokemon_counter];
 		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_id);
-		return;
 	}
 	
 	// Wild Pokemon
@@ -37,8 +78,8 @@ function SCR_Sequencing()
 	}
 	
 	// Eggs
-	i = 0;
-	if (global.item_held[i] = -1 && global.pokemon_ID == 0)
+	var i = 0;
+	if (global.item_held[i] == -1 && global.pokemon_ID == 0)
 	{
 		global.item_held[i] = 0;
 		SCR_Items_Spawn(i, global.item_hidden[i]);
@@ -48,170 +89,47 @@ function SCR_Sequencing()
 		global.tip_string = "Eggs Left: " + string(global.item_hidden[i] - global.item_held[i]);
 		return;
 	}
-
-	// Lab
-	i = 1;
-	if (global.building_count = i && global.item_held[i] = -1)
+	if (global.item_held[i] == global.item_hidden[i] && global.pokemon_ID == 0)
 	{
-		SCR_Items_Spawn(i, global.building_cost[i]);
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
+		// once all the eggs are collected spawn the crates needed for the lab
+		if (global.item_held[1] == -1 && global.building_count == 1)
+		{
+			SCR_Items_Spawn(1, global.building_cost[1]);
+			global.item_held[1] = 0;
+		}
 	}
-	if (global.building_count = i && global.building_count = i && global.item_held[1] < global.building_cost[i])
-	{
-		global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
-		return;
-	}
-	if (global.building_count = i && global.item_held[1] >= global.building_cost[i])
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Lab";	
-		return;
-	}
-	if (global.pokemon_ID == 0 || (global.item_held[2] <= 0 && global.pokemon_health <= 0))
-	{
-		global.entry_allowed[i] = true;
-		global.tip_string = "Enter Lab";
-		
-		// reset the chosen egg type and let the player hatch a new egg if their pokemon is out of HP without kits to heal at the poke center
-		global.chosen_egg_type = -1; 
-		return;
-	}
-
 	
-	// Poke Center
-	i = 2;
-	if (global.building_count ==  i + 1 && global.item_held[i] == -1)
-	{
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
-	}
-	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Poke Center";
-		return;
-	}
-	// Permit entry if the player has a med kit and the pokemon is below max health.
-	if (global.pokemon_health < global.pokemon_health_max && global.item_held[i] > 0)
-	{
-		global.entry_allowed[i] = true
-		// Direct the player to the Poke Center once pokemon health falls below 50%
-		if (global.pokemon_health <= global.pokemon_health_max / 2) 
+	
+	// Building Construction Checks
+    for (i = 1; i < max_buildings; i++)
+    {
+        if (global.building_count = i + 1  && global.item_held[i] == -1)
+        {
+			global.item_held[i] = 0;
+        }
+		else if (global.item_held[i] != -1 && global.building_count == i && global.item_held[1] < global.building_cost[i])
+		{
+			global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
+		}	
+        else if (global.item_held[1] >= global.building_cost[i] && global.building_count == i)
+        {
+            // Allow construction
+            global.build_allowed[i] = true;
+            global.tip_string = "Build " + string(global.building_name[i]);
+        }
+    }
+	
+
+	// Final Tip Overrides
+    if (global.pokemon_health <= global.pokemon_health_max / 2)
+    {
+		if global.item_held[2] > 0
 		{
 			global.tip_string = "Enter Poke Center";
-			return;
 		}
-	}
-	
-
-	// Factory
-	i = 3;
-	if (global.building_count == i + 1 && global.item_held[i] = -1)
-	{
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
-	}
-	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Factory";
-		return;
-	}
-	// Allow entry to the factory once the player has collected a gear.
-	if (global.item_held[i] > 0)
-	{
-		global.entry_allowed[i] = true
-		// Direct the player to enter the Factory once they have collected 5 gears. 
-		if (global.item_held[i] >= 5)
+		else if global.pokemon_health = 0
 		{
-		global.tip_string = "Enter Factory";
-		return;
+			global.tip_string = "Enter Lab";
 		}
-	}
-
-	// Burger Shop
-	i = 4;
-	if (global.building_count ==  i + 1 && global.item_held[i] = -1)
-	{
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
-	}
-	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Burger Shop";
-		return;
-	}
-	if (global.entry_allowed[i] = true)
-	{
-		global.tip_string = "Enter Burger Shop";
-		return;
-	}
-
-	// Bank
-	i = 5;
-	if (global.building_count ==  i + 1 && global.item_held[i] = -1)
-	{
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
-	}
-	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Bank";
-		return;
-	}
-	if (global.entry_allowed[i] = true)
-	{
-		global.tip_string = "Enter Bank";
-		return;
-	}
-
-	// Cafe
-	i = 6;
-	if (global.building_count ==  i + 1 && global.item_held[i] = -1)
-	{
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
-	}
-	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Cafe";
-		return;
-	}
-	if (global.entry_allowed[i] = true)
-	{
-		global.tip_string = "Enter Cafe";
-		return;
-	}
-
-	// Noodle Shop
-	i = 7;
-	if (global.building_count ==  i + 1 && global.item_held[i] = -1)
-	{
-		global.item_held[i] = 0
-		global.tip_string = "";
-		return;
-	}
-	if (global.item_held[1] >= global.building_cost[i] && global.building_count = i)
-	{
-		global.build_allowed[i] = true;
-		global.tip_string = "Build Noodle Shop";
-		return;
-	}
-	if (global.entry_allowed[i] = true)
-	{
-		global.tip_string = "Enter Noodle";
-		return;
-	}
-	
-
+    }
 }

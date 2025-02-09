@@ -31,7 +31,7 @@ function SCR_Hatching_Pokemon()
             pokemon_name = global.Dex_Names[pokedex_id]; // Ensure this array contains Pokémon names by ID
             sprite_index = global.Dex_Sprites[pokedex_id]; // Sprite names should match "SPR_<PokemonName>"
        
-			show_debug_message("Hatched Pokemon is:"+ pokemon_name)
+			show_debug_message("Hatched Pokemon is: "+ pokemon_name)
 	   }
         else
         {
