@@ -4,16 +4,20 @@ function SCR_Attack(attacker, defender)
     var base_power = 40; // Basic attack power
 	var damage = 1;
 	
+	// Check if attack is a critical hit
+	var crit_roll = irandom(100)
+	var is_crit = (crit_roll < attacker.crit);
+	
 	if attacker.attack > attacker.spattack
 	{
 		// Check whether attack or special attack is highest and use that for attacking. The defender will use the corresponding defensive.
 		damage = (((2 * level) / 5 + 2) * base_power * (attacker.attack / defender.defence)) / 50 + 2;
-		var attack_kind = "physical"
+		var is_physical = true
 	}
 	else
 	{	
 		damage = (((2 * level) / 5 + 2) * base_power * (attacker.spattack / defender.spdefence)) / 50 + 2;
-		var attack_kind = "special"
+		var is_physical = false
 	}
     
     // Apply variance (random between 85% - 100%)
@@ -38,9 +42,18 @@ function SCR_Attack(attacker, defender)
     }
 	
 	//show_debug_message("Effectiveness is: " + string(effectiveness));
-
-    damage *= effectiveness;
-    damage = round(damage);
+	damage *= effectiveness;
+	
+	if (is_crit)
+	{
+		// Show debug message
+		show_debug_message("Critical Hit!");
+		damage = damage * 2; // Increase damage if crit
+	}
+	
+	// ensure damage is at least one to prevent infinite fights...
+    damage = max(1,round(damage)); 
+	
     
     // Display effectiveness message
     if (effectiveness > 1) 
@@ -50,7 +63,7 @@ function SCR_Attack(attacker, defender)
     
     // Debug Messages
     show_debug_message(string(attacker.pokemon_name) + " Deals " + string(damage) + " damage to " + string(defender.pokemon_name));
-    show_debug_message(string(defender.pokemon_name) + " Has " + string(defender.current_hp) + " health remaining");
+    show_debug_message(string(defender.pokemon_name) + " Has " + string(defender.current_hp - damage) + " health remaining");
 	
 	// create projectile for attack
 	var proj = instance_create_layer(attacker.x, attacker.y, "Instances", OBJ_Projectile);
@@ -59,5 +72,6 @@ function SCR_Attack(attacker, defender)
     proj.attack_type = attacker.type_id;
     proj.target_pokemon = defender;
 	proj.damage = damage;
-	proj.kind = attack_kind;
+	proj.is_physical = is_physical;
+	proj.is_crit = is_crit;
 }

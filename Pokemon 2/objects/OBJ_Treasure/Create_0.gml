@@ -1,10 +1,5 @@
 treasure_limit = irandom(2) + 1;
 
-// timer for how long to show the items from treasure room before transitioning back to town.
-time_limit = 70;
+time_limit = room_speed * 2; // allow 2 seconds to view the treasure
 timer = 0;
-
-
-
-
-
+no_treasure = true;

@@ -5,7 +5,7 @@ pokemon_b_x = 892
 pokemon_b_y = 344
 
 player_pokemon = instance_create_layer(pokemon_a_x, pokemon_a_y, "Instances", OBJ_Battle_Pokemon);
-wild_pokemon = instance_create_layer(pokemon_b_x, pokemon_b_y, "Instances", OBJ_Battle_Pokemon_Enemy);
+wild_pokemon = instance_create_layer(pokemon_b_x, pokemon_b_y, "Instances", OBJ_Battle_Pokemon_Wild);
 
 // Determine who attacks first
 if (player_pokemon.speedstat > wild_pokemon.speedstat)

@@ -4,6 +4,10 @@
 x = room_width/2
 y = room_height/2
 
+var scaler = 1.5
+image_yscale = scaler;
+image_xscale = scaler;
+
 instance_create_layer(x,y + 200,"Instances",OBJ_Stat_Pokemon);
 
 if room == RM_Factory

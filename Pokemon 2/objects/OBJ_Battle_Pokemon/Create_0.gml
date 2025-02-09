@@ -27,3 +27,4 @@ speedstat = global.pokemon_speed;
 current_hp = global.pokemon_health;
 max_hp = global.pokemon_health_max
 level = global.pokemon_level;
+crit = global.pokemon_crit;

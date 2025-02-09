@@ -33,6 +33,8 @@ function SCR_Initialise_Globals()
 	global.iv_SPdefence = 0;
 	global.iv_speed = 0 ;
 	
+	global.pokemon_crit = 50;
+	
 	global.pokemon_experience = 0;
 	global.pokemon_level = 10;
 
@@ -299,11 +301,9 @@ function SCR_Initialise_Globals()
 	global.building_cost[i] = 2;	
 	global.building_entry_condition[i] = false
 	
-	// Library (Augments SP Defence) 
-	// Power Station (Augments SP Attack)
 	// Potion Shop for combat heals?
-	// Sushi shop for ???
-	// Fruit or flower shop?
+	// Sushi shop?
+	// Florist?
 	// Expedition Camp? for adventures out of town...
 	// NEED A SOURCE FOR CRIT AND ATTACK...
 	

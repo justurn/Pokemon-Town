@@ -12,13 +12,20 @@ if (just_spawned)
 	
 	just_spawned = false;
 	
-	if kind = "physical"
+	if (is_physical)
 	{
 		sprite_index = SPR_Attack;
 	}
 	else
 	{
 		sprite_index = SPR_Special_Attack;
+	}
+	if (is_crit)
+	{
+	    image_xscale = 1.5;
+	    image_yscale = 1.5;
+		alarm_set(0,10);
+		crit_colour = colour;
 	}
 }
 
