@@ -1,8 +1,8 @@
-pokemon_a_x = 395
-pokemon_a_y = 570
+pokemon_a_x = 319
+pokemon_a_y = 425
 
-pokemon_b_x = 892
-pokemon_b_y = 344
+pokemon_b_x = 694
+pokemon_b_y = 268
 
 player_pokemon = instance_create_layer(pokemon_a_x, pokemon_a_y, "Instances", OBJ_Battle_Pokemon);
 wild_pokemon = instance_create_layer(pokemon_b_x, pokemon_b_y, "Instances", OBJ_Battle_Pokemon_Wild);

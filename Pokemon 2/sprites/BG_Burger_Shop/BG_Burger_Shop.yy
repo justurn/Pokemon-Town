@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "BG_Burger_Shop",
-  "bbox_bottom": 1023,
+  "bbox_bottom": 573,
   "bbox_left": 0,
   "bbox_right": 1023,
   "bbox_top": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 1024,
+  "height": 574,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d44f1cf4-0a4f-46c2-b632-392d0adc2358","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

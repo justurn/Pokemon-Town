@@ -40,6 +40,12 @@ function SCR_Sequencing()
 	// Power Station
 	i = 7
 	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Gym
+	i = 8
+	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Arcade
+	i = 9
+	global.building_entry_condition[i] = global.item_held[i] > 0
 	
 	// Entry Permission Checks
     for (i = 1; i < max_buildings; i++)

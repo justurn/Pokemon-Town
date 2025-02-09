@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "BG_Forest_Battle",
-  "bbox_bottom": 539,
+  "bbox_bottom": 573,
   "bbox_left": 0,
-  "bbox_right": 1049,
+  "bbox_right": 1115,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 540,
+  "height": 574,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"43e9f4a4-28cd-4a85-85b8-ec24c43f7b46","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1050,
+  "width": 1116,
 }

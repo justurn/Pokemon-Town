@@ -5,14 +5,15 @@ type_id = SCR_Get_Type_Index(type);
 sprite_index = global.Dex_Sprites[pokedex_id];
 
 // Sprite Scaling
-scale_factor = 3;
+scale_factor = 2;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 
 hb_height = 25;
-hb_width = 300;
+hb_width = 250;
+hb_gap = 150;
 
-hb_x1 = x - 500
+hb_x1 = x - hb_width - hb_gap;
 hb_y1 = y - hb_height/2
 
 hb_x2 = hb_x1 + hb_width

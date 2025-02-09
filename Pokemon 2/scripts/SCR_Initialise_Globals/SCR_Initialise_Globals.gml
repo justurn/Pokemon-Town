@@ -31,12 +31,14 @@ function SCR_Initialise_Globals()
 	global.iv_SPattack = 0;
 	global.iv_defence = 0;
 	global.iv_SPdefence = 0;
-	global.iv_speed = 0 ;
+	global.iv_speed = 0;
+	global.iv_crit = 0;
 	
-	global.pokemon_crit = 50;
+	global.pokemon_start_crit = 10;
+	global.pokemon_crit = global.pokemon_start_crit;
 	
 	global.pokemon_experience = 0;
-	global.pokemon_level = 10;
+	global.pokemon_start_level = 20;
 
 	// Tips
 	global.tip_string ="";
@@ -85,14 +87,14 @@ function SCR_Initialise_Globals()
 	global.item_sprite[i] = SPR_Battery;	
 	
 	
-	i = 8; // Coins item ID
+	i = 8; // Punch Card item ID
+	global.item_name[i] = "Punch Card";
+	global.item_sprite[i] = SPR_Punch_Card;
+
+
+	i = 9; // Coins item ID
 	global.item_name[i] = "Coin";
 	global.item_sprite[i] = SPR_Coin;
-	
-	
-	i = 9; // Noodles item ID
-	global.item_name[i] = "Noodle";
-	global.item_sprite[i] = SPR_Noodles;
 
 	// Set all item found counts to 0
 	for (i = 0; i < array_length(global.item_name); i++)
@@ -287,25 +289,25 @@ function SCR_Initialise_Globals()
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Power_Station;
 	
-	// Bank
+	// Gym
 	i = 8;
-	global.building_name[i] = "Bank";
-	global.building_sprites[i] = SPR_Bank;
+	global.building_name[i] = "Gym";
+	global.building_sprites[i] = SPR_Gym;
 	global.building_cost[i] = 2;
-	global.building_entry_condition[i] = false
+	global.building_room[i] = RM_Gym;
 	
-	// Noodle Shop
+	// Arcade
 	i = 9;
-	global.building_name[i] = "Noodle Shop";
-	global.building_sprites[i] = SPR_Noodle_Shop;
+	global.building_name[i] = "Arcade";
+	global.building_sprites[i] = SPR_Arcade;
 	global.building_cost[i] = 2;	
-	global.building_entry_condition[i] = false
+	global.building_room[i] = RM_Arcade;
 	
 	// Potion Shop for combat heals?
 	// Sushi shop?
 	// Florist?
 	// Expedition Camp? for adventures out of town...
-	// NEED A SOURCE FOR CRIT AND ATTACK...
+
 	
 	for (i = 0; i < array_length(global.building_sprites); i++)
 	{

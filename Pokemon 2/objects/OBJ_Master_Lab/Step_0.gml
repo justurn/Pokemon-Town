@@ -28,7 +28,7 @@ if (keyboard_check_pressed(vk_enter))
 
 // Update the lab master's position to be relative to the selected egg
 lab_master_x = egg_x[selected_egg];
-lab_master_y = egg_y[selected_egg] - 350;
+lab_master_y = egg_y - 250;
 
 // Position the lab master (adjust according to your sprite size and desired offset)
 x = lab_master_x;  

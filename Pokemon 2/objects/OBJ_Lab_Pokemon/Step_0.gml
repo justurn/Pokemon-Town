@@ -23,6 +23,6 @@ if just_hatched = true
 	global.pokemon_speed = global.iv_speed + base_speed;
 	
 	// reset level and experience
-	global.pokemon_level = 10;
+	global.pokemon_level = global.pokemon_start_level;
 	global.pokemon_experience = 0;
 }

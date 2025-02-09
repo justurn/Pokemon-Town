@@ -17,7 +17,7 @@ flash_timer = 0;
 flash_state = false; // Tracks if the Pokémon is currently flashing
 
 // Sprite Scaling
-scale_factor = 1.2;
+scale_factor = 1;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 

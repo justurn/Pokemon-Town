@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "BG_Poke_Center",
-  "bbox_bottom": 863,
+  "bbox_bottom": 573,
   "bbox_left": 0,
-  "bbox_right": 1535,
+  "bbox_right": 1023,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -20,7 +20,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 864,
+  "height": 574,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b9e0fcd8-10cb-4834-9ecb-3eba8b7f4b8d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -76,5 +76,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1536,
+  "width": 1024,
 }

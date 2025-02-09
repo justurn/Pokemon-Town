@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "BG_Noodle_Shop",
-  "bbox_bottom": 681,
+  "bbox_bottom": 573,
   "bbox_left": 0,
   "bbox_right": 1023,
   "bbox_top": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 682,
+  "height": 574,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"086af559-2c7a-453e-86f5-a7af2c721cbd","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},

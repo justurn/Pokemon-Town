@@ -8,5 +8,6 @@ var type_string = global.types[egg_type];  // Get the string corresponding to th
 // Set up the text color and draw the type string
 draw_set_color(c_white);  // You can change the color if needed3
 draw_set_halign(fa_center); // Horizontal alignment to center
+draw_set_font(FNT_Medium);
 
-draw_text(lab_master_x, lab_master_y - 100, type_string);  // Draw the type above the lab master
+draw_text(lab_master_x, lab_master_y - 45, type_string);  // Draw the type above the lab master
