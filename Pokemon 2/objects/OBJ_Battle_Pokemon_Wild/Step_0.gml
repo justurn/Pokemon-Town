@@ -1,6 +1,6 @@
 if (current_hp <= 0)
 {
-	var player_pokemon = instance_find(OBJ_Battle_Pokemon, 0)
+	var player_pokemon = instance_find(OBJ_Battle_Pokemon_Tame, 0)
     global.pokemon_health = player_pokemon.current_hp;
     global.wild_pokemon_id = 0;
     global.wild_pokemon_counter += 1;

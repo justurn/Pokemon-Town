@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "FNT_Menu",
+  "name": "FNT_Small",
   "AntiAlias": 1,
   "applyKerning": 0,
   "ascender": 37,

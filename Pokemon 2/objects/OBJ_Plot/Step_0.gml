@@ -9,7 +9,17 @@ if (OBJ_Player.x  >= plot_left && OBJ_Player.x  <= plot_right)
 	    flashing = true;  // The plot should flash if the player is in bounds
 
 	    // Check if the player presses enter while within bounds
-	    if (keyboard_check_pressed(vk_enter)) 
+		var enter = false;
+		
+		if (keyboard_check_pressed(vk_enter))
+		{
+			enter = true;
+		}
+		if (gamepad_button_check_pressed(0, 0))
+		{
+			enter = true;	
+		}
+	    if (enter) 
 	    {
 			//show_debug_message("New Building:" + string(next_building));
 			

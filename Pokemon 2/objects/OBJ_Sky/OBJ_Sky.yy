@@ -28,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "BG_Sky_Haze",
-    "path": "sprites/BG_Sky_Haze/BG_Sky_Haze.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

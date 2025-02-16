@@ -15,7 +15,14 @@ image_yscale = scale_factor + 0.1 * sin(evolution_timer * 0.1);
 // 3. Transition to New Pokémon Sprite (After X frames)
 if (evolution_timer == 90) 
 {
-    pokedex_id += 1;  // Get new evolution ID
+	if (pokedex_id == 133) // special case for Eevee evolutions
+	{
+		pokedex_id = choose(134,135,136)
+	}
+	else
+	{
+		pokedex_id += 1;  // Get new evolution ID
+	}
     sprite_index = global.Dex_Sprites[pokedex_id];  // Change sprite
 }
 

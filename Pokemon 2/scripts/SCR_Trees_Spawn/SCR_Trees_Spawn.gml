@@ -2,8 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SCR_Trees_Spawn()
 {
-	var tree_y = 550;
-	var tree_x_offset = -150;
+	var tree_y = global.plot_y;
+	var tree_x_offset = global.plot_width/2;
 	
 
 	if array_length(global.trees) == 0 // Randomly select the tree sprites and spawn the trees

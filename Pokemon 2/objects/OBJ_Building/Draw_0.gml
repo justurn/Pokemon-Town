@@ -2,6 +2,7 @@
 if (just_created)
 {
 	sprite_index = global.building_sprites[building_id]
+	image_xscale = (global.plot_width / sprite_width) * 0.9
 	y = y - sprite_height/2;
 	just_created = false;
 	build_left = x - sprite_width/2;    // Left edge of the building

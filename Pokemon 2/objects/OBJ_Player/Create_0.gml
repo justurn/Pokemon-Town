@@ -3,7 +3,7 @@ sprite_idle = SPR_Player;        // Default idle sprite
 sprite_move_right = SPR_Player_Right; // Sprite for moving right
 sprite_move_left = SPR_Player_Left;   // Sprite for moving left
 
-scale_factor = 1;
+scale_factor = 1.25;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 

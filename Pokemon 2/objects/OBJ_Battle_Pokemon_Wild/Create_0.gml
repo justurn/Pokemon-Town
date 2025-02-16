@@ -26,9 +26,10 @@ defence = global.Dex_Defence[pokedex_id];
 spdefence = global.Dex_SPdefence[pokedex_id];
 speedstat = global.Dex_Speed[pokedex_id];
 max_hp = global.Dex_Health[pokedex_id];
-crit = 6;
+crit = global.pokemon_start_crit;
 current_hp = max_hp
-level = 5;
+global.wild_pokemon_level = global.pokemon_level - irandom(global.wild_pokemon_level_gap);
+level = global.wild_pokemon_level;
 
 
 

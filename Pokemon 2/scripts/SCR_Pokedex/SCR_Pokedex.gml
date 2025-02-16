@@ -640,26 +640,26 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[22] = -1; // Fearow
 	global.Dex_Evolve_Level[23] = 22; // Ekans -> Arbok
 	global.Dex_Evolve_Level[24] = -1; // Arbok
-	global.Dex_Evolve_Level[25] = -1; // Pikachu (Needs Thunder Stone)
+	global.Dex_Evolve_Level[25] = 36; // Pikachu (Needs Thunder Stone)
 	global.Dex_Evolve_Level[26] = -1; // Raichu
 	global.Dex_Evolve_Level[27] = 22; // Sandshrew -> Sandslash
 	global.Dex_Evolve_Level[28] = -1; // Sandslash
 	global.Dex_Evolve_Level[29] = 16; // Nidoran♀ -> Nidorina
-	global.Dex_Evolve_Level[30] = -1; // Nidorina (Needs Moon Stone)
+	global.Dex_Evolve_Level[30] = 36; // Nidorina (Needs Moon Stone)
 	global.Dex_Evolve_Level[31] = -1; // Nidoqueen
 	global.Dex_Evolve_Level[32] = 16; // Nidoran♂ -> Nidorino
-	global.Dex_Evolve_Level[33] = -1; // Nidorino (Needs Moon Stone)
+	global.Dex_Evolve_Level[33] = 36; // Nidorino (Needs Moon Stone)
 	global.Dex_Evolve_Level[34] = -1; // Nidoking
-	global.Dex_Evolve_Level[35] = -1; // Clefairy (Needs Moon Stone)
+	global.Dex_Evolve_Level[35] = 30; // Clefairy (Needs Moon Stone)
 	global.Dex_Evolve_Level[36] = -1; // Clefable
-	global.Dex_Evolve_Level[37] = -1; // Vulpix (Needs Fire Stone)
+	global.Dex_Evolve_Level[37] = 36; // Vulpix (Needs Fire Stone)
 	global.Dex_Evolve_Level[38] = -1; // Ninetales
-	global.Dex_Evolve_Level[39] = -1; // Jigglypuff (Needs Moon Stone)
+	global.Dex_Evolve_Level[39] = 30; // Jigglypuff (Needs Moon Stone)
 	global.Dex_Evolve_Level[40] = -1; // Wigglytuff
 	global.Dex_Evolve_Level[41] = 22; // Zubat -> Golbat
 	global.Dex_Evolve_Level[42] = -1; // Golbat
 	global.Dex_Evolve_Level[43] = 21; // Oddish -> Gloom
-	global.Dex_Evolve_Level[44] = -1; // Gloom (Needs Leaf/Fire Stone)
+	global.Dex_Evolve_Level[44] = 36; // Gloom (Needs Leaf Stone)
 	global.Dex_Evolve_Level[45] = -1; // Vileplume
 	global.Dex_Evolve_Level[46] = 24; // Paras -> Parasect
 	global.Dex_Evolve_Level[47] = -1; // Parasect
@@ -673,10 +673,10 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[55] = -1; // Golduck
 	global.Dex_Evolve_Level[56] = 28; // Mankey -> Primeape
 	global.Dex_Evolve_Level[57] = -1; // Primeape
-	global.Dex_Evolve_Level[58] = -1; // Growlithe (Needs Fire Stone)
+	global.Dex_Evolve_Level[58] = 38; // Growlithe (Needs Fire Stone)
 	global.Dex_Evolve_Level[59] = -1; // Arcanine
 	global.Dex_Evolve_Level[60] = 25; // Poliwag -> Poliwhirl
-	global.Dex_Evolve_Level[61] = -1; // Poliwhirl (Needs Water Stone)
+	global.Dex_Evolve_Level[61] = 37; // Poliwhirl (Needs Water Stone)
 	global.Dex_Evolve_Level[62] = -1; // Poliwrath
 	global.Dex_Evolve_Level[63] = 16; // Abra -> Kadabra
 	global.Dex_Evolve_Level[64] = -1; // Kadabra (Trade Evolution)
@@ -685,7 +685,7 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[67] = -1; // Machoke (Trade Evolution)
 	global.Dex_Evolve_Level[68] = -1; // Machamp
 	global.Dex_Evolve_Level[69] = 21; // Bellsprout -> Weepinbell
-	global.Dex_Evolve_Level[70] = -1; // Weepinbell (Needs Leaf Stone)
+	global.Dex_Evolve_Level[70] = 36; // Weepinbell (Needs Leaf Stone)
 	global.Dex_Evolve_Level[71] = -1; // Victreebel
 	global.Dex_Evolve_Level[72] = 30; // Tentacool -> Tentacruel
 	global.Dex_Evolve_Level[73] = -1; // Tentacruel
@@ -705,7 +705,7 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[87] = -1; // Dewgong
 	global.Dex_Evolve_Level[88] = 38; // Grimer -> Muk
 	global.Dex_Evolve_Level[89] = -1; // Muk
-	global.Dex_Evolve_Level[90] = -1; // Shellder (Needs Water Stone)
+	global.Dex_Evolve_Level[90] = 36; // Shellder (Needs Water Stone)
 	global.Dex_Evolve_Level[91] = -1; // Cloyster
 	global.Dex_Evolve_Level[92] = 25; // Gastly -> Haunter
 	global.Dex_Evolve_Level[93] = -1; // Haunter (Trade Evolution)
@@ -717,7 +717,7 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[99] = -1; // Kingler
 	global.Dex_Evolve_Level[100] = 30; // Voltorb -> Electrode
 	global.Dex_Evolve_Level[101] = -1; // Electrode
-	global.Dex_Evolve_Level[102] = -1; // Exeggcute (Needs Leaf Stone)
+	global.Dex_Evolve_Level[102] = 38; // Exeggcute (Needs Leaf Stone)
 	global.Dex_Evolve_Level[103] = -1; // Exeggutor
 	global.Dex_Evolve_Level[104] = 28; // Cubone -> Marowak
 	global.Dex_Evolve_Level[105] = -1; // Marowak
@@ -735,7 +735,7 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[117] = -1; // Seadra
 	global.Dex_Evolve_Level[118] = 33; // Goldeen -> Seaking
 	global.Dex_Evolve_Level[119] = -1; // Seaking
-	global.Dex_Evolve_Level[120] = -1; // Staryu (Needs Water Stone)
+	global.Dex_Evolve_Level[120] = 37; // Staryu (Needs Water Stone)
 	global.Dex_Evolve_Level[121] = -1; // Starmie
 	global.Dex_Evolve_Level[122] = -1; // Mr. Mime (No Evolution in Gen 1)
 	global.Dex_Evolve_Level[123] = -1; // Scyther (No Evolution in Gen 1)
@@ -748,7 +748,7 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[130] = -1; // Gyarados
 	global.Dex_Evolve_Level[131] = -1; // Lapras (No Evolution)
 	global.Dex_Evolve_Level[132] = -1; // Ditto (No Evolution)
-	global.Dex_Evolve_Level[133] = -1; // Eevee (Needs Water/Thunder/Fire Stone)
+	global.Dex_Evolve_Level[133] = 36; // Eevee (Needs Water/Thunder/Fire Stone)
 	global.Dex_Evolve_Level[134] = -1; // Vaporeon
 	global.Dex_Evolve_Level[135] = -1; // Jolteon
 	global.Dex_Evolve_Level[136] = -1; // Flareon
@@ -767,6 +767,32 @@ function SCR_Pokedex()
 	global.Dex_Evolve_Level[149] = -1; // Dragonite
 	global.Dex_Evolve_Level[150] = -1; // Mewtwo (Legendary, No Evolution)
 	global.Dex_Evolve_Level[151] = -1; // Mew (Mythical, No Evolution)
+
+
+	// Bulbasaur
+	global.Dex_Health[1] = 45;
+	global.Dex_Attack[1] = 49;
+	global.Dex_Defence[1] = 49;
+	global.Dex_SPattack[1] = 65;
+	global.Dex_SPdefence[1] = 65;
+	global.Dex_Speed[1] = 45;
+
+	// Ivysaur
+	global.Dex_Health[2] = 60;
+	global.Dex_Attack[2] = 62;
+	global.Dex_Defence[2] = 63;
+	global.Dex_SPattack[2] = 80;
+	global.Dex_SPdefence[2] = 80;
+	global.Dex_Speed[2] = 60;
+
+	// Venusaur
+	global.Dex_Health[3] = 80;
+	global.Dex_Attack[3] = 82;
+	global.Dex_Defence[3] = 83;
+	global.Dex_SPattack[3] = 100;
+	global.Dex_SPdefence[3] = 100;
+	global.Dex_Speed[3] = 80;
+
 
 	// Charmander Line
 	global.Dex_Health[4] = 39;

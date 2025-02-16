@@ -3,7 +3,7 @@ var cam_x = camera_get_view_x(view_camera[0]);
 var cam_width = camera_get_view_width(view_camera[0]);
 
 // Define parallax factor (higher values = slower movement, closer to background)
-var parallax_factor = 0.6;  
+var parallax_factor = 0;  
 
 // Calculate parallax movement
 var max_offset = (room_width - cam_width); 

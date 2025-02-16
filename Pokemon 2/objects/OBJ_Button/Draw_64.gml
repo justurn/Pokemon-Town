@@ -1,7 +1,7 @@
 // Draw Event for Menu
 
 // Set the font to FNT_Menu for the buttons
-draw_set_font(FNT_Menu);
+draw_set_font(FNT_Small);
 
 // Set the font alignment to middle (both horizontally and vertically)
 draw_set_halign(fa_center); // Horizontal alignment to center

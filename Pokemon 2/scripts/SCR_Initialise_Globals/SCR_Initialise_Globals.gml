@@ -3,9 +3,11 @@ function SCR_Initialise_Globals()
 	randomize();
 	var i = 0;
 	
+	show_debug_log(true);
+	
 	// Plots and Buildings
 	global.plot_count = 0;
-	global.plot_y = 600; // Fixed Y position for plots
+	global.plot_y = 275; // Fixed Y position for plots
 	global.plots_x = [];
 	global.buildings_x = [];
 	global.buildings_y = [];
@@ -13,8 +15,8 @@ function SCR_Initialise_Globals()
 	global.more_buildings = true;
 
 	// Player
-	global.player_x = 2000;
-	global.player_y = 770;
+	global.player_x = 2500;
+	global.player_y = 440;
 	global.player_speed = 10;
 	
 	// Pokemon
@@ -25,6 +27,7 @@ function SCR_Initialise_Globals()
 	global.wild_pokemon_x = -1;
 	global.pokemon_health_max = 100;
 	global.pokemon_health = global.pokemon_health_max;
+
 	
 	global.iv_health = 0;
 	global.iv_attack = 0;
@@ -34,11 +37,14 @@ function SCR_Initialise_Globals()
 	global.iv_speed = 0;
 	global.iv_crit = 0;
 	
-	global.pokemon_start_crit = 10;
+	global.pokemon_start_crit = 5;
 	global.pokemon_crit = global.pokemon_start_crit;
 	
 	global.pokemon_experience = 0;
-	global.pokemon_start_level = 20;
+	global.pokemon_start_level = 5;
+	global.pokemon_level = global.pokemon_start_level
+	global.wild_pokemon_level_gap = global.pokemon_start_level - 1;
+	global.wild_pokemon_level = global.pokemon_level - global.wild_pokemon_level_gap;
 
 	// Tips
 	global.tip_string ="";

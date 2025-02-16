@@ -2,7 +2,22 @@
 // Check for movement inputs (WASD + Arrow keys)
 
 // Right movement (Arrow key and 'D' key)
-if (keyboard_check(vk_right) || keyboard_check(ord("D")))
+var right = false;
+
+if (keyboard_check(vk_right))
+{
+	right = true
+}
+if (keyboard_check(ord("D")))
+{
+	right = true
+}
+if (gamepad_button_check(0, 15))
+{
+	right = true
+}
+
+if (right)
 {
     // Move right
 	if (x + sprite_width < room_width)
@@ -11,8 +26,25 @@ if (keyboard_check(vk_right) || keyboard_check(ord("D")))
 	}
     sprite_index = sprite_move_right;
 }
+
 // Left movement (Arrow key and 'A' key)
-else if (keyboard_check(vk_left) || keyboard_check(ord("A"))) 
+var left = false;
+
+if (keyboard_check(vk_left))
+{
+	left = true
+}
+if (keyboard_check(ord("A")))
+{
+	left = true
+}
+if (gamepad_button_check(0, 14))
+{
+	left = true
+}
+
+
+if (left) 
 {
     sprite_index = sprite_move_left;
 	// Move left
@@ -21,8 +53,10 @@ else if (keyboard_check(vk_left) || keyboard_check(ord("A")))
     x -= global.player_speed;
 	}
 }
+
 // No movement (idle state)
-else {
+if (!left && !right) 
+{
     sprite_index = sprite_idle;
 }
 

@@ -1,9 +1,10 @@
 function SCR_Plots_Generate() 
-{
-	var segment_offset = 150;
-    var segment_size = 300;
-    var num_segments = (room_width - 2 * segment_offset) div segment_size;
-    
+{  
+    var num_segments = array_length(global.building_name);
+	var segment_size = room_width / num_segments;
+	var segment_offset = segment_size / 2
+	
+	global.plot_width = segment_size;
     global.plot_segments = array_create(num_segments);
     
     // Populate the array with X positions of each segment

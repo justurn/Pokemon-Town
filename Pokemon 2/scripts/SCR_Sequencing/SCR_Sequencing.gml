@@ -68,11 +68,11 @@ function SCR_Sequencing()
 	// if there is not a current wild pokemon and you have a pokemon, spawn one.
 	if (global.wild_pokemon_id == 0 && global.pokemon_ID != 0)
 	{
-		if global.wild_pokemon_counter == array_length(valid_wild_pokemon) // reset the counter for wild pokemon
+		if global.wild_pokemon_counter == array_length(global.valid_wild_pokemon) // reset the counter for wild pokemon
 		{
 			global.wild_pokemon_counter = 0;
 		}
-		global.wild_pokemon_id = valid_wild_pokemon[global.wild_pokemon_counter];
+		global.wild_pokemon_id = global.valid_wild_pokemon[global.wild_pokemon_counter];
 		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_id);
 	}
 	
