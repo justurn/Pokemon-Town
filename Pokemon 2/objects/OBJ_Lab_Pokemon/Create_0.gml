@@ -11,7 +11,7 @@ egg_y = y;
 egg_height = OBJ_Lab_Egg.sprite_height
 
 // Sprite Scaling
-scale_factor = 3;
+scale_factor = 4;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 
