@@ -18,5 +18,4 @@ hb_y2 = hb_y1 + hb_height
 
 // Reset the wild pokemon outside...
 global.wild_pokemon_id = 0;
-global.wild_pokemon_counter += 1;
 global.wild_pokemon_x = -1;

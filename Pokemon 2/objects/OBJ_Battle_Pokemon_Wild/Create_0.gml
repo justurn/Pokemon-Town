@@ -19,17 +19,30 @@ hb_y1 = y - hb_height/2
 hb_x2 = hb_x1 + hb_width
 hb_y2 = hb_y1 + hb_height
 
-// Stats
-attack = global.Dex_Attack[pokedex_id];
-spattack = global.Dex_SPattack[pokedex_id];
-defence = global.Dex_Defence[pokedex_id];
-spdefence = global.Dex_SPdefence[pokedex_id];
-speedstat = global.Dex_Speed[pokedex_id];
-max_hp = global.Dex_Health[pokedex_id];
-crit = global.pokemon_start_crit;
-current_hp = max_hp
+// Assign base stats from the Pokémon's Pokedex ID
+var base_attack = global.Dex_Attack[pokedex_id];
+var base_spattack = global.Dex_SPattack[pokedex_id];
+var base_defence = global.Dex_Defence[pokedex_id];
+var base_spdefence = global.Dex_SPdefence[pokedex_id];
+var base_speed = global.Dex_Speed[pokedex_id];
+var base_hp = global.Dex_Health[pokedex_id];
+
+// Level
 global.wild_pokemon_level = global.pokemon_level - irandom(global.wild_pokemon_level_gap);
 level = global.wild_pokemon_level;
+
+// Calculate Stats
+attack = floor(((2 * base_attack * level) / 100) + 5);
+spattack = floor(((2 * base_spattack * level) / 100) + 5);
+defence = floor(((2 * base_defence * level) / 100) + 5);
+spdefence = floor(((2 * base_spdefence * level) / 100) + 5);
+speedstat = floor(((2 * base_speed * level) / 100) + 5);
+max_hp = floor(((2 * base_hp * level) / 100) + level + 10);
+
+// Other Stats
+crit = global.pokemon_start_crit;
+current_hp = max_hp
+
 
 
 

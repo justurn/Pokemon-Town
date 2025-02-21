@@ -10,14 +10,14 @@ bounce = 3;
 count = 0;
 countmax = 10;
 cycle = 0;
-follow_distance = 90;
+follow_distance = sprite_width + 50;
 
 // Flashing Variables
 flash_timer = 0;
 flash_state = false; // Tracks if the Pokémon is currently flashing
 
 // Sprite Scaling
-scale_factor = 1.5;
+scale_factor = 2;
 image_yscale = scale_factor;
 image_xscale = scale_factor;
 

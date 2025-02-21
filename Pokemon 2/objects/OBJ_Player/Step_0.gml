@@ -1,9 +1,22 @@
 // Step Event
 // Check for movement inputs (WASD + Arrow keys)
-
-// Right movement (Arrow key and 'D' key)
 var right = false;
+var left = false;
 
+// Gamepad joystick input (Left stick movement)
+var axis_x = gamepad_axis_value(0, gp_axislh); // Left Stick X-Axis
+var axis_min = 0.15;
+if (axis_x < -axis_min)
+{ // Negative value means pushing left
+    left = true;
+}
+if (axis_x > axis_min)
+{ // Adjust threshold to ignore small joystick drifts
+    right = true;
+}
+
+
+// Right movement
 if (keyboard_check(vk_right))
 {
 	right = true
@@ -28,8 +41,6 @@ if (right)
 }
 
 // Left movement (Arrow key and 'A' key)
-var left = false;
-
 if (keyboard_check(vk_left))
 {
 	left = true

@@ -16,7 +16,7 @@ switch (room)
         index = 3; // item ID for Gears
         old_iv = global.iv_defence;
         global.iv_defence += global.item_held[index] + 1;
-        global.pokemon_defence = base_defence + global.iv_defence;
+        SCR_Pokemon_Stats();
         stat_name = "Defence";
         stat_base = base_defence;
         stat_iv = global.iv_defence;
@@ -27,7 +27,7 @@ switch (room)
         index = 4; // item ID for Burgers
         old_iv = global.iv_health;
         global.iv_health += global.item_held[index] + 1;
-        global.pokemon_health_max = base_health + global.iv_health;
+        SCR_Pokemon_Stats();
         stat_name = "Health";
         stat_base = base_health;
         stat_iv = global.iv_health;
@@ -38,7 +38,7 @@ switch (room)
         index = 5; // item ID for Coffees
         old_iv = global.iv_speed;
         global.iv_speed += global.item_held[index] + 1;
-        global.pokemon_speed = base_speed + global.iv_speed;
+        SCR_Pokemon_Stats();
         stat_name = "Speed";
         stat_base = base_speed;
         stat_iv = global.iv_speed;
@@ -49,7 +49,7 @@ switch (room)
         index = 6; // item ID for Books
         old_iv = global.iv_SPdefence;
         global.iv_SPdefence += global.item_held[index] + 1;
-        global.pokemon_SPdefence = base_SPdefence + global.iv_SPdefence;
+        SCR_Pokemon_Stats();
         stat_name = "Special Defence";
         stat_base = base_SPdefence;
         stat_iv = global.iv_SPdefence;
@@ -60,7 +60,7 @@ switch (room)
         index = 7; // item ID for Batteries
         old_iv = global.iv_SPattack;
         global.iv_SPattack += global.item_held[index] + 1;
-        global.pokemon_SPattack = base_SPattack + global.iv_SPattack;
+        SCR_Pokemon_Stats();
         stat_name = "Special Attack";
         stat_base = base_SPattack;
         stat_iv = global.iv_SPattack;
@@ -71,7 +71,7 @@ switch (room)
         index = 8; // item ID for Punch Cards
         old_iv = global.iv_attack;
         global.iv_attack += global.item_held[index] + 1;
-        global.pokemon_attack = base_attack + global.iv_attack;
+        SCR_Pokemon_Stats();
         stat_name = "Attack";
         stat_base = base_attack;
         stat_iv = global.iv_attack;

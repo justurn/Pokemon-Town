@@ -19,7 +19,6 @@ function SCR_Buildings_Restore()
 		show_debug_message("Plot #" + string(global.plot_count) + " placed at: " + string(plot_x));
     }	
 	
-	SCR_Trees_Spawn();
 }
 
 	

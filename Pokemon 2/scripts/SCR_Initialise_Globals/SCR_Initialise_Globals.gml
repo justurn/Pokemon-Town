@@ -3,7 +3,7 @@ function SCR_Initialise_Globals()
 	randomize();
 	var i = 0;
 	
-	show_debug_log(true);
+	global.log = false;
 	
 	// Plots and Buildings
 	global.plot_count = 0;
@@ -15,7 +15,6 @@ function SCR_Initialise_Globals()
 	global.more_buildings = true;
 
 	// Player
-	global.player_x = 2500;
 	global.player_y = 440;
 	global.player_speed = 10;
 	
@@ -23,7 +22,6 @@ function SCR_Initialise_Globals()
 	global.pokemon_ID = 0;
 	global.pokemon_move_speed = 0.9 * global.player_speed
 	global.wild_pokemon_id = 0;
-	global.wild_pokemon_counter = 0;
 	global.wild_pokemon_x = -1;
 	global.pokemon_health_max = 100;
 	global.pokemon_health = global.pokemon_health_max;
@@ -152,17 +150,17 @@ function SCR_Initialise_Globals()
 	global.types[10] = "Ghost";
 	global.types[11] = "Ground";
 	global.types[12] = "Poison";
+	global.types[13] = "Ice";
 	// Commented out types (not in Gen 1 primary types)
-	//global.types[13] = "fairy";
-	//global.types[14] = "dark";
-	//global.types[15] = "ice";
+	//global.types[14] = "fairy";
+	//global.types[15] = "dark";
 	//global.types[16] = "steel";
 	//global.types[17] = "flying"; // Removed because Flying is not a primary type in Gen 1
 	
 	// Define a 2D array for type effectiveness
-	for (i = 0; i < 13; i++)
+	for (i = 0; i < 18; i++)
 	{
-		for (var k = 0; k < 13; k++)
+		for (var k = 0; k < 18; k++)
 		{
 			global.type_chart[i][k] = 1;
 		}
@@ -239,10 +237,10 @@ function SCR_Initialise_Globals()
 	global.type_colors[10] = global.c_ghost;
 	global.type_colors[11] = global.c_ground;
 	global.type_colors[12] = global.c_poison;
+	global.type_colors[13] = global.c_ice;
 	// Commented out colors (not in Gen 1 primary types)
-	//global.type_colors[13] = global.c_fairy;
-	//global.type_colors[14] = global.c_dark;
-	//global.type_colors[15] = global.c_ice;
+	//global.type_colors[14] = global.c_fairy;
+	//global.type_colors[15] = global.c_dark;
 	//global.type_colors[16] = global.c_steel;
 	//global.type_colors[17] = global.c_flying; // Removed because Flying is not a primary type in Gen 1
 	
@@ -313,11 +311,25 @@ function SCR_Initialise_Globals()
 	// Sushi shop?
 	// Florist?
 	// Expedition Camp? for adventures out of town...
-
 	
-	for (i = 0; i < array_length(global.building_sprites); i++)
+	
+	var building_limit = array_length(global.building_name);
+	global.plot_width = 400;
+	global.town_size = building_limit * global.plot_width
+	global.player_x = global.town_size / 2;
+	var segment_offset = global.plot_width / 2
+    global.plot_segments = array_create(building_limit);
+   
+    
+	// set false entry and build permissives for all buildings and store the x positions of each plot
+	for (i = 0; i < building_limit; i++)
 	{
 		global.build_allowed[i] = false;
 		global.entry_allowed[i] = false;
-	}	
+		global.plot_segments[i] = (i * global.plot_width) + segment_offset;
+	}
+	
+	// Shuffle the plot segments array to get a random order
+	SCR_Shuffle_Array(global.plot_segments);   
+	show_debug_message("Plot Segments: " + string(global.plot_segments));
 }

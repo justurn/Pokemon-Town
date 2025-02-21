@@ -48,13 +48,9 @@ if (evolution_complete)
 	var base_SPdefence = global.Dex_SPdefence[pokedex_id];
 	var base_defence = global.Dex_Defence[pokedex_id];
 	
-	global.pokemon_health_max = global.iv_health + base_health;
+	SCR_Pokemon_Stats();
+	
 	global.pokemon_health = global.pokemon_health_max;
-	global.pokemon_attack = global.iv_attack + base_attack;
-	global.pokemon_SPattack = global.iv_SPattack + base_SPattack;
-	global.pokemon_defence = global.iv_defence + base_defence;
-	global.pokemon_SPdefence = global.iv_SPdefence + base_SPdefence;
-	global.pokemon_speed = global.iv_speed + base_speed;
 	
     room_goto(RM_Town);   // Return to previous room
 }

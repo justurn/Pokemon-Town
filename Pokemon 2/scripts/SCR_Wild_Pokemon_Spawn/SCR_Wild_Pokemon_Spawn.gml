@@ -36,7 +36,7 @@ function SCR_Wild_Pokemon_Spawn(pokemon_id)
 		pokemon_x = global.wild_pokemon_x
 	}
 	
-	// Create the item instance
+	// Create the pokemon instance
 	var pokemon_instance = instance_create_layer(pokemon_x, pokemon_y, "Instances", OBJ_Town_Pokemon_Wild);
 
 	show_debug_message("Wild " + string(pokemon_name) + " Spawned at Location: " + string(pokemon_x))

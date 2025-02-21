@@ -6,7 +6,21 @@ function SCR_Hatching_Pokemon()
 		show_debug_message("Selected Type is: " + string(selected_type))
         var matching_pokemon = []; // Array to hold Pokémon matching the selected type
 		var matching_pokemon_names = [];
+		var matching_pokemon_weights = [];
 		var name_string = "";
+		var weight = 0;
+		var bst = 0;
+		
+		// Calculate Town Power
+		var town_power = global.iv_health 
+		               + global.iv_attack 
+		               + global.iv_SPattack 
+		               + global.iv_defence 
+		               + global.iv_SPdefence 
+		               + global.iv_speed 
+		               + global.iv_crit 
+		               + global.building_count * 5;
+
 
         // Iterate through the Dex to find Pokémon with the matching type
         for (var i = 1; i < array_length(global.Dex_Primary_Types); i++) 
@@ -16,6 +30,20 @@ function SCR_Hatching_Pokemon()
                 array_push(matching_pokemon, i); // Add Pokémon ID to the list
 				name_string = global.Dex_Names[i];
 				array_push(matching_pokemon_names, name_string); // Add Pokémon ID to the list
+				
+				// **Weight Calculation**
+                bst = global.Dex_Attack[i]
+					+ global.Dex_SPattack[i]
+					+ global.Dex_Defence[i] 
+					+ global.Dex_SPdefence[i]
+					+ global.Dex_Speed[i]
+					+ global.Dex_Health[i];
+
+		        // **Parabolic Weighting Function**
+		        var bst_diff = (bst - town_power) / 20;
+		        var weight = max(1, round(700 / (1 + (power(bst_diff, 2))))); // Penalizes extremes
+
+                array_push(matching_pokemon_weights, weight);
             }
         }
 		
@@ -24,14 +52,33 @@ function SCR_Hatching_Pokemon()
         // Select a random Pokémon from the matching list
         if (array_length(matching_pokemon) > 0)
         {
-            var random_index = irandom(array_length(matching_pokemon) - 1);
-            pokedex_id = matching_pokemon[random_index];
+			var total_weight = 0;
+		    for (var i = 0; i < array_length(matching_pokemon_weights); i++) 
+			{
+		        total_weight += matching_pokemon_weights[i];
+		    }
+
+		    var random_pick = irandom(total_weight - 1);
+		    var cumulative_weight = 0;
+
+		    for (var i = 0; i < array_length(matching_pokemon); i++) 
+			{
+				
+		        cumulative_weight += matching_pokemon_weights[i];
+		        if (random_pick < cumulative_weight) 
+				{
+					var chance_hatch = SCR_Round_N(matching_pokemon_weights[i] / total_weight * 100,2)
+		            pokedex_id = matching_pokemon[i]; // Return the selected Pokémon ID
+					break;
+		        }
+		    }
 			            
             // Lookup sprite by Pokémon ID
             pokemon_name = global.Dex_Names[pokedex_id]; // Ensure this array contains Pokémon names by ID
             sprite_index = global.Dex_Sprites[pokedex_id]; // Sprite names should match "SPR_<PokemonName>"
        
 			show_debug_message("Hatched Pokemon is: "+ pokemon_name)
+			show_debug_message("Chance of Hatching: " + string(chance_hatch) + "%")
 	   }
         else
         {
