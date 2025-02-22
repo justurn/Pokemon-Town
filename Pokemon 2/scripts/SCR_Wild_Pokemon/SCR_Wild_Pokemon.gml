@@ -59,11 +59,9 @@ function SCR_Wild_Pokemon()
                 + global.Dex_Speed[poke_id] 
                 + global.Dex_Health[poke_id];
 	
-		 // Compare against strongest tamed Pokémon
-	    var bst_diff = (tamed_bst - bst);
-		
-		// Parabolic spawn modifier: Penalizes too strong or too weak wild Pokémon
-		var spawn_weight = max(1, round(30 / (1 + power(bst_diff/20, 2)))); // Quadratic penalty
+		var bst_diff = bst - tamed_bst; 
+		var scale = max(50, tamed_bst * 0.2); 
+		var spawn_weight = max(1, round(50 / (1 + power(bst_diff / scale, 2))));
 		
 		global.wild_spawn_weights[j] = spawn_weight;
 		global.total_spawn_weight += spawn_weight;

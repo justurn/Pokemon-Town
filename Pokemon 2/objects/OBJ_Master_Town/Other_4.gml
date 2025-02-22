@@ -5,7 +5,6 @@ if room == RM_Town
 	instance_create_layer(0,0,"Instances",OBJ_Player)
     if (need_plot_segments)
     {
-		
 		SCR_Plots_Spawn();
         need_plot_segments = false;
     }

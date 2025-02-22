@@ -39,9 +39,11 @@ function SCR_Hatching_Pokemon()
 					+ global.Dex_Speed[i]
 					+ global.Dex_Health[i];
 
-		        // **Parabolic Weighting Function**
-		        var bst_diff = (bst - town_power) / 20;
-		        var weight = max(1, round(700 / (1 + (power(bst_diff, 2))))); // Penalizes extremes
+
+				var bst_diff = bst - (town_power + 200); 
+				var scale_a = 754
+				var scale_b = 21
+				var weight = max(1, round(scale_a - scale_b * power(ln(bst_diff),2)));
 
                 array_push(matching_pokemon_weights, weight);
             }

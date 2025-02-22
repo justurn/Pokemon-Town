@@ -6,7 +6,7 @@ function SCR_Initialise_Globals()
 	global.log = false;
 	
 	// Plots and Buildings
-	global.plot_count = 0;
+	global.plot_count = 1;
 	global.plot_y = 275; // Fixed Y position for plots
 	global.plots_x = [];
 	global.buildings_x = [];
@@ -34,9 +34,14 @@ function SCR_Initialise_Globals()
 	global.iv_SPdefence = 0;
 	global.iv_speed = 0;
 	global.iv_crit = 0;
+	global.iv_xp = 0;
 	
 	global.pokemon_start_crit = 5;
 	global.pokemon_crit = global.pokemon_start_crit;
+	
+	global.pokemon_start_xp_rate = 1;
+	global.pokemon_xp_rate = global.pokemon_start_xp_rate;
+	global.basic_xp_award = 25;
 	
 	global.pokemon_experience = 0;
 	global.pokemon_start_level = 5;
@@ -99,6 +104,10 @@ function SCR_Initialise_Globals()
 	i = 9; // Coins item ID
 	global.item_name[i] = "Coin";
 	global.item_sprite[i] = SPR_Coin;
+
+	i = 10; // Noodles item ID
+	global.item_name[i] = "Noodles";
+	global.item_sprite[i] = SPR_Noodles;
 
 	// Set all item found counts to 0
 	for (i = 0; i < array_length(global.item_name); i++)
@@ -307,6 +316,13 @@ function SCR_Initialise_Globals()
 	global.building_cost[i] = 2;	
 	global.building_room[i] = RM_Arcade;
 	
+	// Noodle Shop
+	i = 10;
+	global.building_name[i] = "Noodle Shop";
+	global.building_sprites[i] = SPR_Noodle_Shop;
+	global.building_cost[i] = 2;	
+	global.building_room[i] = RM_Noodle_Shop;
+	
 	// Potion Shop for combat heals?
 	// Sushi shop?
 	// Florist?
@@ -314,7 +330,7 @@ function SCR_Initialise_Globals()
 	
 	
 	var building_limit = array_length(global.building_name);
-	global.plot_width = 400;
+	global.plot_width = 600;
 	global.town_size = building_limit * global.plot_width
 	global.player_x = global.town_size / 2;
 	var segment_offset = global.plot_width / 2
@@ -322,7 +338,7 @@ function SCR_Initialise_Globals()
    
     
 	// set false entry and build permissives for all buildings and store the x positions of each plot
-	for (i = 0; i < building_limit; i++)
+	for (i = 1; i < building_limit; i++)
 	{
 		global.build_allowed[i] = false;
 		global.entry_allowed[i] = false;

@@ -1,0 +1,48 @@
+WILD ENCOUNTER SCALING
+
+WEIGHT = 50 / (1 + (DIFF / Scale)^2 )
+
+EXAMPLE CATERPIE - BST 195
+
+SCALE = MAX(50,BST * 0.2)
+
+SCALE = 50
+
+WILD POKEMON
+Magikarp BST 200 -> DIFF = 5 -> WEIGHT = 49
+Horsea BSDT 295 -> DIFF = 100 -> WEIGHT = 10
+Butterfree BST 395 -> DIFF = 200 -> WEIGHT = 3
+Charizard BST 534 ->DIFF = 339 -> WEIGHT = 1
+Articuno BST 600 ->DIFF = 405 -> WEIGHT = 1
+
+**************************************************
+
+EXAMPLE HORSEA - BST 295
+
+SCALE = MAX(50,BST * 0.2)
+
+SCALE = 59
+
+WILD POKEMON
+Magikarp BST 200 -> DIFF = -95 -> WEIGHT = 14
+Dratini BST 300 -> DIFF = 5 -> WEIGHT = 49
+Butterfree BST 395 -> DIFF = 100 -> WEIGHT = 13
+Charizard BST 534 ->DIFF = 239 -> WEIGHT = 3
+Articuno BST 600 ->DIFF = 305 -> WEIGHT = 2
+
+***************************************************
+
+EXAMPLE BUTTERFREE - BST 395
+
+SCALE = MAX(50,BST * 0.2)
+
+SCALE = 79
+
+WILD POKEMON
+Magikarp BST 200 -> DIFF = -195 -> WEIGHT = 7
+Dratini BST 300 -> DIFF = 105 -> WEIGHT = 18
+Kadabra BST 400 -> DIFF = 5 -> WEIGHT = 49
+Charizard BST 534 ->DIFF = 139 -> WEIGHT = 12
+Articuno BST 600 ->DIFF = 205 -> WEIGHT = 6
+
+

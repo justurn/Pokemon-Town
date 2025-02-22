@@ -35,6 +35,9 @@ switch (room)
     case RM_Gym:
         sprite_index = SPR_Muscles;
         break;
+	case RM_Noodle_Shop:
+        sprite_index = SPR_XP;
+        break;
 }
 
 

@@ -7,6 +7,7 @@ var base_SPattack = global.Dex_SPattack[ID];
 var base_SPdefence = global.Dex_SPdefence[ID];
 var base_defence = global.Dex_Defence[ID];
 var base_crit = global.pokemon_start_crit;
+var base_xp = global.pokemon_start_xp_rate;
 
 var index, old_iv, stat_name, stat_base, stat_iv, stat_final;
 
@@ -87,6 +88,17 @@ switch (room)
         stat_base = base_crit;
         stat_iv = global.iv_crit;
         stat_final = global.pokemon_crit;
+        break;
+		
+	case RM_Noodle_Shop:
+        index = 10; // item ID for Coins
+        old_iv = global.iv_xp;
+        global.iv_xp += 0.1 * (global.item_held[index] + 1);
+        global.pokemon_xp_rate = base_xp + global.iv_xp;
+        stat_name = "XP Rate";
+        stat_base = base_xp;
+        stat_iv = global.iv_xp;
+        stat_final = global.pokemon_xp_rate;
         break;
 
     default:

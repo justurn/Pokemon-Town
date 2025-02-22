@@ -46,6 +46,9 @@ function SCR_Sequencing()
 	// Arcade
 	i = 9
 	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Noodle Shop
+	i = 10
+	global.building_entry_condition[i] = global.item_held[i] > 0
 	
 	// Entry Permission Checks
     for (i = 1; i < max_buildings; i++)
@@ -61,7 +64,7 @@ function SCR_Sequencing()
 	// Summon your Pokemon if you have one.
 	if (global.pokemon_ID != 0 && !instance_exists(OBJ_Town_Pokemon))
 	{
-		instance_create_layer(OBJ_Player.x+50,OBJ_Player.y,"Instances", OBJ_Town_Pokemon);
+		instance_create_layer(OBJ_Player.x + 100,OBJ_Player.y,"Instances", OBJ_Town_Pokemon);
 	}
 	
 	// Wild Pokemon
