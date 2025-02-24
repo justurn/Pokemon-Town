@@ -5,8 +5,10 @@ function SCR_Initialise_Globals()
 	
 	global.log = false;
 	
+	
+	
 	// Plots and Buildings
-	global.plot_count = 1;
+	global.plot_count = 0;
 	global.plot_y = 275; // Fixed Y position for plots
 	global.plots_x = [];
 	global.buildings_x = [];
@@ -26,7 +28,6 @@ function SCR_Initialise_Globals()
 	global.pokemon_health_max = 100;
 	global.pokemon_health = global.pokemon_health_max;
 
-	
 	global.iv_health = 0;
 	global.iv_attack = 0;
 	global.iv_SPattack = 0;
@@ -43,23 +44,26 @@ function SCR_Initialise_Globals()
 	global.pokemon_xp_rate = global.pokemon_start_xp_rate;
 	global.basic_xp_award = 25;
 	
-	global.pokemon_experience = 0;
 	global.pokemon_start_level = 5;
 	global.pokemon_level = global.pokemon_start_level
+	global.pokemon_experience = power(global.pokemon_level - 1,3);
 	global.wild_pokemon_level_gap = global.pokemon_start_level - 1;
 	global.wild_pokemon_level = global.pokemon_level - global.wild_pokemon_level_gap;
 
 	// Tips
 	global.tip_string ="";
 	
+	// items
+	global.item_counter = 0;
+	
 	
 	i = 0; //Eggs item ID
 	global.item_name[i] = "Eggs";
 	global.item_sprite[i] = SPR_Egg;
-	global.item_hidden[i] = 3;	
-	global.egg_types = [0,0,0];
+	global.item_hidden[i] = 2;	
+	global.egg_types_found = [];
+	global.egg_counter = 0
 	global.chosen_egg_type = -1;
-	
 	
 	i = 1; // Crates item ID
 	global.item_name[i] = "Crate";
@@ -329,23 +333,36 @@ function SCR_Initialise_Globals()
 	// Expedition Camp? for adventures out of town...
 	
 	
-	var building_limit = array_length(global.building_name);
+	var building_limit = array_length(global.building_name) - 1;
 	global.plot_width = 600;
-	global.town_size = building_limit * global.plot_width
+	global.town_size = building_limit * global.plot_width 
 	global.player_x = global.town_size / 2;
 	var segment_offset = global.plot_width / 2
-    global.plot_segments = array_create(building_limit);
-   
     
 	// set false entry and build permissives for all buildings and store the x positions of each plot
-	for (i = 1; i < building_limit; i++)
+	for (i = 1; i <= building_limit; i++)
 	{
 		global.build_allowed[i] = false;
 		global.entry_allowed[i] = false;
-		global.plot_segments[i] = (i * global.plot_width) + segment_offset;
+		global.plot_segments[i-1] = (i-1) * global.plot_width + segment_offset;
 	}
 	
 	// Shuffle the plot segments array to get a random order
 	SCR_Shuffle_Array(global.plot_segments);   
 	show_debug_message("Plot Segments: " + string(global.plot_segments));
+	
+	// Create an array of indices based on the length of global.types
+	global.shuffled_types = array_create(array_length(global.types));
+
+	// Populate the array with indices (0, 1, 2, ...)
+	for (var e = 0; e < array_length(global.types); e++)
+	{
+		global.shuffled_types[e] = e;
+	}
+		
+	// Shuffle the indices
+	SCR_Shuffle_Array(global.shuffled_types);
+
+	show_debug_message("Shuffled Egg Types: " + string(global.shuffled_types));
 }
+

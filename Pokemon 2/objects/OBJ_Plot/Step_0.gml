@@ -55,6 +55,9 @@ if (OBJ_Player.x  >= plot_left && OBJ_Player.x  <= plot_right)
 		
 			// Increment index for next plot
 	        global.building_count += 1;
+			
+			// Spawn an egg
+			SCR_Items_Spawn(0,1);
 
 	        // Destroy the old plot
 	        instance_destroy(self);

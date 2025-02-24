@@ -1,48 +1,66 @@
 WILD ENCOUNTER SCALING
 
-WEIGHT = 50 / (1 + (DIFF / Scale)^2 )
+DIFF = BST - TAMED BST
 
-EXAMPLE CATERPIE - BST 195
+WEIGHT = 100 / (1 + (DIFF / Scale)^2 )
 
-SCALE = MAX(50,BST * 0.2)
+EXAMPLE TAMED CATERPIE - BST 195
 
-SCALE = 50
+SCALE = MAX(30,BST * 0.1)
+
+SCALE = 30
 
 WILD POKEMON
-Magikarp BST 200 -> DIFF = 5 -> WEIGHT = 49
-Horsea BSDT 295 -> DIFF = 100 -> WEIGHT = 10
-Butterfree BST 395 -> DIFF = 200 -> WEIGHT = 3
+Magikarp BST 200 -> DIFF = 5 -> WEIGHT = 97
+Horsea BSDT 295 -> DIFF = 100 -> WEIGHT = 8
+Butterfree BST 395 -> DIFF = 200 -> WEIGHT = 2
 Charizard BST 534 ->DIFF = 339 -> WEIGHT = 1
 Articuno BST 600 ->DIFF = 405 -> WEIGHT = 1
 
 **************************************************
 
-EXAMPLE HORSEA - BST 295
+EXAMPLE TAMED HORSEA - BST 295
 
-SCALE = MAX(50,BST * 0.2)
+SCALE = MAX(30,BST * 0.1)
 
-SCALE = 59
+SCALE = 30
 
 WILD POKEMON
-Magikarp BST 200 -> DIFF = -95 -> WEIGHT = 14
-Dratini BST 300 -> DIFF = 5 -> WEIGHT = 49
-Butterfree BST 395 -> DIFF = 100 -> WEIGHT = 13
-Charizard BST 534 ->DIFF = 239 -> WEIGHT = 3
+Magikarp BST 200 -> DIFF = -95 -> WEIGHT = 9
+Dratini BST 300 -> DIFF = 5 -> WEIGHT = 97
+Butterfree BST 395 -> DIFF = 100 -> WEIGHT = 8
+Charizard BST 534 ->DIFF = 239 -> WEIGHT = 2
 Articuno BST 600 ->DIFF = 305 -> WEIGHT = 2
 
 ***************************************************
 
-EXAMPLE BUTTERFREE - BST 395
+EXAMPLE TAMED BUTTERFREE - BST 395
 
-SCALE = MAX(50,BST * 0.2)
+SCALE = MAX(30,BST * 0.1)
 
-SCALE = 79
+SCALE = 39.5
 
 WILD POKEMON
-Magikarp BST 200 -> DIFF = -195 -> WEIGHT = 7
-Dratini BST 300 -> DIFF = 105 -> WEIGHT = 18
-Kadabra BST 400 -> DIFF = 5 -> WEIGHT = 49
-Charizard BST 534 ->DIFF = 139 -> WEIGHT = 12
-Articuno BST 600 ->DIFF = 205 -> WEIGHT = 6
+Magikarp BST 200 -> DIFF = -195 -> WEIGHT = 4
+Dratini BST 300 -> DIFF = 105 -> WEIGHT = 12
+Kadabra BST 400 -> DIFF = 5 -> WEIGHT = 98
+Charizard BST 534 ->DIFF = 139 -> WEIGHT = 7
+Articuno BST 600 ->DIFF = 205 -> WEIGHT = 4
+
+***************************************************
+
+EXAMPLE TAMED KABUTOPS - BST 495
+
+SCALE = MAX(30,BST * 0.1)
+
+SCALE = 49.5
+
+WILD POKEMON
+Magikarp BST 200 -> DIFF = -295 -> WEIGHT = 3
+Dratini BST 300 -> DIFF = 205 -> WEIGHT = 6
+Kadabra BST 400 -> DIFF = 105 -> WEIGHT = 18
+Charizard BST 534 -> DIFF = 39 -> WEIGHT = 62
+Articuno BST 600 ->DIFF = 105 -> WEIGHT = 18
+
 
 

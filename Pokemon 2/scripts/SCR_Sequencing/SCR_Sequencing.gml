@@ -112,7 +112,7 @@ function SCR_Sequencing()
 		global.item_held[i] = 0;
 		SCR_Items_Spawn(i, global.item_hidden[i]);
 	}
-	if (global.item_held[i] != global.item_hidden[i] && global.pokemon_ID == 0)
+	if (global.item_held[i] < global.item_hidden[i] && global.pokemon_ID == 0)
 	{
 		global.tip_string = "Eggs Left: " + string(global.item_hidden[i] - global.item_held[i]);
 		return;

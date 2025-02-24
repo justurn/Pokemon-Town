@@ -19,8 +19,11 @@ if no_treasure
 	{
 		var random_item = irandom(array_length(valid_items) - 1) + 1;
 		var item_instance = instance_create_layer(item_spacing * j + x_adj, y - 150, "Instances", OBJ_Item)	
-		item_instance.item_id = random_item
-		item_instance.sprite_index = global.item_sprite[random_item];
+		global.item_info_id[global.item_counter] = random_item;
+		global.item_info_found[global.item_counter] = true;
+		item_instance.item_counter = global.item_counter;
+		
+		global.item_counter ++
 		global.item_held[random_item] += 1;
 	}
 

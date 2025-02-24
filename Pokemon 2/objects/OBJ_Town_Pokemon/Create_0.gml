@@ -10,7 +10,7 @@ bounce = 3;
 count = 0;
 countmax = 10;
 cycle = 0;
-follow_distance = sprite_width + 50;
+follow_distance = sprite_width + 80;
 
 // Flashing Variables
 flash_timer = 0;
@@ -22,27 +22,3 @@ image_yscale = scale_factor;
 image_xscale = scale_factor;
 
 show_debug_message("Tamed " + string(pokemon_name) + " Spawned")
-
-if global.pokemon_experience >= 100
-{
-
-	global.pokemon_level += 1;
-	global.pokemon_experience -= 100;
-	show_debug_message(string(pokemon_name) + " has reached level: " + string(global.pokemon_level))
-	
-	// Generate a shuffled array of valid wild pokemon to use based onb new pokemon level
-	SCR_Wild_Pokemon();
-	
-	// Evolution check
-	var evolve_level = global.Dex_Evolve_Level[pokedex_id]
-	if (evolve_level != -1 && global.pokemon_level >= evolve_level)
-	{
-		show_debug_message(string(pokemon_name) + " is evolving")
-		room_goto(RM_Evolution)
-	}
-	else
-	{
-		instance_create_layer(x,y - 100,"Instances", OBJ_Level_Up);
-	}
-
-}

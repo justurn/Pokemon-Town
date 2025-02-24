@@ -3,7 +3,7 @@ function SCR_Items_Spawn(item_id,quantity)
 	
 	// Number of items to spawn
 	var i = item_id
-	var item_count = quantity;
+	var item_count = quantity
 	var item_y = global.player_y;
 	var item_name = global.item_name[i];
 	
@@ -16,23 +16,6 @@ function SCR_Items_Spawn(item_id,quantity)
 		
 	var item_x
 	
-	if (item_id = 0) // special case for eggs.
-	{
-		// Create an array of indices based on the length of global.types
-		shuffled_types = array_create(array_length(global.types));
-
-		// Populate the array with indices (0, 1, 2, ...)
-		for (var e = 0; e < array_length(global.types); e++)
-		{
-		    shuffled_types[e] = e;
-		}
-		
-		// Shuffle the indices
-		SCR_Shuffle_Array(shuffled_types);
-
-		show_debug_message("Shuffled Egg Types: " + string(shuffled_types));
-	}
-
 	// Spawn items
 	for (var j = 0; j < item_count; j++) 
 	{
@@ -68,15 +51,20 @@ function SCR_Items_Spawn(item_id,quantity)
 
 		// Create the item instance
 		var item_instance = instance_create_layer(item_x, item_y, "Instances", OBJ_Item);
-		item_instance.item_id = i;
-		item_instance.sprite_index = global.item_sprite[i];
+		item_instance.item_counter = global.item_counter;
 		
-		if (item_id = 0) // special case for eggs.
+		global.item_info_positionx[global.item_counter] = item_x
+		global.item_info_id[global.item_counter] = i;
+		global.item_info_found[global.item_counter] = false;
+
+		if (item_id == 0) // special case for eggs.
 		{ 
-			// Assign a unique egg type from the shuffled array
-            item_instance.type_id = shuffled_types[j];
+			global.item_info_egg_type[global.item_counter] = global.shuffled_types[global.egg_counter]
+			global.egg_counter ++;
 		}
-				
+		
+		global.item_counter ++;
+		
 		// Store the position of the new item
 		array_push(item_positions, item_x);
 	}

@@ -41,13 +41,6 @@ if (evolution_complete)
 {
     global.pokemon_ID = pokedex_id;  // Update Pokémon ID
 	
-	var base_health = global.Dex_Health[pokedex_id];
-	var base_speed = global.Dex_Speed[pokedex_id];
-	var base_attack = global.Dex_Attack[pokedex_id];
-	var base_SPattack = global.Dex_SPattack[pokedex_id];
-	var base_SPdefence = global.Dex_SPdefence[pokedex_id];
-	var base_defence = global.Dex_Defence[pokedex_id];
-	
 	SCR_Pokemon_Stats();
 	
 	global.pokemon_health = global.pokemon_health_max;

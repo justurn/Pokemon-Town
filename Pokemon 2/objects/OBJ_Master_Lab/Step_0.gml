@@ -18,7 +18,7 @@ if (right)
 {
     // Move to the next egg, loop around to 0 if the last egg is selected
     selected_egg += 1;
-	if selected_egg == global.item_hidden[0]
+	if selected_egg == egg_count
 	{
 		selected_egg = 0;
 	}
@@ -45,7 +45,7 @@ if (left)
     selected_egg -= 1;
 	if selected_egg == -1
 	{
-		selected_egg = global.item_hidden[0] - 1;
+		selected_egg = egg_count - 1;
 	}
 }
 
@@ -63,7 +63,7 @@ if (gamepad_button_check_pressed(0, 0))
 
 if (enter)
 {
-	global.chosen_egg_type = global.egg_types[selected_egg];
+	global.chosen_egg_type = global.egg_types_found[selected_egg];
 	global.item_held[0] = -1; // Reset the held status of eggs.
 	room_goto(RM_Hatching)
 }

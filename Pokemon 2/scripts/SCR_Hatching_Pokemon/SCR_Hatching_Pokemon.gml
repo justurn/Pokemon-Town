@@ -21,7 +21,7 @@ function SCR_Hatching_Pokemon()
 		               + global.iv_crit 
 		               + global.building_count * 5;
 
-
+		show_debug_message("Valid Hatching Pokemon:");
         // Iterate through the Dex to find Pokémon with the matching type
         for (var i = 1; i < array_length(global.Dex_Primary_Types); i++) 
         {
@@ -40,16 +40,17 @@ function SCR_Hatching_Pokemon()
 					+ global.Dex_Health[i];
 
 
-				var bst_diff = bst - (town_power + 200); 
+				var bst_diff = abs(bst - (town_power + 200)); 
 				var scale_a = 754
 				var scale_b = 21
 				var weight = max(1, round(scale_a - scale_b * power(ln(bst_diff),2)));
 
                 array_push(matching_pokemon_weights, weight);
+
+				show_debug_message(name_string + " Hatch Weigthing: " + string(weight));
             }
         }
 		
-		show_debug_message("Valid Hatching Pokemon: " + string(matching_pokemon_names));
 
         // Select a random Pokémon from the matching list
         if (array_length(matching_pokemon) > 0)

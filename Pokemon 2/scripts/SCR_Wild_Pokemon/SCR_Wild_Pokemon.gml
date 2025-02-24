@@ -25,7 +25,7 @@ function SCR_Wild_Pokemon()
 			}
 		}	
 	}
-	SCR_Shuffle_Array(global.valid_wild_pokemon);
+
 	global.wild_pokemon_level = global.pokemon_level - global.wild_pokemon_level_gap;
 	global.total_spawn_weight = 0;
 	global.wild_spawn_weights = [];
@@ -46,6 +46,8 @@ function SCR_Wild_Pokemon()
 		+ global.iv_defence
 		+ global.iv_health
 		+ global.iv_speed;
+		
+	show_debug_message("Wild Encounter Weightings")
 	
 	for (var j = 0; j < array_length(global.valid_wild_pokemon); j++)
     {
@@ -59,9 +61,12 @@ function SCR_Wild_Pokemon()
                 + global.Dex_Speed[poke_id] 
                 + global.Dex_Health[poke_id];
 	
-		var bst_diff = bst - tamed_bst; 
-		var scale = max(50, tamed_bst * 0.2); 
-		var spawn_weight = max(1, round(50 / (1 + power(bst_diff / scale, 2))));
+		var bst_diff = tamed_bst - bst; 
+		var scale = max(30, tamed_bst * 0.1); 
+		var spawn_weight = max(1, round(100 / (1 + power(bst_diff / scale, 2))));
+		var poke_name = global.Dex_Names[poke_id]
+		
+		//show_debug_message(poke_name + " Encounter Weighting is: " + string(spawn_weight))
 		
 		global.wild_spawn_weights[j] = spawn_weight;
 		global.total_spawn_weight += spawn_weight;
