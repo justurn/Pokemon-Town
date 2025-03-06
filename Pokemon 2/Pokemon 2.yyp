@@ -95,6 +95,7 @@
     {"id":{"name":"RM_Evolution","path":"rooms/RM_Evolution/RM_Evolution.yy",},},
     {"id":{"name":"SPR_Arcanine","path":"sprites/SPR_Arcanine/SPR_Arcanine.yy",},},
     {"id":{"name":"SPR_Player_Left","path":"sprites/SPR_Player_Left/SPR_Player_Left.yy",},},
+    {"id":{"name":"OBJ_Clouds","path":"objects/OBJ_Clouds/OBJ_Clouds.yy",},},
     {"id":{"name":"SPR_Victreebel","path":"sprites/SPR_Victreebel/SPR_Victreebel.yy",},},
     {"id":{"name":"SPR_Dodrio","path":"sprites/SPR_Dodrio/SPR_Dodrio.yy",},},
     {"id":{"name":"SPR_Aerodactyl","path":"sprites/SPR_Aerodactyl/SPR_Aerodactyl.yy",},},

@@ -1,11 +1,22 @@
 var ID = global.pokemon_ID;
 var name = global.Dex_Names[ID];
+var level = global.pokemon_level
+
 var base_health = global.Dex_Health[ID];
 var base_speed = global.Dex_Speed[ID];
 var base_attack = global.Dex_Attack[ID];
 var base_SPattack = global.Dex_SPattack[ID];
 var base_SPdefence = global.Dex_SPdefence[ID];
 var base_defence = global.Dex_Defence[ID];
+	
+
+base_health = floor(((2 * base_health * level) / 100) + level + 10);
+base_speed = floor(((2 * base_speed * level) / 100) + 5);
+base_attack = floor(((2 * base_attack * level) / 100) + 5);
+base_SPattack = floor(((2 * base_SPattack * level) / 100) + 5);
+base_SPdefence = floor(((2 * base_SPdefence * level) / 100) + 5);
+base_defence = floor(((2 * base_defence * level) / 100) + 5);
+
 var base_crit = global.pokemon_start_crit;
 var base_xp = global.pokemon_start_xp_rate;
 
@@ -106,7 +117,8 @@ switch (room)
         break;
 }
 
-if (index != -1) {
+if (index != -1) 
+{
     global.item_held[index] = 0;
     show_debug_message(stat_name + " IV Increased from: " + string(old_iv) + " to: " + string(stat_iv));
     show_debug_message(string(name) + " " + stat_name + " is: " + string(stat_final) + " Base " + stat_name + " is: " + string(stat_base));

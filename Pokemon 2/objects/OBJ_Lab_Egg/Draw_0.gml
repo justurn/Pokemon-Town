@@ -2,6 +2,10 @@ if (global.chosen_egg_type != -1)
 {
 	type_id = global.chosen_egg_type
 }
+else
+{
+	type_id = global.egg_types_found[global.selected_egg];	
+}
 
 
 if (room = RM_Hatching)

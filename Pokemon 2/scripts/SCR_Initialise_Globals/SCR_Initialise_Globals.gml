@@ -60,7 +60,7 @@ function SCR_Initialise_Globals()
 	i = 0; //Eggs item ID
 	global.item_name[i] = "Eggs";
 	global.item_sprite[i] = SPR_Egg;
-	global.item_hidden[i] = 2;	
+	global.item_hidden[i] = 1;	
 	global.egg_types_found = [];
 	global.egg_counter = 0
 	global.chosen_egg_type = -1;

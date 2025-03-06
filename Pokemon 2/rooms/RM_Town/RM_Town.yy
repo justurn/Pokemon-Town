@@ -10,6 +10,7 @@
     {"name":"inst_72E526A7","path":"rooms/RM_Town/RM_Town.yy",},
     {"name":"inst_C33F2C5","path":"rooms/RM_Town/RM_Town.yy",},
     {"name":"inst_3BC946F9","path":"rooms/RM_Town/RM_Town.yy",},
+    {"name":"inst_6A541BC8","path":"rooms/RM_Town/RM_Town.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -30,8 +31,11 @@
         {"name":"g_ChromaSpreadAmount","type":0,"value":"0",},
         {"name":"g_CamOffsetScale","type":0,"value":"0",},
         {"name":"g_DistortTexture","type":2,"value":"_filter_heathaze_noise_sprite",},
-      ],"spriteId":{"name":"BG_Sky_Trans","path":"sprites/BG_Sky_Trans/BG_Sky_Trans.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":-300,},
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Sun","depth":300,"effectEnabled":true,"effectType":"_filter_heathaze","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+      ],"spriteId":{"name":"BG_Sky_Trans","path":"sprites/BG_Sky_Trans/BG_Sky_Trans.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":false,"vspeed":0.0,"vtiled":false,"x":0,"y":-300,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Cloud","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6A541BC8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"OBJ_Clouds","path":"objects/OBJ_Clouds/OBJ_Clouds.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":-288.0,},
+      ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Sun","depth":400,"effectEnabled":true,"effectType":"_filter_heathaze","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_C33F2C5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"OBJ_Sun","path":"objects/OBJ_Sun/OBJ_Sun.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":96.0,},
       ],"layers":[],"properties":[
         {"name":"g_Distort1Speed","type":0,"value":"0.012",},
@@ -46,7 +50,7 @@
         {"name":"g_CamOffsetScale","type":0,"value":"0.5",},
         {"name":"g_DistortTexture","type":2,"value":"_filter_heathaze_noise_sprite",},
       ],"userdefinedDepth":false,"visible":true,},
-    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Sky_Static","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":400,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"BG_Sky_Short","path":"sprites/BG_Sky_Short/BG_Sky_Short.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":-300,},
+    {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Sky_Static","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":500,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"BG_Sky_Short","path":"sprites/BG_Sky_Short/BG_Sky_Short.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":-300,},
   ],
   "parent": {
     "name": "Rooms",

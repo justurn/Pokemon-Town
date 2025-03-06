@@ -7,7 +7,7 @@ if just_hatched = true
 	
 	// reset level and experience
 	global.pokemon_level = global.pokemon_start_level;
-	global.pokemon_experience = 0;
+	global.pokemon_experience = power(global.pokemon_level - 1,3);
 	
 	
 	// recalculate pokemon stats and reset health

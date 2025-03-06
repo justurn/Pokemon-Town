@@ -4,8 +4,9 @@ if no_treasure
 	var x_adj = item_spacing / 2;
 
 	var valid_items = []; 
+	var item_limit =  array_length(global.item_name)
 
-	for (var i = 0; i < array_length(global.item_name); i++)
+	for (var i = 1; i <item_limit; i++)
 	{
 		if (global.item_held[i] != -1)
 		{

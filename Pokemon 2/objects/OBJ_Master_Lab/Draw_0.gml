@@ -2,7 +2,7 @@
 draw_self();
 
 // Draw the type of the egg near the egg's position
-var egg_type = global.egg_types_found[selected_egg];  // Get the type ID for the selected egg
+var egg_type = global.egg_types_found[global.selected_egg];  // Get the type ID for the selected egg
 var type_string = global.types[egg_type];  // Get the string corresponding to the type ID
 
 // Set up the text color and draw the type string

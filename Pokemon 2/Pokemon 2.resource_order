@@ -75,6 +75,7 @@
     {"name":"RM_Evolution","order":11,"path":"rooms/RM_Evolution/RM_Evolution.yy",},
     {"name":"SPR_Arcanine","order":99,"path":"sprites/SPR_Arcanine/SPR_Arcanine.yy",},
     {"name":"SPR_Player_Left","order":2,"path":"sprites/SPR_Player_Left/SPR_Player_Left.yy",},
+    {"name":"OBJ_Clouds","order":18,"path":"objects/OBJ_Clouds/OBJ_Clouds.yy",},
     {"name":"SPR_Victreebel","order":107,"path":"sprites/SPR_Victreebel/SPR_Victreebel.yy",},
     {"name":"SPR_Dodrio","order":114,"path":"sprites/SPR_Dodrio/SPR_Dodrio.yy",},
     {"name":"SPR_Aerodactyl","order":145,"path":"sprites/SPR_Aerodactyl/SPR_Aerodactyl.yy",},
