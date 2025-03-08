@@ -40,6 +40,7 @@ switch (room)
         old_iv = global.iv_health;
         global.iv_health += global.item_held[index] + 1;
         SCR_Pokemon_Stats();
+		global.pokemon_health += global.item_held[index] + 1;
         stat_name = "Health";
         stat_base = base_health;
         stat_iv = global.iv_health;

@@ -164,11 +164,10 @@ function SCR_Initialise_Globals()
 	global.types[11] = "Ground";
 	global.types[12] = "Poison";
 	global.types[13] = "Ice";
-	// Commented out types (not in Gen 1 primary types)
-	//global.types[14] = "fairy";
-	//global.types[15] = "dark";
-	//global.types[16] = "steel";
-	//global.types[17] = "flying"; // Removed because Flying is not a primary type in Gen 1
+	global.types[14] = "Fairy";
+	global.types[15] = "Steel";
+	global.types[16] = "Flying";
+	//global.types[17] = "Dark";
 	
 	// Define a 2D array for type effectiveness
 	for (i = 0; i < 18; i++)
@@ -180,61 +179,170 @@ function SCR_Initialise_Globals()
 	}
 
 	// Super Effective (2x)
-	global.type_chart[1][3] = 2.0; // Fire -> Grass
-	global.type_chart[1][6] = 2.0; // Fire -> Bug
-	global.type_chart[2][1] = 2.0; // Water -> Fire
-	global.type_chart[2][9] = 2.0; // Water -> Rock
-	global.type_chart[2][11] = 2.0; // Water -> Ground
-	global.type_chart[3][2] = 2.0; // Grass -> Water
-	global.type_chart[3][9] = 2.0; // Grass -> Rock
-	global.type_chart[3][11] = 2.0; // Grass -> Ground
-	global.type_chart[4][2] = 2.0; // Electric -> Water
-	global.type_chart[6][5] = 2.0; // Bug -> Psychic
-	global.type_chart[6][3] = 2.0; // Bug -> Grass
-	global.type_chart[8][9] = 2.0; // Fighting -> Rock
-	global.type_chart[8][0] = 2.0; // Fighting -> Normal
-	global.type_chart[9][1] = 2.0; // Rock -> Fire
-	global.type_chart[9][6] = 2.0; // Rock -> Bug
-	global.type_chart[9][17] = 2.0; // Rock -> Flying
-	global.type_chart[11][1] = 2.0; // Ground -> Fire
-	global.type_chart[11][4] = 2.0; // Ground -> Electric
-	global.type_chart[11][9] = 2.0; // Ground -> Rock
-	global.type_chart[11][6] = 2.0; // Ground -> Bug
-	global.type_chart[12][3] = 2.0; // Poison -> Grass
-	global.type_chart[5][8] = 2.0; // Psychic -> Fighting
-	global.type_chart[5][12] = 2.0; // Psychic -> Poison
-	global.type_chart[7][7] = 2.0; // Dragon -> Dragon
+	
+	global.type_chart[1][3] = 2.0;   // Fire -> Grass
+	global.type_chart[1][13] = 2.0;  // Fire -> Ice
+	global.type_chart[1][6] = 2.0;   // Fire -> Bug
+	global.type_chart[1][15] = 2.0;  // Fire -> Steel
+	
+	global.type_chart[2][1] = 2.0;   // Water -> Fire
+	global.type_chart[2][9] = 2.0;   // Water -> Rock
+	global.type_chart[2][11] = 2.0;  // Water -> Ground
+	
+	global.type_chart[3][2] = 2.0;   // Grass -> Water
+	global.type_chart[3][9] = 2.0;   // Grass -> Rock
+	global.type_chart[3][11] = 2.0;  // Grass -> Ground
+	
+	global.type_chart[4][2] = 2.0;   // Electric -> Water
+	global.type_chart[4][16] = 2.0;  // Electric -> Flying
+	
+	global.type_chart[5][8] = 2.0;   // Psychic -> Fighting
+	global.type_chart[5][12] = 2.0;  // Psychic -> Poison
+	
+	global.type_chart[6][5] = 2.0;   // Bug -> Psychic
+	global.type_chart[6][3] = 2.0;   // Bug -> Grass
+	global.type_chart[6][17] = 2.0;  // Bug -> Dark
+	
+	global.type_chart[7][7] = 2.0;   // Dragon -> Dragon
+	
+	global.type_chart[8][9] = 2.0;   // Fighting -> Rock
+	global.type_chart[8][0] = 2.0;   // Fighting -> Normal
+	global.type_chart[8][13] = 2.0;  // Fighting -> Ice
+	global.type_chart[8][17] = 2.0;  // Fighting -> Dark
+	global.type_chart[8][15] = 2.0;  // Fighting -> Steel
+	
+	global.type_chart[9][1] = 2.0;   // Rock -> Fire
+	global.type_chart[9][6] = 2.0;   // Rock -> Bug
+	global.type_chart[9][17] = 2.0;  // Rock -> Flying
+	global.type_chart[9][13] = 2.0;  // Rock -> Ice
+	
+	global.type_chart[10][5] = 2.0;  // Ghost -> Psychic
+	global.type_chart[10][10] = 2.0; // Ghost -> Ghost
+	
+	global.type_chart[11][1] = 2.0;  // Ground -> Fire
+	global.type_chart[11][4] = 2.0;  // Ground -> Electric
+	global.type_chart[11][9] = 2.0;  // Ground -> Rock
+	global.type_chart[11][12] = 2.0; // Ground -> Poison
+	global.type_chart[11][15] = 2.0; // Ground -> Steel
+	
+	global.type_chart[12][3] = 2.0;  // Poison -> Grass
+	global.type_chart[12][14] = 2.0; // Poison -> Fairy
+		
+	global.type_chart[13][7] = 2.0;  // Ice -> Dragon
+	global.type_chart[13][3] = 2.0;  // Ice -> Grass
+	global.type_chart[13][11] = 2.0; // Ice -> Ground
+	global.type_chart[13][16] = 2.0; // Ice -> Flying
+	
+	global.type_chart[14][8] = 2.0;  // Fairy -> Fighting
+	global.type_chart[14][7] = 2.0;  // Fairy -> Dragon
+	global.type_chart[14][17] = 2.0; // Fairy -> Dark
+	
+	global.type_chart[15][9] = 2.0;  // Steel -> Rock
+	global.type_chart[15][14] = 2.0; // Steel -> Fairy
+	
+	global.type_chart[16][16] = 2.0; // Flying -> Grass
+	global.type_chart[16][8] = 2.0;  // Flying -> Fighting
+	global.type_chart[16][6] = 2.0;  // Flying -> Bug
+	
+	global.type_chart[17][5] = 2.0;  // Dark -> Psychic
+	global.type_chart[17][10] = 2.0; // Dark -> Ghost
 
 	// Not Very Effective (0.5x)
-	global.type_chart[0][9] = 0.5; // Normal -> Rock
-	global.type_chart[1][2] = 0.5; // Fire -> Water
-	global.type_chart[2][3] = 0.5; // Water -> Grass
-	global.type_chart[2][4] = 0.5; // Water -> Electric
-	global.type_chart[3][1] = 0.5; // Grass -> Fire
-	global.type_chart[3][6] = 0.5; // Grass -> Bug
-	global.type_chart[3][12] = 0.5; // Grass -> Poison
-	global.type_chart[4][9] = 0.5; // Electric -> Rock
-	global.type_chart[5][5] = 0.5; // Psychic -> Psychic
-	global.type_chart[8][5] = 0.5; // Fighting -> Psychic
-	global.type_chart[8][7] = 0.5; // Fighting -> Flying
-	global.type_chart[9][11] = 0.5; // Rock -> Ground
-	global.type_chart[9][8] = 0.5; // Rock -> Fighting
-	global.type_chart[11][3] = 0.5; // Ground -> Grass
-	global.type_chart[11][6] = 0.5; // Ground -> Bug
+	
+	global.type_chart[0][9] = 0.5;   // Normal -> Rock
+	global.type_chart[0][15] = 0.5;  // Normal -> Steel
+	
+	global.type_chart[1][1] = 0.5;   // Fire -> Fire
+	global.type_chart[1][2] = 0.5;   // Fire -> Water
+	global.type_chart[1][9] = 0.5;   // Fire -> Rock
+	global.type_chart[1][7] = 0.5;   // Fire -> Dragon
+	
+	global.type_chart[2][2] = 0.5;   // Water -> Water
+	global.type_chart[2][3] = 0.5;   // Water -> Grass
+	global.type_chart[2][7] = 0.5;   // Water -> Dragon
+	
+	global.type_chart[3][1] = 0.5;   // Grass -> Fire
+	global.type_chart[3][6] = 0.5;   // Grass -> Bug
+	global.type_chart[3][12] = 0.5;  // Grass -> Poison
+	global.type_chart[3][16] = 0.5;  // Grass -> Flying
+	global.type_chart[3][7] = 0.5;   // Grass -> Dragon
+	global.type_chart[3][15] = 0.5;  // Grass -> Steel
+	
+	global.type_chart[4][4] = 0.5;   // Electric -> Electric
+	global.type_chart[4][3] = 0.5;   // Electric -> Grass
+	global.type_chart[4][7] = 0.5;   // Electric -> Dragon
+	
+	global.type_chart[5][5] = 0.5;   // Psychic -> Psychic
+	global.type_chart[5][15] = 0.5;  // Psychic -> Steel
+	
+	global.type_chart[6][1] = 0.5;   // Bug -> Fire
+	global.type_chart[6][8] = 0.5;   // Bug -> Fighting
+	global.type_chart[6][12] = 0.5;  // Bug -> Poison
+	global.type_chart[6][16] = 0.5;  // Bug -> Flying
+	global.type_chart[6][10] = 0.5;  // Bug -> Ghost
+	global.type_chart[6][15] = 0.5;  // Bug -> Steel
+	global.type_chart[6][14] = 0.5;  // Bug -> Fairy
+	
+	global.type_chart[7][15] = 0.5;  // Dragon -> Steel
+	
+	global.type_chart[8][5] = 0.5;   // Fighting -> Psychic
+	global.type_chart[8][16] = 0.5;  // Fighting -> Flying
+	global.type_chart[8][12] = 0.5;  // Fighting -> Poison
+	global.type_chart[8][6] = 0.5;   // Fighting -> Bug
+	global.type_chart[8][14] = 0.5;  // Fighting -> Fairy
+	
+	global.type_chart[9][11] = 0.5;  // Rock -> Ground
+	global.type_chart[9][8] = 0.5;   // Rock -> Fighting
+	global.type_chart[9][15] = 0.5;  // Rock -> Steel
+	
+	global.type_chart[10][17] = 0.5; // Ghost -> Dark
+	
+	global.type_chart[11][3] = 0.5;  // Ground -> Grass
+	global.type_chart[11][6] = 0.5;  // Ground -> Bug
+	
 	global.type_chart[12][12] = 0.5; // Poison -> Poison
-	global.type_chart[12][9] = 0.5; // Poison -> Rock
+	global.type_chart[12][9] = 0.5;  // Poison -> Rock
+	global.type_chart[12][11] = 0.5; // Poison -> Ground
 	global.type_chart[12][10] = 0.5; // Poison -> Ghost
+	
+	global.type_chart[13][1] = 0.5;  // Ice -> Fire
+	global.type_chart[13][2] = 0.5;  // Ice -> Water
+	global.type_chart[13][13] = 0.5; // Ice -> Ice
+	global.type_chart[13][15] = 0.5; // Ice -> Steel
+	
+	global.type_chart[14][17] = 2.0; // Fairy -> Fire
+	global.type_chart[14][12] = 2.0; // Fairy -> Poison
+	global.type_chart[14][15] = 2.0; // Fairy -> Steel
+	
+	global.type_chart[15][1] = 0.5;  // Steel -> Fire
+	global.type_chart[15][2] = 0.5;  // Steel -> Water
+	global.type_chart[15][4] = 0.5;  // Steel -> Electric
+	global.type_chart[15][15] = 0.5; // Steel -> Steel
+	
+	global.type_chart[16][4] = 0.5;  // Flying -> Electric
+	global.type_chart[16][9] = 0.5;  // Flying -> Rock
+	global.type_chart[16][15] = 0.5; // Flying -> Steel
+	
+	global.type_chart[17][10] = 0.5; // Dark -> Fighting
+	global.type_chart[17][14] = 0.5; // Dark -> Fairy
+	global.type_chart[17][17] = 0.5; // Dark -> Dark
 
 	// Immunities (0x)
-	global.type_chart[0][10] = 0.0; // Normal -> Ghost (no effect)
-	global.type_chart[4][11] = 0.0; // Electric -> Ground (no effect)
-	global.type_chart[8][10] = 0.0; // Fighting -> Ghost (no effect)
-	global.type_chart[10][0] = 0.0; // Ghost -> Normal (no effect)
-	global.type_chart[11][17] = 0.5; // Ground -> Flying (no effect)
-
-
-
-
+	global.type_chart[0][10] = 0.0;  // Normal -> Ghost (no effect)
+	
+	global.type_chart[4][11] = 0.0;  // Electric -> Ground (no effect)
+	
+	global.type_chart[7][14] = 0.0;  // Dragon -> Fairy (no effect)
+	
+	global.type_chart[8][10] = 0.0;  // Fighting -> Ghost (no effect)
+	
+	global.type_chart[10][0] = 0.0;  // Ghost -> Normal (no effect)
+	
+	global.type_chart[11][16] = 0.0; // Ground -> Flying (no effect)
+	
+	global.type_chart[12][10] = 0.0; // Poison -> Steel (no effect)
+	
+	global.type_chart[5][17] = 0.0;  // Psychic -> Dark (no effect)
 
 	// Define an array for the colors that correspond to each type (only Gen 1 primary types included)
 	global.type_colors[0] = global.c_normal;
@@ -251,11 +359,10 @@ function SCR_Initialise_Globals()
 	global.type_colors[11] = global.c_ground;
 	global.type_colors[12] = global.c_poison;
 	global.type_colors[13] = global.c_ice;
-	// Commented out colors (not in Gen 1 primary types)
-	//global.type_colors[14] = global.c_fairy;
-	//global.type_colors[15] = global.c_dark;
-	//global.type_colors[16] = global.c_steel;
-	//global.type_colors[17] = global.c_flying; // Removed because Flying is not a primary type in Gen 1
+	global.type_colors[14] = global.c_fairy;
+	global.type_colors[15] = global.c_steel;
+	global.type_colors[16] = global.c_flying;
+	// global.type_colors[17] = global.c_dark;
 	
 	// Lab
 	i = 1;

@@ -1,7 +1,9 @@
 pokedex_id = global.wild_pokemon_id
 pokemon_name = global.Dex_Names[pokedex_id];
-type = global.Dex_Primary_Types[pokedex_id];
-type_id = SCR_Get_Type_Index(type);
+primary_type = global.Dex_Primary_Types[pokedex_id];
+primary_type_id = SCR_Get_Type_Index(primary_type);
+secondary_type = global.Dex_Secondary_Types[pokedex_id];
+secondary_type_id = SCR_Get_Type_Index(secondary_type);
 sprite_index = global.Dex_Sprites[pokedex_id];
 
 // Sprite Scaling

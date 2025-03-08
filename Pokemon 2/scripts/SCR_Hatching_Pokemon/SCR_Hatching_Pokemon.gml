@@ -25,7 +25,7 @@ function SCR_Hatching_Pokemon()
 		for (var i = 1; i < array_length(global.Dex_Primary_Types); i++) 
 		{
 			// Check if Pokémon has the selected type and is marked for hatching.
-			if (global.Dex_Primary_Types[i] == selected_type && global.Dex_Hatching[i] == true) 
+			if ((global.Dex_Primary_Types[i] == selected_type || global.Dex_Secondary_Types[i] == selected_type) && global.Dex_Hatching[i] == true) 
 			{
 				var matching_count = array_length(matching_pokemon_id)              
 		        matching_pokemon_id[matching_count] = i;

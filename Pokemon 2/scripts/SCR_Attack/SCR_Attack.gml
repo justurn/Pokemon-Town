@@ -23,23 +23,68 @@ function SCR_Attack(attacker, defender)
     // Apply variance (random between 85% - 100%)
     damage *= random_range(0.85, 1.0);
     
-    // **Apply Type Effectiveness**
-    var attacker_type = attacker.type; // E.g., "Fire"
-    var defender_type = defender.type; // E.g., "Grass"
-
     // Convert type strings into indices
-    var attacker_type_index = SCR_Get_Type_Index(attacker_type);
-	//show_debug_message("Attacker Type is: " + string(attacker_type) + " Type ID is: " + string(attacker_type_index));
-    var defender_type_index = SCR_Get_Type_Index(defender_type);
-	//show_debug_message("Defender Type is: " + string(defender_type) + " Type ID is: " + string(defender_type_index));
+	var attacker_primary_type = attacker.primary_type;
+	var attacker_secondary_type = attacker.secondary_type;
+	
+    var attacker_primary_type_index = attacker.primary_type_id;
+	var attacker_secondary_type_index = attacker.secondary_type_id;
+	
+    var defender_primary_type_index = defender.primary_type_id;
+	var defender_secondary_type_index = defender.secondary_type_id;
     
-	// Default effectiveness is 1.0
-    var effectiveness = 1.0;
 
-    if (attacker_type_index != -1 && defender_type_index != -1)
-    {
-        effectiveness = global.type_chart[attacker_type_index][defender_type_index];
-    }
+    var primary_atk_effect = 0;
+	
+	if (attacker_primary_type_index != -1)
+	{
+	
+		var primary_atk_effect_def_primary = 1;
+		var primary_atk_effect_def_secondary = 1;
+
+	    if (defender_primary_type_index != -1)
+	    {
+	        primary_atk_effect_def_primary = global.type_chart[attacker_primary_type_index][defender_primary_type_index];
+	    }
+	
+		if (defender_secondary_type_index != -1)
+	    {
+	        primary_atk_effect_def_secondary = global.type_chart[attacker_primary_type_index][defender_secondary_type_index];
+	    }
+	
+		primary_atk_effect = primary_atk_effect_def_primary * primary_atk_effect_def_secondary
+	}
+	
+	var secondary_atk_effect = 0;
+	
+	if (attacker_secondary_type_index != -1)
+	{
+		var secondary_atk_effect_def_primary = 1;
+		var secondary_atk_effect_def_secondary = 1;
+	
+		if (defender_primary_type_index != -1)
+		{
+			secondary_atk_effect_def_primary = global.type_chart[attacker_secondary_type_index][defender_primary_type_index];
+		}
+		if (defender_secondary_type_index != -1)
+		{
+			secondary_atk_effect_def_primary = global.type_chart[attacker_secondary_type_index][defender_secondary_type_index];
+		}
+		secondary_atk_effect = secondary_atk_effect_def_primary * secondary_atk_effect_def_secondary;
+	}
+	
+	if (primary_atk_effect >= secondary_atk_effect)
+	{
+		var effectiveness =  primary_atk_effect;
+		show_debug_message(attacker_primary_type +" is most effective: " + string(effectiveness));
+		var attack_type = attacker_primary_type_index
+	}
+	else
+	{
+		var effectiveness =  secondary_atk_effect;
+		show_debug_message(attacker_secondary_type +" is most effective: " + string(effectiveness));
+		var attack_type = attacker_secondary_type_index
+	}
 	
 	//show_debug_message("Effectiveness is: " + string(effectiveness));
 	damage *= effectiveness;
@@ -69,7 +114,7 @@ function SCR_Attack(attacker, defender)
 	var proj = instance_create_layer(attacker.x, attacker.y, "Instances", OBJ_Projectile);
     proj.target_x = defender.x;
     proj.target_y = defender.y;
-    proj.attack_type = attacker.type_id;
+    proj.attack_type = attack_type;
     proj.target_pokemon = defender;
 	proj.damage = damage;
 	proj.is_physical = is_physical;
