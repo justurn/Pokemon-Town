@@ -49,8 +49,10 @@ if (OBJ_Player.x  >= plot_left && OBJ_Player.x  <= plot_right)
 			}
 			else
 			{
-				global.more_buildings = false
-				show_debug_message("No more buildings left, skipping new plot")
+				global.more_buildings = false;
+				show_debug_message("No more buildings left, skipping new plot");
+				global.item_held[1] = -1; // disable crates, there are no more buildings
+				show_debug_message("Attempted to remove crates");
 			}
 		
 			// Increment index for next plot

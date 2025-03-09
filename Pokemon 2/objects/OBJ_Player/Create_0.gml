@@ -18,7 +18,7 @@ var max_cam_x = room_width - cam_width;
 
 cam_target = max(min(cam_target,max_cam_x),min_cam_x);
 
-show_debug_message("Camera Target: " + string(cam_target))
+//show_debug_message("Camera Target: " + string(cam_target))
 
 camera_set_view_pos(view_camera[0], cam_target, 0);
 

@@ -14,6 +14,7 @@ draw_healthbar(bar_x, bar_top_y, bar_x + bar_width, bar_top_y + bar_height, wild
 // Draw Player Timer Bar (Bottom)
 draw_healthbar(bar_x, bar_bottom_y - bar_height, bar_x + bar_width, bar_bottom_y, player_progress * 100, c_blue, c_black, c_black, 0, true, true);
 
+draw_self();
 
 if (battle_state == "WAIT_WILD") 
 {
