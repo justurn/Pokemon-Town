@@ -240,7 +240,7 @@ function SCR_Initialise_Globals()
 	global.type_chart[15][9] = 2.0;  // Steel -> Rock
 	global.type_chart[15][14] = 2.0; // Steel -> Fairy
 	
-	global.type_chart[16][16] = 2.0; // Flying -> Grass
+	global.type_chart[16][3] = 2.0;  // Flying -> Grass
 	global.type_chart[16][8] = 2.0;  // Flying -> Fighting
 	global.type_chart[16][6] = 2.0;  // Flying -> Bug
 	

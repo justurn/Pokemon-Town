@@ -15,14 +15,33 @@ image_yscale = scale_factor + 0.1 * sin(evolution_timer * 0.1);
 // 3. Transition to New Pokémon Sprite (After X frames)
 if (evolution_timer == 90) 
 {
-	if (pokedex_id == 133) // special case for Eevee evolutions
+	switch (pokedex_id) 
 	{
-		pokedex_id = choose(134,135,136)
+	    case 133: // Eevee evolves into one of three options
+	        pokedex_id = choose(134, 135, 136);
+	        break;
+
+	    case 42: // Golbat evolves into Crobat
+	        pokedex_id = 169;
+	        break;
+			
+		case 172: // Pichu evolves into Pikachu
+	        pokedex_id = 25;
+	        break;		
+			
+		case 173: // Cleffa evolves into Clefairy
+	        pokedex_id = 35;
+	        break;
+			
+		case 174: // Igglybuff evolves into Jigglypuff
+	        pokedex_id = 39;
+	        break;
+			
+	    default:
+	        pokedex_id += 1; // Get new evolution ID
+	        break;
 	}
-	else
-	{
-		pokedex_id += 1;  // Get new evolution ID
-	}
+	
     sprite_index = global.Dex_Sprites[pokedex_id];  // Change sprite
 }
 
