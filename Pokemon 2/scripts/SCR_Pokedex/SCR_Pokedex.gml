@@ -1154,7 +1154,7 @@ function SCR_Pokedex()
 	global.Dex_Primary_Types[80] = "Water";
 	global.Dex_Secondary_Types[80] = "Psychic"
 	global.Dex_Hatching[80] = "False";
-	global.Dex_Evolve_Level[80] = -1;
+	global.Dex_Evolve_Level[80] = 47;
 	global.Dex_Health[80] = 95;
 	global.Dex_Attack[80] = 75;
 	global.Dex_Defence[80] = 110;
@@ -1375,7 +1375,7 @@ function SCR_Pokedex()
 	global.Dex_Primary_Types[95] = "Rock";
 	global.Dex_Secondary_Types[95] = "Ground"
 	global.Dex_Hatching[95] = "True";
-	global.Dex_Evolve_Level[95] = -1;
+	global.Dex_Evolve_Level[95] = 42;
 	global.Dex_Health[95] = 35;
 	global.Dex_Attack[95] = 45;
 	global.Dex_Defence[95] = 160;
@@ -1530,7 +1530,7 @@ function SCR_Pokedex()
 	global.Dex_Names[106] = "Hitmonlee";
 	global.Dex_Sprites[106] = SPR_Hitmonlee;
 	global.Dex_Primary_Types[106] = "Fighting";
-	global.Dex_Hatching[106] = "True";
+	global.Dex_Hatching[106] = "False";
 	global.Dex_Evolve_Level[106] = -1;
 	global.Dex_Health[106] = 50;
 	global.Dex_Attack[106] = 120;
@@ -1544,7 +1544,7 @@ function SCR_Pokedex()
 	global.Dex_Names[107] = "Hitmonchan";
 	global.Dex_Sprites[107] = SPR_Hitmonchan;
 	global.Dex_Primary_Types[107] = "Fighting";
-	global.Dex_Hatching[107] = "True";
+	global.Dex_Hatching[107] = "False";
 	global.Dex_Evolve_Level[107] = -1;
 	global.Dex_Health[107] = 50;
 	global.Dex_Attack[107] = 105;
@@ -1629,7 +1629,7 @@ function SCR_Pokedex()
 	global.Dex_Sprites[113] = SPR_Chansey;
 	global.Dex_Primary_Types[113] = "Normal";
 	global.Dex_Hatching[113] = "True";
-	global.Dex_Evolve_Level[113] = -1;
+	global.Dex_Evolve_Level[113] = 42;
 	global.Dex_Health[113] = 250;
 	global.Dex_Attack[113] = 5;
 	global.Dex_Defence[113] = 5;
@@ -1685,7 +1685,7 @@ function SCR_Pokedex()
 	global.Dex_Sprites[117] = SPR_Seadra;
 	global.Dex_Primary_Types[117] = "Water";
 	global.Dex_Hatching[117] = "False";
-	global.Dex_Evolve_Level[117] = -1;
+	global.Dex_Evolve_Level[117] = 48;
 	global.Dex_Health[117] = 55;
 	global.Dex_Attack[117] = 65;
 	global.Dex_Defence[117] = 95;
@@ -1772,7 +1772,7 @@ function SCR_Pokedex()
 	global.Dex_Primary_Types[123] = "Bug";
 	global.Dex_Secondary_Types[123] = "Flying"
 	global.Dex_Hatching[123] = "True";
-	global.Dex_Evolve_Level[123] = -1;
+	global.Dex_Evolve_Level[123] = 48;
 	global.Dex_Health[123] = 70;
 	global.Dex_Attack[123] = 110;
 	global.Dex_Defence[123] = 80;
@@ -1786,7 +1786,7 @@ function SCR_Pokedex()
 	global.Dex_Sprites[124] = SPR_Jynx;
 	global.Dex_Primary_Types[124] = "Ice";
 	global.Dex_Secondary_Types[124] = "Psychic"
-	global.Dex_Hatching[124] = "True";
+	global.Dex_Hatching[124] = "False";
 	global.Dex_Evolve_Level[124] = -1;
 	global.Dex_Health[124] = 65;
 	global.Dex_Attack[124] = 50;
@@ -1800,7 +1800,7 @@ function SCR_Pokedex()
 	global.Dex_Names[125] = "Electabuzz";
 	global.Dex_Sprites[125] = SPR_Electabuzz;
 	global.Dex_Primary_Types[125] = "Electric";
-	global.Dex_Hatching[125] = "True";
+	global.Dex_Hatching[125] = "False";
 	global.Dex_Evolve_Level[125] = -1;
 	global.Dex_Health[125] = 65;
 	global.Dex_Attack[125] = 83;
@@ -1814,7 +1814,7 @@ function SCR_Pokedex()
 	global.Dex_Names[126] = "Magmar";
 	global.Dex_Sprites[126] = SPR_Magmar;
 	global.Dex_Primary_Types[126] = "Fire";
-	global.Dex_Hatching[126] = "True";
+	global.Dex_Hatching[126] = "False";
 	global.Dex_Evolve_Level[126] = -1;
 	global.Dex_Health[126] = 65;
 	global.Dex_Attack[126] = 95;
@@ -1971,7 +1971,7 @@ function SCR_Pokedex()
 	global.Dex_Sprites[137] = SPR_Porygon;
 	global.Dex_Primary_Types[137] = "Normal";
 	global.Dex_Hatching[137] = "True";
-	global.Dex_Evolve_Level[137] = -1;
+	global.Dex_Evolve_Level[137] = 40;
 	global.Dex_Health[137] = 65;
 	global.Dex_Attack[137] = 60;
 	global.Dex_Defence[137] = 70;
@@ -2528,6 +2528,1018 @@ function SCR_Pokedex()
 	global.Dex_SPattack[176] = 80;
 	global.Dex_SPdefence[176] = 105;
 	global.Dex_Speed[176] = 40;
-
 	
+	// 177 - "Natu";
+	global.Dex_Names[177] = "Natu";
+	global.Dex_Sprites[177] = SPR_Natu;
+	global.Dex_Primary_Types[177] = "Psychic";
+	global.Dex_Secondary_Types[177] = "Flying";
+	global.Dex_Hatching[177] = "True";
+	global.Dex_Evolve_Level[177] = 25;
+	global.Dex_Health[177] = 40;
+	global.Dex_Attack[177] = 50;
+	global.Dex_Defence[177] = 45;
+	global.Dex_SPattack[177] = 70;
+	global.Dex_SPdefence[177] = 45;
+	global.Dex_Speed[177] = 70;
+
+	// 178 - "Xatu";
+	global.Dex_Names[178] = "Xatu";
+	global.Dex_Sprites[178] = SPR_Xatu;
+	global.Dex_Primary_Types[178] = "Psychic";
+	global.Dex_Secondary_Types[178] = "Flying";
+	global.Dex_Hatching[178] = "False";
+	global.Dex_Evolve_Level[178] = -1;
+	global.Dex_Health[178] = 65;
+	global.Dex_Attack[178] = 75;
+	global.Dex_Defence[178] = 70;
+	global.Dex_SPattack[178] = 95;
+	global.Dex_SPdefence[178] = 70;
+	global.Dex_Speed[178] = 95;
+
+	// 179 - "Mareep";
+	global.Dex_Names[179] = "Mareep";
+	global.Dex_Sprites[179] = SPR_Mareep;
+	global.Dex_Primary_Types[179] = "Electric";
+	global.Dex_Hatching[179] = "True";
+	global.Dex_Evolve_Level[179] = 15;
+	global.Dex_Health[179] = 55;
+	global.Dex_Attack[179] = 40;
+	global.Dex_Defence[179] = 40;
+	global.Dex_SPattack[179] = 65;
+	global.Dex_SPdefence[179] = 45;
+	global.Dex_Speed[179] = 35;
+
+	// 180 - "Flaaffy";
+	global.Dex_Names[180] = "Flaaffy";
+	global.Dex_Sprites[180] = SPR_Flaaffy;
+	global.Dex_Primary_Types[180] = "Electric";
+	global.Dex_Hatching[180] = "False";
+	global.Dex_Evolve_Level[180] = 30;
+	global.Dex_Health[180] = 70;
+	global.Dex_Attack[180] = 55;
+	global.Dex_Defence[180] = 55;
+	global.Dex_SPattack[180] = 80;
+	global.Dex_SPdefence[180] = 60;
+	global.Dex_Speed[180] = 45;
+
+	// 181 - "Ampharos";
+	global.Dex_Names[181] = "Ampharos";
+	global.Dex_Sprites[181] = SPR_Ampharos;
+	global.Dex_Primary_Types[181] = "Electric";
+	global.Dex_Hatching[181] = "False";
+	global.Dex_Evolve_Level[181] = -1;
+	global.Dex_Health[181] = 90;
+	global.Dex_Attack[181] = 75;
+	global.Dex_Defence[181] = 85;
+	global.Dex_SPattack[181] = 115;
+	global.Dex_SPdefence[181] = 90;
+	global.Dex_Speed[181] = 55;
+
+	// 182 - "Bellossom";
+	global.Dex_Names[182] = "Bellossom";
+	global.Dex_Sprites[182] = SPR_Bellossom;
+	global.Dex_Primary_Types[182] = "Grass";
+	global.Dex_Hatching[182] = "False";
+	global.Dex_Evolve_Level[182] = -1;
+	global.Dex_Health[182] = 75;
+	global.Dex_Attack[182] = 80;
+	global.Dex_Defence[182] = 95;
+	global.Dex_SPattack[182] = 90;
+	global.Dex_SPdefence[182] = 100;
+	global.Dex_Speed[182] = 50;
+
+	// 183 - "Marill";
+	global.Dex_Names[183] = "Marill";
+	global.Dex_Sprites[183] = SPR_Marill;
+	global.Dex_Primary_Types[183] = "Water";
+	global.Dex_Secondary_Types[183] = "Fairy";
+	global.Dex_Hatching[183] = "True";
+	global.Dex_Evolve_Level[183] = 18;
+	global.Dex_Health[183] = 70;
+	global.Dex_Attack[183] = 20;
+	global.Dex_Defence[183] = 50;
+	global.Dex_SPattack[183] = 20;
+	global.Dex_SPdefence[183] = 50;
+	global.Dex_Speed[183] = 40;
+
+	// 184 - "Azumarill";
+	global.Dex_Names[184] = "Azumarill";
+	global.Dex_Sprites[184] = SPR_Azumarill;
+	global.Dex_Primary_Types[184] = "Water";
+	global.Dex_Secondary_Types[184] = "Fairy";
+	global.Dex_Hatching[184] = "False";
+	global.Dex_Evolve_Level[184] = -1;
+	global.Dex_Health[184] = 100;
+	global.Dex_Attack[184] = 50;
+	global.Dex_Defence[184] = 80;
+	global.Dex_SPattack[184] = 60;
+	global.Dex_SPdefence[184] = 80;
+	global.Dex_Speed[184] = 50;
+
+	// 185 - "Sudowoodo";
+	global.Dex_Names[185] = "Sudowoodo";
+	global.Dex_Sprites[185] = SPR_Sudowoodo;
+	global.Dex_Primary_Types[185] = "Rock";
+	global.Dex_Hatching[185] = "True";
+	global.Dex_Evolve_Level[185] = -1;
+	global.Dex_Health[185] = 70;
+	global.Dex_Attack[185] = 100;
+	global.Dex_Defence[185] = 115;
+	global.Dex_SPattack[185] = 30;
+	global.Dex_SPdefence[185] = 65;
+	global.Dex_Speed[185] = 30;
+
+	// 186 - "Politoed";
+	global.Dex_Names[186] = "Politoed";
+	global.Dex_Sprites[186] = SPR_Politoed;
+	global.Dex_Primary_Types[186] = "Water";
+	global.Dex_Hatching[186] = "False";
+	global.Dex_Evolve_Level[186] = -1;
+	global.Dex_Health[186] = 90;
+	global.Dex_Attack[186] = 75;
+	global.Dex_Defence[186] = 75;
+	global.Dex_SPattack[186] = 90;
+	global.Dex_SPdefence[186] = 100;
+	global.Dex_Speed[186] = 70;
+
+	// 187 - "Hoppip";
+	global.Dex_Names[187] = "Hoppip";
+	global.Dex_Sprites[187] = SPR_Hoppip;
+	global.Dex_Primary_Types[187] = "Grass";
+	global.Dex_Secondary_Types[187] = "Flying";
+	global.Dex_Hatching[187] = "True";
+	global.Dex_Evolve_Level[187] = 18;
+	global.Dex_Health[187] = 35;
+	global.Dex_Attack[187] = 35;
+	global.Dex_Defence[187] = 40;
+	global.Dex_SPattack[187] = 35;
+	global.Dex_SPdefence[187] = 55;
+	global.Dex_Speed[187] = 50;
+
+	// 188 - "Skiploom";
+	global.Dex_Names[188] = "Skiploom";
+	global.Dex_Sprites[188] = SPR_Skiploom;
+	global.Dex_Primary_Types[188] = "Grass";
+	global.Dex_Secondary_Types[188] = "Flying";
+	global.Dex_Hatching[188] = "False";
+	global.Dex_Evolve_Level[188] = 27;
+	global.Dex_Health[188] = 55;
+	global.Dex_Attack[188] = 45;
+	global.Dex_Defence[188] = 50;
+	global.Dex_SPattack[188] = 45;
+	global.Dex_SPdefence[188] = 65;
+	global.Dex_Speed[188] = 80;
+
+	// 189 - "Jumpluff";
+	global.Dex_Names[189] = "Jumpluff";
+	global.Dex_Sprites[189] = SPR_Jumpluff;
+	global.Dex_Primary_Types[189] = "Grass";
+	global.Dex_Secondary_Types[189] = "Flying";
+	global.Dex_Hatching[189] = "False";
+	global.Dex_Evolve_Level[189] = -1;
+	global.Dex_Health[189] = 75;
+	global.Dex_Attack[189] = 55;
+	global.Dex_Defence[189] = 70;
+	global.Dex_SPattack[189] = 55;
+	global.Dex_SPdefence[189] = 95;
+	global.Dex_Speed[189] = 110;
+
+	// 190 - "Aipom";
+	global.Dex_Names[190] = "Aipom";
+	global.Dex_Sprites[190] = SPR_Aipom;
+	global.Dex_Primary_Types[190] = "Normal";
+	global.Dex_Hatching[190] = "True";
+	global.Dex_Evolve_Level[190] = -1;
+	global.Dex_Health[190] = 55;
+	global.Dex_Attack[190] = 70;
+	global.Dex_Defence[190] = 55;
+	global.Dex_SPattack[190] = 40;
+	global.Dex_SPdefence[190] = 55;
+	global.Dex_Speed[190] = 85;
+
+	// 191 - "Sunkern";
+	global.Dex_Names[191] = "Sunkern";
+	global.Dex_Sprites[191] = SPR_Sunkern;
+	global.Dex_Primary_Types[191] = "Grass";
+	global.Dex_Hatching[191] = "True";
+	global.Dex_Evolve_Level[191] = 20;
+	global.Dex_Health[191] = 30;
+	global.Dex_Attack[191] = 30;
+	global.Dex_Defence[191] = 30;
+	global.Dex_SPattack[191] = 30;
+	global.Dex_SPdefence[191] = 30;
+	global.Dex_Speed[191] = 30;
+
+	// 192 - "Sunflora";
+	global.Dex_Names[192] = "Sunflora";
+	global.Dex_Sprites[192] = SPR_Sunflora;
+	global.Dex_Primary_Types[192] = "Grass";
+	global.Dex_Hatching[192] = "False";
+	global.Dex_Evolve_Level[192] = -1;
+	global.Dex_Health[192] = 75;
+	global.Dex_Attack[192] = 75;
+	global.Dex_Defence[192] = 55;
+	global.Dex_SPattack[192] = 105;
+	global.Dex_SPdefence[192] = 85;
+	global.Dex_Speed[192] = 30;
+
+	// 193 - "Yanma";
+	global.Dex_Names[193] = "Yanma";
+	global.Dex_Sprites[193] = SPR_Yanma;
+	global.Dex_Primary_Types[193] = "Bug";
+	global.Dex_Secondary_Types[193] = "Flying";
+	global.Dex_Hatching[193] = "True";
+	global.Dex_Evolve_Level[193] = -1;
+	global.Dex_Health[193] = 65;
+	global.Dex_Attack[193] = 65;
+	global.Dex_Defence[193] = 45;
+	global.Dex_SPattack[193] = 75;
+	global.Dex_SPdefence[193] = 45;
+	global.Dex_Speed[193] = 95;
+
+	// 194 - "Wooper";
+	global.Dex_Names[194] = "Wooper";
+	global.Dex_Sprites[194] = SPR_Wooper;
+	global.Dex_Primary_Types[194] = "Water";
+	global.Dex_Secondary_Types[194] = "Ground";
+	global.Dex_Hatching[194] = "True";
+	global.Dex_Evolve_Level[194] = 20;
+	global.Dex_Health[194] = 55;
+	global.Dex_Attack[194] = 45;
+	global.Dex_Defence[194] = 45;
+	global.Dex_SPattack[194] = 25;
+	global.Dex_SPdefence[194] = 25;
+	global.Dex_Speed[194] = 15;
+
+	// 195 - "Quagsire";
+	global.Dex_Names[195] = "Quagsire";
+	global.Dex_Sprites[195] = SPR_Quagsire;
+	global.Dex_Primary_Types[195] = "Water";
+	global.Dex_Secondary_Types[195] = "Ground";
+	global.Dex_Hatching[195] = "False";
+	global.Dex_Evolve_Level[195] = -1;
+	global.Dex_Health[195] = 95;
+	global.Dex_Attack[195] = 85;
+	global.Dex_Defence[195] = 85;
+	global.Dex_SPattack[195] = 65;
+	global.Dex_SPdefence[195] = 65;
+	global.Dex_Speed[195] = 35;
+
+	// 196 - "Espeon";
+	global.Dex_Names[196] = "Espeon";
+	global.Dex_Sprites[196] = SPR_Espeon;
+	global.Dex_Primary_Types[196] = "Psychic";
+	global.Dex_Hatching[196] = "False";
+	global.Dex_Evolve_Level[196] = -1;
+	global.Dex_Health[196] = 65;
+	global.Dex_Attack[196] = 65;
+	global.Dex_Defence[196] = 60;
+	global.Dex_SPattack[196] = 130;
+	global.Dex_SPdefence[196] = 95;
+	global.Dex_Speed[196] = 110;
+
+	// 197 - "Umbreon";
+	global.Dex_Names[197] = "Umbreon";
+	global.Dex_Sprites[197] = SPR_Umbreon;
+	global.Dex_Primary_Types[197] = "Dark";
+	global.Dex_Hatching[197] = "False";
+	global.Dex_Evolve_Level[197] = -1;
+	global.Dex_Health[197] = 95;
+	global.Dex_Attack[197] = 65;
+	global.Dex_Defence[197] = 110;
+	global.Dex_SPattack[197] = 60;
+	global.Dex_SPdefence[197] = 130;
+	global.Dex_Speed[197] = 65;
+
+	// 198 - "Murkrow";
+	global.Dex_Names[198] = "Murkrow";
+	global.Dex_Sprites[198] = SPR_Murkrow;
+	global.Dex_Primary_Types[198] = "Dark";
+	global.Dex_Secondary_Types[198] = "Flying";
+	global.Dex_Hatching[198] = "True";
+	global.Dex_Evolve_Level[198] = -1; // Does not evolve in Gen 2
+	global.Dex_Health[198] = 60;
+	global.Dex_Attack[198] = 85;
+	global.Dex_Defence[198] = 42;
+	global.Dex_SPattack[198] = 85;
+	global.Dex_SPdefence[198] = 42;
+	global.Dex_Speed[198] = 91;
+
+	// 199 - "Slowking";
+	global.Dex_Names[199] = "Slowking";
+	global.Dex_Sprites[199] = SPR_Slowking;
+	global.Dex_Primary_Types[199] = "Water";
+	global.Dex_Secondary_Types[199] = "Psychic";
+	global.Dex_Hatching[199] = "False"; // Evolution of Slowpoke
+	global.Dex_Evolve_Level[199] = -1; // Evolves via trade with King's Rock
+	global.Dex_Health[199] = 95;
+	global.Dex_Attack[199] = 75;
+	global.Dex_Defence[199] = 80;
+	global.Dex_SPattack[199] = 100;
+	global.Dex_SPdefence[199] = 110;
+	global.Dex_Speed[199] = 30;
+
+	// 200 - "Misdreavous";
+	global.Dex_Names[200] = "Misdreavous";
+	global.Dex_Sprites[200] = SPR_Misdreavous;
+	global.Dex_Primary_Types[200] = "Ghost";
+	global.Dex_Hatching[200] = "True";
+	global.Dex_Evolve_Level[200] = -1; // Evolves in Gen 4 with Dusk Stone
+	global.Dex_Health[200] = 60;
+	global.Dex_Attack[200] = 60;
+	global.Dex_Defence[200] = 60;
+	global.Dex_SPattack[200] = 85;
+	global.Dex_SPdefence[200] = 85;
+	global.Dex_Speed[200] = 85;
+
+	// 201 - "Unown";
+	global.Dex_Names[201] = "Unown";
+	global.Dex_Sprites[201] = SPR_Unown;
+	global.Dex_Primary_Types[201] = "Psychic";
+	global.Dex_Hatching[201] = "True";
+	global.Dex_Evolve_Level[201] = -1; // No evolution
+	global.Dex_Health[201] = 48;
+	global.Dex_Attack[201] = 72;
+	global.Dex_Defence[201] = 48;
+	global.Dex_SPattack[201] = 72;
+	global.Dex_SPdefence[201] = 48;
+	global.Dex_Speed[201] = 48;
+
+	// 202 - "Wobbuffet";
+	global.Dex_Names[202] = "Wobbuffet";
+	global.Dex_Sprites[202] = SPR_Wobbuffet;
+	global.Dex_Primary_Types[202] = "Psychic";
+	global.Dex_Hatching[202] = "False"; // Evolution of Wynaut in later gens
+	global.Dex_Evolve_Level[202] = -1; // No evolution in Gen 2
+	global.Dex_Health[202] = 190;
+	global.Dex_Attack[202] = 33;
+	global.Dex_Defence[202] = 58;
+	global.Dex_SPattack[202] = 33;
+	global.Dex_SPdefence[202] = 58;
+	global.Dex_Speed[202] = 33;
+
+	// 203 - "Girafarig";
+	global.Dex_Names[203] = "Girafarig";
+	global.Dex_Sprites[203] = SPR_Girafarig;
+	global.Dex_Primary_Types[203] = "Normal";
+	global.Dex_Secondary_Types[203] = "Psychic";
+	global.Dex_Hatching[203] = "True";
+	global.Dex_Evolve_Level[203] = -1; // No evolution in Gen 2
+	global.Dex_Health[203] = 70;
+	global.Dex_Attack[203] = 80;
+	global.Dex_Defence[203] = 65;
+	global.Dex_SPattack[203] = 90;
+	global.Dex_SPdefence[203] = 65;
+	global.Dex_Speed[203] = 85;
+
+	// 204 - "Pineco";
+	global.Dex_Names[204] = "Pineco";
+	global.Dex_Sprites[204] = SPR_Pineco;
+	global.Dex_Primary_Types[204] = "Bug";
+	global.Dex_Hatching[204] = "True";
+	global.Dex_Evolve_Level[204] = 31; // Evolves into Forretress at level 31
+	global.Dex_Health[204] = 50;
+	global.Dex_Attack[204] = 65;
+	global.Dex_Defence[204] = 90;
+	global.Dex_SPattack[204] = 35;
+	global.Dex_SPdefence[204] = 35;
+	global.Dex_Speed[204] = 15;
+
+	// 205 - "Forretress";
+	global.Dex_Names[205] = "Forretress";
+	global.Dex_Sprites[205] = SPR_Forretress;
+	global.Dex_Primary_Types[205] = "Bug";
+	global.Dex_Secondary_Types[205] = "Steel";
+	global.Dex_Hatching[205] = "False"; // Evolution of Pineco
+	global.Dex_Evolve_Level[205] = -1;
+	global.Dex_Health[205] = 75;
+	global.Dex_Attack[205] = 90;
+	global.Dex_Defence[205] = 140;
+	global.Dex_SPattack[205] = 60;
+	global.Dex_SPdefence[205] = 60;
+	global.Dex_Speed[205] = 40;
+
+	// 206 - "Dunsparce";
+	global.Dex_Names[206] = "Dunsparce";
+	global.Dex_Sprites[206] = SPR_Dunsparce;
+	global.Dex_Primary_Types[206] = "Normal";
+	global.Dex_Hatching[206] = "True";
+	global.Dex_Evolve_Level[206] = -1; // No evolution in Gen 2
+	global.Dex_Health[206] = 100;
+	global.Dex_Attack[206] = 70;
+	global.Dex_Defence[206] = 70;
+	global.Dex_SPattack[206] = 65;
+	global.Dex_SPdefence[206] = 65;
+	global.Dex_Speed[206] = 45;
+
+	// 207 - "Gligar";
+	global.Dex_Names[207] = "Gligar";
+	global.Dex_Sprites[207] = SPR_Gligar;
+	global.Dex_Primary_Types[207] = "Ground";
+	global.Dex_Secondary_Types[207] = "Flying";
+	global.Dex_Hatching[207] = "True";
+	global.Dex_Evolve_Level[207] = -1; // Evolves in Gen 4 with Razor Fang
+	global.Dex_Health[207] = 65;
+	global.Dex_Attack[207] = 75;
+	global.Dex_Defence[207] = 105;
+	global.Dex_SPattack[207] = 35;
+	global.Dex_SPdefence[207] = 65;
+	global.Dex_Speed[207] = 85;
+
+	// 208 - "Steelix";
+	global.Dex_Names[208] = "Steelix";
+	global.Dex_Sprites[208] = SPR_Steelix;
+	global.Dex_Primary_Types[208] = "Steel";
+	global.Dex_Secondary_Types[208] = "Ground";
+	global.Dex_Hatching[208] = "False"; // Evolution of Onix
+	global.Dex_Evolve_Level[208] = -1; // Evolves via trade with Metal Coat
+	global.Dex_Health[208] = 75;
+	global.Dex_Attack[208] = 85;
+	global.Dex_Defence[208] = 200;
+	global.Dex_SPattack[208] = 55;
+	global.Dex_SPdefence[208] = 65;
+	global.Dex_Speed[208] = 30;
+
+	// 209 - "Snubbull";
+	global.Dex_Names[209] = "Snubbull";
+	global.Dex_Sprites[209] = SPR_Snubbull;
+	global.Dex_Primary_Types[209] = "Fairy"; // Changed to Fairy in later gens
+	global.Dex_Hatching[209] = "True";
+	global.Dex_Evolve_Level[209] = 23; // Evolves into Granbull at level 23
+	global.Dex_Health[209] = 60;
+	global.Dex_Attack[209] = 80;
+	global.Dex_Defence[209] = 50;
+	global.Dex_SPattack[209] = 40;
+	global.Dex_SPdefence[209] = 40;
+	global.Dex_Speed[209] = 30;
+
+	// 210 - "Granbull";
+	global.Dex_Names[210] = "Granbull";
+	global.Dex_Sprites[210] = SPR_Granbull;
+	global.Dex_Primary_Types[210] = "Fairy"; // Changed to Fairy in later gens
+	global.Dex_Hatching[210] = "False"; // Evolution of Snubbull
+	global.Dex_Evolve_Level[210] = -1;
+	global.Dex_Health[210] = 90;
+	global.Dex_Attack[210] = 120;
+	global.Dex_Defence[210] = 75;
+	global.Dex_SPattack[210] = 60;
+	global.Dex_SPdefence[210] = 60;
+	global.Dex_Speed[210] = 45;
+
+	// 211 - "Qwilfish";
+	global.Dex_Names[211] = "Qwilfish";
+	global.Dex_Sprites[211] = SPR_Qwilfish;
+	global.Dex_Primary_Types[211] = "Water";
+	global.Dex_Secondary_Types[211] = "Poison";
+	global.Dex_Hatching[211] = "True";
+	global.Dex_Evolve_Level[211] = -1; // No evolution in Gen 2
+	global.Dex_Health[211] = 65;
+	global.Dex_Attack[211] = 95;
+	global.Dex_Defence[211] = 75;
+	global.Dex_SPattack[211] = 55;
+	global.Dex_SPdefence[211] = 55;
+	global.Dex_Speed[211] = 85;
+
+	// 212 - "Scizor";
+	global.Dex_Names[212] = "Scizor";
+	global.Dex_Sprites[212] = SPR_Scizor;
+	global.Dex_Primary_Types[212] = "Bug";
+	global.Dex_Secondary_Types[212] = "Steel";
+	global.Dex_Hatching[212] = "False"; // Evolution of Scyther
+	global.Dex_Evolve_Level[212] = -1; // Evolves via trade with Metal Coat
+	global.Dex_Health[212] = 70;
+	global.Dex_Attack[212] = 130;
+	global.Dex_Defence[212] = 100;
+	global.Dex_SPattack[212] = 55;
+	global.Dex_SPdefence[212] = 80;
+	global.Dex_Speed[212] = 65;
+
+	// 213 - "Shuckle";
+	global.Dex_Names[213] = "Shuckle";
+	global.Dex_Sprites[213] = SPR_Shuckle;
+	global.Dex_Primary_Types[213] = "Bug";
+	global.Dex_Secondary_Types[213] = "Rock";
+	global.Dex_Hatching[213] = "True";
+	global.Dex_Evolve_Level[213] = -1; // No evolution
+	global.Dex_Health[213] = 20;
+	global.Dex_Attack[213] = 10;
+	global.Dex_Defence[213] = 230;
+	global.Dex_SPattack[213] = 10;
+	global.Dex_SPdefence[213] = 230;
+	global.Dex_Speed[213] = 5;
+
+	// 214 - "Heracross";
+	global.Dex_Names[214] = "Heracross";
+	global.Dex_Sprites[214] = SPR_Heracross;
+	global.Dex_Primary_Types[214] = "Bug";
+	global.Dex_Secondary_Types[214] = "Fighting";
+	global.Dex_Hatching[214] = "True";
+	global.Dex_Evolve_Level[214] = -1; // No evolution
+	global.Dex_Health[214] = 80;
+	global.Dex_Attack[214] = 125;
+	global.Dex_Defence[214] = 75;
+	global.Dex_SPattack[214] = 40;
+	global.Dex_SPdefence[214] = 95;
+	global.Dex_Speed[214] = 85;
+
+	// 215 - "Sneasel";
+	global.Dex_Names[215] = "Sneasel";
+	global.Dex_Sprites[215] = SPR_Sneasel;
+	global.Dex_Primary_Types[215] = "Dark";
+	global.Dex_Secondary_Types[215] = "Ice";
+	global.Dex_Hatching[215] = "True";
+	global.Dex_Evolve_Level[215] = -1; // Evolves in Gen 4 with Razor Claw at night
+	global.Dex_Health[215] = 55;
+	global.Dex_Attack[215] = 95;
+	global.Dex_Defence[215] = 55;
+	global.Dex_SPattack[215] = 35;
+	global.Dex_SPdefence[215] = 75;
+	global.Dex_Speed[215] = 115;
+	
+	// 216 - "Teddiursa";
+	global.Dex_Names[216] = "Teddiursa";
+	global.Dex_Sprites[216] = SPR_Teddiursa;
+	global.Dex_Primary_Types[216] = "Normal";
+	global.Dex_Hatching[216] = "True";
+	global.Dex_Evolve_Level[216] = 30; // Evolves into Ursaring at level 30
+	global.Dex_Health[216] = 60;
+	global.Dex_Attack[216] = 80;
+	global.Dex_Defence[216] = 50;
+	global.Dex_SPattack[216] = 50;
+	global.Dex_SPdefence[216] = 50;
+	global.Dex_Speed[216] = 40;
+
+	// 217 - "Ursaring";
+	global.Dex_Names[217] = "Ursaring";
+	global.Dex_Sprites[217] = SPR_Ursaring;
+	global.Dex_Primary_Types[217] = "Normal";
+	global.Dex_Hatching[217] = "False"; // Evolution of Teddiursa
+	global.Dex_Evolve_Level[217] = -1; // Evolves in Gen 8 into Ursaluna
+	global.Dex_Health[217] = 90;
+	global.Dex_Attack[217] = 130;
+	global.Dex_Defence[217] = 75;
+	global.Dex_SPattack[217] = 75;
+	global.Dex_SPdefence[217] = 75;
+	global.Dex_Speed[217] = 55;
+
+	// 218 - "Slugma";
+	global.Dex_Names[218] = "Slugma";
+	global.Dex_Sprites[218] = SPR_Slugma;
+	global.Dex_Primary_Types[218] = "Fire";
+	global.Dex_Hatching[218] = "True";
+	global.Dex_Evolve_Level[218] = 38; // Evolves into Magcargo at level 38
+	global.Dex_Health[218] = 40;
+	global.Dex_Attack[218] = 40;
+	global.Dex_Defence[218] = 40;
+	global.Dex_SPattack[218] = 70;
+	global.Dex_SPdefence[218] = 40;
+	global.Dex_Speed[218] = 20;
+
+	// 219 - "Magcargo";
+	global.Dex_Names[219] = "Magcargo";
+	global.Dex_Sprites[219] = SPR_Magcargo;
+	global.Dex_Primary_Types[219] = "Fire";
+	global.Dex_Secondary_Types[219] = "Rock";
+	global.Dex_Hatching[219] = "False"; // Evolution of Slugma
+	global.Dex_Evolve_Level[219] = -1;
+	global.Dex_Health[219] = 60;
+	global.Dex_Attack[219] = 50;
+	global.Dex_Defence[219] = 120;
+	global.Dex_SPattack[219] = 90;
+	global.Dex_SPdefence[219] = 80;
+	global.Dex_Speed[219] = 30;
+
+	// 220 - "Swinub";
+	global.Dex_Names[220] = "Swinub";
+	global.Dex_Sprites[220] = SPR_Swinub;
+	global.Dex_Primary_Types[220] = "Ice";
+	global.Dex_Secondary_Types[220] = "Ground";
+	global.Dex_Hatching[220] = "True";
+	global.Dex_Evolve_Level[220] = 33; // Evolves into Piloswine at level 33
+	global.Dex_Health[220] = 50;
+	global.Dex_Attack[220] = 50;
+	global.Dex_Defence[220] = 40;
+	global.Dex_SPattack[220] = 30;
+	global.Dex_SPdefence[220] = 30;
+	global.Dex_Speed[220] = 50;
+
+	// 221 - "Piloswine";
+	global.Dex_Names[221] = "Piloswine";
+	global.Dex_Sprites[221] = SPR_Piloswine;
+	global.Dex_Primary_Types[221] = "Ice";
+	global.Dex_Secondary_Types[221] = "Ground";
+	global.Dex_Hatching[221] = "False"; // Evolution of Swinub
+	global.Dex_Evolve_Level[221] = -1; // Evolves into Mamoswine in Gen 4 with Ancient Power
+	global.Dex_Health[221] = 100;
+	global.Dex_Attack[221] = 100;
+	global.Dex_Defence[221] = 80;
+	global.Dex_SPattack[221] = 60;
+	global.Dex_SPdefence[221] = 60;
+	global.Dex_Speed[221] = 50;
+
+	// 222 - "Corsola";
+	global.Dex_Names[222] = "Corsola";
+	global.Dex_Sprites[222] = SPR_Corsola;
+	global.Dex_Primary_Types[222] = "Water";
+	global.Dex_Secondary_Types[222] = "Rock";
+	global.Dex_Hatching[222] = "True";
+	global.Dex_Evolve_Level[222] = -1; // No evolution in Gen 2
+	global.Dex_Health[222] = 55;
+	global.Dex_Attack[222] = 55;
+	global.Dex_Defence[222] = 85;
+	global.Dex_SPattack[222] = 65;
+	global.Dex_SPdefence[222] = 85;
+	global.Dex_Speed[222] = 35;
+
+	// 223 - "Remoraid";
+	global.Dex_Names[223] = "Remoraid";
+	global.Dex_Sprites[223] = SPR_Remoraid;
+	global.Dex_Primary_Types[223] = "Water";
+	global.Dex_Hatching[223] = "True";
+	global.Dex_Evolve_Level[223] = 25; // Evolves into Octillery at level 25
+	global.Dex_Health[223] = 35;
+	global.Dex_Attack[223] = 65;
+	global.Dex_Defence[223] = 35;
+	global.Dex_SPattack[223] = 65;
+	global.Dex_SPdefence[223] = 35;
+	global.Dex_Speed[223] = 65;
+
+	// 224 - "Octillery";
+	global.Dex_Names[224] = "Octillery";
+	global.Dex_Sprites[224] = SPR_Octillery;
+	global.Dex_Primary_Types[224] = "Water";
+	global.Dex_Hatching[224] = "False"; // Evolution of Remoraid
+	global.Dex_Evolve_Level[224] = -1;
+	global.Dex_Health[224] = 75;
+	global.Dex_Attack[224] = 105;
+	global.Dex_Defence[224] = 75;
+	global.Dex_SPattack[224] = 105;
+	global.Dex_SPdefence[224] = 75;
+	global.Dex_Speed[224] = 45;
+
+	// 225 - "Delibird";
+	global.Dex_Names[225] = "Delibird";
+	global.Dex_Sprites[225] = SPR_Delibird;
+	global.Dex_Primary_Types[225] = "Ice";
+	global.Dex_Secondary_Types[225] = "Flying";
+	global.Dex_Hatching[225] = "True";
+	global.Dex_Evolve_Level[225] = -1; // No evolution
+	global.Dex_Health[225] = 45;
+	global.Dex_Attack[225] = 55;
+	global.Dex_Defence[225] = 45;
+	global.Dex_SPattack[225] = 65;
+	global.Dex_SPdefence[225] = 45;
+	global.Dex_Speed[225] = 75;
+
+	// 226 - "Mantine";
+	global.Dex_Names[226] = "Mantine";
+	global.Dex_Sprites[226] = SPR_Mantine;
+	global.Dex_Primary_Types[226] = "Water";
+	global.Dex_Secondary_Types[226] = "Flying";
+	global.Dex_Hatching[226] = "False"; // Evolution of Mantyke (Gen 4)
+	global.Dex_Evolve_Level[226] = -1;
+	global.Dex_Health[226] = 85;
+	global.Dex_Attack[226] = 40;
+	global.Dex_Defence[226] = 70;
+	global.Dex_SPattack[226] = 80;
+	global.Dex_SPdefence[226] = 140;
+	global.Dex_Speed[226] = 70;
+
+	// 227 - "Skarmory";
+	global.Dex_Names[227] = "Skarmory";
+	global.Dex_Sprites[227] = SPR_Skarmory;
+	global.Dex_Primary_Types[227] = "Steel";
+	global.Dex_Secondary_Types[227] = "Flying";
+	global.Dex_Hatching[227] = "True";
+	global.Dex_Evolve_Level[227] = -1; // No evolution
+	global.Dex_Health[227] = 65;
+	global.Dex_Attack[227] = 80;
+	global.Dex_Defence[227] = 140;
+	global.Dex_SPattack[227] = 40;
+	global.Dex_SPdefence[227] = 70;
+	global.Dex_Speed[227] = 70;
+
+	// 228 - "Houndour";
+	global.Dex_Names[228] = "Houndour";
+	global.Dex_Sprites[228] = SPR_Houndour;
+	global.Dex_Primary_Types[228] = "Dark";
+	global.Dex_Secondary_Types[228] = "Fire";
+	global.Dex_Hatching[228] = "True";
+	global.Dex_Evolve_Level[228] = 24; // Evolves into Houndoom at level 24
+	global.Dex_Health[228] = 45;
+	global.Dex_Attack[228] = 60;
+	global.Dex_Defence[228] = 30;
+	global.Dex_SPattack[228] = 80;
+	global.Dex_SPdefence[228] = 50;
+	global.Dex_Speed[228] = 65;
+
+	// 229 - "Houndoom";
+	global.Dex_Names[229] = "Houndoom";
+	global.Dex_Sprites[229] = SPR_Houndoom;
+	global.Dex_Primary_Types[229] = "Dark";
+	global.Dex_Secondary_Types[229] = "Fire";
+	global.Dex_Hatching[229] = "False"; // Evolution of Houndour
+	global.Dex_Evolve_Level[229] = -1;
+	global.Dex_Health[229] = 75;
+	global.Dex_Attack[229] = 90;
+	global.Dex_Defence[229] = 50;
+	global.Dex_SPattack[229] = 110;
+	global.Dex_SPdefence[229] = 80;
+	global.Dex_Speed[229] = 95;
+
+	// 230 - "Kingdra";
+	global.Dex_Names[230] = "Kingdra";
+	global.Dex_Sprites[230] = SPR_Kingdra;
+	global.Dex_Primary_Types[230] = "Water";
+	global.Dex_Secondary_Types[230] = "Dragon";
+	global.Dex_Hatching[230] = "False"; // Evolution of Seadra
+	global.Dex_Evolve_Level[230] = -1;
+	global.Dex_Health[230] = 75;
+	global.Dex_Attack[230] = 95;
+	global.Dex_Defence[230] = 95;
+	global.Dex_SPattack[230] = 95;
+	global.Dex_SPdefence[230] = 95;
+	global.Dex_Speed[230] = 85;
+
+	// 231 - "Phanpy";
+	global.Dex_Names[231] = "Phanpy";
+	global.Dex_Sprites[231] = SPR_Phanpy;
+	global.Dex_Primary_Types[231] = "Ground";
+	global.Dex_Hatching[231] = "True";
+	global.Dex_Evolve_Level[231] = 25; // Evolves into Donphan at level 25
+	global.Dex_Health[231] = 90;
+	global.Dex_Attack[231] = 60;
+	global.Dex_Defence[231] = 60;
+	global.Dex_SPattack[231] = 40;
+	global.Dex_SPdefence[231] = 40;
+	global.Dex_Speed[231] = 40;
+
+	// 232 - "Donphan";
+	global.Dex_Names[232] = "Donphan";
+	global.Dex_Sprites[232] = SPR_Donphan;
+	global.Dex_Primary_Types[232] = "Ground";
+	global.Dex_Hatching[232] = "False"; // Evolution of Phanpy
+	global.Dex_Evolve_Level[232] = -1;
+	global.Dex_Health[232] = 90;
+	global.Dex_Attack[232] = 120;
+	global.Dex_Defence[232] = 120;
+	global.Dex_SPattack[232] = 60;
+	global.Dex_SPdefence[232] = 60;
+	global.Dex_Speed[232] = 50;
+	
+	// 233 - "Porygon2";
+	global.Dex_Names[233] = "Porygon2";
+	global.Dex_Sprites[233] = SPR_Porygon2;
+	global.Dex_Primary_Types[233] = "Normal";
+	global.Dex_Hatching[233] = "False"; // Evolution of Porygon
+	global.Dex_Evolve_Level[233] = -1;
+	global.Dex_Health[233] = 85;
+	global.Dex_Attack[233] = 80;
+	global.Dex_Defence[233] = 90;
+	global.Dex_SPattack[233] = 105;
+	global.Dex_SPdefence[233] = 95;
+	global.Dex_Speed[233] = 60;
+
+	// 234 - "Stantler";
+	global.Dex_Names[234] = "Stantler";
+	global.Dex_Sprites[234] = SPR_Stantler;
+	global.Dex_Primary_Types[234] = "Normal";
+	global.Dex_Hatching[234] = "True";
+	global.Dex_Evolve_Level[234] = -1; // No evolution in Gen 2
+	global.Dex_Health[234] = 73;
+	global.Dex_Attack[234] = 95;
+	global.Dex_Defence[234] = 62;
+	global.Dex_SPattack[234] = 85;
+	global.Dex_SPdefence[234] = 65;
+	global.Dex_Speed[234] = 85;
+
+	// 235 - "Smeargle";
+	global.Dex_Names[235] = "Smeargle";
+	global.Dex_Sprites[235] = SPR_Smeargle;
+	global.Dex_Primary_Types[235] = "Normal";
+	global.Dex_Hatching[235] = "True";
+	global.Dex_Evolve_Level[235] = -1; // No evolution
+	global.Dex_Health[235] = 55;
+	global.Dex_Attack[235] = 20;
+	global.Dex_Defence[235] = 35;
+	global.Dex_SPattack[235] = 20;
+	global.Dex_SPdefence[235] = 45;
+	global.Dex_Speed[235] = 75;
+
+	// 236 - "Tyrogue";
+	global.Dex_Names[236] = "Tyrogue";
+	global.Dex_Sprites[236] = SPR_Tyrogue;
+	global.Dex_Primary_Types[236] = "Fighting";
+	global.Dex_Hatching[236] = "True";
+	global.Dex_Evolve_Level[236] = 20; // Evolves based on stats
+	global.Dex_Health[236] = 35;
+	global.Dex_Attack[236] = 35;
+	global.Dex_Defence[236] = 35;
+	global.Dex_SPattack[236] = 35;
+	global.Dex_SPdefence[236] = 35;
+	global.Dex_Speed[236] = 35;
+
+	// 237 - "Hitmontop";
+	global.Dex_Names[237] = "Hitmontop";
+	global.Dex_Sprites[237] = SPR_Hitmontop;
+	global.Dex_Primary_Types[237] = "Fighting";
+	global.Dex_Hatching[237] = "False"; // Evolution of Tyrogue
+	global.Dex_Evolve_Level[237] = -1;
+	global.Dex_Health[237] = 50;
+	global.Dex_Attack[237] = 95;
+	global.Dex_Defence[237] = 95;
+	global.Dex_SPattack[237] = 35;
+	global.Dex_SPdefence[237] = 110;
+	global.Dex_Speed[237] = 70;
+
+	// 238 - "Smoochum";
+	global.Dex_Names[238] = "Smoochum";
+	global.Dex_Sprites[238] = SPR_Smoochum;
+	global.Dex_Primary_Types[238] = "Ice";
+	global.Dex_Secondary_Types[238] = "Psychic";
+	global.Dex_Hatching[238] = "True";
+	global.Dex_Evolve_Level[238] = 30; // Evolves into Jynx
+	global.Dex_Health[238] = 45;
+	global.Dex_Attack[238] = 30;
+	global.Dex_Defence[238] = 15;
+	global.Dex_SPattack[238] = 85;
+	global.Dex_SPdefence[238] = 65;
+	global.Dex_Speed[238] = 65;
+
+	// 239 - "Elekid";
+	global.Dex_Names[239] = "Elekid";
+	global.Dex_Sprites[239] = SPR_Elekid;
+	global.Dex_Primary_Types[239] = "Electric";
+	global.Dex_Hatching[239] = "True";
+	global.Dex_Evolve_Level[239] = 30; // Evolves into Electabuzz
+	global.Dex_Health[239] = 45;
+	global.Dex_Attack[239] = 63;
+	global.Dex_Defence[239] = 37;
+	global.Dex_SPattack[239] = 65;
+	global.Dex_SPdefence[239] = 55;
+	global.Dex_Speed[239] = 95;
+
+	// 240 - "Magby";
+	global.Dex_Names[240] = "Magby";
+	global.Dex_Sprites[240] = SPR_Magby;
+	global.Dex_Primary_Types[240] = "Fire";
+	global.Dex_Hatching[240] = "True";
+	global.Dex_Evolve_Level[240] = 30; // Evolves into Magmar
+	global.Dex_Health[240] = 45;
+	global.Dex_Attack[240] = 75;
+	global.Dex_Defence[240] = 37;
+	global.Dex_SPattack[240] = 70;
+	global.Dex_SPdefence[240] = 55;
+	global.Dex_Speed[240] = 83;
+
+	// 241 - "Miltank";
+	global.Dex_Names[241] = "Miltank";
+	global.Dex_Sprites[241] = SPR_Miltank;
+	global.Dex_Primary_Types[241] = "Normal";
+	global.Dex_Hatching[241] = "True";
+	global.Dex_Evolve_Level[241] = -1; // No evolution
+	global.Dex_Health[241] = 95;
+	global.Dex_Attack[241] = 80;
+	global.Dex_Defence[241] = 105;
+	global.Dex_SPattack[241] = 40;
+	global.Dex_SPdefence[241] = 70;
+	global.Dex_Speed[241] = 100;
+
+	// 242 - "Blissey";
+	global.Dex_Names[242] = "Blissey";
+	global.Dex_Sprites[242] = SPR_Blissey;
+	global.Dex_Primary_Types[242] = "Normal";
+	global.Dex_Hatching[242] = "False"; // Evolution of Chansey
+	global.Dex_Evolve_Level[242] = -1;
+	global.Dex_Health[242] = 255;
+	global.Dex_Attack[242] = 10;
+	global.Dex_Defence[242] = 10;
+	global.Dex_SPattack[242] = 75;
+	global.Dex_SPdefence[242] = 135;
+	global.Dex_Speed[242] = 55;
+
+	// 243 - "Raikou";
+	global.Dex_Names[243] = "Raikou";
+	global.Dex_Sprites[243] = SPR_Raikou;
+	global.Dex_Primary_Types[243] = "Electric";
+	global.Dex_Hatching[243] = "True"; // Legendary Pokémon
+	global.Dex_Evolve_Level[243] = -1;
+	global.Dex_Health[243] = 90;
+	global.Dex_Attack[243] = 85;
+	global.Dex_Defence[243] = 75;
+	global.Dex_SPattack[243] = 115;
+	global.Dex_SPdefence[243] = 100;
+	global.Dex_Speed[243] = 115;
+
+	// 244 - "Entei";
+	global.Dex_Names[244] = "Entei";
+	global.Dex_Sprites[244] = SPR_Entei;
+	global.Dex_Primary_Types[244] = "Fire";
+	global.Dex_Hatching[244] = "True"; // Legendary Pokémon
+	global.Dex_Evolve_Level[244] = -1;
+	global.Dex_Health[244] = 115;
+	global.Dex_Attack[244] = 115;
+	global.Dex_Defence[244] = 85;
+	global.Dex_SPattack[244] = 90;
+	global.Dex_SPdefence[244] = 75;
+	global.Dex_Speed[244] = 100;
+
+	// 245 - "Suicune";
+	global.Dex_Names[245] = "Suicune";
+	global.Dex_Sprites[245] = SPR_Suicune;
+	global.Dex_Primary_Types[245] = "Water";
+	global.Dex_Hatching[245] = "True"; // Legendary Pokémon
+	global.Dex_Evolve_Level[245] = -1;
+	global.Dex_Health[245] = 100;
+	global.Dex_Attack[245] = 75;
+	global.Dex_Defence[245] = 115;
+	global.Dex_SPattack[245] = 90;
+	global.Dex_SPdefence[245] = 115;
+	global.Dex_Speed[245] = 85;
+
+	// 246 - "Larvitar";
+	global.Dex_Names[246] = "Larvitar";
+	global.Dex_Sprites[246] = SPR_Larvitar;
+	global.Dex_Primary_Types[246] = "Rock";
+	global.Dex_Secondary_Types[246] = "Ground";
+	global.Dex_Hatching[246] = "True";
+	global.Dex_Evolve_Level[246] = 30; // Evolves into Pupitar
+	global.Dex_Health[246] = 50;
+	global.Dex_Attack[246] = 64;
+	global.Dex_Defence[246] = 50;
+	global.Dex_SPattack[246] = 45;
+	global.Dex_SPdefence[246] = 50;
+	global.Dex_Speed[246] = 41;
+
+	// 247 - "Pupitar";
+	global.Dex_Names[247] = "Pupitar";
+	global.Dex_Sprites[247] = SPR_Pupitar;
+	global.Dex_Primary_Types[247] = "Rock";
+	global.Dex_Secondary_Types[247] = "Ground";
+	global.Dex_Hatching[247] = "False"; // Evolution of Larvitar
+	global.Dex_Evolve_Level[247] = 55; // Evolves into Tyranitar
+	global.Dex_Health[247] = 70;
+	global.Dex_Attack[247] = 84;
+	global.Dex_Defence[247] = 70;
+	global.Dex_SPattack[247] = 65;
+	global.Dex_SPdefence[247] = 70;
+	global.Dex_Speed[247] = 51;
+
+	// 248 - "Tyranitar";
+	global.Dex_Names[248] = "Tyranitar";
+	global.Dex_Sprites[248] = SPR_Tyranitar;
+	global.Dex_Primary_Types[248] = "Rock";
+	global.Dex_Secondary_Types[248] = "Dark";
+	global.Dex_Hatching[248] = "False"; // Final evolution
+	global.Dex_Evolve_Level[248] = -1;
+	global.Dex_Health[248] = 100;
+	global.Dex_Attack[248] = 134;
+	global.Dex_Defence[248] = 110;
+	global.Dex_SPattack[248] = 95;
+	global.Dex_SPdefence[248] = 100;
+	global.Dex_Speed[248] = 61;
+
+	// 249 - "Lugia";
+	global.Dex_Names[249] = "Lugia";
+	global.Dex_Sprites[249] = SPR_Lugia;
+	global.Dex_Primary_Types[249] = "Psychic";
+	global.Dex_Secondary_Types[249] = "Flying";
+	global.Dex_Hatching[249] = "True"; // Legendary Pokémon
+	global.Dex_Evolve_Level[249] = -1;
+	global.Dex_Health[249] = 106;
+	global.Dex_Attack[249] = 90;
+	global.Dex_Defence[249] = 130;
+	global.Dex_SPattack[249] = 90;
+	global.Dex_SPdefence[249] = 154;
+	global.Dex_Speed[249] = 110;
+
+	// 250 - "Ho-oh";
+	global.Dex_Names[250] = "Ho-oh";
+	global.Dex_Sprites[250] = SPR_Hooh;
+	global.Dex_Primary_Types[250] = "Fire";
+	global.Dex_Secondary_Types[250] = "Flying";
+	global.Dex_Hatching[250] = "True"; // Legendary Pokémon
+	global.Dex_Evolve_Level[250] = -1;
+	global.Dex_Health[250] = 106;
+	global.Dex_Attack[250] = 130;
+	global.Dex_Defence[250] = 90;
+	global.Dex_SPattack[250] = 110;
+	global.Dex_SPdefence[250] = 154;
+	global.Dex_Speed[250] = 90;
+
+	// 251 - "Celebi";
+	global.Dex_Names[251] = "Celebi";
+	global.Dex_Sprites[251] = SPR_Celebi;
+	global.Dex_Primary_Types[251] = "Psychic";
+	global.Dex_Secondary_Types[251] = "Grass";
+	global.Dex_Hatching[251] = "True"; // Mythical Pokémon
+	global.Dex_Evolve_Level[251] = -1;
+	global.Dex_Health[251] = 100;
+	global.Dex_Attack[251] = 100;
+	global.Dex_Defence[251] = 100;
+	global.Dex_SPattack[251] = 100;
+	global.Dex_SPdefence[251] = 100;
+	global.Dex_Speed[251] = 100;
+
 }

@@ -167,7 +167,7 @@ function SCR_Initialise_Globals()
 	global.types[14] = "Fairy";
 	global.types[15] = "Steel";
 	global.types[16] = "Flying";
-	//global.types[17] = "Dark";
+	global.types[17] = "Dark";
 	
 	// Define a 2D array for type effectiveness
 	for (i = 0; i < 18; i++)
@@ -362,7 +362,7 @@ function SCR_Initialise_Globals()
 	global.type_colors[14] = global.c_fairy;
 	global.type_colors[15] = global.c_steel;
 	global.type_colors[16] = global.c_flying;
-	// global.type_colors[17] = global.c_dark;
+	global.type_colors[17] = global.c_dark;
 	
 	// Lab
 	i = 1;

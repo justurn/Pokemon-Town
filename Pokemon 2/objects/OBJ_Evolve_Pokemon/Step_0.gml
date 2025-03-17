@@ -18,12 +18,44 @@ if (evolution_timer == 90)
 	switch (pokedex_id) 
 	{
 	    case 133: // Eevee evolves into one of three options
-	        pokedex_id = choose(134, 135, 136);
+	        pokedex_id = choose(134, 135, 136, 196, 197);
 	        break;
 
 	    case 42: // Golbat evolves into Crobat
 	        pokedex_id = 169;
 	        break;
+			
+		case 44: // Gloom evolves into Vileplume or Bellossom
+	        pokedex_id = choose(45, 182);
+	        break;
+
+		case 61: // Poliwhirl evolves into Poliwrath or Politoed
+	        pokedex_id = choose(62, 186);
+	        break;
+			
+		case 80: // Slowbro evolves into Slowking
+	        pokedex_id = 199;
+	        break;
+			
+		case 95: // Onix evolves into Steelix
+	        pokedex_id = 208;
+	        break;		
+						
+		case 113: // Chansey evolves into Blissey
+	        pokedex_id = 242;
+	        break;	
+
+		case 117: // Seadra evolves into Kingdra
+	        pokedex_id = 230;
+	        break;			
+
+		case 123: // Scyther evolves into Scizor
+	        pokedex_id = 212;
+	        break;	
+			
+		case 137: // Porygon evolves into Porygon2
+	        pokedex_id = 233;
+	        break;	
 			
 		case 172: // Pichu evolves into Pikachu
 	        pokedex_id = 25;
@@ -37,6 +69,22 @@ if (evolution_timer == 90)
 	        pokedex_id = 39;
 	        break;
 			
+		case 236: // Tyrogue evolves into Hitmontop, Hitmonlee or Hitmonchamp
+	        pokedex_id = choose(237, 107, 106);
+	        break;
+			
+		case 238: // Smoochum evolves into Jynx
+	        pokedex_id = 124;
+	        break;
+			
+		case 239: // Elekid evolves into Electabuzz
+	        pokedex_id = 125;
+	        break;
+			
+		case 240: // Magby evolves into Magmar
+	        pokedex_id = 126;
+	        break;
+				
 	    default:
 	        pokedex_id += 1; // Get new evolution ID
 	        break;
