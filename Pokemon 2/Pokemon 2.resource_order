@@ -260,6 +260,7 @@
     {"name":"SPR_Lightning","order":13,"path":"sprites/SPR_Lightning/SPR_Lightning.yy",},
     {"name":"SPR_Zubat","order":46,"path":"sprites/SPR_Zubat/SPR_Zubat.yy",},
     {"name":"SPR_Coin","order":2,"path":"sprites/SPR_Coin/SPR_Coin.yy",},
+    {"name":"SCR_Inputs","order":18,"path":"scripts/SCR_Inputs/SCR_Inputs.yy",},
     {"name":"SPR_Sandslash","order":82,"path":"sprites/SPR_Sandslash/SPR_Sandslash.yy",},
     {"name":"SPR_Miltank","order":243,"path":"sprites/SPR_Miltank/SPR_Miltank.yy",},
     {"name":"SPR_Speed","order":15,"path":"sprites/SPR_Speed/SPR_Speed.yy",},

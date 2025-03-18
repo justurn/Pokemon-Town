@@ -7,15 +7,7 @@ if (OBJ_Player.x >= build_left && OBJ_Player.x <= build_right && global.entry_al
     // Check if the player presses enter while within bounds
 	var enter = false;
 		
-	if (keyboard_check_pressed(vk_enter))
-	{
-		enter = true;
-	}
-	if (gamepad_button_check_pressed(0, 0))
-	{
-		enter = true;	
-	}
-	if (enter) 
+	if (global.enter) 
 	{
 		if (building_id != 1) // Check for Lab
 		{

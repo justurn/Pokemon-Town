@@ -282,6 +282,7 @@
     {"id":{"name":"SPR_Lightning","path":"sprites/SPR_Lightning/SPR_Lightning.yy",},},
     {"id":{"name":"SPR_Zubat","path":"sprites/SPR_Zubat/SPR_Zubat.yy",},},
     {"id":{"name":"SPR_Coin","path":"sprites/SPR_Coin/SPR_Coin.yy",},},
+    {"id":{"name":"SCR_Inputs","path":"scripts/SCR_Inputs/SCR_Inputs.yy",},},
     {"id":{"name":"SPR_Sandslash","path":"sprites/SPR_Sandslash/SPR_Sandslash.yy",},},
     {"id":{"name":"SPR_Miltank","path":"sprites/SPR_Miltank/SPR_Miltank.yy",},},
     {"id":{"name":"SPR_Speed","path":"sprites/SPR_Speed/SPR_Speed.yy",},},

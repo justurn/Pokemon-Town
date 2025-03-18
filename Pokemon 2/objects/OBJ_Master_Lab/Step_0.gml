@@ -1,21 +1,8 @@
-// Check for user input to change the selected egg
-var right = false;
+delay++
 
-if (keyboard_check_pressed(vk_right))
+if (global.right && delay > delay_limit) 
 {
-	right = true
-}
-if (keyboard_check_pressed(ord("D")))
-{
-	right = true
-}
-if (gamepad_button_check_pressed(0, 15))
-{
-	right = true
-}
-
-if (right) 
-{
+	delay = 0;
 	if egg_count != 1
 	{
 	    // Move to the next egg, loop around to 0 if the last egg is selected
@@ -27,24 +14,9 @@ if (right)
 	}
 }
 
-var left = false;
-
-if (keyboard_check_pressed(vk_left))
+if (global.left && delay > delay_limit) 
 {
-	left = true
-}
-if (keyboard_check_pressed(ord("A")))
-{
-	left = true
-}
-if (gamepad_button_check_pressed(0, 14))
-{
-	left = true
-}
-
-
-if (left) 
-{
+	delay = 0;
 	if egg_count != 1
 	{
 	    global.selected_egg -= 1;
@@ -55,19 +27,8 @@ if (left)
 	}
 }
 
-var enter = false
 
-if (keyboard_check_pressed(vk_enter))
-{
-	enter = true;
-}
-if (gamepad_button_check_pressed(0, 0))
-{
-	enter = true;
-}
-
-
-if (enter)
+if (global.enter)
 {
 	global.chosen_egg_type = global.egg_types_found[global.selected_egg];
 	global.item_held[0] = -1; // Reset the held status of eggs.

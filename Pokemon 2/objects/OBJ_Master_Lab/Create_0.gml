@@ -5,6 +5,8 @@ global.chosen_egg_type = -1;
 global.wild_pokemon_id = 0;
 global.wild_pokemon_x = -1;
 
+delay_limit = room_speed / 5;
+delay = 0;
 egg_y = 440
 egg_count = array_length(global.egg_types_found)
 var wall_gap = max(sprite_width / 2);

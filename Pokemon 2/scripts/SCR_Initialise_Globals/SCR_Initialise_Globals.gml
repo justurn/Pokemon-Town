@@ -19,10 +19,11 @@ function SCR_Initialise_Globals()
 	// Player
 	global.player_y = 440;
 	global.player_speed = 10;
+	global.sprint_speed = 1.5;
 	
 	// Pokemon
 	global.pokemon_ID = 0;
-	global.pokemon_move_speed = 0.9 * global.player_speed
+	global.pokemon_move_speed = 0.95 * global.player_speed
 	global.wild_pokemon_id = 0;
 	global.wild_pokemon_x = -1;
 	global.pokemon_health_max = 100;
@@ -213,7 +214,7 @@ function SCR_Initialise_Globals()
 	
 	global.type_chart[9][1] = 2.0;   // Rock -> Fire
 	global.type_chart[9][6] = 2.0;   // Rock -> Bug
-	global.type_chart[9][17] = 2.0;  // Rock -> Flying
+	global.type_chart[9][16] = 2.0;  // Rock -> Flying
 	global.type_chart[9][13] = 2.0;  // Rock -> Ice
 	
 	global.type_chart[10][5] = 2.0;  // Ghost -> Psychic
