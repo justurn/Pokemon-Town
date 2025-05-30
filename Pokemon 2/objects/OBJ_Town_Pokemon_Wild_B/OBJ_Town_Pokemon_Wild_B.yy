@@ -1,18 +1,18 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "OBJ_Town_Pokemon_Wild",
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-  ],
+  "name": "OBJ_Town_Pokemon_Wild_B",
+  "eventList": [],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
     "name": "Pokemon",
     "path": "folders/Objects/Pokemon.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "OBJ_Town_Pokemon_Wild",
+    "path": "objects/OBJ_Town_Pokemon_Wild/OBJ_Town_Pokemon_Wild.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
@@ -28,10 +28,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "SPR_Blank",
-    "path": "sprites/SPR_Blank/SPR_Blank.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

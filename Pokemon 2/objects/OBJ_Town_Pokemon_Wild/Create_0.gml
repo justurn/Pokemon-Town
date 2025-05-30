@@ -1,11 +1,4 @@
-sprite_index = global.Dex_Sprites[global.wild_pokemon_id];
-
-global.wild_pokemon_x = x;
-
-// Sprite Scaling
-scale_factor = 2;
-image_yscale = scale_factor;
-image_xscale = scale_factor;
-
-wild_left = x - sprite_width/2;    // Left edge of the sprite
-wild_right = x + sprite_width/2;   // Right edge of the sprite
+needs_sprite = true;
+wild_left = 0;
+wild_right = 0;
+scale_factor = 0;

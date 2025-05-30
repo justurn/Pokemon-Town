@@ -24,8 +24,10 @@ function SCR_Initialise_Globals()
 	// Pokemon
 	global.pokemon_ID = 0;
 	global.pokemon_move_speed = 0.95 * global.player_speed
-	global.wild_pokemon_id = 0;
-	global.wild_pokemon_x = -1;
+	global.wild_pokemon_a_id = 0;
+	global.wild_pokemon_b_id = 0;
+	global.wild_pokemon_a_x = -1;
+	global.wild_pokemon_b_x = -1;
 	global.pokemon_health_max = 100;
 	global.pokemon_health = global.pokemon_health_max;
 

@@ -13,6 +13,14 @@ if (global.right)
 			x += global.player_speed;
 		}
 	}
+	else
+	{
+		x = 0 + sprite_width;
+		if (instance_exists(OBJ_Town_Pokemon))
+		{
+			OBJ_Town_Pokemon.x = x
+		}
+	}
     
 }
 
@@ -28,6 +36,14 @@ if (global.left)
 		else
 		{
 			x -= global.player_speed;
+		}
+	}
+	else
+	{
+		x = room_width - sprite_width;
+		if (instance_exists(OBJ_Town_Pokemon))
+		{
+			OBJ_Town_Pokemon.x = x
 		}
 	}
 }

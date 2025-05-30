@@ -13,8 +13,13 @@ if (current_hp <= 0)
 	var xp_increase = floor(base_exp * global.wild_pokemon_level * global.pokemon_xp_rate / 7);
 	global.pokemon_experience += xp_increase
 	
-	global.wild_pokemon_id = 0;
-    global.wild_pokemon_x = -1;
+	
+	// reset wild pokemons
+	global.wild_pokemon_a_id = 0;
+    global.wild_pokemon_a_x = -1;
+	
+	global.wild_pokemon_b_id = 0;
+    global.wild_pokemon_b_x = -1;
 	
     show_debug_message(string(global.Dex_Names[global.pokemon_ID]) + " wins the battle!");
 	show_debug_message(string(global.Dex_Names[global.pokemon_ID]) + " gains " + string(xp_increase) + " Experience");

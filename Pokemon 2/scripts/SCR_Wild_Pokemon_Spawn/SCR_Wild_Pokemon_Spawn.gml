@@ -1,4 +1,4 @@
-function SCR_Wild_Pokemon_Spawn(pokemon_id)
+function SCR_Wild_Pokemon_Spawn(pokemon_id, is_alpha)
 {
 	
 	var pokemon_y = global.player_y;
@@ -31,13 +31,29 @@ function SCR_Wild_Pokemon_Spawn(pokemon_id)
 		}
 	}
 	
-	if (global.wild_pokemon_x != -1)
+	if (is_alpha && global.wild_pokemon_a_x != -1)
 	{
-		pokemon_x = global.wild_pokemon_x
+		pokemon_x = global.wild_pokemon_a_x
+	}
+	
+	if (!is_alpha && global.wild_pokemon_b_x != -1)
+	{
+		pokemon_x = global.wild_pokemon_b_x
 	}
 	
 	// Create the pokemon instance
-	var pokemon_instance = instance_create_layer(pokemon_x, pokemon_y, "Instances", OBJ_Town_Pokemon_Wild);
+	if (is_alpha)
+	{
+		var pokemon_instance = instance_create_layer(pokemon_x, pokemon_y, "Instances", OBJ_Town_Pokemon_Wild_A);
+		pokemon_instance.is_alpha = is_alpha;
+		pokemon_instance.wild_pokemon_id = pokemon_id;
+	}
+	else
+	{
+		var pokemon_instance = instance_create_layer(pokemon_x, pokemon_y, "Instances", OBJ_Town_Pokemon_Wild_B);
+		pokemon_instance.is_alpha = is_alpha;
+		pokemon_instance.wild_pokemon_id = pokemon_id;
+	}
 
 	show_debug_message("Wild " + string(pokemon_name) + " Spawned at Location: " + string(pokemon_x))
-}
+}        

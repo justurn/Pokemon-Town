@@ -1,4 +1,4 @@
-pokedex_id = global.wild_pokemon_id
+pokedex_id = global.wild_pokemon_battle_id
 pokemon_name = global.Dex_Names[pokedex_id];
 primary_type = global.Dex_Primary_Types[pokedex_id];
 primary_type_id = SCR_Get_Type_Index(primary_type);

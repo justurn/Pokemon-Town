@@ -8,7 +8,7 @@ function SCR_Inputs()
 	global.shift = false;
 	
 	// log gamepad inputs
-	var gamepad_logging = false;
+	var gamepad_logging = true;
 	if gamepad_logging
 	{
 		 // Check for any button press and print the ID
@@ -31,7 +31,10 @@ function SCR_Inputs()
 	{
 		global.log = !global.log;	
 	}
-	
+	if (gamepad_button_check_pressed(0, 8))
+	{
+		global.log = !global.log;	
+	}
 	show_debug_log(global.log);
 	
 	if (global.log && log_old != global.log)
@@ -93,11 +96,19 @@ function SCR_Inputs()
 	{
 		global.enter = true;
 	}
+	if (gamepad_button_check_pressed(0, 12))
+	{
+		global.enter = true
+	}
 	
 	// Shift checks (keyboard and controller)
 	if (keyboard_check(vk_lshift))
 	{
 		global.shift = true;
+	}
+	if (gamepad_button_check(0, 13))
+	{
+		global.shift = true
 	}
 	//if (gamepad_button_check_pressed(0, 0))
 	//{

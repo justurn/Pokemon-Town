@@ -25,8 +25,9 @@ var x_start = x - sprite_width/2
 for (var k = 0; k < item_limit; k++)
 {
 	var i = inventory_list[k]
-	draw_sprite(global.item_sprite[i],0, x_start + (k) * item_spacing + edging, y)
-	draw_text( x_start + (k) * item_spacing + padding + edging, y, global.item_held[i]);
+	var x_target = x_start + (k) * item_spacing + padding + edging
+	draw_text(x_target, y, global.item_held[i]);
+	draw_sprite(global.item_sprite[i],0, x_target - 70, y)
 }
 
 

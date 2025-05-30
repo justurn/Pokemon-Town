@@ -68,8 +68,10 @@ function SCR_Sequencing()
 	}
 	
 	// Wild Pokemon
-	// if there is not a current wild pokemon and you have a pokemon, spawn one.
-	if (global.wild_pokemon_id == 0 && global.pokemon_ID != 0)
+	// if there is not a current wild pokemon A and you have a pokemon, spawn one.
+	// set alpha flag to false, to signal the beta wild pokemon
+	var is_alpha = true;
+	if (global.wild_pokemon_a_id == 0 && global.pokemon_ID != 0)
 	{
 		// Pick a Pokémon based on weighted random
 		var rand_pick = irandom(global.total_spawn_weight);
@@ -81,11 +83,11 @@ function SCR_Sequencing()
 		    cumulative_weight += global.wild_spawn_weights[i];
 		    if (rand_pick < cumulative_weight) 
 			{
-		        global.wild_pokemon_id = global.valid_wild_pokemon[i];
+		        global.wild_pokemon_a_id = global.valid_wild_pokemon[i];
 		        break;
 		    }
 		}
-		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_id);
+		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_a_id, is_alpha);
 		var spawn_chance = SCR_Round_N(global.wild_spawn_weights[i] / global.total_spawn_weight * 100,2)
 		var average_chance = SCR_Round_N(1 / array_length(global.valid_wild_pokemon) *100,2)
 		var above = spawn_chance > average_chance
@@ -93,17 +95,49 @@ function SCR_Sequencing()
 		else show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Below Average of: " + string(average_chance) + "%")
 		show_debug_message("Base Stat Difference Between Tamed and Wild Pokemon is: " + string(global.wild_spawn_diff[i]));
 	}
-	else if (global.wild_pokemon_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild)) // respawn the wild pokemon after changing room.
+	else if (global.wild_pokemon_a_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild_A)) // respawn the wild pokemon after changing room.
 	{
-		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_id);
+		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_a_id, is_alpha);
 	}
 	
-	// Wild Pokemon
-	if (global.wild_pokemon_id != 0 && global.pokemon_ID != 0)
+	// set alpha flag to false, to signal the beta wild pokemon
+	var is_alpha = false;
+	if (global.wild_pokemon_b_id == 0 && global.pokemon_ID != 0)
 	{
-		pokemon_name = global.Dex_Names[global.wild_pokemon_id]
-		global.tip_string = "Defeat " + string(pokemon_name);
+		// Pick a Pokémon based on weighted random
+		var rand_pick = irandom(global.total_spawn_weight);
+		var cumulative_weight = 0;
+		var chosen_pokemon = global.valid_wild_pokemon[0];
+
+		for (var i = 0; i < array_length(global.valid_wild_pokemon); i++) 
+		{
+		    cumulative_weight += global.wild_spawn_weights[i];
+		    if (rand_pick < cumulative_weight) 
+			{
+		        global.wild_pokemon_b_id = global.valid_wild_pokemon[i];
+		        break;
+		    }
+		}
+		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_b_id, is_alpha);
+		var spawn_chance = SCR_Round_N(global.wild_spawn_weights[i] / global.total_spawn_weight * 100,2)
+		var average_chance = SCR_Round_N(1 / array_length(global.valid_wild_pokemon) *100,2)
+		var above = spawn_chance > average_chance
+		if above show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Above Average of: " + string(average_chance) + "%")
+		else show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Below Average of: " + string(average_chance) + "%")
+		show_debug_message("Base Stat Difference Between Tamed and Wild Pokemon is: " + string(global.wild_spawn_diff[i]));
 	}
+	else if (global.wild_pokemon_b_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild_B)) // respawn the wild pokemon after changing room.
+	{
+		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_b_id, is_alpha);
+	}
+	
+	
+	// Wild Pokemon
+	if (global.wild_pokemon_a_id != 0 && global.pokemon_ID != 0 && global.wild_pokemon_b_id != 0)
+	{
+		global.tip_string = "Battle Wild Pokemon";
+	}
+	
 	
 	// Eggs
 	var i = 0;
