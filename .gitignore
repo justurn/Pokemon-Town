@@ -1,0 +1,8 @@
+# Assets directory - contains large sprite and image files
+Assets/
+
+# Executables
+*.exe
+
+# Keystore files
+*.keystore
