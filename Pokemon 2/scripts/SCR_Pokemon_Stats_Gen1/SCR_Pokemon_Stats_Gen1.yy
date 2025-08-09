@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
-  },
+  "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "SCR_Pokemon_Stats_Gen1",
-  "tags": [],
-  "resourceType": "GMScript",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Pokedex",
+    "path": "folders/Scripts/Pokedex.yy",
+  },
 }
