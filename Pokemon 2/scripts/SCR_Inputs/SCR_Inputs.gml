@@ -4,6 +4,8 @@ function SCR_Inputs()
 {
 	global.left = false;
 	global.right = false;
+	global.up = false;
+	global.down = false;
 	global.enter = false;
 	global.shift = false;
 	
@@ -81,6 +83,36 @@ function SCR_Inputs()
 	if (gamepad_button_check(0, 14))
 	{
 		global.left = true
+	}
+	
+	// Up checks (keyboard and D-PAD)
+	if (keyboard_check(vk_up))
+	{
+		global.up = true
+	}
+	if (keyboard_check(ord("W")))
+	{
+		global.up = true
+	}
+	// Use gamepad axis for up/down instead of buttons to avoid conflicts
+	var axis_y = gamepad_axis_value(0, gp_axislv); // Left Stick Y-Axis
+	if (axis_y < -0.15)
+	{ // Negative value means pushing up
+		global.up = true
+	}
+	
+	// Down checks (keyboard and D-PAD)  
+	if (keyboard_check(vk_down))
+	{
+		global.down = true
+	}
+	if (keyboard_check(ord("S")))
+	{
+		global.down = true
+	}
+	if (axis_y > 0.15)
+	{ // Positive value means pushing down
+		global.down = true
 	}
 	
 	// Enter checks (keyboard and controller)

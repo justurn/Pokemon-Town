@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "SPR_Arrow",
-    "path": "sprites/SPR_Arrow/SPR_Arrow.yy",
+    "name": "SPR_Side_Panel",
+    "path": "sprites/SPR_Side_Panel/SPR_Side_Panel.yy",
   },
   "spriteMaskId": null,
   "visible": true,
