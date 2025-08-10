@@ -104,20 +104,29 @@ function SCR_Sequencing()
 	var is_alpha = false;
 	if (global.wild_pokemon_b_id == 0 && global.pokemon_ID != 0)
 	{
-		// Pick a Pokémon based on weighted random
-		var rand_pick = irandom(global.total_spawn_weight);
-		var cumulative_weight = 0;
-		var chosen_pokemon = global.valid_wild_pokemon[0];
+		// Pick a Pokémon based on weighted random, ensuring it's different from Pokemon A
+		var selected_pokemon_b;
+		var attempts = 0;
+		var max_attempts = 50; // Prevent infinite loop
+		
+		do {
+			var rand_pick = irandom(global.total_spawn_weight);
+			var cumulative_weight = 0;
+			selected_pokemon_b = global.valid_wild_pokemon[0];
 
-		for (var i = 0; i < array_length(global.valid_wild_pokemon); i++) 
-		{
-		    cumulative_weight += global.wild_spawn_weights[i];
-		    if (rand_pick < cumulative_weight) 
+			for (var i = 0; i < array_length(global.valid_wild_pokemon); i++) 
 			{
-		        global.wild_pokemon_b_id = global.valid_wild_pokemon[i];
-		        break;
-		    }
-		}
+			    cumulative_weight += global.wild_spawn_weights[i];
+			    if (rand_pick < cumulative_weight) 
+				{
+			        selected_pokemon_b = global.valid_wild_pokemon[i];
+			        break;
+			    }
+			}
+			attempts++;
+		} while (selected_pokemon_b == global.wild_pokemon_a_id && attempts < max_attempts);
+		
+		global.wild_pokemon_b_id = selected_pokemon_b;
 		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_b_id, is_alpha);
 		var spawn_chance = SCR_Round_N(global.wild_spawn_weights[i] / global.total_spawn_weight * 100,2)
 		var average_chance = SCR_Round_N(1 / array_length(global.valid_wild_pokemon) *100,2)

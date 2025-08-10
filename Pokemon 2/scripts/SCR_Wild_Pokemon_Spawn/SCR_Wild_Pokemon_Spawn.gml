@@ -29,6 +29,24 @@ function SCR_Wild_Pokemon_Spawn(pokemon_id, is_alpha)
 		{
 			valid_position = false;
 		}
+		
+		// Check distance from existing wild Pokemon A
+		if (instance_exists(OBJ_Town_Pokemon_Wild_A))
+		{
+			if (abs(pokemon_x - OBJ_Town_Pokemon_Wild_A.x) < min_distance)
+			{
+				valid_position = false;
+			}
+		}
+		
+		// Check distance from existing wild Pokemon B
+		if (instance_exists(OBJ_Town_Pokemon_Wild_B))
+		{
+			if (abs(pokemon_x - OBJ_Town_Pokemon_Wild_B.x) < min_distance)
+			{
+				valid_position = false;
+			}
+		}
 	}
 	
 	if (is_alpha && global.wild_pokemon_a_x != -1)
