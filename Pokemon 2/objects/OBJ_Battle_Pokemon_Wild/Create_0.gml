@@ -29,9 +29,16 @@ var base_spdefence = global.Dex_SPdefence[pokedex_id];
 var base_speed = global.Dex_Speed[pokedex_id];
 var base_hp = global.Dex_Health[pokedex_id];
 
-// Level
-global.wild_pokemon_level = global.pokemon_level - irandom(global.wild_pokemon_level_gap);
-level = global.wild_pokemon_level;
+// Level - preserve rival battle level for trainer battles
+if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
+    // For trainer battles, use the pre-set level (don't randomize)
+    level = global.wild_pokemon_level;
+    show_debug_message("Trainer battle: using fixed level " + string(level));
+} else {
+    // For wild Pokemon, randomize level as normal
+    global.wild_pokemon_level = global.pokemon_level - irandom(global.wild_pokemon_level_gap);
+    level = global.wild_pokemon_level;
+}
 
 // Calculate Stats
 attack = floor(((2 * base_attack * level) / 100) + 5);

@@ -2,6 +2,24 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SCR_Inputs()
 {
+	// Check if inputs are disabled for camera sequences
+	if (global.inputs_disabled) {
+		// Safety check - if no camera controller exists, re-enable inputs
+		if (!instance_exists(OBJ_Camera_Controller)) {
+			show_debug_message("Input lock detected but no camera controller found - re-enabling inputs");
+			global.inputs_disabled = false;
+			global.camera_sequence_active = false;
+		} else {
+			global.left = false;
+			global.right = false;
+			global.up = false;
+			global.down = false;
+			global.enter = false;
+			global.shift = false;
+			return; // Exit early, don't process any inputs
+		}
+	}
+	
 	global.left = false;
 	global.right = false;
 	global.up = false;

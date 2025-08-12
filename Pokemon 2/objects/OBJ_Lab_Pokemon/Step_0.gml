@@ -3,6 +3,14 @@ SCR_Hatching_Pokemon()
 if just_hatched = true
 {
 	global.pokemon_ID = pokedex_id
+	
+	// RIVAL RESET: New Pokemon hatched, reset rival progress
+	if (global.rival_pokemon_id != 0) {
+		show_debug_message("Rival progress reset - new Pokemon hatched");
+		global.rival_pokemon_id = 0;
+		global.rival_completed_milestones = []; // Clear completed milestones
+	}
+	
 	just_hatched = false;
 	
 	// reset level and experience

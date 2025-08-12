@@ -446,7 +446,9 @@ function SCR_Initialise_Globals()
 	var building_limit = array_length(global.building_name) - 1;
 	global.plot_width = 600;
 	global.town_size = building_limit * global.plot_width 
-	global.player_x = global.town_size / 2;
+	// F-022: Center player in middle segment instead of town center
+	var middle_segment = floor(building_limit / 2);
+	global.player_x = middle_segment * global.plot_width + (global.plot_width / 2);
 	var segment_offset = global.plot_width / 2
     
 	// set false entry and build permissives for all buildings and store the x positions of each plot
@@ -461,6 +463,218 @@ function SCR_Initialise_Globals()
 	SCR_Shuffle_Array(global.plot_segments);   
 	show_debug_message("Plot Segments: " + string(global.plot_segments));
 	
+	// F-022: Initialize spawn segment system for dynamic spawning and patrol
+	
+	// F-022 Segment constants
+	global.SPAWN_EMPTY = 0;
+	global.SPAWN_ITEM = 1;
+	global.SPAWN_POKEMON_A = 2;
+	global.SPAWN_POKEMON_B = 3;
+	global.SPAWN_RIVAL = 4;
+	
+	// Create non-shuffled spawn segments (left to right order)
+	var total_segments = array_length(global.plot_segments);
+	global.spawn_segments = array_create(total_segments);
+	
+	// Fill spawn segments in sequential order (not shuffled like plot_segments)
+	for (var seg_i = 0; seg_i < total_segments; seg_i++) {
+		global.spawn_segments[seg_i] = seg_i * global.plot_width + (global.plot_width / 2);
+	}
+	
+	// Create tracking arrays for spawn segments
+	global.spawn_segment_occupancy = array_create(total_segments, global.SPAWN_EMPTY);
+	global.spawn_segment_objects = array_create(total_segments, noone);
+	global.available_spawn_segments = [];
+	
+	// All spawn segments initially available (buildings are separate layer)
+	for (var seg_i = 0; seg_i < total_segments; seg_i++) {
+		array_push(global.available_spawn_segments, seg_i);
+	}
+	
+	show_debug_message("Initialized " + string(total_segments) + " spawn segments for F-022 system");
+	
+	// F-022 segment management functions
+	global.SCR_Get_Player_Segment = function() {
+		// Find which spawn segment the player is currently in
+		var player_x = instance_exists(OBJ_Player) ? OBJ_Player.x : global.player_x;
+		
+		for (var i = 0; i < array_length(global.spawn_segments); i++) {
+			var segment_x = global.spawn_segments[i];
+			var segment_left = segment_x - (global.plot_width / 2);
+			var segment_right = segment_x + (global.plot_width / 2);
+			
+			if (player_x >= segment_left && player_x <= segment_right) {
+				return i;
+			}
+		}
+		
+		return -1; // Player not in any segment (shouldn't happen)
+	}
+	
+	global.SCR_Reserve_Spawn_Segment_Safe = function(object_type, exclude_adjacent) {
+		// Get player's current segment
+		var player_segment = global.SCR_Get_Player_Segment();
+		var safe_segments = [];
+		var total_segments = array_length(global.spawn_segments);
+		
+		// Find actual leftmost and rightmost segment positions (once)
+		var min_x = 999999;
+		var max_x = -999999;
+		var leftmost_segment = -1;
+		var rightmost_segment = -1;
+		
+		for (var j = 0; j < total_segments; j++) {
+			var check_x = global.SCR_Get_Segment_Center(j);
+			if (check_x < min_x) {
+				min_x = check_x;
+				leftmost_segment = j;
+			}
+			if (check_x > max_x) {
+				max_x = check_x;
+				rightmost_segment = j;
+			}
+		}
+		
+		for (var i = 0; i < array_length(global.available_spawn_segments); i++) {
+			var segment_id = global.available_spawn_segments[i];
+			var is_safe = true;
+			
+			if (exclude_adjacent && player_segment != -1) {
+				// Find segments spatially adjacent to player (not by ID)
+				var player_x = global.SCR_Get_Segment_Center(player_segment);
+				var segment_x = global.SCR_Get_Segment_Center(segment_id);
+				
+				// Exclude if this segment is within one segment width of player
+				if (abs(segment_x - player_x) <= global.plot_width) {
+					is_safe = false;
+				}
+			}
+			
+			// Exclude edge segments (leftmost and rightmost positions in town)
+			if (segment_id == leftmost_segment || segment_id == rightmost_segment) {
+				is_safe = false;
+			}
+			
+			if (is_safe) {
+				array_push(safe_segments, segment_id);
+			}
+		}
+		
+		// Check if any safe segments available
+		if (array_length(safe_segments) == 0) {
+			show_debug_message("No safe segments available for type: " + string(object_type) + " (excluding adjacent to player and edge segments)");
+			return -1;
+		}
+		
+		// Get random safe segment
+		var random_index = irandom(array_length(safe_segments) - 1);
+		var segment_id = safe_segments[random_index];
+		
+		// Reserve the segment
+		global.spawn_segment_occupancy[segment_id] = object_type;
+		
+		// Remove from available segments list
+		for (var i = 0; i < array_length(global.available_spawn_segments); i++) {
+			if (global.available_spawn_segments[i] == segment_id) {
+				array_delete(global.available_spawn_segments, i, 1);
+				break;
+			}
+		}
+		
+		show_debug_message("Reserved safe segment " + string(segment_id) + " for type: " + string(object_type) + " (player in segment: " + string(player_segment) + ", excluded edges)");
+		return segment_id;
+	}
+	
+	global.SCR_Release_Spawn_Segment = function(segment_id) {
+		// Validate segment ID
+		if (segment_id < 0 || segment_id >= array_length(global.spawn_segment_occupancy)) {
+			show_debug_message("Invalid segment ID for release: " + string(segment_id));
+			return false;
+		}
+		
+		// Only release if actually occupied
+		if (global.spawn_segment_occupancy[segment_id] == global.SPAWN_EMPTY) {
+			show_debug_message("Segment " + string(segment_id) + " already empty");
+			return false;
+		}
+		
+		// Release the segment
+		global.spawn_segment_occupancy[segment_id] = global.SPAWN_EMPTY;
+		global.spawn_segment_objects[segment_id] = noone;
+		array_push(global.available_spawn_segments, segment_id);
+		
+		show_debug_message("Released segment: " + string(segment_id));
+		return true;
+	}
+	
+	global.SCR_Clear_All_Spawn_Segments = function() {
+		// Force clear all segments (useful for room transitions or debugging)
+		var total_segments = array_length(global.spawn_segments);
+		
+		// Reset all tracking arrays
+		global.spawn_segment_occupancy = array_create(total_segments, global.SPAWN_EMPTY);
+		global.spawn_segment_objects = array_create(total_segments, noone);
+		global.available_spawn_segments = [];
+		
+		// Make all segments available again
+		for (var i = 0; i < total_segments; i++) {
+			array_push(global.available_spawn_segments, i);
+		}
+		
+		// F-022: Don't clear Pokemon positions - preserve town state
+		// Pokemon should respawn in same locations after room transitions
+		
+		show_debug_message("CLEARED ALL SPAWN SEGMENTS - Reset " + string(total_segments) + " segments and Pokemon positions");
+	}
+	
+	global.SCR_Debug_Spawn_Segments = function() {
+		show_debug_message("=== SPAWN SEGMENT DEBUG ===");
+		show_debug_message("Available segments: " + string(array_length(global.available_spawn_segments)));
+		show_debug_message("Available segment IDs: " + string(global.available_spawn_segments));
+		
+		var occupied_count = 0;
+		for (var i = 0; i < array_length(global.spawn_segment_occupancy); i++) {
+			if (global.spawn_segment_occupancy[i] != global.SPAWN_EMPTY) {
+				occupied_count++;
+				var type_name = "UNKNOWN";
+				switch(global.spawn_segment_occupancy[i]) {
+					case global.SPAWN_ITEM: type_name = "ITEM"; break;
+					case global.SPAWN_POKEMON_A: type_name = "POKEMON_A"; break;
+					case global.SPAWN_POKEMON_B: type_name = "POKEMON_B"; break;
+					case global.SPAWN_RIVAL: type_name = "RIVAL"; break;
+				}
+				show_debug_message("Segment " + string(i) + ": " + type_name + " (object: " + string(global.spawn_segment_objects[i]) + ")");
+			}
+		}
+		show_debug_message("Total occupied segments: " + string(occupied_count));
+		show_debug_message("=========================");
+	}
+	
+	// Helper function for manual clearing - can be called from debug console
+	global.clear_segments = function() {
+		global.SCR_Clear_All_Spawn_Segments();
+	}
+	
+	// Helper function for manual debugging - can be called from debug console  
+	global.debug_segments = function() {
+		global.SCR_Debug_Spawn_Segments();
+	}
+	
+	global.SCR_Get_Segment_Center = function(segment_id) {
+		// Use spawn segments for spawnable objects (sequential left-to-right)
+		return global.spawn_segments[segment_id];
+	}
+	
+	global.SCR_Get_Segment_Patrol_Bounds = function(segment_id) {
+		// Calculate patrol boundaries for a given segment with dead zone buffer
+		var center_x = global.SCR_Get_Segment_Center(segment_id);
+		var patrol_buffer = 50; // 50px dead zone from segment edges
+		var patrol_left = center_x - (global.plot_width / 2) + patrol_buffer;
+		var patrol_right = center_x + (global.plot_width / 2) - patrol_buffer;
+		
+		return [patrol_left, patrol_right];
+	}
+	
 	// Create an array of indices based on the length of global.types
 	global.shuffled_types = array_create(array_length(global.types));
 
@@ -474,5 +688,19 @@ function SCR_Initialise_Globals()
 	SCR_Shuffle_Array(global.shuffled_types);
 
 	show_debug_message("Shuffled Egg Types: " + string(global.shuffled_types));
+
+	// Rival Battle System
+	global.rival_pokemon_id = 0;
+	global.rival_battle_milestones = [7, 20, 30, 40, 50, 60];
+	global.rival_completed_milestones = [];
+	global.inputs_disabled = false;
+	global.camera_sequence_active = false;
+	global.rival_battle_pokemon_id = 0; // Separate global for battle system
+	global.rival_battle_level = 0;
+	global.rival_milestone_level = 0; // Store the milestone level for consistent battles
+	global.temp_wild_pokemon_a_id = 0; // Temp storage for wild Pokemon during rival battles
+	global.temp_wild_pokemon_b_id = 0;
+	global.is_trainer_battle = false;
+	global.treasure_limit_override = -1; // -1 means no override, use normal treasure_limit
 }
 

@@ -67,11 +67,34 @@ function SCR_Sequencing()
 		instance_create_layer(OBJ_Player.x + 100,OBJ_Player.y,"Instances", OBJ_Town_Pokemon);
 	}
 	
+	// RIVAL ENCOUNTER SYSTEM
+	// Check for level milestones before wild Pokemon spawning
+	// Only spawn rival if no wild Pokemon battles are active and no existing rival
+	if (global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer) && !global.is_trainer_battle) {
+		var current_level = global.pokemon_level;
+		
+		// Check if current level matches any milestone in the array
+		for (var m = 0; m < array_length(global.rival_battle_milestones); m++) {
+			var milestone_level = global.rival_battle_milestones[m];
+			
+			// If we've reached this milestone level and haven't completed it yet
+			if (current_level >= milestone_level && 
+				!array_contains(global.rival_completed_milestones, milestone_level)) {
+				
+				// First time reaching this milestone - spawn rival (only once)
+				show_debug_message("Triggering rival encounter for milestone " + string(milestone_level));
+				SCR_Rival_Encounter_Setup(milestone_level);
+				return; // Skip normal wild Pokemon spawning
+			}
+		}
+	}
+	
 	// Wild Pokemon
 	// if there is not a current wild pokemon A and you have a pokemon, spawn one.
 	// set alpha flag to false, to signal the beta wild pokemon
+	// Skip wild Pokemon spawning if rival encounter is active
 	var is_alpha = true;
-	if (global.wild_pokemon_a_id == 0 && global.pokemon_ID != 0)
+	if (global.wild_pokemon_a_id == 0 && global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer))
 	{
 		// Pick a Pokémon based on weighted random
 		var rand_pick = irandom(global.total_spawn_weight);
@@ -95,56 +118,57 @@ function SCR_Sequencing()
 		else show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Below Average of: " + string(average_chance) + "%")
 		show_debug_message("Base Stat Difference Between Tamed and Wild Pokemon is: " + string(global.wild_spawn_diff[i]));
 	}
-	else if (global.wild_pokemon_a_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild_A)) // respawn the wild pokemon after changing room.
+	else if (global.wild_pokemon_a_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild_A) && !instance_exists(OBJ_Rival_Trainer)) // respawn the wild pokemon after changing room.
 	{
 		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_a_id, is_alpha);
 	}
 	
 	// set alpha flag to false, to signal the beta wild pokemon
+	// Skip wild Pokemon spawning if rival encounter is active
 	var is_alpha = false;
-	if (global.wild_pokemon_b_id == 0 && global.pokemon_ID != 0)
+	if (global.wild_pokemon_b_id == 0 && global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer))
 	{
-		// Pick a Pokémon based on weighted random, ensuring it's different from Pokemon A
-		var selected_pokemon_b;
-		var attempts = 0;
-		var max_attempts = 50; // Prevent infinite loop
-		
-		do {
-			var rand_pick = irandom(global.total_spawn_weight);
-			var cumulative_weight = 0;
-			selected_pokemon_b = global.valid_wild_pokemon[0];
+		// Pick a Pokémon based on weighted random
+		var rand_pick = irandom(global.total_spawn_weight);
+		var cumulative_weight = 0;
+		var chosen_pokemon = global.valid_wild_pokemon[0];
 
-			for (var i = 0; i < array_length(global.valid_wild_pokemon); i++) 
+		for (var i = 0; i < array_length(global.valid_wild_pokemon); i++) 
+		{
+		    cumulative_weight += global.wild_spawn_weights[i];
+		    if (rand_pick < cumulative_weight) 
 			{
-			    cumulative_weight += global.wild_spawn_weights[i];
-			    if (rand_pick < cumulative_weight) 
-				{
-			        selected_pokemon_b = global.valid_wild_pokemon[i];
-			        break;
-			    }
-			}
-			attempts++;
-		} while (selected_pokemon_b == global.wild_pokemon_a_id && attempts < max_attempts);
-		
-		global.wild_pokemon_b_id = selected_pokemon_b;
+		        global.wild_pokemon_b_id = global.valid_wild_pokemon[i];
+		        break;
+		    }
+		}
 		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_b_id, is_alpha);
 		var spawn_chance = SCR_Round_N(global.wild_spawn_weights[i] / global.total_spawn_weight * 100,2)
 		var average_chance = SCR_Round_N(1 / array_length(global.valid_wild_pokemon) *100,2)
 		var above = spawn_chance > average_chance
 		if above show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Above Average of: " + string(average_chance) + "%")
-		else show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Below Average of: " + string(average_chance) + "%")
-		show_debug_message("Base Stat Difference Between Tamed and Wild Pokemon is: " + string(global.wild_spawn_diff[i]));
+		else 
+		{
+			show_debug_message("Spawn Chance = " + string(spawn_chance) + "%, Below Average of: " + string(average_chance) + "%")
+			show_debug_message("Base Stat Difference Between Tamed and Wild Pokemon is: " + string(global.wild_spawn_diff[i]));
+		}
 	}
-	else if (global.wild_pokemon_b_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild_B)) // respawn the wild pokemon after changing room.
+	else if (global.wild_pokemon_b_id != 0 && !instance_exists(OBJ_Town_Pokemon_Wild_B) && !instance_exists(OBJ_Rival_Trainer)) // respawn the wild pokemon after changing room.
 	{
 		SCR_Wild_Pokemon_Spawn(global.wild_pokemon_b_id, is_alpha);
 	}
 	
 	
-	// Wild Pokemon
-	if (global.wild_pokemon_a_id != 0 && global.pokemon_ID != 0 && global.wild_pokemon_b_id != 0)
+	// Wild Pokemon - only show tip if no rival trainer is present
+	if (global.wild_pokemon_a_id != 0 && global.pokemon_ID != 0 && global.wild_pokemon_b_id != 0 && !instance_exists(OBJ_Rival_Trainer))
 	{
 		global.tip_string = "Battle Wild Pokemon";
+	}
+	
+	// Rival Trainer - set tip when rival is present
+	if (instance_exists(OBJ_Rival_Trainer))
+	{
+		global.tip_string = "Battle Rival";
 	}
 	
 	

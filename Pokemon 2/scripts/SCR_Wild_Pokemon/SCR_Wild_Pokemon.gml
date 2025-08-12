@@ -1,10 +1,13 @@
 function SCR_Wild_Pokemon()
 {
+	// Calculate minimum possible wild Pokemon level for filtering (worst case scenario)
+	var min_wild_level = global.pokemon_level - global.wild_pokemon_level_gap;
+	
 	// Generate a shuffled array of valid wild pokemon to use
 	global.valid_wild_pokemon = [];
 	for (var i = 1; i < array_length(global.Dex_Names); i++)
 	{
-		var evolve_ready = (global.Dex_Evolve_Level[i] <= global.pokemon_level)
+		var evolve_ready = (global.Dex_Evolve_Level[i] <= min_wild_level)
 		var has_evolution = (global.Dex_Evolve_Level[i] != -1)
 		var hatching = global.Dex_Hatching[i]
 		
@@ -25,8 +28,6 @@ function SCR_Wild_Pokemon()
 			}
 		}	
 	}
-
-	global.wild_pokemon_level = global.pokemon_level - global.wild_pokemon_level_gap;
 	global.total_spawn_weight = 0;
 	global.wild_spawn_weights = [];
 	global.wild_spawn_diff = [];

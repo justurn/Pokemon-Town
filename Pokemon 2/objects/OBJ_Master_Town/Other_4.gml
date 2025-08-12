@@ -3,6 +3,12 @@ if room == RM_Town
 	room_width = global.town_size;
 	//show_debug_message("Room Width is: " + string(room_width))
 	instance_create_layer(0,0,"Instances",OBJ_Player)
+	
+	// F-022: Clear spawn segments when entering town room
+	if (variable_global_exists("SCR_Clear_All_Spawn_Segments")) {
+		global.SCR_Clear_All_Spawn_Segments();
+	}
+	
     if (need_plot_segments)
     {
 		SCR_Plots_Spawn();

@@ -46,4 +46,8 @@ sprite_index = random_background;
 x = 0
 y = 0
 
+// Check if this is a trainer battle for special handling
+if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
+    show_debug_message("Trainer battle detected - special rewards enabled");
+}
 

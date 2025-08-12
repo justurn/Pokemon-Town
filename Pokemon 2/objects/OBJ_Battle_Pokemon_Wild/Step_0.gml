@@ -23,5 +23,11 @@ if (current_hp <= 0)
 	
     show_debug_message(string(global.Dex_Names[global.pokemon_ID]) + " wins the battle!");
 	show_debug_message(string(global.Dex_Names[global.pokemon_ID]) + " gains " + string(xp_increase) + " Experience");
-    room_goto(RM_Treasure);
+    
+    // Check if this was a trainer battle for special handling
+    if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
+        SCR_Rival_Battle_Victory();
+    } else {
+        room_goto(RM_Treasure);
+    }
 }
