@@ -22,7 +22,7 @@ if just_hatched = true
 	global.pokemon_health = global.pokemon_health_max;
 	
 	// Run the script to determine valid wild pokemon after a pokemon switch
-	SCR_Wild_Pokemon();
+	SCR_Wild_Pokemon([]);
 	
 
 }

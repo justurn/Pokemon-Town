@@ -77,7 +77,7 @@ if global.pokemon_experience >= level_up_exp
 	show_debug_message(string(pokemon_name) + " has reached level: " + string(global.pokemon_level))
 	
 	// Generate a shuffled array of valid wild pokemon to use based onb new pokemon level
-	SCR_Wild_Pokemon();
+	SCR_Wild_Pokemon([]);
 	
 	global.pokemon_health = global.pokemon_health_max;
 	

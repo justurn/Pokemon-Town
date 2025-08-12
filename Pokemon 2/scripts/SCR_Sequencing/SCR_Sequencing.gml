@@ -96,6 +96,10 @@ function SCR_Sequencing()
 	var is_alpha = true;
 	if (global.wild_pokemon_a_id == 0 && global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer))
 	{
+		// Generate valid Pokemon pool excluding tamed Pokemon to prevent mirror matches
+		var banned_pokemon_alpha = [global.pokemon_ID];
+		SCR_Wild_Pokemon(banned_pokemon_alpha);
+		
 		// Pick a Pokémon based on weighted random
 		var rand_pick = irandom(global.total_spawn_weight);
 		var cumulative_weight = 0;
@@ -128,6 +132,10 @@ function SCR_Sequencing()
 	var is_alpha = false;
 	if (global.wild_pokemon_b_id == 0 && global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer))
 	{
+		// Generate valid Pokemon pool excluding tamed Pokemon and wild Pokemon A to prevent duplicates and mirror matches
+		var banned_pokemon_beta = [global.pokemon_ID, global.wild_pokemon_a_id];
+		SCR_Wild_Pokemon(banned_pokemon_beta);
+		
 		// Pick a Pokémon based on weighted random
 		var rand_pick = irandom(global.total_spawn_weight);
 		var cumulative_weight = 0;

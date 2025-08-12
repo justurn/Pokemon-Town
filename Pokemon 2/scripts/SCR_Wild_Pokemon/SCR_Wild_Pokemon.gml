@@ -1,7 +1,24 @@
-function SCR_Wild_Pokemon()
+function SCR_Wild_Pokemon(banned_ids = [])
 {
 	// Calculate minimum possible wild Pokemon level for filtering (worst case scenario)
 	var min_wild_level = global.pokemon_level - global.wild_pokemon_level_gap;
+	
+	// Convert banned_ids to array if it's a single value
+	if (!is_array(banned_ids)) {
+		banned_ids = [banned_ids];
+	}
+	
+	// Debug logging for banned Pokemon
+	if (array_length(banned_ids) > 0) {
+		var banned_names = "";
+		for (var d = 0; d < array_length(banned_ids); d++) {
+			if (d > 0) banned_names += ", ";
+			banned_names += global.Dex_Names[banned_ids[d]];
+		}
+		show_debug_message("SCR_Wild_Pokemon: Banned Pokemon - " + banned_names);
+	} else {
+		show_debug_message("SCR_Wild_Pokemon: No banned Pokemon (general pool generation)");
+	}
 	
 	// Generate a shuffled array of valid wild pokemon to use
 	global.valid_wild_pokemon = [];
@@ -11,20 +28,52 @@ function SCR_Wild_Pokemon()
 		var has_evolution = (global.Dex_Evolve_Level[i] != -1)
 		var hatching = global.Dex_Hatching[i]
 		
+		// Skip banned Pokemon IDs
+		var is_banned = false;
+		for (var b = 0; b < array_length(banned_ids); b++) {
+			if (i == banned_ids[b]) {
+				is_banned = true;
+				break;
+			}
+		}
+		if (is_banned) continue;
+		
 		if (hatching && !has_evolution) || (hatching && !evolve_ready)
 		{
 			array_push(global.valid_wild_pokemon, i)
 		}
 		else if (evolve_ready && has_evolution)
 		{
-			// add the evolution of the current pokemon index to the array
-			array_push(global.valid_wild_pokemon, i+1)
+			// Check if evolution is banned
+			var evolution_banned = false;
+			for (var b = 0; b < array_length(banned_ids); b++) {
+				if ((i+1) == banned_ids[b]) {
+					evolution_banned = true;
+					break;
+				}
+			}
+			
+			if (!evolution_banned) {
+				// add the evolution of the current pokemon index to the array
+				array_push(global.valid_wild_pokemon, i+1)
+			}
 			
 			if (i == 133) // Special case for Eevee
 			{
-				array_push(global.valid_wild_pokemon, 134) // Vaporeon
-				array_push(global.valid_wild_pokemon, 135) // Jolteon
-				array_push(global.valid_wild_pokemon, 136) // Flareon
+				// Check each Eevee evolution individually for bans
+				var eevee_evolutions = [134, 135, 136]; // Vaporeon, Jolteon, Flareon
+				for (var e = 0; e < array_length(eevee_evolutions); e++) {
+					var evo_banned = false;
+					for (var b = 0; b < array_length(banned_ids); b++) {
+						if (eevee_evolutions[e] == banned_ids[b]) {
+							evo_banned = true;
+							break;
+						}
+					}
+					if (!evo_banned) {
+						array_push(global.valid_wild_pokemon, eevee_evolutions[e]);
+					}
+				}
 			}
 		}	
 	}
