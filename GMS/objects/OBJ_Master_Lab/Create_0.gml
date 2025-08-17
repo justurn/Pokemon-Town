@@ -77,8 +77,17 @@ if (egg_count > 0) {
 
 // Panel content variables
 panel_prob_data = undefined;
-lab_mode = "egg_selection"; // or "pokedex_mode" for F-005
+lab_mode = "egg_selection"; // or "pokedex_mode" for F-005, "hatching", "post_hatch" for F-019
 display_pokemon_count = 0;
+
+// F-019: Hatching mode variables
+hatching_timer = 0;
+hatching_egg_x = egg_x; // Store hatching position  
+hatching_egg_y = egg_y;
+hatched_pokemon_id = -1;
+shake_offset_x = 0;
+shake_offset_y = 0;
+original_background = layer_background_get_sprite(layer_background_get_id(layer_get_id("Background")));
 
 show_debug_message("============================");
 

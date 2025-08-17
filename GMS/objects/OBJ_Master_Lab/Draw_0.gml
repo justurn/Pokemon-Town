@@ -1,8 +1,8 @@
 // Draw the side panel sprite
 draw_self();
 
-// Draw panel content if in egg selection mode
-if (lab_mode == "egg_selection")
+// F-019: Draw panel content for all interactive modes (egg_selection, hatching, post_hatch)
+if (lab_mode == "egg_selection" || lab_mode == "hatching" || lab_mode == "post_hatch")
 {
     // Set text properties
     draw_set_color(c_white);

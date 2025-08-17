@@ -15,7 +15,7 @@ if (global.right)
 	}
 	else
 	{
-		x = 0 + sprite_width;
+		x = 0 + sprite_width/2;
 		if (instance_exists(OBJ_Town_Pokemon))
 		{
 			OBJ_Town_Pokemon.x = x
@@ -40,7 +40,7 @@ if (global.left)
 	}
 	else
 	{
-		x = room_width - sprite_width;
+		x = room_width - sprite_width/2;
 		if (instance_exists(OBJ_Town_Pokemon))
 		{
 			OBJ_Town_Pokemon.x = x

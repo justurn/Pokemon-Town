@@ -73,8 +73,18 @@ function SCR_Inputs()
 	{ // Adjust threshold to ignore small joystick drifts
 	    global.right = true;
 	}
-
-
+	
+	// Use gamepad axis for up/down instead of buttons to avoid conflicts
+	var axis_y = gamepad_axis_value(0, gp_axislv); // Left Stick Y-Axis
+	if (axis_y < -axis_min)
+	{ // Negative value means pushing up
+		global.up = true
+	}
+	if (axis_y > axis_min)
+	{ // Positive value means pushing down
+		global.down = true
+	}
+	
 	// Right checks (keyboard and D-PAD)
 	if (keyboard_check(vk_right))
 	{
@@ -102,6 +112,7 @@ function SCR_Inputs()
 	{
 		global.left = true
 	}
+
 	
 	// Up checks (keyboard and D-PAD)
 	if (keyboard_check(vk_up))
@@ -112,12 +123,11 @@ function SCR_Inputs()
 	{
 		global.up = true
 	}
-	// Use gamepad axis for up/down instead of buttons to avoid conflicts
-	var axis_y = gamepad_axis_value(0, gp_axislv); // Left Stick Y-Axis
-	if (axis_y < -0.15)
-	{ // Negative value means pushing up
+	if (gamepad_button_check(0, 12))
+	{
 		global.up = true
 	}
+
 	
 	// Down checks (keyboard and D-PAD)  
 	if (keyboard_check(vk_down))
@@ -128,8 +138,8 @@ function SCR_Inputs()
 	{
 		global.down = true
 	}
-	if (axis_y > 0.15)
-	{ // Positive value means pushing down
+	if (gamepad_button_check(0, 13))
+	{
 		global.down = true
 	}
 	
@@ -142,21 +152,21 @@ function SCR_Inputs()
 	{
 		global.enter = true;
 	}
-	if (gamepad_button_check_pressed(0, 0))
+	if (gamepad_button_check_pressed(0, 0)) //A
 	{
 		global.enter = true;
 	}
-	if (gamepad_button_check_pressed(0, 12))
+	if (gamepad_button_check_pressed(0, 10)) // left stick in
 	{
-		global.enter = true
-	}
+		global.enter = true;
+	}	
 	
 	// Shift checks (keyboard and controller)
 	if (keyboard_check(vk_lshift))
 	{
 		global.shift = true;
 	}
-	if (gamepad_button_check(0, 13))
+	if (gamepad_button_check(0, 1)) // B
 	{
 		global.shift = true
 	}

@@ -19,7 +19,7 @@ for (var i = 0; i < button_count; i++) {
     if (is_hovered) 
 	{
         // Set the sprite animation (start playing animation)
-        sprite_index = SPR_Menu_Button_Selected;
+        sprite_index = SPR_Name_Panel;
         image_speed = 0.1; // Adjust the speed of the animation (you can tweak the value)
 
         // Draw the button sprite

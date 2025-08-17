@@ -5,6 +5,10 @@ function SCR_Initialise_Globals()
 	
 	global.log = false;
 	
+	// F-018: Initialize Battle System Enhancements
+	SCR_Type_Icons_Init();
+	SCR_Moves_Init();
+	
 	
 	
 	// Plots and Buildings
@@ -43,7 +47,7 @@ function SCR_Initialise_Globals()
 	global.pokemon_start_crit = 5;
 	global.pokemon_crit = global.pokemon_start_crit;
 	
-	global.pokemon_start_xp_rate = 1;
+	global.pokemon_start_xp_rate = 30;
 	global.pokemon_xp_rate = global.pokemon_start_xp_rate;
 	global.basic_xp_award = 25;
 	
@@ -52,6 +56,12 @@ function SCR_Initialise_Globals()
 	global.pokemon_experience = power(global.pokemon_level - 1,3);
 	global.wild_pokemon_level_gap = global.pokemon_start_level - 1;
 	global.wild_pokemon_level = global.pokemon_level - global.wild_pokemon_level_gap;
+	
+	// F-018: Player Pokemon move storage
+	global.player_move_1 = 0;
+	global.player_move_2 = 0;
+	global.player_move_3 = 0;
+	global.player_move_4 = 0;
 
 	// Tips
 	global.tip_string ="";
@@ -691,7 +701,7 @@ function SCR_Initialise_Globals()
 
 	// Rival Battle System
 	global.rival_pokemon_id = 0;
-	global.rival_battle_milestones = [7, 20, 30, 40, 50, 60];
+	global.rival_battle_milestones = [7, 15, 25, 35, 45, 55];
 	global.rival_completed_milestones = [];
 	global.inputs_disabled = false;
 	global.camera_sequence_active = false;

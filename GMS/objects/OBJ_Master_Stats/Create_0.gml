@@ -107,7 +107,7 @@ switch (room)
         panel_stat_current = global.pokemon_xp_rate;
         global.iv_xp += panel_items_used;
 		panel_new_iv = global.iv_xp;
-        global.pokemon_xp_rate = global.pokemon_start_xp_rate + (1 + global.iv_xp / 10);
+        global.pokemon_xp_rate = global.pokemon_start_xp_rate + (global.iv_xp / 10);
         panel_stat_final = global.pokemon_xp_rate;
         global.item_held[10] = 0;
         break;

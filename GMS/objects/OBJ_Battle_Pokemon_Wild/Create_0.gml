@@ -52,6 +52,13 @@ max_hp = floor(((2 * base_hp * level) / 100) + level + 10);
 crit = global.pokemon_start_crit;
 current_hp = max_hp
 
+// F-018: Assign random moves to wild Pokemon
+move_1 = 0;
+move_2 = 0;
+move_3 = 0;
+move_4 = 0;
+SCR_Assign_Random_Moves(self);
+
 
 
 

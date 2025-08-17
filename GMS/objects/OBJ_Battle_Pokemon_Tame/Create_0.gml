@@ -30,3 +30,9 @@ current_hp = global.pokemon_health;
 max_hp = global.pokemon_health_max
 level = global.pokemon_level;
 crit = global.pokemon_crit;
+
+// F-018: Assign moves to battle Pokemon
+move_1 = global.player_move_1;
+move_2 = global.player_move_2;
+move_3 = global.player_move_3;
+move_4 = global.player_move_4;

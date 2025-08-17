@@ -1,7 +1,7 @@
 function SCR_Update_Panel_Content()
 {
-    // Only update if we have eggs and are in egg selection mode
-    if (array_length(global.egg_types_found) > 0 && lab_mode == "egg_selection") 
+    // F-019: Update panel content for all interactive modes to maintain probability display
+    if (array_length(global.egg_types_found) > 0 && (lab_mode == "egg_selection" || lab_mode == "hatching" || lab_mode == "post_hatch")) 
     {
         // Ensure selected_egg is within bounds
         if (global.selected_egg >= array_length(global.egg_types_found)) {

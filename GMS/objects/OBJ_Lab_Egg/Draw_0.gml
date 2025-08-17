@@ -7,6 +7,18 @@ else
 	type_id = global.egg_types_found[global.selected_egg];	
 }
 
+// F-019: Apply shake offsets during lab hatching mode
+var draw_x = x;
+var draw_y = y;
+
+if (room == RM_Lab && instance_exists(OBJ_Master_Lab)) {
+    with (OBJ_Master_Lab) {
+        if (lab_mode == "hatching") {
+            draw_x = other.x + shake_offset_x;
+            draw_y = other.y + shake_offset_y;
+        }
+    }
+}
 
 if (room = RM_Hatching)
 {
@@ -36,5 +48,6 @@ if (room = RM_Hatching)
 	
 var egg_colour = global.type_colors[type_id]
 
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, egg_colour, image_alpha);
+// F-019: Use calculated draw position (with shake offsets in lab mode)
+draw_sprite_ext(sprite_index, image_index, draw_x, draw_y, image_xscale, image_yscale, image_angle, egg_colour, image_alpha);
 
