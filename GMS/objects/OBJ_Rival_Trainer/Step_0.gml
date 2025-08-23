@@ -4,10 +4,8 @@ x += move_direction * move_speed;
 // Check if we've hit patrol boundaries and need to turn around
 if (x <= patrol_left && move_direction == -1) {
     move_direction = 1; // Turn right
-    show_debug_message("Rival reached left boundary, turning right");
 } else if (x >= patrol_right && move_direction == 1) {
     move_direction = -1; // Turn left
-    show_debug_message("Rival reached right boundary, turning left");
 }
 
 // Set appropriate walking sprite based on direction
