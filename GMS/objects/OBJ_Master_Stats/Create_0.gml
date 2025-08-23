@@ -5,7 +5,7 @@
 switch (room) 
 {
     case RM_Factory:
-        panel_stat_sprite = SPR_Shield;       // Show stat sprite in panel
+        panel_stat_sprite = SPR_Shield_2;     // Show stat sprite in panel
         item_sprite = SPR_Gear;
         panel_old_iv = global.iv_defence;
         panel_stat_name = "Defence";
