@@ -47,7 +47,7 @@ function SCR_Initialise_Globals()
 	global.pokemon_start_crit = 5;
 	global.pokemon_crit = global.pokemon_start_crit;
 	
-	global.pokemon_start_xp_rate = 30;
+	global.pokemon_start_xp_rate = 1;
 	global.pokemon_xp_rate = global.pokemon_start_xp_rate;
 	global.basic_xp_award = 25;
 	
@@ -699,6 +699,9 @@ function SCR_Initialise_Globals()
 
 	show_debug_message("Shuffled Egg Types: " + string(global.shuffled_types));
 
+	// Battle System Settings
+	global.wild_pokemon_flee_chance = 1; // Wild Pokemon flee chance percentage (1% default)
+	
 	// Rival Battle System
 	global.rival_pokemon_id = 0;
 	global.rival_battle_milestones = [7, 15, 25, 35, 45, 55];

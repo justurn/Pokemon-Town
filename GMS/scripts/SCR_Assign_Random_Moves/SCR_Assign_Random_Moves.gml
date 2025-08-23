@@ -31,8 +31,10 @@ function SCR_Assign_Random_Moves(pokemon_instance)
     var secondary_special_moves = [];
     
     // Single pass through move database to collect all matching moves
+    
     for (var i = 1; i < array_length(global.move_name); i++) {
-        if (global.move_name[i] == undefined) continue;
+        // CRITICAL: Only consider moves with valid names (not undefined, empty, or "0")
+        if (global.move_name[i] == undefined || global.move_name[i] == "" || string(global.move_name[i]) == "0") continue;
         
         // Check if move matches primary type
         if (global.move_type_id[i] == primary_type_id) {
@@ -53,21 +55,32 @@ function SCR_Assign_Random_Moves(pokemon_instance)
         }
     }
     
+    // Debug logging for move pool sizes
+    show_debug_message("MOVE DEBUG: " + pokemon_instance.pokemon_name + " (" + primary_type + ") - Physical: " + string(array_length(primary_physical_moves)) + ", Special: " + string(array_length(primary_special_moves)));
+    
     // Assign moves based on type structure
     if (secondary_type_id == -1 || secondary_type_id == undefined || secondary_type_id == primary_type_id) {
-        // Mono-type: 2 physical + 2 special from primary type
-        if (array_length(primary_physical_moves) >= 2 && array_length(primary_special_moves) >= 2) {
-            // Get unique physical moves
+        // Mono-type: Assign available moves from primary type
+        // Assign physical moves if available
+        if (array_length(primary_physical_moves) > 0) {
             pokemon_instance.move_1 = primary_physical_moves[irandom(array_length(primary_physical_moves) - 1)];
-            do {
-                pokemon_instance.move_2 = primary_physical_moves[irandom(array_length(primary_physical_moves) - 1)];
-            } until (pokemon_instance.move_2 != pokemon_instance.move_1 || array_length(primary_physical_moves) == 1);
-            
-            // Get unique special moves
-            pokemon_instance.move_3 = primary_special_moves[irandom(array_length(primary_special_moves) - 1)];
-            do {
-                pokemon_instance.move_4 = primary_special_moves[irandom(array_length(primary_special_moves) - 1)];
-            } until (pokemon_instance.move_4 != pokemon_instance.move_3 || array_length(primary_special_moves) == 1);
+            if (array_length(primary_physical_moves) > 1) {
+                do {
+                    pokemon_instance.move_2 = primary_physical_moves[irandom(array_length(primary_physical_moves) - 1)];
+                } until (pokemon_instance.move_2 != pokemon_instance.move_1);
+            }
+        }
+        
+        // Assign special moves if available
+        if (array_length(primary_special_moves) > 0) {
+            var selected_id = irandom(array_length(primary_special_moves) - 1);
+            pokemon_instance.move_3 = primary_special_moves[selected_id];
+                if (array_length(primary_special_moves) > 1) {
+                do {
+                    var selected_id2 = irandom(array_length(primary_special_moves) - 1);
+                    pokemon_instance.move_4 = primary_special_moves[selected_id2];
+                } until (pokemon_instance.move_4 != pokemon_instance.move_3);
+            }
         }
     } else {
         // Dual-type: 1 physical + 1 special from each type

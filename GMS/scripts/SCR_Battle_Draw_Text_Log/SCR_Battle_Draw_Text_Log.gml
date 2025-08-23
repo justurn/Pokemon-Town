@@ -8,16 +8,18 @@ function SCR_Battle_Draw_Text_Log() {
     if (battle_state == "LEVEL_UP") {
         // Note: Background and border now drawn permanently in main draw step
         
-        // Title
-        draw_set_font(FNT_Small);
-        draw_set_color(c_yellow);
-        draw_set_halign(fa_center);
-        draw_text(ui_left_panel_width/2, battle_text_line_1_y - battle_line_spacing, "STAT INCREASES");
-        
         // Stat comparison display
         draw_set_font(FNT_Small);
         draw_set_halign(fa_left);
         var stat_x = 40;
+        
+        // First line: STAT INCREASES title (centered)
+        draw_set_color(c_yellow);
+        draw_set_halign(fa_center);
+        draw_text(ui_left_panel_width/2, battle_text_line_1_y, "STAT INCREASES");
+        
+        // Start stats display from second line (after stat increases title)
+        var stats_start_y = battle_text_line_1_y + battle_line_spacing;
         
         // Helper function to format stat change display
         function format_stat_line(stat_name, before_val, after_val, change_val) {
@@ -74,7 +76,7 @@ function SCR_Battle_Draw_Text_Log() {
         // Draw stat lines using consistent spacing and columns
         for (var i = 0; i < array_length(stats_to_display); i++) {
             var stat_info = stats_to_display[i];
-            var y_pos = battle_text_line_1_y + (i * battle_line_spacing);
+            var y_pos = stats_start_y + (i * battle_line_spacing);
             
             // Parse the original stat info
             var stat_name = "";

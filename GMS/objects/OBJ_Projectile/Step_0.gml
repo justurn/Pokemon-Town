@@ -34,18 +34,21 @@ var dist_to_target = point_distance(x, y, target_x, target_y);
 if (dist_to_target < speed) 
 { 
     // If close enough, apply effect and destroy
-    with (target_pokemon) 
-	{
-        image_blend = c_red; // Flash red
-        alarm[1] = 10; // Set timer to revert color after 10 frames
+    // Only flash red and apply damage if it's not a miss
+    if (!is_miss) {
+        with (target_pokemon) 
+        {
+            image_blend = c_red; // Flash red
+            alarm[1] = 10; // Set timer to revert color after 10 frames
+        }
+        
+        target_pokemon.current_hp -= damage;
+        
+        if target_pokemon.current_hp < 0
+        {
+            target_pokemon.current_hp = 0;
+        }
     }
-	
-	target_pokemon.current_hp -= damage;
-	
-	if target_pokemon.current_hp < 0
-	{
-		target_pokemon.current_hp = 0;
-	}
 	
     instance_destroy(); // Remove projectile
 } 

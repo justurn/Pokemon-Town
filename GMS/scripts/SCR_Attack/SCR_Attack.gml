@@ -76,8 +76,17 @@ function SCR_Attack(attacker, defender, selected_move_slot = -1)
 	
 	// Add initial battle log message showing the move being used
 	if (instance_exists(OBJ_Master_Battle)) {
+		// Get variables before entering with statement
+		var attacker_name = (variable_instance_exists(attacker, "pokemon_name") && attacker.pokemon_name != "") ? 
+			attacker.pokemon_name : "Pokemon";
+		var move_text = (move_name != undefined && move_name != "") ? move_name : "Attack";
+		
 		with (OBJ_Master_Battle) {
-			array_push(battle_log, attacker.pokemon_name + " uses " + move_name + "!");
+			// Safety check for battle_log array
+			if (!is_array(battle_log)) {
+				battle_log = [];
+			}
+			array_push(battle_log, attacker_name + " uses " + move_text + "!");
 			if (array_length(battle_log) > max_log_messages) {
 				array_delete(battle_log, 0, 1);
 			}
@@ -86,7 +95,7 @@ function SCR_Attack(attacker, defender, selected_move_slot = -1)
 	
 	// Check move accuracy and determine if attack hits
 	var move_accuracy = 100; // Default accuracy (100%)
-	var accuracy_roll = irandom(100) + 1; // Roll 1-100 (irandom(100) gives 0-99, so +1 for 1-100)
+	var accuracy_roll = irandom(100); // Roll 0-99 for proper percentage check
 	var attack_hits = true;
 	
 	// Get accuracy from move database if we have a valid move
@@ -98,17 +107,23 @@ function SCR_Attack(attacker, defender, selected_move_slot = -1)
 			attack_hits = true;
 			show_debug_message(move_name + " never misses!");
 		} else {
-			attack_hits = (accuracy_roll <= move_accuracy);
+			attack_hits = (accuracy_roll < move_accuracy);
 		}
 	}
 	
 	// If attack misses, handle miss and return early
 	if (!attack_hits) {
-		show_debug_message(attacker.pokemon_name + "'s " + move_name + " missed! (rolled " + string(accuracy_roll) + " vs " + string(move_accuracy) + " accuracy)");
+		var attacker_name = (variable_instance_exists(attacker, "pokemon_name") && attacker.pokemon_name != "") ? 
+			attacker.pokemon_name : "Pokemon";
+		show_debug_message(attacker_name + "'s " + move_name + " missed! (rolled " + string(accuracy_roll) + " vs " + string(move_accuracy) + " accuracy)");
 		
 		// Add battle log message for miss
 		if (instance_exists(OBJ_Master_Battle)) {
 			with (OBJ_Master_Battle) {
+				// Safety check for battle_log array
+				if (!is_array(battle_log)) {
+					battle_log = [];
+				}
 				var miss_messages = ["But it missed!", "The attack missed!", "It didn't hit!", "The move failed to connect!"];
 				var miss_text = miss_messages[irandom(array_length(miss_messages) - 1)];
 				array_push(battle_log, miss_text);
@@ -132,7 +147,9 @@ function SCR_Attack(attacker, defender, selected_move_slot = -1)
 		return; // Exit function early - no damage calculation needed
 	}
 	
-	show_debug_message(attacker.pokemon_name + "'s " + move_name + " hits! (rolled " + string(accuracy_roll) + " vs " + string(move_accuracy) + " accuracy)");
+	var attacker_name = (variable_instance_exists(attacker, "pokemon_name") && attacker.pokemon_name != "") ? 
+		attacker.pokemon_name : "Pokemon";
+	show_debug_message(attacker_name + "'s " + move_name + " hits! (rolled " + string(accuracy_roll) + " vs " + string(move_accuracy) + " accuracy)");
 	
 	// Calculate damage based on attack type
 	if (is_physical) {
@@ -163,7 +180,9 @@ function SCR_Attack(attacker, defender, selected_move_slot = -1)
         }
         
         var attack_type = move_type_id;
-        show_debug_message("Move " + move_name + " (" + move_type + ") vs " + defender.pokemon_name + ": " + string(effectiveness) + "x effectiveness");
+        var defender_name = (variable_instance_exists(defender, "pokemon_name") && defender.pokemon_name != "") ? 
+            defender.pokemon_name : "Pokemon";
+        show_debug_message("Move " + move_name + " (" + move_type + ") vs " + defender_name + ": " + string(effectiveness) + "x effectiveness");
     } else {
         // Fallback: use attacker's primary type for effectiveness
         var attack_type = attacker.primary_type_id;
@@ -198,31 +217,44 @@ function SCR_Attack(attacker, defender, selected_move_slot = -1)
         show_debug_message("It's not very effective...");
     
     // Debug Messages
-    show_debug_message(string(attacker.pokemon_name) + " Deals " + string(damage) + " damage to " + string(defender.pokemon_name));
-    show_debug_message(string(defender.pokemon_name) + " Has " + string(defender.current_hp - damage) + " health remaining");
+    var attacker_name = (variable_instance_exists(attacker, "pokemon_name") && attacker.pokemon_name != "") ? 
+        attacker.pokemon_name : "Pokemon";
+    var defender_name = (variable_instance_exists(defender, "pokemon_name") && defender.pokemon_name != "") ? 
+        defender.pokemon_name : "Pokemon";
+    show_debug_message(string(attacker_name) + " Deals " + string(damage) + " damage to " + string(defender_name));
+    show_debug_message(string(defender_name) + " Has " + string(defender.current_hp - damage) + " health remaining");
 	
 	// Add battle log messages for the new UI
 	if (instance_exists(OBJ_Master_Battle)) {
+		// Get variables before entering with statement
+		var damage_text = string(floor(damage));
+		var eff_value = effectiveness;
+		var crit_flag = is_crit;
+		
 		// F-018: Enhanced battle log with damage and effectiveness
 		with (OBJ_Master_Battle) {
-			array_push(battle_log, "Deals " + string(floor(damage)) + " damage!");
+			// Safety check for battle_log array
+			if (!is_array(battle_log)) {
+				battle_log = [];
+			}
+			array_push(battle_log, "Deals " + damage_text + " damage!");
 			if (array_length(battle_log) > max_log_messages) {
 				array_delete(battle_log, 0, 1);
 			}
 			
-			if (effectiveness > 1) {
+			if (eff_value > 1) {
 				array_push(battle_log, "Super effective!");
 				if (array_length(battle_log) > max_log_messages) {
 					array_delete(battle_log, 0, 1);
 				}
-			} else if (effectiveness < 1) {
+			} else if (eff_value < 1) {
 				array_push(battle_log, "Not very effective...");
 				if (array_length(battle_log) > max_log_messages) {
 					array_delete(battle_log, 0, 1);
 				}
 			}
 			
-			if (is_crit) {
+			if (crit_flag) {
 				array_push(battle_log, "Critical hit!");
 				if (array_length(battle_log) > max_log_messages) {
 					array_delete(battle_log, 0, 1);

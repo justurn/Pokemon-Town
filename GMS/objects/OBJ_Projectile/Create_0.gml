@@ -3,5 +3,6 @@
 just_spawned = true;
 colour = c_white;
 crit_colour = c_white;
+is_miss = false;
 
 sprite_index = SPR_Blank;

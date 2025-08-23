@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "SCR_Battle_Draw_Left_Panel",
+  "name": "SCR_Battle_Draw_Panel_Outlines",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
