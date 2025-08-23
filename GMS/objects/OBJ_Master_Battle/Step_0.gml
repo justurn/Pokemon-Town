@@ -85,69 +85,22 @@ if (battle_state == "PLAYER_CHOICE") {
                 case 2: // Flee
                     // Clear battle text when player chooses to flee
                     battle_log = [];
-                    // Use dedicated flee attempt function
-                    SCR_Battle_Flee_Attempt();
+                    // Store flee choice for execution in action phase
+                    player_chosen_action = "FLEE";
+                    
+                    // Check speed to determine execution order
+                    if (attacks_first == "PLAYER") {
+                        // Player acts first - execute flee immediately
+                        show_debug_message("Player acts first (speed advantage) - executing flee");
+                        SCR_Execute_Player_Flee();
+                    } else {
+                        // Wild Pokemon acts first - store flee for later execution
+                        show_debug_message("Wild Pokemon acts first (speed advantage), storing player flee");
+                        battle_state = "WILD_TURN";
+                    }
+                    battle_ui_state = "BATTLE_TEXT";
                     break;
             }
-        }
-    }
-    else if (battle_ui_state == "ATTACK_TYPE_SELECT") {
-        if (global.left && delay > delay_limit) {
-            delay = 0;
-            selected_attack_type--;
-            if (selected_attack_type < 0) {
-                selected_attack_type = 1; // Loop to Special
-            }
-        }
-        if (global.right && delay > delay_limit) {
-            delay = 0;
-            selected_attack_type++;
-            if (selected_attack_type > 1) {
-                selected_attack_type = 0; // Loop to Physical
-            }
-        }
-        if (global.enter && delay > delay_limit) {
-            delay = 0;
-            // Inline player attack logic
-            SCR_Attack(player_pokemon, wild_pokemon, selected_attack_type);
-            
-            // Check if wild Pokemon is defeated
-            if (wild_pokemon.current_hp <= 0) {
-                return; // Battle ends, wild Pokemon defeated
-            }
-            
-            // Check if wild Pokemon was attempting to flee after player attack
-            if (variable_global_exists("wild_attempting_flee") && global.wild_attempting_flee) {
-                global.wild_attempting_flee = false;
-                // Add message to battle log
-                array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
-                if (array_length(battle_log) > max_log_messages) {
-                    array_delete(battle_log, 0, 1);
-                }
-                // Start wild Pokemon flee animation after player attack
-                flee_animation_active = true;
-                flee_animation_timer = 0;
-                flee_target_x = room_width + 100; // Move wild Pokemon off-screen to the right
-                flee_who = "wild";
-                battle_ui_state = "BATTLE_TEXT";
-                show_debug_message("Starting wild Pokemon flee animation after player attack");
-                // Reset wild Pokemon positions
-                global.wild_pokemon_a_id = 0;
-                global.wild_pokemon_a_x = -1;
-                global.wild_pokemon_b_id = 0;
-                global.wild_pokemon_b_x = -1;
-                return;
-            }
-            
-            // Wild Pokemon's turn is next
-            battle_state = "WAIT_WILD";
-            battle_ui_state = "BATTLE_TEXT";
-            alarm[0] = wild_turn_timer;
-        }
-        // Allow backing out of attack selection with shift key
-        if (global.shift && delay > delay_limit) {
-            delay = 0;
-            battle_ui_state = "ACTION_SELECT";
         }
     }
     // F-018: Move Selection State
@@ -181,41 +134,51 @@ if (battle_state == "PLAYER_CHOICE") {
                 // Remember this move for next time
                 last_used_move = selected_move;
                 
-                // Use selected move in attack
-                SCR_Attack(player_pokemon, wild_pokemon, selected_move);
-                
-                // Check if wild Pokemon is defeated
-                if (wild_pokemon.current_hp <= 0) {
-                    return; // Battle ends, wild Pokemon defeated
-                }
-                
-                // Check if wild Pokemon was attempting to flee after player attack
-                if (variable_global_exists("wild_attempting_flee") && global.wild_attempting_flee) {
-                    global.wild_attempting_flee = false;
-                    // Add message to battle log
-                    array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
-                    if (array_length(battle_log) > max_log_messages) {
-                        array_delete(battle_log, 0, 1);
+                // Check speed to determine execution order
+                if (attacks_first == "PLAYER") {
+                    // Player goes first - execute immediately
+                    show_debug_message("Player attacks first (speed advantage)");
+                    SCR_Attack(player_pokemon, wild_pokemon, selected_move);
+                    
+                    // Check if wild Pokemon is defeated
+                    if (wild_pokemon.current_hp <= 0) {
+                        return; // Battle ends, wild Pokemon defeated
                     }
-                    // Start wild Pokemon flee animation after player attack
-                    flee_animation_active = true;
-                    flee_animation_timer = 0;
-                    flee_target_x = room_width + 100; // Move wild Pokemon off-screen to the right
-                    flee_who = "wild";
-                    battle_ui_state = "BATTLE_TEXT";
-                    show_debug_message("Starting wild Pokemon flee animation after player attack");
-                    // Reset wild Pokemon positions
-                    global.wild_pokemon_a_id = 0;
-                    global.wild_pokemon_a_x = -1;
-                    global.wild_pokemon_b_id = 0;
-                    global.wild_pokemon_b_x = -1;
-                    return;
+                    
+                    // Check if wild Pokemon was attempting to flee after player attack
+                    if (variable_global_exists("wild_attempting_flee") && global.wild_attempting_flee) {
+                        global.wild_attempting_flee = false;
+                        // Add message to battle log
+                        array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
+                        if (array_length(battle_log) > max_log_messages) {
+                            array_delete(battle_log, 0, 1);
+                        }
+                        // Start wild Pokemon flee animation after player attack
+                        flee_animation_active = true;
+                        flee_animation_timer = 0;
+                        flee_target_x = room_width + 100; // Move wild Pokemon off-screen to the right
+                        flee_who = "wild";
+                        battle_ui_state = "BATTLE_TEXT";
+                        show_debug_message("Starting wild Pokemon flee animation after player attack");
+                        // Reset wild Pokemon positions
+                        global.wild_pokemon_a_id = 0;
+                        global.wild_pokemon_a_x = -1;
+                        global.wild_pokemon_b_id = 0;
+                        global.wild_pokemon_b_x = -1;
+                        return;
+                    }
+                    
+                    // Player went first, now wild's turn (with delay)
+                    show_debug_message("Player finished first attack, now wild Pokemon's turn");
+                    battle_state = "WAIT_WILD";
+                    alarm[0] = attack_delay_duration;
+                } else {
+                    // Wild goes first - store player's move for later execution
+                    show_debug_message("Wild Pokemon attacks first (speed advantage), storing player's move");
+                    player_chosen_move = selected_move;
+                    battle_state = "WILD_TURN";
                 }
-                
-                // Wild Pokemon's turn is next
-                battle_state = "WAIT_WILD";
                 battle_ui_state = "BATTLE_TEXT";
-                alarm[0] = wild_turn_timer;
             } else {
                 // No move in this slot - show message
                 array_push(battle_log, "No move assigned to this slot!");
@@ -233,82 +196,132 @@ if (battle_state == "PLAYER_CHOICE") {
     }
 }
 
-// PLAYER TURN LOGIC - MODIFIED
+
+// PLAYER TURN LOGIC - Always start with player choice
 if (battle_state == "PLAYER_TURN") {
     show_debug_message(battle_state);
     
     // Reset timer bar
     player_turn_timer = turn_max;
     
-    // Transition to player choice instead of auto-attack
+    // Player always chooses first, speed determines execution order
+    show_debug_message("Player chooses action first (speed determines execution order)");
     battle_state = "PLAYER_CHOICE";
     battle_ui_state = "ACTION_SELECT";
     selected_action = 0; // Reset to Attack
 }
 
-// WILD TURN LOGIC - SIMPLIFIED
+// WILD TURN LOGIC - With timing for sequential attacks
 if (battle_state == "WILD_TURN") {
-    show_debug_message(battle_state);
-    
-    // Reset timer bar
-    wild_turn_timer = turn_max;
-    
-    // Wild Pokemon has 1% chance to flee
-    var wild_flee_roll = irandom(100);
-    if (wild_flee_roll < 1) {
-        // During wild Pokemon's turn, they can always flee regardless of speed
-        show_debug_message("Wild Pokemon chose to flee during their turn");
-        // Add message to battle log
-        array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
-        if (array_length(battle_log) > max_log_messages) {
-            array_delete(battle_log, 0, 1);
+    // Only show state message once
+    if (!waiting_for_second_attack && attack_delay_timer == 0) {
+        show_debug_message(battle_state);
+        
+        // Reset timer bar
+        wild_turn_timer = turn_max;
+        
+        // Wild Pokemon has configurable chance to flee (but not in trainer battles)
+        var wild_flee_roll = irandom(100);
+        var is_trainer_battle = variable_global_exists("is_trainer_battle") && global.is_trainer_battle;
+        if (wild_flee_roll < global.wild_pokemon_flee_chance && !is_trainer_battle) {
+            // During wild Pokemon's turn, they can always flee regardless of speed
+            show_debug_message("Wild Pokemon chose to flee during their turn");
+            // Add message to battle log
+            array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
+            if (array_length(battle_log) > max_log_messages) {
+                array_delete(battle_log, 0, 1);
+            }
+            // Start wild Pokemon flee animation
+            flee_animation_active = true;
+            flee_animation_timer = 0;
+            flee_target_x = room_width + 100; // Move wild Pokemon off-screen to the right
+            flee_who = "wild";
+            battle_ui_state = "BATTLE_TEXT";
+            show_debug_message("Starting wild Pokemon flee animation");
+            // Reset wild Pokemon positions
+            global.wild_pokemon_a_id = 0;
+            global.wild_pokemon_a_x = -1;
+            global.wild_pokemon_b_id = 0;
+            global.wild_pokemon_b_x = -1;
+            return;
         }
-        // Start wild Pokemon flee animation
-        flee_animation_active = true;
-        flee_animation_timer = 0;
-        flee_target_x = room_width + 100; // Move wild Pokemon off-screen to the right
-        flee_who = "wild";
-        battle_ui_state = "BATTLE_TEXT";
-        show_debug_message("Starting wild Pokemon flee animation");
-        // Reset wild Pokemon positions
-        global.wild_pokemon_a_id = 0;
-        global.wild_pokemon_a_x = -1;
-        global.wild_pokemon_b_id = 0;
-        global.wild_pokemon_b_x = -1;
-        return;
-    }
-    
-    SCR_Attack(wild_pokemon, player_pokemon, -1); // -1 = auto-select best attack type
-    
-    // Check if player was attempting to flee after wild attack
-    if (variable_global_exists("player_attempting_flee") && global.player_attempting_flee) {
-        global.player_attempting_flee = false;
-        // Sync player Pokemon health to global before fleeing
-        global.pokemon_health = player_pokemon.current_hp;
-        // Add message to battle log
-        array_push(battle_log, "Got away safely!");
-        if (array_length(battle_log) > max_log_messages) {
-            array_delete(battle_log, 0, 1);
+        
+        // Execute wild Pokemon's attack
+        SCR_Attack(wild_pokemon, player_pokemon, -1); // -1 = auto-select best attack type
+        
+        // Check if player Pokemon is defeated
+        if (player_pokemon.current_hp <= 0) {
+            return; // Battle ends, player defeated
         }
-        // Start player flee animation after wild attack
-        flee_animation_active = true;
-        flee_animation_timer = 0;
-        flee_target_x = room_width + 100; // Move player Pokemon off-screen to the right
-        flee_who = "player";
-        battle_ui_state = "BATTLE_TEXT";
-        show_debug_message("Starting player flee animation after wild attack");
-        SCR_Battle_Flee_Cleanup();
-        return;
+        
+        // Check if we need to execute stored player action after delay
+        if (attacks_first == "WILD" && (player_chosen_move >= 0 || player_chosen_action == "FLEE")) {
+            // Start waiting for second action
+            waiting_for_second_attack = true;
+            attack_delay_timer = 0;
+            show_debug_message("Wild Pokemon attacked first, waiting before player's stored action (" + player_chosen_action + ")");
+        } else {
+            // Wild went second (after player), round complete
+            show_debug_message("Wild Pokemon finished second attack, round complete");
+            battle_state = "WAIT_PLAYER"; 
+            alarm[0] = wild_turn_timer;
+        }
     }
     
-    // Check if player Pokemon is defeated
-    if (player_pokemon.current_hp <= 0) {
-        return; // Battle ends, player defeated
+    // Handle timing for second attack
+    if (waiting_for_second_attack) {
+        attack_delay_timer++;
+        
+        if (attack_delay_timer >= attack_delay_duration) {
+            // Execute stored player action
+            if (player_chosen_action == "FLEE") {
+                show_debug_message("Delay complete, executing player's stored flee attempt");
+                var flee_successful = SCR_Execute_Player_Flee();
+                
+                // Reset timing variables
+                waiting_for_second_attack = false;
+                attack_delay_timer = 0;
+                player_chosen_move = -1;
+                player_chosen_action = "";
+                
+                if (flee_successful) {
+                    return; // Flee successful, battle ends
+                } else {
+                    // Flee failed, round complete
+                    show_debug_message("Player flee failed, round complete");
+                    battle_state = "WAIT_PLAYER"; 
+                    alarm[0] = wild_turn_timer;
+                }
+            } else {
+                // Execute stored player attack
+                show_debug_message("Delay complete, executing player's stored move " + string(player_chosen_move));
+                SCR_Attack(player_pokemon, wild_pokemon, player_chosen_move);
+                
+                // Check if wild Pokemon is defeated after player's attack
+                if (wild_pokemon.current_hp <= 0) {
+                    // Reset timing variables
+                    waiting_for_second_attack = false;
+                    attack_delay_timer = 0;
+                    player_chosen_move = -1;
+                    player_chosen_action = "";
+                    return; // Battle ends, wild Pokemon defeated
+                }
+                
+                // Round complete after both attacks
+                show_debug_message("Both Pokemon attacked, round complete");
+                battle_state = "WAIT_PLAYER"; 
+                alarm[0] = wild_turn_timer;
+                
+                // Reset timing variables
+                waiting_for_second_attack = false;
+                attack_delay_timer = 0;
+                player_chosen_move = -1;
+                player_chosen_action = "";
+            }
+        }
     }
-
-    battle_state = "WAIT_PLAYER"; 
-    alarm[0] = wild_turn_timer;
 }
+
 
 // ENEMY FAINT STATE - Wild Pokemon slides off screen
 if (battle_state == "ENEMY_FAINT") {
@@ -339,10 +352,6 @@ if (battle_state == "ENEMY_FAINT") {
         center_stage_timer = 0;
         show_debug_message("ENEMY_FAINT -> CENTER_STAGE: Moving Pokemon to center");
         
-        array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " gained " + string(victory_data.xp_gained) + " XP!");
-        if (array_length(battle_log) > max_log_messages) {
-            array_delete(battle_log, 0, 1);
-        }
     }
 }
 
@@ -373,47 +382,59 @@ if (battle_state == "XP_DISPLAY") {
     
     // Debug output only when entering state or stage changes
     if (last_battle_state != "XP_DISPLAY" || last_xp_stage != xp_display_stage) {
-        show_debug_message("XP_DISPLAY: Entered state - xp_current=" + string(xp_current_display) + ", xp_target=" + string(xp_target) + ", level_up=" + string(level_up_detected) + ", stage=" + string(xp_display_stage));
+        show_debug_message("XP_DISPLAY: Entered state - display_xp=" + string(display_xp) + ", xp_target=" + string(xp_target) + ", level_up=" + string(level_up_detected) + ", stage=" + string(xp_display_stage));
         last_battle_state = "XP_DISPLAY";
         last_xp_stage = xp_display_stage;
     }
     
     // Two-stage XP animation logic
     if (xp_display_stage == "CURRENT_LEVEL") {
-        // Animate XP gaining
-        if (xp_current_display < xp_target) {
-            var xp_to_add = min(xp_fill_speed, xp_target - xp_current_display);
-            xp_current_display += xp_to_add;
+        // Stage 1: Add awarded XP (not fill to 100%)
+        var original_level = victory_data.level_before;
+        var current_level_start = power(original_level - 1, 3);
+        var current_level_end = power(original_level, 3);
+        
+        // If level up detected, stage 1 target is 100% of current level
+        // Otherwise, stage 1 target is just the awarded XP
+        var stage_1_target;
+        if (level_up_detected) {
+            stage_1_target = current_level_end; // Fill to 100% only if leveling up
+        } else {
+            stage_1_target = xp_target; // Just add the awarded XP
         }
         
-        // Check for transitions when animation completes AND minimum display time passed
-        if (xp_current_display >= xp_target && xp_display_timer >= 60) { // Minimum 1 second display
+        if (display_xp < stage_1_target) {
+            var xp_to_add = min(xp_fill_speed, stage_1_target - display_xp);
+            display_xp += xp_to_add;
+        }
+        
+        // Check for transitions when stage 1 completes AND minimum display time passed
+        if (display_xp >= stage_1_target && xp_display_timer >= 60) { // Minimum 1 second display
             if (level_up_detected) {
-                // Level up detected - transition to LEVEL_UP state
-                var original_level = victory_data.level_before;
-                var current_level_end = power(original_level, 3);
-                
-                // Set XP display to level boundary for stage 1 visual completion
-                xp_current_display = current_level_end;
+                // Level up detected - transition to stage 2 (new level)
                 xp_display_stage = "NEW_LEVEL";
+                display_level = victory_data.level_after;  // Update to new level for XP bar calculations
+                display_xp = power(display_level - 1, 3);  // Reset to start of new level
                 battle_state = "LEVEL_UP";
                 level_up_timer = 0;
-                show_debug_message("XP_DISPLAY -> LEVEL_UP: Auto-transition after level up");
+                show_debug_message("XP_DISPLAY -> LEVEL_UP: Auto-transition to stage 2 after level up");
                 
-                // NOW update the visual display (level and HP restoration)
+                // NOW update the visual display (level and HP restoration) using victory data
                 with (OBJ_Battle_Pokemon_Tame) {
-                    level = global.pokemon_level;
-                    current_hp = global.pokemon_health;
-                    max_hp = global.pokemon_health_max;
+                    level = other.victory_data.level_after;
+                    current_hp = other.victory_data.stats_after.health_max;  // Full heal on level up
+                    max_hp = other.victory_data.stats_after.health_max;
                 }
                 
-                array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " reached Level " + string(global.pokemon_level) + "!");
+                array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " reached Level " + string(victory_data.level_after) + "!");
                 if (array_length(battle_log) > max_log_messages) {
                     array_delete(battle_log, 0, 1);
                 }
             } else {
                 // No level up - require keypress to continue
                 if (global.enter || global.shift) {
+                    // Victory complete - update global variables  
+                    global.pokemon_experience = xp_target;
                     battle_state = "VICTORY_COMPLETE";
                     show_debug_message("XP_DISPLAY -> VICTORY_COMPLETE: Manual transition after keypress");
                 }
@@ -424,28 +445,35 @@ if (battle_state == "XP_DISPLAY") {
     // Allow skipping stage 1 animation
     if (global.enter || global.shift) {
         if (xp_display_stage == "CURRENT_LEVEL") {
-            xp_current_display = xp_target; // Skip to final XP amount
-            
             if (level_up_detected) {
+                // Skip to end of current level (100%) only if leveling up
                 var original_level = victory_data.level_before;
                 var current_level_end = power(original_level, 3);
-                xp_current_display = current_level_end; // Set to level boundary for visual
+                display_xp = current_level_end;
+                
+                // Immediately transition to stage 2 (new level)
                 xp_display_stage = "NEW_LEVEL";
+                display_level = victory_data.level_after;  // Update to new level
+                display_xp = power(display_level - 1, 3);  // Reset to start of new level
                 battle_state = "LEVEL_UP";
                 level_up_timer = 0;
                 
                 // Update the visual display when manually skipping to LEVEL_UP
                 with (OBJ_Battle_Pokemon_Tame) {
-                    level = global.pokemon_level;
-                    current_hp = global.pokemon_health;
-                    max_hp = global.pokemon_health_max;
+                    level = other.victory_data.level_after;
+                    current_hp = other.victory_data.stats_after.health_max;
+                    max_hp = other.victory_data.stats_after.health_max;
                 }
                 
-                array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " reached Level " + string(global.pokemon_level) + "!");
+                array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " reached Level " + string(victory_data.level_after) + "!");
                 if (array_length(battle_log) > max_log_messages) {
                     array_delete(battle_log, 0, 1);
                 }
             } else {
+                // No level up - skip to awarded XP amount
+                display_xp = xp_target;
+                // Victory complete - update global variables
+                global.pokemon_experience = xp_target;
                 battle_state = "VICTORY_COMPLETE";
             }
         }
@@ -464,16 +492,16 @@ if (battle_state == "LEVEL_UP") {
     }
     
     // Stage 2: Animate remaining XP in new level
-    if (xp_display_stage == "NEW_LEVEL" && xp_current_display < xp_target) {
-        var xp_to_add = min(xp_fill_speed, xp_target - xp_current_display);
-        xp_current_display += xp_to_add;
+    if (xp_display_stage == "NEW_LEVEL" && display_xp < xp_target) {
+        var xp_to_add = min(xp_fill_speed, xp_target - display_xp);
+        display_xp += xp_to_add;
     }
     
-    // Require minimum display time (2 seconds) before allowing transitions
-    if (level_up_timer >= 120) {
+    // Require minimum display time (1 second) before allowing transitions
+    if (level_up_timer >= 60) {
         // Allow skipping stage 2 animation after minimum time
         if (global.enter || global.shift) {
-            xp_current_display = xp_target; // Skip to final XP amount
+            display_xp = xp_target; // Skip to final XP amount
             
             if (victory_data.evolution_triggered) {
                 battle_state = "EVOLUTION";
@@ -485,6 +513,11 @@ if (battle_state == "LEVEL_UP") {
                     array_delete(battle_log, 0, 1);
                 }
             } else {
+                // Victory complete - update all global variables for level up
+                global.pokemon_experience = xp_target;
+                global.pokemon_level = victory_data.level_after;
+                global.pokemon_health = victory_data.stats_after.health_max; // Full heal on level up
+                SCR_Pokemon_Stats(); // Recalculate all stats for new level
                 battle_state = "VICTORY_COMPLETE";
                 show_debug_message("LEVEL_UP -> VICTORY_COMPLETE: Manual transition after keypress");
             }
@@ -498,21 +531,16 @@ if (battle_state == "LEVEL_UP") {
 if (battle_state == "EVOLUTION") {
     evolution_timer++;
     evolution_flash_timer++;
-    show_debug_message("EVOLUTION timer: " + string(evolution_timer));
     
     // Create sparkles on first frame
     if (evolution_timer == 1) {
         // Create sparkles only behind left panel area (right side of screen)
-        for (var sparkle_x = ui_left_panel_width; sparkle_x <= room_width + 50; sparkle_x += random_range(50, 70)) {
-            for (var sparkle_y = -50; sparkle_y <= room_height + 50; sparkle_y += random_range(50, 70)) {
-                var sparkle = instance_create_depth(sparkle_x + random_range(-20, 20), 
-                                                   sparkle_y + random_range(-20, 20), 
-                                                   500, OBJ_Sparkle);
-                // De-sync sparkle animations by setting random image_index
-                with (sparkle) {
-                    image_index = random(image_number);
-                }
-                array_push(sparkle_instances, sparkle);
+        sparkle_instances = SCR_Create_Sparkle_Effect(ui_left_panel_width, room_width + 50, -50, room_height + 50);
+        
+        // Make sparkles invisible for manual drawing in battle
+        for (var i = 0; i < array_length(sparkle_instances); i++) {
+            with (sparkle_instances[i]) {
+                visible = false; // Hide from normal drawing, we'll draw manually
             }
         }
         
@@ -521,7 +549,7 @@ if (battle_state == "EVOLUTION") {
             depth = 50; // Bring Pokemon to front layer
         }
         
-        show_debug_message("Evolution started: Created " + string(array_length(sparkle_instances)) + " sparkles at depth 500 (behind left panel)");
+        show_debug_message("Evolution started: Created " + string(array_length(sparkle_instances)) + " sparkles at depth -1000 (on top of everything)");
     }
     
     // Fade in black background
@@ -531,21 +559,20 @@ if (battle_state == "EVOLUTION") {
         evolution_background_alpha = 1;
     }
     
-    // Apply existing evolution animation logic from OBJ_Evolve_Pokemon
-    evolution_flash_timer++;
-    var flash_interval = 5;
-    var flashing = false;
+    // Scaling effect - consistent 3x size like lab hatching
+    evolution_scale = 3;
     
-    if (evolution_flash_timer >= flash_interval) {
-        flashing = !flashing;
-        evolution_flash_timer = 0;
+    // Alpha effect for flashing - slower and stops after sprite change
+    if (evolution_timer < 90) {
+        // Fast flashing before sprite change
+        evolution_alpha = 0.7 + 0.3 * sin(evolution_flash_timer * 0.2);
+    } else if (evolution_timer < 120) {
+        // Slower flashing after sprite change
+        evolution_alpha = 0.8 + 0.2 * sin(evolution_flash_timer * 0.1);
+    } else {
+        // Stop flashing - solid appearance
+        evolution_alpha = 1.0;
     }
-    
-    // Scaling effect (from OBJ_Evolve_Pokemon)
-    evolution_scale = 3 + 0.1 * sin(evolution_timer * 0.1);
-    
-    // Alpha effect for flashing
-    evolution_alpha = 0.8 + 0.2 * sin(evolution_flash_timer * 0.5);
     
     // Sprite transition at frame 90 (from OBJ_Evolve_Pokemon)
     if (evolution_timer == 90) {
@@ -577,9 +604,12 @@ if (battle_state == "EVOLUTION") {
             
             // Apply final evolution changes (from OBJ_Evolve_Pokemon) - NOW update global.pokemon_ID
             global.pokemon_ID = victory_data.new_pokemon_id;
+            global.pokemon_level = victory_data.level_after;  // FIX: Update level after evolution
             SCR_Pokemon_Stats();
             global.pokemon_health = global.pokemon_health_max;
             
+            // Update global XP when completing victory
+            global.pokemon_experience = xp_target;
             battle_state = "VICTORY_COMPLETE";
             show_debug_message("Evolution complete: Pokemon ID updated to " + string(global.pokemon_ID));
         }
@@ -625,10 +655,7 @@ if (battle_state == "VICTORY_COMPLETE") {
             show_debug_message("Restored wild Pokemon data after rival victory");
         }
         
-        // Bonus XP for rival battles (already applied during victory sequence)
-        var bonus_xp = global.basic_xp_award * 2;
-        global.pokemon_experience += bonus_xp;
-        show_debug_message("Bonus rival XP awarded: " + string(bonus_xp));
+        // Rival XP bonus now handled in main XP calculation with multiplier
     } else {
         // Reset wild Pokemon positions for regular battles
         global.wild_pokemon_a_id = 0;
