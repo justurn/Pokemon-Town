@@ -26,6 +26,15 @@ if (player_pokemon.speedstat > wild_pokemon.speedstat) {
     show_debug_message("Same speeds - random first attacker: " + attacks_first);
 }
 
+// Action storage for when wild Pokemon attacks first
+player_chosen_move = -1;
+player_chosen_action = ""; // ATTACK, FLEE, ITEM
+
+// Timing for sequential attacks
+attack_delay_timer = 0;
+attack_delay_duration = 60; // 1 second delay between attacks
+waiting_for_second_attack = false;
+
 player_turn_timer = room_speed;
 wild_turn_timer = player_turn_timer;
 turn_max = player_turn_timer;
@@ -151,9 +160,10 @@ pokemon_center_y = room_height / 2;
 player_start_x = pokemon_a_x;
 player_start_y = pokemon_a_y;
 
-// XP Animation Properties
-xp_current_display = 0;
-xp_target = 0;
+// XP Display Properties - Consistent variables used throughout all states
+display_level = global.pokemon_level;      // Level used for XP bar calculations
+display_xp = global.pokemon_experience;    // XP value shown in XP bar
+xp_target = 0;                             // Target XP after gaining experience
 xp_fill_speed = 3.0;
 level_up_detected = false;
 

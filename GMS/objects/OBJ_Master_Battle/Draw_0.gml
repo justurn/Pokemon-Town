@@ -1,58 +1,53 @@
 // Battle Background
 draw_self();
 
-// Current timer bars (keep existing)
-var bar_width = room_width;
-var bar_height = 30;
-var bar_x = 0;
-var bar_top_y = 0;
-var bar_bottom_y = room_height;
-var player_progress = player_turn_timer / turn_max;
-var wild_progress = wild_turn_timer / turn_max;
+// Timer bars removed
 
-// Draw Wild Pokémon Timer Bar (Top)
-draw_healthbar(bar_x, bar_top_y, bar_x + bar_width, bar_top_y + bar_height, wild_progress * 100, c_red, c_black, c_black, 0, true, true);
 
-// Draw Player Timer Bar (Bottom)
-draw_healthbar(bar_x, bar_bottom_y - bar_height, bar_x + bar_width, bar_bottom_y, player_progress * 100, c_blue, c_black, c_black, 0, true, true);
+// Evolution Black Background (drawn early to be behind everything)
+if (battle_state == "EVOLUTION") {
+    draw_set_color(c_black);
+    draw_set_alpha(evolution_background_alpha);
+    draw_rectangle(ui_left_panel_width, 0, room_width, room_height, false);
+    draw_set_alpha(1);
+    
+    // Draw sparkles ON TOP of black background but UNDER left panel
+    for (var i = 0; i < array_length(sparkle_instances); i++) {
+        var sparkle = sparkle_instances[i];
+        if (instance_exists(sparkle)) {
+            with (sparkle) {
+                draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+            }
+        }
+    }
+}
 
-// Permanent Battle Text Log Outline Area
-var text_area_x = 10;
-var text_area_y = ui_action_section_height + 50;
-var text_area_width = ui_left_panel_width - 20;
-var text_area_height = min(ui_text_section_height - 50, room_height - text_area_y - 10);
+// Draw SPR_Side_Panel background
+draw_sprite(SPR_Side_Panel, 0, ui_left_panel_width/2, room_height/2);
 
-// Draw text area background
-draw_set_color(c_black);
-draw_set_alpha(0.2);
-draw_rectangle(text_area_x, text_area_y, text_area_x + text_area_width, text_area_y + text_area_height, false);
-draw_set_alpha(1);
+// Draw panel backgrounds/outlines (drawn after side panel sprite but before content)
+SCR_Battle_Draw_Panel_Outlines();
 
-// Draw text area border
-draw_set_color(c_gray);
-draw_rectangle(text_area_x, text_area_y, text_area_x + text_area_width, text_area_y + text_area_height, true);
+// Left Panel UI Content - drawn in order based on battle state
+if (battle_state == "XP_DISPLAY" || battle_state == "LEVEL_UP" || battle_state == "EVOLUTION") {
+    // Victory celebration display
+    SCR_Battle_Draw_Victory_Display();
+} else {
+    // Normal battle action menu
+    SCR_Battle_Draw_Action_Menu();
+}
 
-// Permanent Battle Action Menu Outline Area (matching actual action area)
-var action_area_x = 10;
-var action_area_y = 20;
-var action_area_width = ui_left_panel_width - 20;
-var action_area_height = ui_action_section_height - 20;
+// Bottom section content based on UI state  
+if (battle_ui_state == "MOVE_SELECT") {
+    SCR_Battle_Draw_Move_Grid();
+} else {
+    SCR_Battle_Draw_Text_Log();
+}
 
-// Draw action area background
-draw_set_color(c_black);
-draw_set_alpha(0.2);
-draw_rectangle(action_area_x, action_area_y, action_area_x + action_area_width, action_area_y + action_area_height, false);
-draw_set_alpha(1);
-
-// Draw action area border
-draw_set_color(c_gray);
-draw_rectangle(action_area_x, action_area_y, action_area_x + action_area_width, action_area_y + action_area_height, true);
-
-// NEW: Left Panel UI (drawn after outlines so text appears on top)
-SCR_Battle_Draw_Left_Panel();
-
-// NEW: Right Panel Pokemon Info
-SCR_Battle_Draw_Pokemon_Info();
+// Right Panel Pokemon Info (hidden during evolution for focus)
+if (battle_state != "EVOLUTION") {
+    SCR_Battle_Draw_Pokemon_Info();
+}
 
 // Level Up Sprite (above center-stage Pokemon)
 if (battle_state == "LEVEL_UP") {
@@ -60,27 +55,33 @@ if (battle_state == "LEVEL_UP") {
     draw_sprite_ext(SPR_Level_Up, sprite_frame, pokemon_center_x, pokemon_center_y - 120, 1, 1, 0, c_white, 1);
 }
 
-// Evolution Black Background
+// Pokemon evolution effects (drawn last, on top of everything)
 if (battle_state == "EVOLUTION") {
-    draw_set_color(c_black);
-    draw_set_alpha(evolution_background_alpha);
-    draw_rectangle(ui_left_panel_width, 0, room_width, room_height, false);
-    draw_set_alpha(1);
-    
     // Pokemon evolution scaling and flashing (following OBJ_Evolve_Pokemon logic)
     with (OBJ_Battle_Pokemon_Tame) {
         image_xscale = other.evolution_scale;
         image_yscale = other.evolution_scale;
         image_alpha = other.evolution_alpha;
         
-        // Add flashing effect (from OBJ_Evolve_Pokemon)
-        var flash_interval = 5;
-        var flash_cycle = (other.evolution_flash_timer div flash_interval) % 2;
-        var flashing = (flash_cycle == 1);
-        
-        if (flashing) {
-            image_alpha *= 0.3; // Make Pokemon very transparent when flashing
+        // Add slower flashing effect that stops after evolution completes
+        if (other.evolution_timer < 120) {
+            var flash_interval = 15; // Slower flashing (every 15 frames = 4 times per second)
+            var flash_cycle = (other.evolution_flash_timer div flash_interval) % 2;
+            var flashing = (flash_cycle == 1);
+            
+            if (flashing && other.evolution_timer < 90) {
+                image_alpha *= 0.4; // Less transparent flashing before sprite change
+            } else if (flashing && other.evolution_timer < 120) {
+                image_alpha *= 0.7; // Very subtle flashing after sprite change
+            }
         }
+        // After frame 120, no more flashing - Pokemon stays solid
+    }
+    
+    // Draw Pokemon name above Pokemon after evolution completes (like in lab hatching)
+    if (evolution_timer >= 120) {
+        var evolved_pokemon_name = global.Dex_Names[victory_data.new_pokemon_id];
+        SCR_Draw_Pokemon_Name_Plate(evolved_pokemon_name, pokemon_center_x, pokemon_center_y, -150);
     }
 }
 
