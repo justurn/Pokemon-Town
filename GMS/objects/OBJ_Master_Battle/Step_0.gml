@@ -92,7 +92,13 @@ if (battle_state == "PLAYER_CHOICE") {
                     if (attacks_first == "PLAYER") {
                         // Player acts first - execute flee immediately
                         show_debug_message("Player acts first (speed advantage) - executing flee");
-                        SCR_Execute_Player_Flee();
+                        var flee_successful = SCR_Execute_Player_Flee();
+                        if (!flee_successful) {
+                            // Flee failed, transition to wild Pokemon's turn
+                            show_debug_message("Player flee failed, wild Pokemon's turn");
+                            battle_state = "WILD_TURN";
+                        }
+                        // If flee succeeded, the flee animation will handle state transitions
                     } else {
                         // Wild Pokemon acts first - store flee for later execution
                         show_debug_message("Wild Pokemon acts first (speed advantage), storing player flee");
@@ -223,7 +229,9 @@ if (battle_state == "WILD_TURN") {
         // Wild Pokemon has configurable chance to flee (but not in trainer battles)
         var wild_flee_roll = irandom(100);
         var is_trainer_battle = variable_global_exists("is_trainer_battle") && global.is_trainer_battle;
-        if (wild_flee_roll < global.wild_pokemon_flee_chance && !is_trainer_battle) {
+        var modified_wild_flee_chance = global.wild_pokemon_flee_chance * global.flee_success_modifier;
+        show_debug_message("Wild Pokemon flee attempt: base_chance=" + string(global.wild_pokemon_flee_chance) + ", modified_chance=" + string(modified_wild_flee_chance) + ", roll=" + string(wild_flee_roll));
+        if (wild_flee_roll < modified_wild_flee_chance && !is_trainer_battle) {
             // During wild Pokemon's turn, they can always flee regardless of speed
             show_debug_message("Wild Pokemon chose to flee during their turn");
             // Add message to battle log

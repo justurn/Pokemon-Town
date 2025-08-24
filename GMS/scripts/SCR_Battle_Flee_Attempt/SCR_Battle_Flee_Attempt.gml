@@ -1,10 +1,11 @@
 function SCR_Execute_Player_Flee() {
     // Calculate flee chance based on Pokemon speed
     var speed_ratio = player_pokemon.speedstat / wild_pokemon.speedstat;
-    var flee_chance = min(100, 50 + (speed_ratio * 25));
+    var base_flee_chance = min(100, 50 + (speed_ratio * 25));
+    var flee_chance = base_flee_chance * global.flee_success_modifier;
     var flee_roll = irandom(100);
     
-    show_debug_message("Player flee attempt: speed_ratio=" + string(speed_ratio) + ", chance=" + string(flee_chance) + ", roll=" + string(flee_roll));
+    show_debug_message("Player flee attempt: speed_ratio=" + string(speed_ratio) + ", base_chance=" + string(base_flee_chance) + ", modified_chance=" + string(flee_chance) + ", roll=" + string(flee_roll));
     
     if (flee_roll < flee_chance) {
         // Flee successful
