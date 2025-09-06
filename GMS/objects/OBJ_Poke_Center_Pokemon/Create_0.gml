@@ -16,9 +16,3 @@ hb_y1 = y - hb_height/2
 hb_x2 = hb_x1 + hb_width
 hb_y2 = hb_y1 + hb_height
 
-// Reset the wild pokemon outside...
-global.wild_pokemon_a_id = 0;
-global.wild_pokemon_a_x = -1;
-
-global.wild_pokemon_b_id = 0;
-global.wild_pokemon_b_x = -1;
