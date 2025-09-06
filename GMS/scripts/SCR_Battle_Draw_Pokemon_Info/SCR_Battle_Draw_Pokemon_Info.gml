@@ -15,9 +15,10 @@ function SCR_Battle_Draw_Pokemon_Info() {
         
         var enemy_base_y = enemy_panel_top + enemy_icon_offset; // Icon center position
         var enemy_icon_y = enemy_base_y;
-        var enemy_text_y = enemy_base_y - enemy_icon_offset; // Start text at top of icon
-        var enemy_healthbar_y = enemy_text_y + font_small_line_spacing; // One line down from text
-        var enemy_hp_text_y = enemy_healthbar_y + 10; // Align with healthbar center
+        
+        // Consistent line-based Y positioning system
+        var enemy_line_0_y = enemy_base_y - enemy_icon_offset; // Line 0: Name/Level
+        var enemy_line_1_y = enemy_line_0_y + font_small_line_spacing; // Line 1: Health bar
         
         // Semi-transparent background (positioned at very top, 70px height)
         draw_set_color(c_red);
@@ -38,10 +39,10 @@ function SCR_Battle_Draw_Pokemon_Info() {
             draw_rectangle(right_area_x + 15, enemy_icon_y - 50, right_area_x + 65, enemy_icon_y + 50, false);
         }
         
-        // Type icons - arranged vertically next to Pokemon icon (moved right 10px for larger icon)
-        var type_icon_x = right_area_x + 80;  // Right of Pokemon icon, was +70, now +80
+        // Type icons - arranged vertically next to Pokemon icon using line system
+        var type_icon_x = right_area_x + 80;  // Right of Pokemon icon
         var type_icon_scale = 1;
-        var type_icon_y_base = enemy_icon_y - 29;  // Moved down 3px from -32 to -29
+        var type_icon_y_base = enemy_line_0_y;  // Align with Line 0 positioning
         
         // Check if dual type to determine positioning
         var has_dual_type = (wild_pokemon.secondary_type_id >= 0 && wild_pokemon.secondary_type_id != wild_pokemon.primary_type_id);
@@ -59,8 +60,8 @@ function SCR_Battle_Draw_Pokemon_Info() {
         
         // Secondary type (if different from primary)
         if (has_dual_type) {
-            // Secondary type: additional 5px down (was 29px apart, now 34px apart)
-            SCR_Draw_Type_Icon(wild_pokemon.secondary_type_id, type_icon_x, type_icon_y_base + 34, type_icon_scale);
+            // Secondary type: on Line 1 (health bar line) for consistent spacing
+            SCR_Draw_Type_Icon(wild_pokemon.secondary_type_id, type_icon_x, enemy_line_1_y, type_icon_scale);
         }
         
         // Pokemon Name and Level on same line with spacing (moved right by 20px)
@@ -70,16 +71,28 @@ function SCR_Battle_Draw_Pokemon_Info() {
         var name_level_text = wild_pokemon.pokemon_name + "     Lv." + string(wild_pokemon.level);
         
         
-        draw_text(right_area_x + 120, enemy_text_y, name_level_text);  // Was +110, now +120 (additional 10px for larger icon)
+        draw_text(right_area_x + 120, enemy_line_0_y, name_level_text);  // Line 0: Name/Level
         
-        // Health Bar - double thickness (moved right by 30px total)
+        // Health Bar - Line 1
         var hp_percentage = (wild_pokemon.current_hp / wild_pokemon.max_hp) * 100;
-        draw_healthbar(right_area_x + 120, enemy_healthbar_y, right_area_x + 300, enemy_healthbar_y + 20, hp_percentage, c_red, c_green, c_green, 0, true, true);  // Was +110 to +290, now +120 to +300
+        var healthbar_height = 20;
+        draw_healthbar(right_area_x + 120, enemy_line_1_y, right_area_x + 300, enemy_line_1_y + healthbar_height, hp_percentage, c_red, c_green, c_green, 0, true, true);
         
-        // HP Text - properly aligned with health bar center (moved right by 30px total)
-        draw_set_valign(fa_middle);
-        draw_text(right_area_x + 310, enemy_hp_text_y + 1, string(wild_pokemon.current_hp) + "/" + string(wild_pokemon.max_hp));  // Was +300, now +310
+        // HP Text - positioned at line using top alignment for consistency
         draw_set_valign(fa_top);
+        draw_text(right_area_x + 310, enemy_line_1_y, string(wild_pokemon.current_hp) + "/" + string(wild_pokemon.max_hp));
+        
+        // Enemy Pokemon Stats Display (F-023)
+        var enemy_stat_start_x = right_area_x + 400; // Moved right by 50px
+        
+        // DEF stat on Line 0 (Name/Level line)
+        draw_sprite_ext(SPR_Defence, 0, enemy_stat_start_x, enemy_line_0_y, 1.0, 1.0, 0, c_white, 1);
+        draw_set_valign(fa_top);
+        draw_text(enemy_stat_start_x + 33, enemy_line_0_y, string(wild_pokemon.defence)); // Text moved right by 65px total
+        
+        // SP.DEF stat on Line 1 (Health bar line)
+        draw_sprite_ext(SPR_SpDefence, 0, enemy_stat_start_x, enemy_line_1_y, 1.0, 1.0, 0, c_white, 1);
+        draw_text(enemy_stat_start_x + 33, enemy_line_1_y, string(wild_pokemon.spdefence)); // Text moved right by 65px total
     }
     
     // PLAYER POKEMON INFO (Bottom right area)
@@ -91,9 +104,11 @@ function SCR_Battle_Draw_Pokemon_Info() {
         var player_panel_top = room_height - ui_pokemon_info_height + player_panel_offset;
         var player_base_y = player_panel_top + player_icon_offset; // Icon center position
         var player_icon_y = player_base_y;
-        var player_text_y = player_base_y - player_icon_offset; // Start text at top of icon
-        var player_healthbar_y = player_text_y + font_small_line_spacing; // One line down from text
-        var player_hp_text_y = player_healthbar_y + 10; // Align with healthbar center
+        
+        // Consistent line-based Y positioning system
+        var player_line_0_y = player_base_y - player_icon_offset; // Line 0: Name/Level
+        var player_line_1_y = player_line_0_y + font_small_line_spacing; // Line 1: Health bar
+        var player_line_2_y = player_line_0_y + (font_small_line_spacing * 2); // Line 2: XP bar
         
         // Semi-transparent background (extended to bottom of screen)
         draw_set_color(c_blue);
@@ -114,10 +129,10 @@ function SCR_Battle_Draw_Pokemon_Info() {
             draw_rectangle(right_area_x + 15, player_icon_y - 50, right_area_x + 65, player_icon_y + 50, false);
         }
         
-        // Type icons - arranged vertically next to Pokemon icon (moved right 10px for larger icon)
-        var type_icon_x = right_area_x + 80;  // Right of Pokemon icon, was +70, now +80
+        // Type icons - arranged vertically next to Pokemon icon using line system
+        var type_icon_x = right_area_x + 80;  // Right of Pokemon icon
         var type_icon_scale = 1;
-        var type_icon_y_base = player_icon_y - 29;  // Moved down 3px from -32 to -29
+        var type_icon_y_base = player_line_0_y;  // Align with Line 0 positioning
         
         // Check if dual type to determine positioning
         var has_dual_type = (player_pokemon.secondary_type_id >= 0 && player_pokemon.secondary_type_id != player_pokemon.primary_type_id);
@@ -135,8 +150,8 @@ function SCR_Battle_Draw_Pokemon_Info() {
         
         // Secondary type (if different from primary)
         if (has_dual_type) {
-            // Secondary type: additional 5px down (was 29px apart, now 34px apart)
-            SCR_Draw_Type_Icon(player_pokemon.secondary_type_id, type_icon_x, type_icon_y_base + 34, type_icon_scale);
+            // Secondary type: on Line 1 (health bar line) for consistent spacing
+            SCR_Draw_Type_Icon(player_pokemon.secondary_type_id, type_icon_x, player_line_1_y, type_icon_scale);
         }
         
         // Pokemon Name and Level on same line with spacing (moved right by 20px)
@@ -144,16 +159,28 @@ function SCR_Battle_Draw_Pokemon_Info() {
         draw_set_color(c_white);
         draw_set_halign(fa_left);
         var name_level_text = player_pokemon.pokemon_name + "     Lv." + string(player_pokemon.level);
-        draw_text(right_area_x + 120, player_text_y, name_level_text);  // Was +110, now +120 (additional 10px for larger icon)
+        draw_text(right_area_x + 120, player_line_0_y, name_level_text);  // Line 0: Name/Level
         
-        // Health Bar - double thickness (moved right by 30px total)
+        // Health Bar - Line 1
         var hp_percentage = (player_pokemon.current_hp / player_pokemon.max_hp) * 100;
-        draw_healthbar(right_area_x + 120, player_healthbar_y, right_area_x + 300, player_healthbar_y + 20, hp_percentage, c_red, c_green, c_green, 0, true, true);  // Was +110 to +290, now +120 to +300
+        var healthbar_height = 20;
+        draw_healthbar(right_area_x + 120, player_line_1_y, right_area_x + 300, player_line_1_y + healthbar_height, hp_percentage, c_red, c_green, c_green, 0, true, true);
         
-        // HP Text - properly aligned with health bar center (moved right by 30px total)
-        draw_set_valign(fa_middle);
-        draw_text(right_area_x + 310, player_hp_text_y + 1, string(player_pokemon.current_hp) + "/" + string(player_pokemon.max_hp));  // Was +300, now +310
+        // HP Text - positioned at line using top alignment for consistency
         draw_set_valign(fa_top);
+        draw_text(right_area_x + 310, player_line_1_y, string(player_pokemon.current_hp) + "/" + string(player_pokemon.max_hp));
+        
+        // Player Pokemon Stats Display (F-023)
+        var player_stat_start_x = right_area_x + 400; // Moved right by 50px
+        
+        // ATK stat on Line 0 (Name/Level line)
+        draw_sprite_ext(SPR_Physical, 0, player_stat_start_x, player_line_0_y, 1.0, 1.0, 0, c_white, 1);
+        draw_set_valign(fa_top);
+        draw_text(player_stat_start_x + 33, player_line_0_y, string(player_pokemon.attack)); // Text moved right by 65px total
+        
+        // SP.ATK stat on Line 1 (Health bar line)
+        draw_sprite_ext(SPR_Special, 0, player_stat_start_x, player_line_1_y, 1.0, 1.0, 0, c_white, 1);
+        draw_text(player_stat_start_x + 33, player_line_1_y, string(player_pokemon.spattack)); // Text moved right by 65px total
         
         // XP Bar (always visible in player Pokemon section)
         if (true) {
@@ -173,16 +200,14 @@ function SCR_Battle_Draw_Pokemon_Info() {
             
             xp_percentage = max(0, min(100, (xp_in_level / xp_needed_for_level) * 100));
             
-            // XP Bar - match health bar height and position (moved right by 30px total)
-            var xp_bar_y = player_healthbar_y + font_small_line_spacing; // One line down from HP bar
-            draw_healthbar(right_area_x + 120, xp_bar_y, right_area_x + 300, xp_bar_y + 20, xp_percentage, c_black, make_color_rgb(100, 200, 255), make_color_rgb(100, 200, 255), 0, true, true);
+            // XP Bar - Line 2
+            draw_healthbar(right_area_x + 120, player_line_2_y, right_area_x + 300, player_line_2_y + healthbar_height, xp_percentage, c_black, make_color_rgb(100, 200, 255), make_color_rgb(100, 200, 255), 0, true, true);
             
-            // XP Text - positioned like HP text, to the right of the bar (moved right by 30px total)
+            // XP Text - positioned at line using top alignment for consistency
             draw_set_font(FNT_Small);
             draw_set_color(c_white);
-            draw_set_valign(fa_middle);
-            draw_text(right_area_x + 310, xp_bar_y + 11, string(floor(xp_in_level)) + "/" + string(xp_needed_for_level));
             draw_set_valign(fa_top);
+            draw_text(right_area_x + 310, player_line_2_y, string(floor(xp_in_level)) + "/" + string(xp_needed_for_level));
         }
     }
 }
