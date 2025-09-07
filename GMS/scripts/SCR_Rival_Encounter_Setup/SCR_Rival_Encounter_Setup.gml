@@ -12,7 +12,7 @@ function SCR_Rival_Encounter_Setup(milestone_level) {
     
     // Initialize rival Pokemon if first encounter
     if (global.rival_pokemon_id == 0) {
-        var starter_pool = [1, 4, 7, 152, 155, 158]; // Bulbasaur, Charmander, Squirtle, Chikorita, Cyndaquil, Totodile
+        var starter_pool = [1, 4, 7, 152, 155, 158, 252, 255, 258]; // Bulbasaur, Charmander, Squirtle, Chikorita, Cyndaquil, Totodile, Treecko, Torchic, Mudkip
         global.rival_pokemon_id = starter_pool[irandom(array_length(starter_pool) - 1)];
         show_debug_message("Rival selected starter: " + string(global.rival_pokemon_id));
     }

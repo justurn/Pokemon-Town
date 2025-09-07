@@ -119,8 +119,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Pokemon",
-    "path": "folders/Sprites/Pokemon.yy",
+    "name": "Gen 1",
+    "path": "folders/Sprites/Pokemon/Gen 1.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

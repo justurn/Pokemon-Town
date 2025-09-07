@@ -14,7 +14,7 @@ function SCR_Check_Rival_Evolution(current_id, encounter_level) {
         pokemon_id += 1;
         
         // Safety check to prevent infinite loops
-        if (pokemon_id > 251) break;
+        if (pokemon_id > 386) break; // Extended to include Gen 3 Pokemon
     }
     
     return pokemon_id;
