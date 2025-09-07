@@ -182,7 +182,7 @@ evolution_scale = 3;
 
 // Player defeat handling
 player_faint_timer = 0;
-player_faint_duration = 120; // 2 seconds
+player_faint_duration = 60; // 1 second (matches wild Pokemon)
 
 // Debug state tracking to prevent spam
 last_battle_state = "";

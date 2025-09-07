@@ -349,10 +349,6 @@ if (battle_state == "ENEMY_FAINT") {
         }
     }
     
-    // Clear battle log after showing fainted message for a moment
-    if (enemy_faint_timer == 60) {
-        battle_log = [];
-    }
     
     // Transition to center stage
     if (enemy_faint_timer >= enemy_faint_duration) {
@@ -388,6 +384,9 @@ if (battle_state == "CENTER_STAGE") {
 if (battle_state == "XP_DISPLAY") {
     xp_display_timer++;
     
+    // Keep battle log visible during XP display - will be cleared at VICTORY_COMPLETE
+    // Removed: battle log clearing moved to VICTORY_COMPLETE state
+    
     // Debug output only when entering state or stage changes
     if (last_battle_state != "XP_DISPLAY" || last_xp_stage != xp_display_stage) {
         show_debug_message("XP_DISPLAY: Entered state - display_xp=" + string(display_xp) + ", xp_target=" + string(xp_target) + ", level_up=" + string(level_up_detected) + ", stage=" + string(xp_display_stage));
@@ -419,24 +418,27 @@ if (battle_state == "XP_DISPLAY") {
         // Check for transitions when stage 1 completes AND minimum display time passed
         if (display_xp >= stage_1_target && xp_display_timer >= 60) { // Minimum 1 second display
             if (level_up_detected) {
-                // Level up detected - transition to stage 2 (new level)
-                xp_display_stage = "NEW_LEVEL";
-                display_level = victory_data.level_after;  // Update to new level for XP bar calculations
-                display_xp = power(display_level - 1, 3);  // Reset to start of new level
-                battle_state = "LEVEL_UP";
-                level_up_timer = 0;
-                show_debug_message("XP_DISPLAY -> LEVEL_UP: Auto-transition to stage 2 after level up");
-                
-                // NOW update the visual display (level and HP restoration) using victory data
-                with (OBJ_Battle_Pokemon_Tame) {
-                    level = other.victory_data.level_after;
-                    current_hp = other.victory_data.stats_after.health_max;  // Full heal on level up
-                    max_hp = other.victory_data.stats_after.health_max;
-                }
-                
-                array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " reached Level " + string(victory_data.level_after) + "!");
-                if (array_length(battle_log) > max_log_messages) {
-                    array_delete(battle_log, 0, 1);
+                // Level up detected - require keypress to continue (consistent UX)
+                if (global.enter || global.shift) {
+                    // Transition to stage 2 (new level)
+                    xp_display_stage = "NEW_LEVEL";
+                    display_level = victory_data.level_after;  // Update to new level for XP bar calculations
+                    display_xp = power(display_level - 1, 3);  // Reset to start of new level
+                    battle_state = "LEVEL_UP";
+                    level_up_timer = 0;
+                    show_debug_message("XP_DISPLAY -> LEVEL_UP: Manual transition after keypress");
+                    
+                    // NOW update the visual display (level and HP restoration) using victory data
+                    with (OBJ_Battle_Pokemon_Tame) {
+                        level = other.victory_data.level_after;
+                        current_hp = other.victory_data.stats_after.health_max;  // Full heal on level up
+                        max_hp = other.victory_data.stats_after.health_max;
+                    }
+                    
+                    array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " reached Level " + string(victory_data.level_after) + "!");
+                    if (array_length(battle_log) > max_log_messages) {
+                        array_delete(battle_log, 0, 1);
+                    }
                 }
             } else {
                 // No level up - require keypress to continue
@@ -631,6 +633,9 @@ if (battle_state == "EVOLUTION") {
 
 // VICTORY COMPLETE STATE - Instant cleanup and transition
 if (battle_state == "VICTORY_COMPLETE") {
+    // Clear battle log when victory is complete
+    battle_log = [];
+    
     show_debug_message("VICTORY_COMPLETE: Performing cleanup and going to treasure room");
     
     // Handle special rival battle logic
@@ -686,10 +691,10 @@ if (battle_state == "PLAYER_FAINT") {
     // Animate player Pokemon sliding down and fading
     with (OBJ_Battle_Pokemon_Tame) {
         image_alpha = max(0, 1 - (other.player_faint_timer / other.player_faint_duration));
-        y = min(room_height + 100, y + 2); // Slide down
+        y = min(room_height + 100, y + 3); // Slide down (matches wild Pokemon speed)
     }
     
-    // Add battle log message
+    // Add Pokemon faint message to battle log (not UI panel)
     if (player_faint_timer == 1) {
         array_push(battle_log, global.Dex_Names[global.pokemon_ID] + " fainted!");
         if (array_length(battle_log) > max_log_messages) {
@@ -697,10 +702,48 @@ if (battle_state == "PLAYER_FAINT") {
         }
     }
     
-    // Transition to defeat screen
-    if (player_faint_timer >= player_faint_duration) {
-        // Reset player health and return to Pokemon Center or Town
-        global.pokemon_health = global.pokemon_health_max;
-        room_goto(RM_Town); // Or RM_Pokemon_Center for healing
+    // Require keypress to continue after minimum display time
+    if (player_faint_timer >= player_faint_duration + 30) {
+        if (global.enter || global.shift) {
+            // Handle trainer battle cleanup (moved from player Pokemon step event)
+            if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
+                // Mark this milestone as completed (even though lost) to prevent re-encounter
+                if (variable_global_exists("rival_milestone_level") && global.rival_milestone_level > 0) {
+                    if (!array_contains(global.rival_completed_milestones, global.rival_milestone_level)) {
+                        array_push(global.rival_completed_milestones, global.rival_milestone_level);
+                        show_debug_message("Rival battle lost - marked milestone " + string(global.rival_milestone_level) + " as completed to prevent re-encounter");
+                    }
+                }
+                
+                global.is_trainer_battle = false;
+                global.treasure_limit_override = -1; // Clear any pending treasure override
+                show_debug_message("Rival battle lost - cleaned up trainer battle flags and treasure override");
+                
+                // Restore original wild Pokemon data that was stored before battle
+                if (variable_global_exists("temp_wild_pokemon_a_id")) {
+                    global.wild_pokemon_a_id = global.temp_wild_pokemon_a_id;
+                    global.wild_pokemon_b_id = global.temp_wild_pokemon_b_id;
+                    show_debug_message("Restored wild Pokemon data after rival defeat");
+                }
+            }
+            
+            // Clear wild Pokemon data for regular battles (similar to victory cleanup)
+            if (!variable_global_exists("is_trainer_battle") || !global.is_trainer_battle) {
+                // Reset wild Pokemon positions for regular battles
+                global.wild_pokemon_a_id = 0;
+                global.wild_pokemon_a_x = -1;
+                global.wild_pokemon_b_id = 0;
+                global.wild_pokemon_b_x = -1;
+            }
+            
+            // Clear battle log and set battle state to inactive
+            battle_log = [];
+            battle_state = "INACTIVE";
+            
+            // Keep Pokemon fainted after defeat - player must visit Pokemon Center to heal
+            global.pokemon_health = 0; // Set to 0 HP to prevent new battles
+            room_goto(RM_Town);
+            show_debug_message("PLAYER_FAINT -> RM_Town: Manual transition after keypress");
+        }
     }
 }

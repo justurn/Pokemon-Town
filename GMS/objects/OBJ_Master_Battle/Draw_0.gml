@@ -32,6 +32,9 @@ SCR_Battle_Draw_Panel_Outlines();
 if (battle_state == "XP_DISPLAY" || battle_state == "LEVEL_UP" || battle_state == "EVOLUTION") {
     // Victory celebration display
     SCR_Battle_Draw_Victory_Display();
+} else if (battle_state == "PLAYER_FAINT") {
+    // Defeat display with keypress prompt
+    SCR_Battle_Draw_Defeat_Display();
 } else {
     // Normal battle action menu
     SCR_Battle_Draw_Action_Menu();
