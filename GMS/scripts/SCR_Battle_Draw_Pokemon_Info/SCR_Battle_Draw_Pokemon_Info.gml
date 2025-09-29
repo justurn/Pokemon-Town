@@ -83,15 +83,15 @@ function SCR_Battle_Draw_Pokemon_Info() {
         draw_text(right_area_x + 310, enemy_line_1_y, string(wild_pokemon.current_hp) + "/" + string(wild_pokemon.max_hp));
         
         // Enemy Pokemon Stats Display (F-023)
-        var enemy_stat_start_x = right_area_x + 400; // Moved right by 50px
+        var enemy_stat_start_x = right_area_x + 430; // Moved right by 80px
         
         // DEF stat on Line 0 (Name/Level line)
-        draw_sprite_ext(SPR_Defence, 0, enemy_stat_start_x, enemy_line_0_y, 1.0, 1.0, 0, c_white, 1);
+        SCR_Draw_Stat_Icon(SPR_Defence, enemy_stat_start_x, enemy_line_0_y, 1.0, 1, c_white);
         draw_set_valign(fa_top);
         draw_text(enemy_stat_start_x + 33, enemy_line_0_y, string(wild_pokemon.defence)); // Text moved right by 65px total
         
         // SP.DEF stat on Line 1 (Health bar line)
-        draw_sprite_ext(SPR_SpDefence, 0, enemy_stat_start_x, enemy_line_1_y, 1.0, 1.0, 0, c_white, 1);
+        SCR_Draw_Stat_Icon(SPR_SpDefence, enemy_stat_start_x, enemy_line_1_y, 1.0, 1, c_white);
         draw_text(enemy_stat_start_x + 33, enemy_line_1_y, string(wild_pokemon.spdefence)); // Text moved right by 65px total
     }
     
@@ -171,15 +171,15 @@ function SCR_Battle_Draw_Pokemon_Info() {
         draw_text(right_area_x + 310, player_line_1_y, string(player_pokemon.current_hp) + "/" + string(player_pokemon.max_hp));
         
         // Player Pokemon Stats Display (F-023)
-        var player_stat_start_x = right_area_x + 400; // Moved right by 50px
+        var player_stat_start_x = right_area_x + 430; // Moved right by 80px
         
         // ATK stat on Line 0 (Name/Level line)
-        draw_sprite_ext(SPR_Physical, 0, player_stat_start_x, player_line_0_y, 1.0, 1.0, 0, c_white, 1);
+        SCR_Draw_Stat_Icon(SPR_Physical, player_stat_start_x, player_line_0_y, 1.0, 1, c_white);
         draw_set_valign(fa_top);
         draw_text(player_stat_start_x + 33, player_line_0_y, string(player_pokemon.attack)); // Text moved right by 65px total
         
         // SP.ATK stat on Line 1 (Health bar line)
-        draw_sprite_ext(SPR_Special, 0, player_stat_start_x, player_line_1_y, 1.0, 1.0, 0, c_white, 1);
+        SCR_Draw_Stat_Icon(SPR_Special, player_stat_start_x, player_line_1_y, 1.0, 1, c_white);
         draw_text(player_stat_start_x + 33, player_line_1_y, string(player_pokemon.spattack)); // Text moved right by 65px total
         
         // XP Bar (always visible in player Pokemon section)

@@ -13,147 +13,668 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"720c5eff-9994-4346-bab3-a24c5b4a5361",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"20017bea-5ae9-448c-85c9-a9b8cf3596e7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a1973f4c-1fe1-40f1-a38b-487e7a7980a7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b34adbab-1f81-4185-b8ce-72b1193e8f29",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"551eddfa-c224-4b6f-b5ee-1b8c09f256e1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11d74cc6-dcb3-4cd6-b3b2-5b32743db525",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0015368e-b026-4d0b-93e0-4f817be66bec",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49a9abeb-ef0a-4458-99fb-d6970d89bf7c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12070dc7-94a9-4f7c-87e1-3f366e718e4b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de6eaa47-7ddf-4088-b829-bf0dfe68c143",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3e0995e1-b581-45a2-87d1-00d437565231",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1af46eb-6da6-4c3d-9496-36716e63d2ef",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f28565d7-505c-40c1-8380-377ed00b98e9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0077fd63-4987-40b2-8f32-82b314e44041",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40ae0b49-8683-4518-848f-3b29f61e921d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41b85dc5-b44d-4179-b1eb-3a89ec5583af",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26f7d83f-de0c-4cbf-8c94-dcc06ceeafd1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c02dff69-cf14-4d31-ba4d-8d29af9e357d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89d32fbf-578e-42c2-9bef-59c4d497f81b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"359dc77d-19f5-409e-9e1c-c66a6b334285",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca0871bf-f752-4e94-8c02-8393dcf3da2a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5e5f0dfd-398e-444d-83dc-7652f5151f2c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46fad150-e31f-45c7-a83a-2b938a919e0a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86692d66-81b7-4490-8f72-8e7eba3ff652",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b314389-013f-4068-8c8a-acd9ee362ab3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fcc714f4-a2e3-4555-8077-eb504d84590f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2769b993-79e0-48d5-9e83-f98c581fdcd6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bdff2247-c87b-4ac7-a630-7127ab16e106",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91cd22f9-22e8-48c3-8c8c-99e6c5c1298d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4909d5e5-722f-43f4-b94f-173dad8e41fc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55962117-064a-45cc-b52e-c72238383976",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa3c8734-3eb9-4b21-82a5-8ec1cf7864ed",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9285ef7-4bb7-4144-ad8c-5abe2f1d9043",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"62caf86d-9e08-4302-8fb9-a23d834a258c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"20922274-19ea-4a1f-94d5-953bde06fa15",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"079219a8-7705-4496-9296-9681d08b865b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c1489a30-63b8-46f0-8c64-8bdd6dfedd6e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a0d844f2-e898-478c-9701-2e376c6bc4eb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aab7063c-5879-476b-ae79-b855e8299dae",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"575dd3a5-8cd4-4eb3-9f93-dee4176a15b3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"751c2f09-a505-460c-974a-19982041a78d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"22da1745-41c7-4c5b-bd81-d6c22fd0d036",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ebb645e0-5928-410b-9933-8c76ea5704bb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"582ef210-c5a3-4957-8dd5-912e82994010",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a0427644-b4f8-4759-b696-7c575ee3dfd0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eccc3875-0be6-465b-af36-65b23da494c7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b578600-3a44-438a-b226-83a946fb1702",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12f5561a-76a0-43d8-880c-956d44e400a1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7d2f212-7bb4-43fc-82b4-994e608e8449",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"deb4ca42-9290-4b9e-a4a0-10bc90a2e4b9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"210694fe-1970-4a42-9a02-af383285bb3a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d153dbb1-396f-40dc-9f03-a604f7033bbd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cbe2d032-2aa0-4cd0-acf7-c9ed2180b0e4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e33f337-728a-43b1-b64e-fd5ec6d908ec",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40311465-0f83-4381-93c1-ea1434b91d55",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"44429e91-5371-4e80-aa6d-a8a3a9026b36",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b1bf2f69-9afd-41cb-8026-f19ffd227b63",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"703cdcd1-8d57-4e09-9380-ca669af508f8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"22ffdea1-cc09-4be2-95b1-dfacce8d44e8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3673878d-2e69-4816-ae00-79df63daf4cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"785cb758-1802-4d79-a075-ccc08ec1a791",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9bf194ee-a945-4040-8624-69d076d79ca6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a783a3f8-40e5-48d6-9dde-f8fbde428d93",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8cb86276-9f86-4676-800f-8d45e2301069",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1f7334bc-1019-43d4-a404-d1bcf2ced143",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c7edf47-57a7-4860-a2c2-82014670d6f6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2eefb89e-8ecf-4786-8773-09cc7d53f36c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e78a129-75a7-4b0e-9965-d0061de1f9e4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd3c52bb-c028-4814-9764-b9608a2bdb6d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac469039-2483-4c4a-8986-0a7179ab3b1a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ede0f73f-03bc-4a91-b33d-853b39195263",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"302e7f26-9162-43b3-9b20-589280f8b172",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6db663f2-8db6-42c8-b92a-03c19cde48e5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57d0b943-7f45-45bd-b65d-74b47082bcc7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fbd6939f-2537-4b09-b0a0-83986c26c166",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c76d0099-483c-487c-9488-e46c2f588dca",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2c9a7dd1-e387-495f-9273-5947a9365863",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6277149-9a17-45f9-a9e4-9c6bb6e0434f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"15fdb3c6-28e3-4574-b1ad-0e84c9f142a5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca5aba3d-0156-47e0-800a-08fae9ceb664",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0db0c26-9220-425c-bec1-003c0436f948",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76fff1bf-546d-40d3-a559-36211a02c259",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"08d93cbf-382b-420c-a0b8-8a9c1b348bb7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3dc5ec5d-8309-4c26-89ce-beb18d23746e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14b89b04-2570-415f-a6b2-4bbb5eb0b5ac",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eea8a1ea-0286-491a-ae4c-f0dd62c5f0a9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1370ff41-03ed-4848-88b0-c14090ca69bd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10494405-afa6-483a-a8b2-0c4ec6b7eb3c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19ea43d7-1ae1-44c6-991c-8ad33d2000e5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"65af1716-2bb5-4dff-a457-c3bc9d720095",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3de99b77-79fb-4dc0-9b7d-48d9b84e30a6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3df513a9-d715-4523-80f6-77b274686c5c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a3daf622-f73c-4836-b1a9-dc94c8c831db",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a53d0e81-9772-4765-9b22-146f9bb40ead",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b1eafe10-f013-4f54-a07c-945130490b14",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02d9cf49-b68c-4aa5-8eb3-3c81cca58d1f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"724717f5-5e9d-4c02-a451-034666c5b339",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8f82711-af32-48b5-aa5f-f24a38a2010d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"10c04f10-6981-482c-a777-508b59cb1868",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"898f4f06-ef89-41f4-9858-c87522c8194d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04b4cf58-130e-466d-8149-e96dfb2f1901",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"80527323-1c7f-450a-9b42-f7fd5df5bcce",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4eb18268-2519-412f-9b50-b42e0f3b2040",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a09f011-d77d-4073-b487-f5cf13fe442f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e190054-461d-4a55-b762-b8b955576296",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ea47965a-a0f3-4223-a77d-6372f421245e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"12b9131e-63fc-4125-a6a2-6def2561c4d9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97c7a601-527c-4374-aea7-efa262a55997",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2be881ab-11fa-43a5-8f32-1143fb4689b8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"003f13c5-ad24-49ce-9bff-93475ff32b95",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d7e00022-01f7-47d5-815a-8c16b0691277",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"93cea59e-61b9-449a-a421-27beb52e7def",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85bebebb-c855-4418-9f0a-6f92f36ec7a6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"77d0c191-2653-45d7-b896-fa202e9404e0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"111fe466-d04e-400f-83b8-c7cae33a8eaa",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e1f9c53a-a8d6-4533-8849-4b8b4289e936",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"48b70ecf-89f5-4efa-8a42-1763109cbf6e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8527f3cb-8d08-4174-b243-d46dcefa5b9f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd97b4ae-ea05-4464-a928-500b3c51a846",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4625392-1172-47ee-ad42-b34f14d2243b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3370fc9a-3f2e-4b24-94f6-22b152a28550",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8ce121e-d109-436d-84ee-60158596abb6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ea88092e-e4cc-48f3-931c-0c5247a35c62",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9eba40d-e4ba-40f8-a6f0-726056adc030",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"933ba524-c3a0-4194-b008-d1f459b477ac",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"113f9ba3-b53c-41bd-aba3-14ba9d399c9a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d66c446-3dff-4e6c-9358-6f4e929afe88",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae7d3d4c-6708-4674-a6fc-eeb8278aba00",},
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "720c5eff-9994-4346-bab3-a24c5b4a5361"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "20017bea-5ae9-448c-85c9-a9b8cf3596e7"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "a1973f4c-1fe1-40f1-a38b-487e7a7980a7"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "b34adbab-1f81-4185-b8ce-72b1193e8f29"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "551eddfa-c224-4b6f-b5ee-1b8c09f256e1"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "11d74cc6-dcb3-4cd6-b3b2-5b32743db525"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "0015368e-b026-4d0b-93e0-4f817be66bec"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "49a9abeb-ef0a-4458-99fb-d6970d89bf7c"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "12070dc7-94a9-4f7c-87e1-3f366e718e4b"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "de6eaa47-7ddf-4088-b829-bf0dfe68c143"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "3e0995e1-b581-45a2-87d1-00d437565231"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "e1af46eb-6da6-4c3d-9496-36716e63d2ef"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "f28565d7-505c-40c1-8380-377ed00b98e9"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "0077fd63-4987-40b2-8f32-82b314e44041"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "40ae0b49-8683-4518-848f-3b29f61e921d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "41b85dc5-b44d-4179-b1eb-3a89ec5583af"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "26f7d83f-de0c-4cbf-8c94-dcc06ceeafd1"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "c02dff69-cf14-4d31-ba4d-8d29af9e357d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "89d32fbf-578e-42c2-9bef-59c4d497f81b"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "359dc77d-19f5-409e-9e1c-c66a6b334285"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ca0871bf-f752-4e94-8c02-8393dcf3da2a"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "5e5f0dfd-398e-444d-83dc-7652f5151f2c"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "46fad150-e31f-45c7-a83a-2b938a919e0a"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "86692d66-81b7-4490-8f72-8e7eba3ff652"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "1b314389-013f-4068-8c8a-acd9ee362ab3"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "fcc714f4-a2e3-4555-8077-eb504d84590f"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "2769b993-79e0-48d5-9e83-f98c581fdcd6"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "bdff2247-c87b-4ac7-a630-7127ab16e106"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "91cd22f9-22e8-48c3-8c8c-99e6c5c1298d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "4909d5e5-722f-43f4-b94f-173dad8e41fc"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "55962117-064a-45cc-b52e-c72238383976"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "fa3c8734-3eb9-4b21-82a5-8ec1cf7864ed"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "d9285ef7-4bb7-4144-ad8c-5abe2f1d9043"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "62caf86d-9e08-4302-8fb9-a23d834a258c"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "20922274-19ea-4a1f-94d5-953bde06fa15"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "079219a8-7705-4496-9296-9681d08b865b"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "c1489a30-63b8-46f0-8c64-8bdd6dfedd6e"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "a0d844f2-e898-478c-9701-2e376c6bc4eb"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "aab7063c-5879-476b-ae79-b855e8299dae"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "575dd3a5-8cd4-4eb3-9f93-dee4176a15b3"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "751c2f09-a505-460c-974a-19982041a78d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "22da1745-41c7-4c5b-bd81-d6c22fd0d036"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ebb645e0-5928-410b-9933-8c76ea5704bb"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "582ef210-c5a3-4957-8dd5-912e82994010"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "a0427644-b4f8-4759-b696-7c575ee3dfd0"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "eccc3875-0be6-465b-af36-65b23da494c7"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "6b578600-3a44-438a-b226-83a946fb1702"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "12f5561a-76a0-43d8-880c-956d44e400a1"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "b7d2f212-7bb4-43fc-82b4-994e608e8449"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "deb4ca42-9290-4b9e-a4a0-10bc90a2e4b9"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "210694fe-1970-4a42-9a02-af383285bb3a"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "d153dbb1-396f-40dc-9f03-a604f7033bbd"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "cbe2d032-2aa0-4cd0-acf7-c9ed2180b0e4"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "6e33f337-728a-43b1-b64e-fd5ec6d908ec"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "40311465-0f83-4381-93c1-ea1434b91d55"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "44429e91-5371-4e80-aa6d-a8a3a9026b36"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "b1bf2f69-9afd-41cb-8026-f19ffd227b63"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "703cdcd1-8d57-4e09-9380-ca669af508f8"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "22ffdea1-cc09-4be2-95b1-dfacce8d44e8"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "3673878d-2e69-4816-ae00-79df63daf4cf"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "785cb758-1802-4d79-a075-ccc08ec1a791"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "9bf194ee-a945-4040-8624-69d076d79ca6"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "a783a3f8-40e5-48d6-9dde-f8fbde428d93"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "8cb86276-9f86-4676-800f-8d45e2301069"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "1f7334bc-1019-43d4-a404-d1bcf2ced143"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "7c7edf47-57a7-4860-a2c2-82014670d6f6"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "2eefb89e-8ecf-4786-8773-09cc7d53f36c"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "7e78a129-75a7-4b0e-9965-d0061de1f9e4"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "bd3c52bb-c028-4814-9764-b9608a2bdb6d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ac469039-2483-4c4a-8986-0a7179ab3b1a"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ede0f73f-03bc-4a91-b33d-853b39195263"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "302e7f26-9162-43b3-9b20-589280f8b172"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "6db663f2-8db6-42c8-b92a-03c19cde48e5"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "57d0b943-7f45-45bd-b65d-74b47082bcc7"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "fbd6939f-2537-4b09-b0a0-83986c26c166"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "c76d0099-483c-487c-9488-e46c2f588dca"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "2c9a7dd1-e387-495f-9273-5947a9365863"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "d6277149-9a17-45f9-a9e4-9c6bb6e0434f"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "15fdb3c6-28e3-4574-b1ad-0e84c9f142a5"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ca5aba3d-0156-47e0-800a-08fae9ceb664"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "b0db0c26-9220-425c-bec1-003c0436f948"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "76fff1bf-546d-40d3-a559-36211a02c259"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "08d93cbf-382b-420c-a0b8-8a9c1b348bb7"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "3dc5ec5d-8309-4c26-89ce-beb18d23746e"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "14b89b04-2570-415f-a6b2-4bbb5eb0b5ac"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "eea8a1ea-0286-491a-ae4c-f0dd62c5f0a9"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "1370ff41-03ed-4848-88b0-c14090ca69bd"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "10494405-afa6-483a-a8b2-0c4ec6b7eb3c"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "19ea43d7-1ae1-44c6-991c-8ad33d2000e5"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "65af1716-2bb5-4dff-a457-c3bc9d720095"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "3de99b77-79fb-4dc0-9b7d-48d9b84e30a6"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "3df513a9-d715-4523-80f6-77b274686c5c"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "a3daf622-f73c-4836-b1a9-dc94c8c831db"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "a53d0e81-9772-4765-9b22-146f9bb40ead"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "b1eafe10-f013-4f54-a07c-945130490b14"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "02d9cf49-b68c-4aa5-8eb3-3c81cca58d1f"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "724717f5-5e9d-4c02-a451-034666c5b339"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "e8f82711-af32-48b5-aa5f-f24a38a2010d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "10c04f10-6981-482c-a777-508b59cb1868"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "898f4f06-ef89-41f4-9858-c87522c8194d"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "04b4cf58-130e-466d-8149-e96dfb2f1901"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "80527323-1c7f-450a-9b42-f7fd5df5bcce"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "4eb18268-2519-412f-9b50-b42e0f3b2040"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "2a09f011-d77d-4073-b487-f5cf13fe442f"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "6e190054-461d-4a55-b762-b8b955576296"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ea47965a-a0f3-4223-a77d-6372f421245e"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "12b9131e-63fc-4125-a6a2-6def2561c4d9"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "97c7a601-527c-4374-aea7-efa262a55997"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "2be881ab-11fa-43a5-8f32-1143fb4689b8"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "003f13c5-ad24-49ce-9bff-93475ff32b95"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "d7e00022-01f7-47d5-815a-8c16b0691277"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "93cea59e-61b9-449a-a421-27beb52e7def"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "85bebebb-c855-4418-9f0a-6f92f36ec7a6"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "77d0c191-2653-45d7-b896-fa202e9404e0"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "111fe466-d04e-400f-83b8-c7cae33a8eaa"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "e1f9c53a-a8d6-4533-8849-4b8b4289e936"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "48b70ecf-89f5-4efa-8a42-1763109cbf6e"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "8527f3cb-8d08-4174-b243-d46dcefa5b9f"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "cd97b4ae-ea05-4464-a928-500b3c51a846"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "f4625392-1172-47ee-ad42-b34f14d2243b"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "3370fc9a-3f2e-4b24-94f6-22b152a28550"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "e8ce121e-d109-436d-84ee-60158596abb6"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ea88092e-e4cc-48f3-931c-0c5247a35c62"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "f9eba40d-e4ba-40f8-a6f0-726056adc030"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "933ba524-c3a0-4194-b008-d1f459b477ac"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "113f9ba3-b53c-41bd-aba3-14ba9d399c9a"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "7d66c446-3dff-4e6c-9358-6f4e929afe88"
+    },
+    {
+      "resourceType": "GMSpriteFrame",
+      "resourceVersion": "1.1",
+      "name": "ae7d3d4c-6708-4674-a6fc-eeb8278aba00"
+    }
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 37,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8cf9e0e8-1711-4acd-9122-4d7c3f628fe7","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {
+      "resourceType": "GMImageLayer",
+      "resourceVersion": "1.0",
+      "name": "8cf9e0e8-1711-4acd-9122-4d7c3f628fe7",
+      "blendMode": 0,
+      "displayName": "default",
+      "isLocked": false,
+      "opacity": 100.0,
+      "visible": true
+    }
   ],
   "nineSlice": null,
   "origin": 4,
   "parent": {
     "name": "Gen 2",
-    "path": "folders/Sprites/Pokemon/Gen 2.yy",
+    "path": "folders/Sprites/Pokemon/Gen 2.yy"
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -167,12 +688,20 @@
     "backdropWidth": 1366,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "resourceVersion": "1.0",
+      "Keyframes": []
+    },
     "eventStubScript": null,
     "eventToFunction": {},
     "length": 128.0,
     "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "resourceVersion": "1.0",
+      "Keyframes": []
+    },
     "playback": 1,
     "playbackSpeed": 20.0,
     "playbackSpeedType": 0,
@@ -180,149 +709,2600 @@
     "showBackdropImage": false,
     "timeUnits": 1,
     "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"720c5eff-9994-4346-bab3-a24c5b4a5361","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"d2fb1096-0de0-45cf-8b78-2040d3153f76","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"20017bea-5ae9-448c-85c9-a9b8cf3596e7","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"fe293b36-56ad-4eab-becc-e92731a2c3c8","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a1973f4c-1fe1-40f1-a38b-487e7a7980a7","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"2b80e70a-ce1c-43fd-833b-f86ecf05f85e","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b34adbab-1f81-4185-b8ce-72b1193e8f29","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"1842146d-296c-4d6a-a3c3-7c3dd57d2388","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"551eddfa-c224-4b6f-b5ee-1b8c09f256e1","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"6de9d191-d3fb-440c-b948-e5645e06c266","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"11d74cc6-dcb3-4cd6-b3b2-5b32743db525","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"396d30cf-a71b-43b4-91c3-2cce41d53bfb","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0015368e-b026-4d0b-93e0-4f817be66bec","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"956bc6b8-2d04-4033-84c7-7e24ac61b2f4","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"49a9abeb-ef0a-4458-99fb-d6970d89bf7c","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"200c52ec-a34c-4454-8f3b-08809bbe4eab","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"12070dc7-94a9-4f7c-87e1-3f366e718e4b","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"9205d5f3-04b1-4222-8ae7-4074bfd4284d","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"de6eaa47-7ddf-4088-b829-bf0dfe68c143","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"55851c42-a09a-40cd-aeb2-4d9b91708a83","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3e0995e1-b581-45a2-87d1-00d437565231","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"07768179-b6bb-4e1c-9fc9-1cb330e79f63","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e1af46eb-6da6-4c3d-9496-36716e63d2ef","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"6dc9cf63-9d56-4583-8308-bcba969ae480","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f28565d7-505c-40c1-8380-377ed00b98e9","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"47558a51-2e27-49da-b6ad-13846cf67a66","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0077fd63-4987-40b2-8f32-82b314e44041","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"5c263582-fafc-4264-af22-2c1fc7fcadae","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"40ae0b49-8683-4518-848f-3b29f61e921d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"30ddefad-5523-4f1d-9fb4-70c3bca1d89e","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"41b85dc5-b44d-4179-b1eb-3a89ec5583af","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"80ac33e1-1c18-489a-96c0-f45e558144bd","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"26f7d83f-de0c-4cbf-8c94-dcc06ceeafd1","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"be38d8b6-042e-4eec-b3a1-89d26365b614","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c02dff69-cf14-4d31-ba4d-8d29af9e357d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b6a76ecf-cf02-42b6-a6b0-53e82e3ccbeb","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"89d32fbf-578e-42c2-9bef-59c4d497f81b","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"0bb6b7fd-d944-43ab-a881-e7970c3c694b","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"359dc77d-19f5-409e-9e1c-c66a6b334285","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"939b8665-bab6-4544-aa4a-d3a24fd89f79","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ca0871bf-f752-4e94-8c02-8393dcf3da2a","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"375a2a3c-0d03-4faf-ae9a-b6853e1f0761","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5e5f0dfd-398e-444d-83dc-7652f5151f2c","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"a794a857-2f3d-49a3-ac02-ae5ca503be30","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"46fad150-e31f-45c7-a83a-2b938a919e0a","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"0ddca81f-bcc0-4d22-97cb-a055a5ed8527","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"86692d66-81b7-4490-8f72-8e7eba3ff652","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"3b5733d8-f06a-4c2c-a77f-f5e5b78cd4e6","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1b314389-013f-4068-8c8a-acd9ee362ab3","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"a67341ed-c423-4fc0-bb52-5d0ebed585fe","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fcc714f4-a2e3-4555-8077-eb504d84590f","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4a7ee785-04c2-4674-bc25-b3e84338e18d","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2769b993-79e0-48d5-9e83-f98c581fdcd6","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"695071a8-1529-4702-af53-1353791a1f86","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bdff2247-c87b-4ac7-a630-7127ab16e106","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4bc4d02d-c9ef-4e3c-bdd8-9ea9b36100d6","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"91cd22f9-22e8-48c3-8c8c-99e6c5c1298d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"087bc558-9bb5-4ed1-bb42-18f799af2aa3","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4909d5e5-722f-43f4-b94f-173dad8e41fc","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"49029703-796c-46e7-b8f7-3e76492ce5b1","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"55962117-064a-45cc-b52e-c72238383976","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"1126de2d-efe0-4cd3-bac0-2c96aa746280","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fa3c8734-3eb9-4b21-82a5-8ec1cf7864ed","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"6af379db-505d-42ae-8aae-241d9c1a6cb8","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d9285ef7-4bb7-4144-ad8c-5abe2f1d9043","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"7ddfbad9-780f-488f-8e67-3c5d2b99893d","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"62caf86d-9e08-4302-8fb9-a23d834a258c","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"e77774dd-c9c1-4307-b96d-37046293fcf3","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"20922274-19ea-4a1f-94d5-953bde06fa15","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"df9b4923-b751-45e4-9bf8-d835ec2ef417","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"079219a8-7705-4496-9296-9681d08b865b","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"488ea291-16b0-4869-95fc-acfd8aaebdaa","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c1489a30-63b8-46f0-8c64-8bdd6dfedd6e","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"75199fb4-1a0e-475e-90b4-d6f6d745c65e","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a0d844f2-e898-478c-9701-2e376c6bc4eb","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"ea27d836-e6c4-41a0-8721-26f951ad9059","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aab7063c-5879-476b-ae79-b855e8299dae","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"735821f0-73ac-493b-801a-28a7c570e281","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"575dd3a5-8cd4-4eb3-9f93-dee4176a15b3","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"d11991a4-0e10-49b3-bac2-5a872f088ec0","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"751c2f09-a505-460c-974a-19982041a78d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"bc86987b-f031-4abc-94df-d21b46d94251","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"22da1745-41c7-4c5b-bd81-d6c22fd0d036","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b9eb715c-9d69-4faf-a3c1-0d1662d1d002","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ebb645e0-5928-410b-9933-8c76ea5704bb","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"00408e36-b9e4-44c7-aa6f-97544c94b921","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"582ef210-c5a3-4957-8dd5-912e82994010","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"344e0587-3876-4392-ba44-fae7b53b2381","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a0427644-b4f8-4759-b696-7c575ee3dfd0","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"169d24ad-16c9-4c74-9f82-2194e0fc6723","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eccc3875-0be6-465b-af36-65b23da494c7","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"5928fbaa-9478-4c66-8f46-b2b9416473fd","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6b578600-3a44-438a-b226-83a946fb1702","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"570dbd74-50b4-40fa-ae09-47bf3c1b1f04","IsCreationKey":false,"Key":46.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"12f5561a-76a0-43d8-880c-956d44e400a1","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"5c562d34-2c8d-491f-aeb9-82573be453e9","IsCreationKey":false,"Key":47.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b7d2f212-7bb4-43fc-82b4-994e608e8449","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"32afe968-e5e3-466a-890e-1dd0be1c3d44","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"deb4ca42-9290-4b9e-a4a0-10bc90a2e4b9","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"abd9f8fc-f4ba-4d67-8e0a-fa6b241f65ed","IsCreationKey":false,"Key":49.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"210694fe-1970-4a42-9a02-af383285bb3a","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"607bf239-5c1e-41e0-ae5f-2b8ea2a27ee8","IsCreationKey":false,"Key":50.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d153dbb1-396f-40dc-9f03-a604f7033bbd","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"6e12eab3-cbdf-4f3c-b8c6-01cb2d9d1e1c","IsCreationKey":false,"Key":51.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cbe2d032-2aa0-4cd0-acf7-c9ed2180b0e4","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"c089c173-9eb4-40d8-950c-fe68b39c9e8f","IsCreationKey":false,"Key":52.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6e33f337-728a-43b1-b64e-fd5ec6d908ec","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"76147b62-3c43-40e6-be01-11c4a307f454","IsCreationKey":false,"Key":53.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"40311465-0f83-4381-93c1-ea1434b91d55","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"69ef94a9-0c63-4651-a521-ed730c38260f","IsCreationKey":false,"Key":54.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"44429e91-5371-4e80-aa6d-a8a3a9026b36","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"e31a0b31-45f1-40b8-adff-b160536eca16","IsCreationKey":false,"Key":55.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b1bf2f69-9afd-41cb-8026-f19ffd227b63","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b870689b-ae7d-4279-94c2-35d6d2458e05","IsCreationKey":false,"Key":56.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"703cdcd1-8d57-4e09-9380-ca669af508f8","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"1d02ed45-66df-4d75-84ca-90b911fdae08","IsCreationKey":false,"Key":57.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"22ffdea1-cc09-4be2-95b1-dfacce8d44e8","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"6a3dc8b5-5b66-4fcd-8156-f4cba6422238","IsCreationKey":false,"Key":58.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3673878d-2e69-4816-ae00-79df63daf4cf","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"95d23968-23bc-4482-9c36-62568dfdbc7a","IsCreationKey":false,"Key":59.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"785cb758-1802-4d79-a075-ccc08ec1a791","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b2821991-582f-425d-a29a-24e0ae9074e2","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9bf194ee-a945-4040-8624-69d076d79ca6","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"c9fd9bd5-8b9f-453f-8616-c34a58e2376b","IsCreationKey":false,"Key":61.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a783a3f8-40e5-48d6-9dde-f8fbde428d93","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"3de5c96b-c84d-4f1a-a73d-8c30baec9ea5","IsCreationKey":false,"Key":62.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8cb86276-9f86-4676-800f-8d45e2301069","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"9a6f85d8-52bf-47e6-9f14-198362453739","IsCreationKey":false,"Key":63.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1f7334bc-1019-43d4-a404-d1bcf2ced143","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b99d4e54-fc8f-4e89-b884-b903bcbec67c","IsCreationKey":false,"Key":64.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7c7edf47-57a7-4860-a2c2-82014670d6f6","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"0be1c954-c6a3-46ce-8ff5-43e039a9dcc3","IsCreationKey":false,"Key":65.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2eefb89e-8ecf-4786-8773-09cc7d53f36c","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"23db49db-c0ad-4047-b04e-cac15b2fb7ad","IsCreationKey":false,"Key":66.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7e78a129-75a7-4b0e-9965-d0061de1f9e4","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"0968b444-1c76-4658-8f9d-a409cd3b102f","IsCreationKey":false,"Key":67.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bd3c52bb-c028-4814-9764-b9608a2bdb6d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"fcde1c2a-604e-4ee7-ada0-5dc4015c8fcb","IsCreationKey":false,"Key":68.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ac469039-2483-4c4a-8986-0a7179ab3b1a","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"d2db0cea-9d09-4045-9b4c-3c32f6c1271c","IsCreationKey":false,"Key":69.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ede0f73f-03bc-4a91-b33d-853b39195263","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"86a62ba0-5267-4772-8642-5fc13ad0da44","IsCreationKey":false,"Key":70.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"302e7f26-9162-43b3-9b20-589280f8b172","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"458e4c37-2fac-4b8c-a2d2-510ae03f67a0","IsCreationKey":false,"Key":71.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6db663f2-8db6-42c8-b92a-03c19cde48e5","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"9724bfa4-f193-4d34-bf40-fd9742d4b533","IsCreationKey":false,"Key":72.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"57d0b943-7f45-45bd-b65d-74b47082bcc7","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"655fbc0d-e8ba-4c3d-8bb9-2526ca6f6d90","IsCreationKey":false,"Key":73.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fbd6939f-2537-4b09-b0a0-83986c26c166","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"ea1a3321-0b67-4e27-bf4e-16ed61d9106e","IsCreationKey":false,"Key":74.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c76d0099-483c-487c-9488-e46c2f588dca","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"5f99d27a-cf19-4c00-b6fc-71b35a9e0838","IsCreationKey":false,"Key":75.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2c9a7dd1-e387-495f-9273-5947a9365863","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"63823dfc-9346-44e6-95b2-b642e834cec3","IsCreationKey":false,"Key":76.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d6277149-9a17-45f9-a9e4-9c6bb6e0434f","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"41292765-45b2-432e-815f-0b167b4e3a89","IsCreationKey":false,"Key":77.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"15fdb3c6-28e3-4574-b1ad-0e84c9f142a5","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"db4ef08a-8b3c-4727-a364-90652a589831","IsCreationKey":false,"Key":78.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ca5aba3d-0156-47e0-800a-08fae9ceb664","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"aaaadcd6-da95-4648-bf82-e40c945a0ca8","IsCreationKey":false,"Key":79.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b0db0c26-9220-425c-bec1-003c0436f948","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b545223c-d69f-4692-8369-054112a114fe","IsCreationKey":false,"Key":80.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"76fff1bf-546d-40d3-a559-36211a02c259","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"3f99463a-72da-4048-bfe0-9ba5ea8b0d58","IsCreationKey":false,"Key":81.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"08d93cbf-382b-420c-a0b8-8a9c1b348bb7","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4cc3d880-4812-4d3b-bb4e-2187ecc8651d","IsCreationKey":false,"Key":82.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3dc5ec5d-8309-4c26-89ce-beb18d23746e","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"7fe590f9-b8a6-4144-983f-1ddabdc3bb1b","IsCreationKey":false,"Key":83.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"14b89b04-2570-415f-a6b2-4bbb5eb0b5ac","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"0dad1e7d-c048-4229-95ef-fb0702e1ab71","IsCreationKey":false,"Key":84.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eea8a1ea-0286-491a-ae4c-f0dd62c5f0a9","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"06d79d57-5610-4eba-8bac-d0c6ebb4ebc2","IsCreationKey":false,"Key":85.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1370ff41-03ed-4848-88b0-c14090ca69bd","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"5b80542a-aa24-43d9-a07b-e8b63d519ad7","IsCreationKey":false,"Key":86.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"10494405-afa6-483a-a8b2-0c4ec6b7eb3c","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"f780769e-bf8a-4873-ba36-a8d7e07c9fd9","IsCreationKey":false,"Key":87.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"19ea43d7-1ae1-44c6-991c-8ad33d2000e5","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"06aec60a-8398-493c-a60e-85184404b409","IsCreationKey":false,"Key":88.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"65af1716-2bb5-4dff-a457-c3bc9d720095","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"509d1a13-e17f-40cd-91c6-47fcc51708d0","IsCreationKey":false,"Key":89.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3de99b77-79fb-4dc0-9b7d-48d9b84e30a6","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"85f203ee-56ca-4b57-bd57-8b7f2dd4f22f","IsCreationKey":false,"Key":90.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3df513a9-d715-4523-80f6-77b274686c5c","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"aae19c7b-e0e2-4c7e-9f38-36c4e8fd6fd3","IsCreationKey":false,"Key":91.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a3daf622-f73c-4836-b1a9-dc94c8c831db","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"71d9863b-d7c1-4e84-bfcb-d30cdcd2ec57","IsCreationKey":false,"Key":92.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a53d0e81-9772-4765-9b22-146f9bb40ead","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"5863949c-802f-4103-b952-962080a78358","IsCreationKey":false,"Key":93.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b1eafe10-f013-4f54-a07c-945130490b14","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"7673bf58-bb40-43b0-8812-1380a7f6fbaa","IsCreationKey":false,"Key":94.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"02d9cf49-b68c-4aa5-8eb3-3c81cca58d1f","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"11cceb36-e0cf-4146-ae06-a11ec2b1f4e2","IsCreationKey":false,"Key":95.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"724717f5-5e9d-4c02-a451-034666c5b339","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"92fa720e-e113-4383-ad16-a6a7719a2164","IsCreationKey":false,"Key":96.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8f82711-af32-48b5-aa5f-f24a38a2010d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4609ac3b-ebe9-4802-8895-29c8bca5ade3","IsCreationKey":false,"Key":97.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"10c04f10-6981-482c-a777-508b59cb1868","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"9bcae024-21fe-4648-b5be-ec3019990e0c","IsCreationKey":false,"Key":98.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"898f4f06-ef89-41f4-9858-c87522c8194d","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"b48e217e-4959-4bf2-bc22-3192b47a687f","IsCreationKey":false,"Key":99.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"04b4cf58-130e-466d-8149-e96dfb2f1901","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"78c632c2-3a19-40c6-aa63-bde56204e2a3","IsCreationKey":false,"Key":100.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"80527323-1c7f-450a-9b42-f7fd5df5bcce","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"44963127-dd95-44f5-a906-29df755327ec","IsCreationKey":false,"Key":101.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4eb18268-2519-412f-9b50-b42e0f3b2040","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"14f351a7-1016-42bb-897e-2eadf3b9c647","IsCreationKey":false,"Key":102.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2a09f011-d77d-4073-b487-f5cf13fe442f","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"54edffb5-bcac-4b59-bb57-1306a1fd162e","IsCreationKey":false,"Key":103.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6e190054-461d-4a55-b762-b8b955576296","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"0e378f4b-79a7-4b71-826e-192f8851b8e0","IsCreationKey":false,"Key":104.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ea47965a-a0f3-4223-a77d-6372f421245e","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"894cbc01-4c03-48db-a52e-a5874642a707","IsCreationKey":false,"Key":105.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"12b9131e-63fc-4125-a6a2-6def2561c4d9","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"3490b5bb-7bb7-4c76-8ac3-e6691ce4ae7e","IsCreationKey":false,"Key":106.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"97c7a601-527c-4374-aea7-efa262a55997","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"df49b503-f77a-4131-a5b9-ddbbbc562a34","IsCreationKey":false,"Key":107.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2be881ab-11fa-43a5-8f32-1143fb4689b8","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"7b7eb339-83bb-47d0-9dfe-5be30090d0b9","IsCreationKey":false,"Key":108.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"003f13c5-ad24-49ce-9bff-93475ff32b95","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4ce842b2-de39-4f8c-960d-9f60bf39b48e","IsCreationKey":false,"Key":109.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d7e00022-01f7-47d5-815a-8c16b0691277","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"2431836e-4bf5-4f78-a36e-7ebd9a4e8c70","IsCreationKey":false,"Key":110.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"93cea59e-61b9-449a-a421-27beb52e7def","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"be1149a4-f9bd-42a8-9a06-7e81870946b1","IsCreationKey":false,"Key":111.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"85bebebb-c855-4418-9f0a-6f92f36ec7a6","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"1e6cf545-b9ff-460f-91e7-b6cef128df84","IsCreationKey":false,"Key":112.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"77d0c191-2653-45d7-b896-fa202e9404e0","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"d67a1180-cff9-4312-8ef5-40f3d4c532ac","IsCreationKey":false,"Key":113.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"111fe466-d04e-400f-83b8-c7cae33a8eaa","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"f685f8cc-e572-41f4-a48c-7ca0a1790200","IsCreationKey":false,"Key":114.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e1f9c53a-a8d6-4533-8849-4b8b4289e936","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"bfb75403-fbfc-45c4-b501-aa0cc9fac252","IsCreationKey":false,"Key":115.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"48b70ecf-89f5-4efa-8a42-1763109cbf6e","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"ff6bdca1-faab-4a19-9ac9-41f2f10f0127","IsCreationKey":false,"Key":116.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8527f3cb-8d08-4174-b243-d46dcefa5b9f","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"25e810ec-6975-435f-81cc-cbc7ab7a8cfe","IsCreationKey":false,"Key":117.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd97b4ae-ea05-4464-a928-500b3c51a846","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4d8b5f42-5737-4357-8a9c-f5b7165fcd89","IsCreationKey":false,"Key":118.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f4625392-1172-47ee-ad42-b34f14d2243b","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"e32fbf89-a1ee-474b-8a3c-d7370b27d148","IsCreationKey":false,"Key":119.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3370fc9a-3f2e-4b24-94f6-22b152a28550","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"68a7211f-1a95-4ea2-9de0-ef2f8e18ed20","IsCreationKey":false,"Key":120.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8ce121e-d109-436d-84ee-60158596abb6","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"52708c67-af5f-4120-9fe9-6a24b99f0421","IsCreationKey":false,"Key":121.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ea88092e-e4cc-48f3-931c-0c5247a35c62","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"49534fc1-eb94-4610-b7de-70b8c2805f3a","IsCreationKey":false,"Key":122.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f9eba40d-e4ba-40f8-a6f0-726056adc030","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"4c9f858a-2731-4249-b13c-2833a88aed62","IsCreationKey":false,"Key":123.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"933ba524-c3a0-4194-b008-d1f459b477ac","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"90273ef1-3bcf-4c6b-873d-f76873cd6b83","IsCreationKey":false,"Key":124.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"113f9ba3-b53c-41bd-aba3-14ba9d399c9a","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"6f28afb6-8990-416a-b38c-414c5478bd93","IsCreationKey":false,"Key":125.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7d66c446-3dff-4e6c-9358-6f4e929afe88","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"224cdcd4-a3b4-4f26-b914-ff04df173207","IsCreationKey":false,"Key":126.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ae7d3d4c-6708-4674-a6fc-eeb8278aba00","path":"sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy",},},},"Disabled":false,"id":"e6954d14-ad8a-4b82-ba85-65482a4e85da","IsCreationKey":false,"Key":127.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
+      {
+        "resourceType": "GMSpriteFramesTrack",
+        "resourceVersion": "1.0",
+        "name": "frames",
+        "builtinName": 0,
+        "events": [],
+        "inheritsTrackColour": true,
+        "interpolation": 1,
+        "isCreationTrack": false,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "resourceVersion": "1.0",
+          "Keyframes": [
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "720c5eff-9994-4346-bab3-a24c5b4a5361",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "d2fb1096-0de0-45cf-8b78-2040d3153f76",
+              "IsCreationKey": false,
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "20017bea-5ae9-448c-85c9-a9b8cf3596e7",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "fe293b36-56ad-4eab-becc-e92731a2c3c8",
+              "IsCreationKey": false,
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "a1973f4c-1fe1-40f1-a38b-487e7a7980a7",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "2b80e70a-ce1c-43fd-833b-f86ecf05f85e",
+              "IsCreationKey": false,
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "b34adbab-1f81-4185-b8ce-72b1193e8f29",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "1842146d-296c-4d6a-a3c3-7c3dd57d2388",
+              "IsCreationKey": false,
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "551eddfa-c224-4b6f-b5ee-1b8c09f256e1",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "6de9d191-d3fb-440c-b948-e5645e06c266",
+              "IsCreationKey": false,
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "11d74cc6-dcb3-4cd6-b3b2-5b32743db525",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "396d30cf-a71b-43b4-91c3-2cce41d53bfb",
+              "IsCreationKey": false,
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "0015368e-b026-4d0b-93e0-4f817be66bec",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "956bc6b8-2d04-4033-84c7-7e24ac61b2f4",
+              "IsCreationKey": false,
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "49a9abeb-ef0a-4458-99fb-d6970d89bf7c",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "200c52ec-a34c-4454-8f3b-08809bbe4eab",
+              "IsCreationKey": false,
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "12070dc7-94a9-4f7c-87e1-3f366e718e4b",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "9205d5f3-04b1-4222-8ae7-4074bfd4284d",
+              "IsCreationKey": false,
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "de6eaa47-7ddf-4088-b829-bf0dfe68c143",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "55851c42-a09a-40cd-aeb2-4d9b91708a83",
+              "IsCreationKey": false,
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "3e0995e1-b581-45a2-87d1-00d437565231",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "07768179-b6bb-4e1c-9fc9-1cb330e79f63",
+              "IsCreationKey": false,
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "e1af46eb-6da6-4c3d-9496-36716e63d2ef",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "6dc9cf63-9d56-4583-8308-bcba969ae480",
+              "IsCreationKey": false,
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "f28565d7-505c-40c1-8380-377ed00b98e9",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "47558a51-2e27-49da-b6ad-13846cf67a66",
+              "IsCreationKey": false,
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "0077fd63-4987-40b2-8f32-82b314e44041",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "5c263582-fafc-4264-af22-2c1fc7fcadae",
+              "IsCreationKey": false,
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "40ae0b49-8683-4518-848f-3b29f61e921d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "30ddefad-5523-4f1d-9fb4-70c3bca1d89e",
+              "IsCreationKey": false,
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "41b85dc5-b44d-4179-b1eb-3a89ec5583af",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "80ac33e1-1c18-489a-96c0-f45e558144bd",
+              "IsCreationKey": false,
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "26f7d83f-de0c-4cbf-8c94-dcc06ceeafd1",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "be38d8b6-042e-4eec-b3a1-89d26365b614",
+              "IsCreationKey": false,
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "c02dff69-cf14-4d31-ba4d-8d29af9e357d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b6a76ecf-cf02-42b6-a6b0-53e82e3ccbeb",
+              "IsCreationKey": false,
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "89d32fbf-578e-42c2-9bef-59c4d497f81b",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "0bb6b7fd-d944-43ab-a881-e7970c3c694b",
+              "IsCreationKey": false,
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "359dc77d-19f5-409e-9e1c-c66a6b334285",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "939b8665-bab6-4544-aa4a-d3a24fd89f79",
+              "IsCreationKey": false,
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ca0871bf-f752-4e94-8c02-8393dcf3da2a",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "375a2a3c-0d03-4faf-ae9a-b6853e1f0761",
+              "IsCreationKey": false,
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "5e5f0dfd-398e-444d-83dc-7652f5151f2c",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "a794a857-2f3d-49a3-ac02-ae5ca503be30",
+              "IsCreationKey": false,
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "46fad150-e31f-45c7-a83a-2b938a919e0a",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "0ddca81f-bcc0-4d22-97cb-a055a5ed8527",
+              "IsCreationKey": false,
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "86692d66-81b7-4490-8f72-8e7eba3ff652",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "3b5733d8-f06a-4c2c-a77f-f5e5b78cd4e6",
+              "IsCreationKey": false,
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "1b314389-013f-4068-8c8a-acd9ee362ab3",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "a67341ed-c423-4fc0-bb52-5d0ebed585fe",
+              "IsCreationKey": false,
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "fcc714f4-a2e3-4555-8077-eb504d84590f",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4a7ee785-04c2-4674-bc25-b3e84338e18d",
+              "IsCreationKey": false,
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "2769b993-79e0-48d5-9e83-f98c581fdcd6",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "695071a8-1529-4702-af53-1353791a1f86",
+              "IsCreationKey": false,
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "bdff2247-c87b-4ac7-a630-7127ab16e106",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4bc4d02d-c9ef-4e3c-bdd8-9ea9b36100d6",
+              "IsCreationKey": false,
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "91cd22f9-22e8-48c3-8c8c-99e6c5c1298d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "087bc558-9bb5-4ed1-bb42-18f799af2aa3",
+              "IsCreationKey": false,
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "4909d5e5-722f-43f4-b94f-173dad8e41fc",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "49029703-796c-46e7-b8f7-3e76492ce5b1",
+              "IsCreationKey": false,
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "55962117-064a-45cc-b52e-c72238383976",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "1126de2d-efe0-4cd3-bac0-2c96aa746280",
+              "IsCreationKey": false,
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "fa3c8734-3eb9-4b21-82a5-8ec1cf7864ed",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "6af379db-505d-42ae-8aae-241d9c1a6cb8",
+              "IsCreationKey": false,
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "d9285ef7-4bb7-4144-ad8c-5abe2f1d9043",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "7ddfbad9-780f-488f-8e67-3c5d2b99893d",
+              "IsCreationKey": false,
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "62caf86d-9e08-4302-8fb9-a23d834a258c",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "e77774dd-c9c1-4307-b96d-37046293fcf3",
+              "IsCreationKey": false,
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "20922274-19ea-4a1f-94d5-953bde06fa15",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "df9b4923-b751-45e4-9bf8-d835ec2ef417",
+              "IsCreationKey": false,
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "079219a8-7705-4496-9296-9681d08b865b",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "488ea291-16b0-4869-95fc-acfd8aaebdaa",
+              "IsCreationKey": false,
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "c1489a30-63b8-46f0-8c64-8bdd6dfedd6e",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "75199fb4-1a0e-475e-90b4-d6f6d745c65e",
+              "IsCreationKey": false,
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "a0d844f2-e898-478c-9701-2e376c6bc4eb",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "ea27d836-e6c4-41a0-8721-26f951ad9059",
+              "IsCreationKey": false,
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "aab7063c-5879-476b-ae79-b855e8299dae",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "735821f0-73ac-493b-801a-28a7c570e281",
+              "IsCreationKey": false,
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "575dd3a5-8cd4-4eb3-9f93-dee4176a15b3",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "d11991a4-0e10-49b3-bac2-5a872f088ec0",
+              "IsCreationKey": false,
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "751c2f09-a505-460c-974a-19982041a78d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "bc86987b-f031-4abc-94df-d21b46d94251",
+              "IsCreationKey": false,
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "22da1745-41c7-4c5b-bd81-d6c22fd0d036",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b9eb715c-9d69-4faf-a3c1-0d1662d1d002",
+              "IsCreationKey": false,
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ebb645e0-5928-410b-9933-8c76ea5704bb",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "00408e36-b9e4-44c7-aa6f-97544c94b921",
+              "IsCreationKey": false,
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "582ef210-c5a3-4957-8dd5-912e82994010",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "344e0587-3876-4392-ba44-fae7b53b2381",
+              "IsCreationKey": false,
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "a0427644-b4f8-4759-b696-7c575ee3dfd0",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "169d24ad-16c9-4c74-9f82-2194e0fc6723",
+              "IsCreationKey": false,
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "eccc3875-0be6-465b-af36-65b23da494c7",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "5928fbaa-9478-4c66-8f46-b2b9416473fd",
+              "IsCreationKey": false,
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "6b578600-3a44-438a-b226-83a946fb1702",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "570dbd74-50b4-40fa-ae09-47bf3c1b1f04",
+              "IsCreationKey": false,
+              "Key": 46.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "12f5561a-76a0-43d8-880c-956d44e400a1",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "5c562d34-2c8d-491f-aeb9-82573be453e9",
+              "IsCreationKey": false,
+              "Key": 47.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "b7d2f212-7bb4-43fc-82b4-994e608e8449",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "32afe968-e5e3-466a-890e-1dd0be1c3d44",
+              "IsCreationKey": false,
+              "Key": 48.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "deb4ca42-9290-4b9e-a4a0-10bc90a2e4b9",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "abd9f8fc-f4ba-4d67-8e0a-fa6b241f65ed",
+              "IsCreationKey": false,
+              "Key": 49.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "210694fe-1970-4a42-9a02-af383285bb3a",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "607bf239-5c1e-41e0-ae5f-2b8ea2a27ee8",
+              "IsCreationKey": false,
+              "Key": 50.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "d153dbb1-396f-40dc-9f03-a604f7033bbd",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "6e12eab3-cbdf-4f3c-b8c6-01cb2d9d1e1c",
+              "IsCreationKey": false,
+              "Key": 51.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "cbe2d032-2aa0-4cd0-acf7-c9ed2180b0e4",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "c089c173-9eb4-40d8-950c-fe68b39c9e8f",
+              "IsCreationKey": false,
+              "Key": 52.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "6e33f337-728a-43b1-b64e-fd5ec6d908ec",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "76147b62-3c43-40e6-be01-11c4a307f454",
+              "IsCreationKey": false,
+              "Key": 53.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "40311465-0f83-4381-93c1-ea1434b91d55",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "69ef94a9-0c63-4651-a521-ed730c38260f",
+              "IsCreationKey": false,
+              "Key": 54.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "44429e91-5371-4e80-aa6d-a8a3a9026b36",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "e31a0b31-45f1-40b8-adff-b160536eca16",
+              "IsCreationKey": false,
+              "Key": 55.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "b1bf2f69-9afd-41cb-8026-f19ffd227b63",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b870689b-ae7d-4279-94c2-35d6d2458e05",
+              "IsCreationKey": false,
+              "Key": 56.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "703cdcd1-8d57-4e09-9380-ca669af508f8",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "1d02ed45-66df-4d75-84ca-90b911fdae08",
+              "IsCreationKey": false,
+              "Key": 57.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "22ffdea1-cc09-4be2-95b1-dfacce8d44e8",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "6a3dc8b5-5b66-4fcd-8156-f4cba6422238",
+              "IsCreationKey": false,
+              "Key": 58.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "3673878d-2e69-4816-ae00-79df63daf4cf",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "95d23968-23bc-4482-9c36-62568dfdbc7a",
+              "IsCreationKey": false,
+              "Key": 59.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "785cb758-1802-4d79-a075-ccc08ec1a791",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b2821991-582f-425d-a29a-24e0ae9074e2",
+              "IsCreationKey": false,
+              "Key": 60.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "9bf194ee-a945-4040-8624-69d076d79ca6",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "c9fd9bd5-8b9f-453f-8616-c34a58e2376b",
+              "IsCreationKey": false,
+              "Key": 61.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "a783a3f8-40e5-48d6-9dde-f8fbde428d93",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "3de5c96b-c84d-4f1a-a73d-8c30baec9ea5",
+              "IsCreationKey": false,
+              "Key": 62.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "8cb86276-9f86-4676-800f-8d45e2301069",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "9a6f85d8-52bf-47e6-9f14-198362453739",
+              "IsCreationKey": false,
+              "Key": 63.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "1f7334bc-1019-43d4-a404-d1bcf2ced143",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b99d4e54-fc8f-4e89-b884-b903bcbec67c",
+              "IsCreationKey": false,
+              "Key": 64.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "7c7edf47-57a7-4860-a2c2-82014670d6f6",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "0be1c954-c6a3-46ce-8ff5-43e039a9dcc3",
+              "IsCreationKey": false,
+              "Key": 65.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "2eefb89e-8ecf-4786-8773-09cc7d53f36c",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "23db49db-c0ad-4047-b04e-cac15b2fb7ad",
+              "IsCreationKey": false,
+              "Key": 66.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "7e78a129-75a7-4b0e-9965-d0061de1f9e4",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "0968b444-1c76-4658-8f9d-a409cd3b102f",
+              "IsCreationKey": false,
+              "Key": 67.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "bd3c52bb-c028-4814-9764-b9608a2bdb6d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "fcde1c2a-604e-4ee7-ada0-5dc4015c8fcb",
+              "IsCreationKey": false,
+              "Key": 68.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ac469039-2483-4c4a-8986-0a7179ab3b1a",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "d2db0cea-9d09-4045-9b4c-3c32f6c1271c",
+              "IsCreationKey": false,
+              "Key": 69.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ede0f73f-03bc-4a91-b33d-853b39195263",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "86a62ba0-5267-4772-8642-5fc13ad0da44",
+              "IsCreationKey": false,
+              "Key": 70.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "302e7f26-9162-43b3-9b20-589280f8b172",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "458e4c37-2fac-4b8c-a2d2-510ae03f67a0",
+              "IsCreationKey": false,
+              "Key": 71.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "6db663f2-8db6-42c8-b92a-03c19cde48e5",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "9724bfa4-f193-4d34-bf40-fd9742d4b533",
+              "IsCreationKey": false,
+              "Key": 72.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "57d0b943-7f45-45bd-b65d-74b47082bcc7",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "655fbc0d-e8ba-4c3d-8bb9-2526ca6f6d90",
+              "IsCreationKey": false,
+              "Key": 73.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "fbd6939f-2537-4b09-b0a0-83986c26c166",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "ea1a3321-0b67-4e27-bf4e-16ed61d9106e",
+              "IsCreationKey": false,
+              "Key": 74.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "c76d0099-483c-487c-9488-e46c2f588dca",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "5f99d27a-cf19-4c00-b6fc-71b35a9e0838",
+              "IsCreationKey": false,
+              "Key": 75.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "2c9a7dd1-e387-495f-9273-5947a9365863",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "63823dfc-9346-44e6-95b2-b642e834cec3",
+              "IsCreationKey": false,
+              "Key": 76.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "d6277149-9a17-45f9-a9e4-9c6bb6e0434f",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "41292765-45b2-432e-815f-0b167b4e3a89",
+              "IsCreationKey": false,
+              "Key": 77.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "15fdb3c6-28e3-4574-b1ad-0e84c9f142a5",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "db4ef08a-8b3c-4727-a364-90652a589831",
+              "IsCreationKey": false,
+              "Key": 78.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ca5aba3d-0156-47e0-800a-08fae9ceb664",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "aaaadcd6-da95-4648-bf82-e40c945a0ca8",
+              "IsCreationKey": false,
+              "Key": 79.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "b0db0c26-9220-425c-bec1-003c0436f948",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b545223c-d69f-4692-8369-054112a114fe",
+              "IsCreationKey": false,
+              "Key": 80.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "76fff1bf-546d-40d3-a559-36211a02c259",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "3f99463a-72da-4048-bfe0-9ba5ea8b0d58",
+              "IsCreationKey": false,
+              "Key": 81.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "08d93cbf-382b-420c-a0b8-8a9c1b348bb7",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4cc3d880-4812-4d3b-bb4e-2187ecc8651d",
+              "IsCreationKey": false,
+              "Key": 82.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "3dc5ec5d-8309-4c26-89ce-beb18d23746e",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "7fe590f9-b8a6-4144-983f-1ddabdc3bb1b",
+              "IsCreationKey": false,
+              "Key": 83.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "14b89b04-2570-415f-a6b2-4bbb5eb0b5ac",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "0dad1e7d-c048-4229-95ef-fb0702e1ab71",
+              "IsCreationKey": false,
+              "Key": 84.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "eea8a1ea-0286-491a-ae4c-f0dd62c5f0a9",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "06d79d57-5610-4eba-8bac-d0c6ebb4ebc2",
+              "IsCreationKey": false,
+              "Key": 85.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "1370ff41-03ed-4848-88b0-c14090ca69bd",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "5b80542a-aa24-43d9-a07b-e8b63d519ad7",
+              "IsCreationKey": false,
+              "Key": 86.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "10494405-afa6-483a-a8b2-0c4ec6b7eb3c",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "f780769e-bf8a-4873-ba36-a8d7e07c9fd9",
+              "IsCreationKey": false,
+              "Key": 87.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "19ea43d7-1ae1-44c6-991c-8ad33d2000e5",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "06aec60a-8398-493c-a60e-85184404b409",
+              "IsCreationKey": false,
+              "Key": 88.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "65af1716-2bb5-4dff-a457-c3bc9d720095",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "509d1a13-e17f-40cd-91c6-47fcc51708d0",
+              "IsCreationKey": false,
+              "Key": 89.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "3de99b77-79fb-4dc0-9b7d-48d9b84e30a6",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "85f203ee-56ca-4b57-bd57-8b7f2dd4f22f",
+              "IsCreationKey": false,
+              "Key": 90.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "3df513a9-d715-4523-80f6-77b274686c5c",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "aae19c7b-e0e2-4c7e-9f38-36c4e8fd6fd3",
+              "IsCreationKey": false,
+              "Key": 91.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "a3daf622-f73c-4836-b1a9-dc94c8c831db",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "71d9863b-d7c1-4e84-bfcb-d30cdcd2ec57",
+              "IsCreationKey": false,
+              "Key": 92.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "a53d0e81-9772-4765-9b22-146f9bb40ead",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "5863949c-802f-4103-b952-962080a78358",
+              "IsCreationKey": false,
+              "Key": 93.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "b1eafe10-f013-4f54-a07c-945130490b14",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "7673bf58-bb40-43b0-8812-1380a7f6fbaa",
+              "IsCreationKey": false,
+              "Key": 94.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "02d9cf49-b68c-4aa5-8eb3-3c81cca58d1f",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "11cceb36-e0cf-4146-ae06-a11ec2b1f4e2",
+              "IsCreationKey": false,
+              "Key": 95.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "724717f5-5e9d-4c02-a451-034666c5b339",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "92fa720e-e113-4383-ad16-a6a7719a2164",
+              "IsCreationKey": false,
+              "Key": 96.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "e8f82711-af32-48b5-aa5f-f24a38a2010d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4609ac3b-ebe9-4802-8895-29c8bca5ade3",
+              "IsCreationKey": false,
+              "Key": 97.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "10c04f10-6981-482c-a777-508b59cb1868",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "9bcae024-21fe-4648-b5be-ec3019990e0c",
+              "IsCreationKey": false,
+              "Key": 98.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "898f4f06-ef89-41f4-9858-c87522c8194d",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "b48e217e-4959-4bf2-bc22-3192b47a687f",
+              "IsCreationKey": false,
+              "Key": 99.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "04b4cf58-130e-466d-8149-e96dfb2f1901",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "78c632c2-3a19-40c6-aa63-bde56204e2a3",
+              "IsCreationKey": false,
+              "Key": 100.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "80527323-1c7f-450a-9b42-f7fd5df5bcce",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "44963127-dd95-44f5-a906-29df755327ec",
+              "IsCreationKey": false,
+              "Key": 101.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "4eb18268-2519-412f-9b50-b42e0f3b2040",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "14f351a7-1016-42bb-897e-2eadf3b9c647",
+              "IsCreationKey": false,
+              "Key": 102.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "2a09f011-d77d-4073-b487-f5cf13fe442f",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "54edffb5-bcac-4b59-bb57-1306a1fd162e",
+              "IsCreationKey": false,
+              "Key": 103.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "6e190054-461d-4a55-b762-b8b955576296",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "0e378f4b-79a7-4b71-826e-192f8851b8e0",
+              "IsCreationKey": false,
+              "Key": 104.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ea47965a-a0f3-4223-a77d-6372f421245e",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "894cbc01-4c03-48db-a52e-a5874642a707",
+              "IsCreationKey": false,
+              "Key": 105.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "12b9131e-63fc-4125-a6a2-6def2561c4d9",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "3490b5bb-7bb7-4c76-8ac3-e6691ce4ae7e",
+              "IsCreationKey": false,
+              "Key": 106.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "97c7a601-527c-4374-aea7-efa262a55997",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "df49b503-f77a-4131-a5b9-ddbbbc562a34",
+              "IsCreationKey": false,
+              "Key": 107.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "2be881ab-11fa-43a5-8f32-1143fb4689b8",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "7b7eb339-83bb-47d0-9dfe-5be30090d0b9",
+              "IsCreationKey": false,
+              "Key": 108.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "003f13c5-ad24-49ce-9bff-93475ff32b95",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4ce842b2-de39-4f8c-960d-9f60bf39b48e",
+              "IsCreationKey": false,
+              "Key": 109.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "d7e00022-01f7-47d5-815a-8c16b0691277",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "2431836e-4bf5-4f78-a36e-7ebd9a4e8c70",
+              "IsCreationKey": false,
+              "Key": 110.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "93cea59e-61b9-449a-a421-27beb52e7def",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "be1149a4-f9bd-42a8-9a06-7e81870946b1",
+              "IsCreationKey": false,
+              "Key": 111.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "85bebebb-c855-4418-9f0a-6f92f36ec7a6",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "1e6cf545-b9ff-460f-91e7-b6cef128df84",
+              "IsCreationKey": false,
+              "Key": 112.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "77d0c191-2653-45d7-b896-fa202e9404e0",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "d67a1180-cff9-4312-8ef5-40f3d4c532ac",
+              "IsCreationKey": false,
+              "Key": 113.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "111fe466-d04e-400f-83b8-c7cae33a8eaa",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "f685f8cc-e572-41f4-a48c-7ca0a1790200",
+              "IsCreationKey": false,
+              "Key": 114.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "e1f9c53a-a8d6-4533-8849-4b8b4289e936",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "bfb75403-fbfc-45c4-b501-aa0cc9fac252",
+              "IsCreationKey": false,
+              "Key": 115.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "48b70ecf-89f5-4efa-8a42-1763109cbf6e",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "ff6bdca1-faab-4a19-9ac9-41f2f10f0127",
+              "IsCreationKey": false,
+              "Key": 116.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "8527f3cb-8d08-4174-b243-d46dcefa5b9f",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "25e810ec-6975-435f-81cc-cbc7ab7a8cfe",
+              "IsCreationKey": false,
+              "Key": 117.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "cd97b4ae-ea05-4464-a928-500b3c51a846",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4d8b5f42-5737-4357-8a9c-f5b7165fcd89",
+              "IsCreationKey": false,
+              "Key": 118.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "f4625392-1172-47ee-ad42-b34f14d2243b",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "e32fbf89-a1ee-474b-8a3c-d7370b27d148",
+              "IsCreationKey": false,
+              "Key": 119.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "3370fc9a-3f2e-4b24-94f6-22b152a28550",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "68a7211f-1a95-4ea2-9de0-ef2f8e18ed20",
+              "IsCreationKey": false,
+              "Key": 120.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "e8ce121e-d109-436d-84ee-60158596abb6",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "52708c67-af5f-4120-9fe9-6a24b99f0421",
+              "IsCreationKey": false,
+              "Key": 121.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ea88092e-e4cc-48f3-931c-0c5247a35c62",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "49534fc1-eb94-4610-b7de-70b8c2805f3a",
+              "IsCreationKey": false,
+              "Key": 122.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "f9eba40d-e4ba-40f8-a6f0-726056adc030",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "4c9f858a-2731-4249-b13c-2833a88aed62",
+              "IsCreationKey": false,
+              "Key": 123.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "933ba524-c3a0-4194-b008-d1f459b477ac",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "90273ef1-3bcf-4c6b-873d-f76873cd6b83",
+              "IsCreationKey": false,
+              "Key": 124.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "113f9ba3-b53c-41bd-aba3-14ba9d399c9a",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "6f28afb6-8990-416a-b38c-414c5478bd93",
+              "IsCreationKey": false,
+              "Key": 125.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "7d66c446-3dff-4e6c-9358-6f4e929afe88",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "224cdcd4-a3b4-4f26-b914-ff04df173207",
+              "IsCreationKey": false,
+              "Key": 126.0,
+              "Length": 1.0,
+              "Stretch": false
+            },
+            {
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0",
+              "Channels": {
+                "0": {
+                  "resourceType": "SpriteFrameKeyframe",
+                  "resourceVersion": "1.0",
+                  "Id": {
+                    "name": "ae7d3d4c-6708-4674-a6fc-eeb8278aba00",
+                    "path": "sprites/SPR_Cyndaquil/SPR_Cyndaquil.yy"
+                  }
+                }
+              },
+              "Disabled": false,
+              "id": "e6954d14-ad8a-4b82-ba85-65482a4e85da",
+              "IsCreationKey": false,
+              "Key": 127.0,
+              "Length": 1.0,
+              "Stretch": false
+            }
+          ]
+        },
+        "modifiers": [],
+        "spriteId": null,
+        "trackColour": 0,
+        "tracks": [],
+        "traits": 0
+      }
     ],
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 22,
-    "yorigin": 18,
+    "yorigin": 18
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default",
+    "path": "texturegroups/Default"
   },
   "type": 0,
   "VTile": false,
-  "width": 44,
+  "width": 44
 }

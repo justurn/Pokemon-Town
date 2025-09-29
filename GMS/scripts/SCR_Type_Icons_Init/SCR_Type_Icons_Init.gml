@@ -53,8 +53,15 @@ function SCR_Draw_Type_Icon(type_id, x, y, scale = 1, alpha = 1) {
         var type_sprite = global.type_icon_sprites[type_id];
         var type_color = global.type_colors[type_id];
         
+        // Adjust position to account for centered sprite origin (15, 15)
+        // This draws the sprite with its top-left corner at the specified x, y
+        var sprite_origin_x = sprite_get_xoffset(type_sprite);
+        var sprite_origin_y = sprite_get_yoffset(type_sprite);
+        var draw_x = x + sprite_origin_x;
+        var draw_y = y + sprite_origin_y;
+        
         // Use same colorization method as eggs (draw_sprite_ext with color blend)
-        draw_sprite_ext(type_sprite, 0, x, y, scale, scale, 0, type_color, alpha);
+        draw_sprite_ext(type_sprite, 0, draw_x, draw_y, scale, scale, 0, type_color, alpha);
     }
 }
 
@@ -65,5 +72,24 @@ function SCR_Draw_Category_Icon(is_physical, x, y, scale = 1, alpha = 1) {
         make_color_rgb(255, 150, 150) :  // Light red for Physical
         make_color_rgb(150, 150, 255);   // Light blue for Special
     
-    draw_sprite_ext(category_sprite, 0, x, y, scale, scale, 0, category_color, alpha);
+    // Adjust position to account for centered sprite origin
+    // This draws the sprite with its top-left corner at the specified x, y
+    var sprite_origin_x = sprite_get_xoffset(category_sprite);
+    var sprite_origin_y = sprite_get_yoffset(category_sprite);
+    var draw_x = x + sprite_origin_x;
+    var draw_y = y + sprite_origin_y;
+    
+    draw_sprite_ext(category_sprite, 0, draw_x, draw_y, scale, scale, 0, category_color, alpha);
+}
+
+// Helper function to draw stat icons with origin compensation
+function SCR_Draw_Stat_Icon(stat_sprite, x, y, scale = 1, alpha = 1, color = c_white) {
+    // Adjust position to account for centered sprite origin
+    // This draws the sprite with its top-left corner at the specified x, y
+    var sprite_origin_x = sprite_get_xoffset(stat_sprite);
+    var sprite_origin_y = sprite_get_yoffset(stat_sprite);
+    var draw_x = x + sprite_origin_x;
+    var draw_y = y + sprite_origin_y;
+    
+    draw_sprite_ext(stat_sprite, 0, draw_x, draw_y, scale, scale, 0, color, alpha);
 }

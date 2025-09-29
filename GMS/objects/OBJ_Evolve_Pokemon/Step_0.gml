@@ -84,6 +84,10 @@ if (evolution_timer == 90)
 		case 240: // Magby evolves into Magmar
 	        pokedex_id = 126;
 	        break;
+			
+		case 298: // Azurill evolves into Marill
+	        pokedex_id = 183;
+	        break;
 				
 	    default:
 	        pokedex_id += 1; // Get new evolution ID

@@ -147,7 +147,7 @@ function SCR_Pokemon_Evolution_Gen2() {
 
     // Pokemon 183 - "Marill"
     global.Dex_Evolve_Level[183] = 18;
-    global.Dex_Hatching[183] = "True";
+    global.Dex_Hatching[183] = "False";  // Changed: Azurill hatches instead, evolves to Marill
 
     // Pokemon 184 - "Azumarill"
     global.Dex_Evolve_Level[184] = -1;
@@ -385,17 +385,20 @@ function SCR_Pokemon_Evolution_Gen2() {
     global.Dex_Evolve_Level[242] = -1;
     global.Dex_Hatching[242] = "False";
 
-    // Pokemon 243 - "Raikou"
+    // Pokemon 243 - "Raikou" (LEGENDARY)
     global.Dex_Evolve_Level[243] = -1;
-    global.Dex_Hatching[243] = "True";
+    global.Dex_Hatching[243] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[243] = true;   // F-026: Mark as legendary
 
-    // Pokemon 244 - "Entei"
+    // Pokemon 244 - "Entei" (LEGENDARY)
     global.Dex_Evolve_Level[244] = -1;
-    global.Dex_Hatching[244] = "True";
+    global.Dex_Hatching[244] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[244] = true;   // F-026: Mark as legendary
 
-    // Pokemon 245 - "Suicune"
+    // Pokemon 245 - "Suicune" (LEGENDARY)
     global.Dex_Evolve_Level[245] = -1;
-    global.Dex_Hatching[245] = "True";
+    global.Dex_Hatching[245] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[245] = true;   // F-026: Mark as legendary
 
     // Pokemon 246 - "Larvitar"
     global.Dex_Evolve_Level[246] = 30;
@@ -409,15 +412,18 @@ function SCR_Pokemon_Evolution_Gen2() {
     global.Dex_Evolve_Level[248] = -1;
     global.Dex_Hatching[248] = "False";
 
-    // Pokemon 249 - "Lugia"
+    // Pokemon 249 - "Lugia" (LEGENDARY)
     global.Dex_Evolve_Level[249] = -1;
-    global.Dex_Hatching[249] = "True";
+    global.Dex_Hatching[249] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[249] = true;   // F-026: Mark as legendary
 
-    // Pokemon 250 - "Ho-oh"
+    // Pokemon 250 - "Ho-oh" (LEGENDARY)
     global.Dex_Evolve_Level[250] = -1;
-    global.Dex_Hatching[250] = "True";
+    global.Dex_Hatching[250] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[250] = true;   // F-026: Mark as legendary
 
-    // Pokemon 251 - "Celebi"
+    // Pokemon 251 - "Celebi" (LEGENDARY)
     global.Dex_Evolve_Level[251] = -1;
-    global.Dex_Hatching[251] = "True";
+    global.Dex_Hatching[251] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[251] = true;   // F-026: Mark as legendary
 }

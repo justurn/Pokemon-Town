@@ -206,7 +206,7 @@ function SCR_Pokemon_Evolution_Gen3() {
     global.Dex_Hatching[297] = "False";
 
     // Pokemon 298 - "Azurill"
-    global.Dex_Evolve_Level[298] = -1;
+    global.Dex_Evolve_Level[298] = 10;  // Changed: Evolves to Marill at level 10
     global.Dex_Hatching[298] = "True";
 
     // Pokemon 299 - "Nosepass"
@@ -521,43 +521,53 @@ function SCR_Pokemon_Evolution_Gen3() {
     global.Dex_Evolve_Level[376] = -1;
     global.Dex_Hatching[376] = "False";
 
-    // Pokemon 377 - "Regirock"
+    // Pokemon 377 - "Regirock" (LEGENDARY)
     global.Dex_Evolve_Level[377] = -1;
-    global.Dex_Hatching[377] = "False";
+    global.Dex_Hatching[377] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[377] = true;   // F-026: Mark as legendary
 
-    // Pokemon 378 - "Regice"
+    // Pokemon 378 - "Regice" (LEGENDARY)
     global.Dex_Evolve_Level[378] = -1;
-    global.Dex_Hatching[378] = "False";
+    global.Dex_Hatching[378] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[378] = true;   // F-026: Mark as legendary
 
-    // Pokemon 379 - "Registeel"
+    // Pokemon 379 - "Registeel" (LEGENDARY)
     global.Dex_Evolve_Level[379] = -1;
-    global.Dex_Hatching[379] = "False";
+    global.Dex_Hatching[379] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[379] = true;   // F-026: Mark as legendary
 
-    // Pokemon 380 - "Latias"
+    // Pokemon 380 - "Latias" (LEGENDARY)
     global.Dex_Evolve_Level[380] = -1;
-    global.Dex_Hatching[380] = "False";
+    global.Dex_Hatching[380] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[380] = true;   // F-026: Mark as legendary
 
-    // Pokemon 381 - "Latios"
+    // Pokemon 381 - "Latios" (LEGENDARY)
     global.Dex_Evolve_Level[381] = -1;
-    global.Dex_Hatching[381] = "False";
+    global.Dex_Hatching[381] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[381] = true;   // F-026: Mark as legendary
 
-    // Pokemon 382 - "Kyogre"
+    // Pokemon 382 - "Kyogre" (LEGENDARY)
     global.Dex_Evolve_Level[382] = -1;
-    global.Dex_Hatching[382] = "False";
+    global.Dex_Hatching[382] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[382] = true;   // F-026: Mark as legendary
 
-    // Pokemon 383 - "Groudon"
+    // Pokemon 383 - "Groudon" (LEGENDARY)
     global.Dex_Evolve_Level[383] = -1;
-    global.Dex_Hatching[383] = "False";
+    global.Dex_Hatching[383] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[383] = true;   // F-026: Mark as legendary
 
-    // Pokemon 384 - "Rayquaza"
+    // Pokemon 384 - "Rayquaza" (LEGENDARY)
     global.Dex_Evolve_Level[384] = -1;
-    global.Dex_Hatching[384] = "False";
+    global.Dex_Hatching[384] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[384] = true;   // F-026: Mark as legendary
 
-    // Pokemon 385 - "Jirachi"
+    // Pokemon 385 - "Jirachi" (LEGENDARY)
     global.Dex_Evolve_Level[385] = -1;
-    global.Dex_Hatching[385] = "False";
+    global.Dex_Hatching[385] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[385] = true;   // F-026: Mark as legendary
 
-    // Pokemon 386 - "Deoxys"
+    // Pokemon 386 - "Deoxys" (LEGENDARY)
     global.Dex_Evolve_Level[386] = -1;
-    global.Dex_Hatching[386] = "False";
+    global.Dex_Hatching[386] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[386] = true;   // F-026: Mark as legendary
 }

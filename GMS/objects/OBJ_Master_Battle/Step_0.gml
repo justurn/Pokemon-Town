@@ -344,6 +344,20 @@ if (battle_state == "ENEMY_FAINT") {
     // Add battle log message
     if (enemy_faint_timer == 1) {
         array_push(battle_log, victory_data.defeated_pokemon_name + " fainted!");
+        
+        // F-026: Check if defeated Pokemon is legendary and unlock hatching
+        var defeated_id = wild_pokemon.pokedex_id;
+        if (global.Dex_Legendary[defeated_id] && global.Dex_Hatching[defeated_id] == "False") {
+            
+            // Toggle hatching flag to make legendary hatchable
+            global.Dex_Hatching[defeated_id] = "True";
+            
+            // Add achievement message
+            array_push(battle_log, "Legendary " + victory_data.defeated_pokemon_name + " can now hatch from eggs!");
+            
+            show_debug_message("F-026: Legendary unlocked for hatching: " + string(defeated_id) + " (" + victory_data.defeated_pokemon_name + ")");
+        }
+        
         if (array_length(battle_log) > max_log_messages) {
             array_delete(battle_log, 0, 1);
         }

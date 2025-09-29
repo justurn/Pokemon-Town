@@ -699,8 +699,14 @@ function SCR_Initialise_Globals()
 
 	show_debug_message("Shuffled Egg Types: " + string(global.shuffled_types));
 
+	// F-026: Initialize legendary Pokemon flag system
+	// Initialize legendary flags array
+	for (var i = 1; i <= 1000; i++) {
+		global.Dex_Legendary[i] = false;
+	}
+
 	// Battle System Settings
-	global.wild_pokemon_flee_chance = 5; // Wild Pokemon flee chance percentage (1% default)
+	global.wild_pokemon_flee_chance = 1; // Wild Pokemon flee chance percentage (1% default)
 	global.flee_success_modifier = 1; // Flee success rate modifier for both player and wild Pokemon (1.0 = normal, 0.1 = 10% chance, 0.0 = never succeed)
 	
 	// Rival Battle System

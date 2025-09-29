@@ -112,7 +112,7 @@ if (current_hp <= 0 && instance_exists(OBJ_Master_Battle) &&
                 
                 // Check for evolution using existing system (after level up)
                 var evolve_level = global.Dex_Evolve_Level[global.pokemon_ID];
-                if (evolve_level != -1 && global.pokemon_level >= evolve_level) {
+                if (evolve_level != -1 && victory_data.level_after >= evolve_level) {
                     victory_data.evolution_triggered = true;
                     
                     // Apply existing evolution switch case logic with comprehensive comments

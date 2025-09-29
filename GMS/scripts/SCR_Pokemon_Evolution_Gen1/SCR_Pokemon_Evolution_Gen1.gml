@@ -286,7 +286,7 @@ function SCR_Pokemon_Evolution_Gen1() {
     global.Dex_Hatching[66] = "True";
 
     // Pokemon 67 - "Machoke"
-    global.Dex_Evolve_Level[67] = -1;
+    global.Dex_Evolve_Level[67] = 48;
     global.Dex_Hatching[67] = "False";
 
     // Pokemon 68 - "Machamp"
@@ -593,17 +593,20 @@ function SCR_Pokemon_Evolution_Gen1() {
     global.Dex_Evolve_Level[143] = -1;
     global.Dex_Hatching[143] = "True";
 
-    // Pokemon 144 - "Articuno"
+    // Pokemon 144 - "Articuno" (LEGENDARY)
     global.Dex_Evolve_Level[144] = -1;
-    global.Dex_Hatching[144] = "True";
+    global.Dex_Hatching[144] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[144] = true;   // F-026: Mark as legendary
 
-    // Pokemon 145 - "Zapdos"
+    // Pokemon 145 - "Zapdos" (LEGENDARY)
     global.Dex_Evolve_Level[145] = -1;
-    global.Dex_Hatching[145] = "True";
+    global.Dex_Hatching[145] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[145] = true;   // F-026: Mark as legendary
 
-    // Pokemon 146 - "Moltres"
+    // Pokemon 146 - "Moltres" (LEGENDARY)
     global.Dex_Evolve_Level[146] = -1;
-    global.Dex_Hatching[146] = "True";
+    global.Dex_Hatching[146] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[146] = true;   // F-026: Mark as legendary
 
     // Pokemon 147 - "Dratini"
     global.Dex_Evolve_Level[147] = 30;
@@ -617,11 +620,13 @@ function SCR_Pokemon_Evolution_Gen1() {
     global.Dex_Evolve_Level[149] = -1;
     global.Dex_Hatching[149] = "False";
 
-    // Pokemon 150 - "Mewtwo"
+    // Pokemon 150 - "Mewtwo" (LEGENDARY)
     global.Dex_Evolve_Level[150] = -1;
-    global.Dex_Hatching[150] = "True";
+    global.Dex_Hatching[150] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[150] = true;   // F-026: Mark as legendary
 
-    // Pokemon 151 - "Mew"
+    // Pokemon 151 - "Mew" (LEGENDARY)
     global.Dex_Evolve_Level[151] = -1;
-    global.Dex_Hatching[151] = "True";
+    global.Dex_Hatching[151] = "False";  // F-026: Start as non-hatchable
+    global.Dex_Legendary[151] = true;   // F-026: Mark as legendary
 }
