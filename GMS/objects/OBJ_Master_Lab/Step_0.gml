@@ -50,8 +50,9 @@ if (global.down && delay > delay_limit)
 	show_debug_message("Down pressed - mode switching not yet implemented");
 }
 
-if (global.enter && egg_count > 0)
+if (global.enter && delay > delay_limit && egg_count > 0)
 {
+	delay = 0;
 	// Ensure selected_egg is within bounds before using it
 	if (global.selected_egg >= egg_count) {
 		global.selected_egg = 0;
