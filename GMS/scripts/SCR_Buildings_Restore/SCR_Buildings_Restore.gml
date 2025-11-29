@@ -1,8 +1,8 @@
 function SCR_Buildings_Restore()
 {
-    if (global.building_count > 0)
+    if (global.building_count > 1)
     {
-        for (var i = 0; i < global.building_count; i++)
+        for (var i = 1; i < global.building_count; i++)
         {
             var build_x = global.buildings_x[i];
             var build_y = global.buildings_y[i];

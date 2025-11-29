@@ -2,6 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SCR_Trees_Spawn()
 {
+	// Destroy any existing tree instances first to prevent duplicates
+	with (OBJ_Tree) {
+		instance_destroy();
+	}
+	
 	var tree_y = global.plot_y - 60;
 	var tree_x_offset = global.plot_width/2;
 	var plot_width = global.plot_width
