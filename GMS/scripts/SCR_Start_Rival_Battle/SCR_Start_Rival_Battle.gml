@@ -17,6 +17,12 @@ function SCR_Start_Rival_Battle() {
     // Mark this as a trainer battle (for any special handling)
     global.is_trainer_battle = true;
     
+    // Clear the encounter active flag and saved position data since battle is starting
+    global.rival_encounter_active = false;
+    global.rival_saved_x = -1;
+    global.rival_saved_patrol_left = -1;
+    global.rival_saved_patrol_right = -1;
+    
     // Destroy rival trainer object
     with (OBJ_Rival_Trainer) {
         instance_destroy();

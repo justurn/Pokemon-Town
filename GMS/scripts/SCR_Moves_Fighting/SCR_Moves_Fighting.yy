@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SCR_Moves_Fighting",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Moves",
-    "path": "folders/Scripts/Moves.yy",
+  "$GMScript":"v1",
+  "%Name":"SCR_Moves_Fighting",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Moves_Fighting",
+  "parent":{
+    "name":"Moves",
+    "path":"folders/Scripts/Moves.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

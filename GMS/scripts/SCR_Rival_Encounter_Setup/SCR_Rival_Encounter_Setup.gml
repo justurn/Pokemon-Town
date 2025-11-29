@@ -27,6 +27,9 @@ function SCR_Rival_Encounter_Setup(milestone_level) {
     // Store milestone level for consistent rival battles
     global.rival_milestone_level = milestone_level;
     
+    // Mark rival encounter as active to prevent respawning during room transitions
+    global.rival_encounter_active = true;
+    
     // Use proper spawn positioning logic like wild Pokemon
     var rival_spawn_x, rival_spawn_y;
     var valid_position = false;

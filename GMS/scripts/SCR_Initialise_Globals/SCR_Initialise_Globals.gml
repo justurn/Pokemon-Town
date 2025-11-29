@@ -721,6 +721,10 @@ function SCR_Initialise_Globals()
 	global.temp_wild_pokemon_a_id = 0; // Temp storage for wild Pokemon during rival battles
 	global.temp_wild_pokemon_b_id = 0;
 	global.is_trainer_battle = false;
+	global.rival_encounter_active = false; // Prevents rival respawning during room transitions
+	global.rival_saved_x = -1; // Saved X position for room transitions
+	global.rival_saved_patrol_left = -1; // Saved patrol boundaries
+	global.rival_saved_patrol_right = -1;
 	global.treasure_limit_override = -1; // -1 means no override, use normal treasure_limit
 }
 

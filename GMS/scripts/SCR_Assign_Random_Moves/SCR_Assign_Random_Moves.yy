@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SCR_Assign_Random_Moves",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Battle",
-    "path": "folders/Scripts/Battle.yy",
+  "$GMScript":"v1",
+  "%Name":"SCR_Assign_Random_Moves",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Assign_Random_Moves",
+  "parent":{
+    "name":"Battle",
+    "path":"folders/Scripts/Battle.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

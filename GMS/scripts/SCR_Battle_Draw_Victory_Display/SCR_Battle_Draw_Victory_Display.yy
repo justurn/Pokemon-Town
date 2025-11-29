@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SCR_Battle_Draw_Victory_Display",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Battle",
-    "path": "folders/Scripts/Battle.yy",
+  "$GMScript":"v1",
+  "%Name":"SCR_Battle_Draw_Victory_Display",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Battle_Draw_Victory_Display",
+  "parent":{
+    "name":"Battle",
+    "path":"folders/Scripts/Battle.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

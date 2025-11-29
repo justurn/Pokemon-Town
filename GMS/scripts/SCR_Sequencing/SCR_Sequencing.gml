@@ -70,7 +70,7 @@ function SCR_Sequencing()
 	// RIVAL ENCOUNTER SYSTEM
 	// Check for level milestones before wild Pokemon spawning
 	// Only spawn rival if no wild Pokemon battles are active and no existing rival
-	if (global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer) && !global.is_trainer_battle) {
+	if (global.pokemon_ID != 0 && !instance_exists(OBJ_Rival_Trainer) && !global.is_trainer_battle && !global.rival_encounter_active) {
 		var current_level = global.pokemon_level;
 		
 		// Check if current level matches any milestone in the array
@@ -87,6 +87,22 @@ function SCR_Sequencing()
 				return; // Skip normal wild Pokemon spawning
 			}
 		}
+	}
+	
+	// RIVAL PERSISTENCE - Respawn rival if encounter is active but object doesn't exist (after room transitions)
+	if (global.rival_encounter_active && !instance_exists(OBJ_Rival_Trainer) && global.pokemon_ID != 0) {
+		// Restore rival at saved position
+		var rival_x = (global.rival_saved_x != -1) ? global.rival_saved_x : room_width / 2;
+		var rival_instance = instance_create_layer(rival_x, global.player_y, "Instances", OBJ_Rival_Trainer);
+		
+		// Restore patrol boundaries if saved
+		if (global.rival_saved_patrol_left != -1 && global.rival_saved_patrol_right != -1) {
+			rival_instance.patrol_left = global.rival_saved_patrol_left;
+			rival_instance.patrol_right = global.rival_saved_patrol_right;
+		}
+		
+		show_debug_message("Restored rival at saved position: " + string(rival_x));
+		return; // Skip normal wild Pokemon spawning
 	}
 	
 	// Wild Pokemon

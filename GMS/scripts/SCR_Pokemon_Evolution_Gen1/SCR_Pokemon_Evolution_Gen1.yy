@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "SCR_Pokemon_Evolution_Gen1",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Pokedex",
-    "path": "folders/Scripts/Pokedex.yy",
+  "$GMScript":"v1",
+  "%Name":"SCR_Pokemon_Evolution_Gen1",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Pokemon_Evolution_Gen1",
+  "parent":{
+    "name":"Pokedex",
+    "path":"folders/Scripts/Pokedex.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
