@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SCR_Get_Habitat_Index",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Get_Habitat_Index",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

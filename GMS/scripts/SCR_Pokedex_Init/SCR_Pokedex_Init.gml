@@ -31,6 +31,8 @@ function SCR_Pokedex() {
         global.Dex_Secondary_Types[i] = "";
     }
     
+    // Biome and habitat system initialized in SCR_Initialise_Globals()
+    
     // Load all Pokemon data modules in logical order
     
     // 1. Basic Information (Names, Sprites, Types)
@@ -47,6 +49,9 @@ function SCR_Pokedex() {
     SCR_Pokemon_Evolution_Gen1();  // Pokemon 1-151
     SCR_Pokemon_Evolution_Gen2();  // Pokemon 152-251
     SCR_Pokemon_Evolution_Gen3();  // Pokemon 252-386
+    
+    // 4. Habitat & Biome Assignments (F-001) - Real PokéAPI Data
+    // Habitat assignments are now included in SCR_Pokemon_Basic_Gen1()
     
     // Optional: Debug verification
     show_debug_message("Pokedex initialization complete - 386 Pokemon loaded");

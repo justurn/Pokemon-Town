@@ -1,10 +1,14 @@
 function SCR_Initialise_Globals()
 {
+	// === F-001 BIOME AND HABITAT SYSTEM ===
+	// CRITICAL: Initialize FIRST so habitat indices are available for Pokemon data
+	SCR_Biome_Habitats();
+
 	randomize();
 	var i = 0;
-	
+
 	global.log = false;
-	
+
 	// F-018: Initialize Battle System Enhancements
 	SCR_Type_Icons_Init();
 	SCR_Moves_Init();
@@ -126,6 +130,10 @@ function SCR_Initialise_Globals()
 	global.item_name[i] = "Noodles";
 	global.item_sprite[i] = SPR_Noodles;
 
+	i = 12; // Adventure Scroll item ID
+	global.item_name[i] = "Adventure Map";
+	global.item_sprite[i] = SPR_Scroll;
+	
 	// Set all item found counts to 0
 	for (i = 0; i < array_length(global.item_name); i++)
 	{
@@ -383,74 +391,93 @@ function SCR_Initialise_Globals()
 	global.building_sprites[i] = SPR_Lab;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Lab;
+	global.building_item_id[i] = -1; // No item requirement (special case)
 		
-	//Poke Center
+	// Adventure Building
 	i = 2;
+	global.building_name[i] = "Adventure Building";
+	global.building_sprites[i] = SPR_Station;
+	global.building_cost[i] = 2;
+	global.building_room[i] = RM_Map;
+	global.building_item_id[i] = 12; // Adventure Map scroll
+	
+	//Poke Center
+	i = 3;
 	global.building_name[i] = "Poke Center";
 	global.building_sprites[i] = SPR_Poke_Center;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Poke_Center;
+	global.building_item_id[i] = 2; // Med Kit
 	
 	// Factory - Augments Defence
-	i = 3;
+	i = 4;
 	global.building_name[i] = "Factory";
 	global.building_sprites[i] = SPR_Factory;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Factory;
+	global.building_item_id[i] = 3; // Gears
 
 	// Burger Shop - Augments HP
-	i = 4;
+	i = 5;
 	global.building_name[i] = "Burger Shop";
 	global.building_sprites[i] = SPR_Burger_Shop;
 	global.building_cost[i] = 2;	
 	global.building_room[i] = RM_Burger_Shop;
+	global.building_item_id[i] = 4; // Burger
 	
 	// Cafe - Augments Speed
-	i = 5;
+	i = 6;
 	global.building_name[i] = "Cafe";
 	global.building_sprites[i] = SPR_Cafe;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Cafe;
+	global.building_item_id[i] = 5; // Coffee
 	
 	// Library - Augments SP Defence
-	i = 6;
+	i = 7;
 	global.building_name[i] = "Library";
 	global.building_sprites[i] = SPR_Library;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Library;
+	global.building_item_id[i] = 6; // Book
 	
 	// Power Station - Augements SP Attack
-	i = 7;
+	i = 8;
 	global.building_name[i] = "Power Station";
 	global.building_sprites[i] = SPR_Power_Station;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Power_Station;
+	global.building_item_id[i] = 7; // Battery
 	
 	// Gym
-	i = 8;
+	i = 9;
 	global.building_name[i] = "Gym";
 	global.building_sprites[i] = SPR_Gym;
 	global.building_cost[i] = 2;
 	global.building_room[i] = RM_Gym;
+	global.building_item_id[i] = 8; // Punch Card
 	
 	// Arcade
-	i = 9;
+	i = 10;
 	global.building_name[i] = "Arcade";
 	global.building_sprites[i] = SPR_Arcade;
 	global.building_cost[i] = 2;	
 	global.building_room[i] = RM_Arcade;
+	global.building_item_id[i] = 9; // Coin
 	
 	// Noodle Shop
-	i = 10;
+	i = 11;
 	global.building_name[i] = "Noodle Shop";
 	global.building_sprites[i] = SPR_Noodle_Shop;
 	global.building_cost[i] = 2;	
 	global.building_room[i] = RM_Noodle_Shop;
+	global.building_item_id[i] = 10; // Noodles
 	
 	// Potion Shop for combat heals?
 	// Sushi shop?
 	// Florist?
-	// Expedition Camp? for adventures out of town...
+	
+	// F-001: Biome index initialized after SCR_Biome_Habitats() call (see line ~757)
 	
 	
 	var building_limit = array_length(global.building_name) - 1;
@@ -726,5 +753,9 @@ function SCR_Initialise_Globals()
 	global.rival_saved_patrol_left = -1; // Saved patrol boundaries
 	global.rival_saved_patrol_right = -1;
 	global.treasure_limit_override = -1; // -1 means no override, use normal treasure_limit
+	
+	// F-001: Initialize default biome/habitat for battle backgrounds (after SCR_Biome_Habitats at top)
+	global.selected_biome_index = SCR_Get_Biome_Index("Town");
+	global.selected_habitat_index = -1;  // Set during battle initialization (random per battle)
 }
 

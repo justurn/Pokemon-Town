@@ -94,9 +94,31 @@ battle_background[7] = BG_Autumn_Battle;
 battle_background[8] = BG_Desert_Town_Battle;
 battle_background[9] = BG_Dungeon_Battle;
 
-// Pick a random background
-random_background = battle_background[irandom(9)];
-sprite_index = random_background;
+// F-001: Randomly select habitat from selected biome, use habitat's background
+var biome_index = global.selected_biome_index;
+var biome_name = global.Biome_Names[biome_index];
+
+// Get all habitats that belong to this biome
+var available_habitats = SCR_Get_Habitats_For_Biome(biome_index);
+
+// Randomly select one habitat from the available habitats
+if (array_length(available_habitats) > 0) {
+    var random_habitat_index = available_habitats[irandom(array_length(available_habitats) - 1)];
+    global.selected_habitat_index = random_habitat_index;
+
+    var habitat_name = global.Habitat_Names[random_habitat_index];
+    var background_name = global.Habitat_Backgrounds[random_habitat_index];
+    selected_background = asset_get_index(background_name);
+
+    show_debug_message("Battle - Biome: " + biome_name + " (index " + string(biome_index) + ") → Habitat: " + habitat_name + " (index " + string(random_habitat_index) + ") → Background: " + background_name);
+} else {
+    // Fallback if no habitats found (shouldn't happen)
+    show_debug_message("ERROR: No habitats found for biome " + biome_name + " - using fallback background");
+    selected_background = BG_Autumn_Battle;
+    global.selected_habitat_index = -1;
+}
+
+sprite_index = selected_background;
 
 x = 0
 y = 0

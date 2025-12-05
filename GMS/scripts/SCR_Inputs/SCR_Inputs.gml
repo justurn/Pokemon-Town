@@ -47,6 +47,18 @@ function SCR_Inputs()
 	{
 		global.log = !global.log;
 	}
+	
+	// Simple cheat: Give crates to build Adventure Building (key "C")
+	if (keyboard_check_pressed(ord("C")))
+	{
+		if (global.pokemon_ID != 0) {
+			global.item_held[1] = 10; // Give enough crates
+			global.item_held[12] = 1; // Give Adventure Map scroll
+			show_debug_message("CHEAT: Crates and Adventure Map given!");
+		} else {
+			show_debug_message("CHEAT: Get a Pokemon first before building!");
+		}
+	}
 	if (gamepad_button_check_pressed(0, 4))
 	{
 		global.log = !global.log;	

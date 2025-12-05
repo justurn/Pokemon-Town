@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SCR_Biome_Habitats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Biome_Habitats",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

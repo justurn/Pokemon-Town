@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SCR_Get_Habitats_For_Biome",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SCR_Get_Habitats_For_Biome",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

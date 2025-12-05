@@ -8,7 +8,7 @@
 
 function SCR_Sequencing()
 {
-	global.tip_string = "Game Completed";
+	global.tip_string = ""; // Reset tip, will be set by conditions below
 	var max_buildings = array_length(global.building_sprites);
 	
 	// Entry Conditions
@@ -19,36 +19,28 @@ function SCR_Sequencing()
 		global.entry_allowed[i] = false;
 	}
 	
-	// Lab
-	i = 1
-	global.building_entry_condition[i] = (global.pokemon_ID == 0 || global.pokemon_health <= 0)
-	// Poke Center
-	i = 2
-	global.building_entry_condition[i] = (global.pokemon_health < global.pokemon_health_max && global.item_held[i] > 0)
-	// Factory
-	i = 3
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Burger Shop
-	i = 4
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Cafe
-	i = 5
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Library
-	i = 6
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Power Station
-	i = 7
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Gym
-	i = 8
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Arcade
-	i = 9
-	global.building_entry_condition[i] = global.item_held[i] > 0
-	// Noodle Shop
-	i = 10
-	global.building_entry_condition[i] = global.item_held[i] > 0
+	// Set entry conditions for each building using the new mapping system
+	for (i = 1; i < max_buildings; i++)
+	{
+		var item_id = global.building_item_id[i];
+		
+		// Special cases for buildings that don't use standard item logic
+		if (i == 1) { // Lab
+			global.building_entry_condition[i] = (global.pokemon_ID == 0 || global.pokemon_health <= 0);
+		}
+		else if (i == 2) { // Adventure Building - requires Adventure Map AND Pokemon
+			global.building_entry_condition[i] = (global.pokemon_ID != 0 && global.item_held[item_id] > 0);
+		}
+		else if (i == 3) { // Poke Center
+			global.building_entry_condition[i] = (global.pokemon_health < global.pokemon_health_max && global.item_held[item_id] > 0);
+		}
+		else if (item_id >= 0) { // Regular buildings with item requirements
+			global.building_entry_condition[i] = global.item_held[item_id] > 0;
+		}
+		else { // Fallback for buildings without item mapping
+			global.building_entry_condition[i] = false;
+		}
+	}
 	
 	// Entry Permission Checks
     for (i = 1; i < max_buildings; i++)
@@ -222,14 +214,19 @@ function SCR_Sequencing()
 	// Building Construction Checks
     for (i = 1; i < max_buildings; i++)
     {
-        if (global.building_count = i + 1  && global.item_held[i] == -1)
+		var item_id = global.building_item_id[i];
+		
+		// Initialize item when building becomes available
+        if (global.building_count = i + 1  && item_id >= 0 && global.item_held[item_id] == -1)
         {
-			global.item_held[i] = 0;
+			global.item_held[item_id] = 0;
         }
-		else if (global.item_held[i] != -1 && global.building_count == i && global.item_held[1] < global.building_cost[i])
+		// Check if player needs more crates
+		else if (item_id >= 0 && global.item_held[item_id] != -1 && global.building_count == i && global.item_held[1] < global.building_cost[i])
 		{
 			global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
 		}	
+		// Allow construction when player has enough crates
         else if (global.item_held[1] >= global.building_cost[i] && global.building_count == i)
         {
             // Allow construction
@@ -251,4 +248,9 @@ function SCR_Sequencing()
 			global.tip_string = "Enter Lab";
 		}
     }
+	
+	// Set "Game Completed" only when all buildings are built
+	if (global.tip_string == "" && global.building_count >= max_buildings && !global.more_buildings) {
+		global.tip_string = "Game Completed";
+	}
 }

@@ -27,6 +27,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[1] = "Grass";
     global.Dex_Secondary_Types[1] = "Poison";
     global.Dex_Portrait[1] = ICO_0001;
+    global.Dex_Habitats[1] = [SCR_Get_Habitat_Index("Grassland")]; // PokéAPI habitat
 
     // Pokemon 2 - "Ivysaur"
     global.Dex_Names[2] = "Ivysaur";
@@ -34,6 +35,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[2] = "Grass";
     global.Dex_Secondary_Types[2] = "Poison";
     global.Dex_Portrait[2] = ICO_0002;
+    global.Dex_Habitats[2] = [SCR_Get_Habitat_Index("Grassland")]; // PokéAPI habitat
 
     // Pokemon 3 - "Venusaur"
     global.Dex_Names[3] = "Venusaur";
@@ -41,6 +43,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[3] = "Grass";
     global.Dex_Secondary_Types[3] = "Poison";
     global.Dex_Portrait[3] = ICO_0003;
+    global.Dex_Habitats[3] = [SCR_Get_Habitat_Index("Grassland")]; // PokéAPI habitat
 
     // Pokemon 4 - "Charmander"
     global.Dex_Names[4] = "Charmander";
@@ -90,6 +93,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[10] = "Bug";
     global.Dex_Secondary_Types[10] = "";
     global.Dex_Portrait[10] = ICO_0010;
+    global.Dex_Habitats[10] = [SCR_Get_Habitat_Index("Forest")]; // PokéAPI habitat
 
     // Pokemon 11 - "Metapod"
     global.Dex_Names[11] = "Metapod";
@@ -104,6 +108,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[12] = "Bug";
     global.Dex_Secondary_Types[12] = "Flying";
     global.Dex_Portrait[12] = ICO_0012;
+    global.Dex_Habitats[12] = [SCR_Get_Habitat_Index("Forest")]; // PokéAPI habitat
 
     // Pokemon 13 - "Weedle"
     global.Dex_Names[13] = "Weedle";
@@ -111,6 +116,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[13] = "Bug";
     global.Dex_Secondary_Types[13] = "Poison";
     global.Dex_Portrait[13] = ICO_0013;
+    global.Dex_Habitats[13] = [SCR_Get_Habitat_Index("Forest")]; // PokéAPI habitat
 
     // Pokemon 14 - "Kakuna"
     global.Dex_Names[14] = "Kakuna";
@@ -195,6 +201,7 @@ function SCR_Pokemon_Basic_Gen1() {
     global.Dex_Primary_Types[25] = "Electric";
     global.Dex_Secondary_Types[25] = "";
     global.Dex_Portrait[25] = ICO_0025;
+    global.Dex_Habitats[25] = [SCR_Get_Habitat_Index("Forest")]; // PokéAPI habitat
 
     // Pokemon 26 - "Raichu"
     global.Dex_Names[26] = "Raichu";
