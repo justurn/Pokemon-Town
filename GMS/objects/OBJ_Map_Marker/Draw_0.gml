@@ -10,16 +10,10 @@ if (!variable_instance_exists(id, "is_selected")) {
 draw_self();
 
 // Optional: Draw biome name below marker for debugging
-if (is_selected) {
-    var biome_name = "Unknown";
-    
-    // Get biome name based on object type
-    if (object_index == OBJ_Map_Marker_Town) {
-        biome_name = "Town";
-    } else if (object_index == OBJ_Map_Marker_Forrest) {
-        biome_name = "Forest";
-    }
-    
+if (is_selected && variable_instance_exists(id, "biome_index")) {
+    // Get biome name from array using child's biome_index
+    var biome_name = global.Biome_Names[biome_index];
+
     // Draw text below marker
     draw_set_color(c_white);
     draw_set_halign(fa_center);

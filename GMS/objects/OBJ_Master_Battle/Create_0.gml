@@ -1,10 +1,82 @@
-// Position Pokemon in the right area, away from the side panel (512px wide)
-// Frame them nicely within the battle area considering UI panels
-pokemon_a_x = 650;  // Player Pokemon - bottom right, below info panel
-pokemon_a_y = 350;
+// I-021 Fix: Select Pokemon for adventure battles BEFORE creating battle objects
+if (global.adventure_active) 
+{
+    // Get current habitat from adventure queue
+    var current_habitat_index;
+    var is_rival_battle = false;
 
-pokemon_b_x = 850;  // Wild Pokemon - top right, moved right by 100px
-pokemon_b_y = 200;  // Wild Pokemon - moved down by 50px
+    // I-024 Fix: Check if this is a rival battle (final encounter)
+    if (global.adventure_encounter >= array_length(global.adventure_habitat_queue)) {
+        // Rival battle - use random habitat from queue for variety
+        current_habitat_index = global.adventure_habitat_queue[irandom(array_length(global.adventure_habitat_queue) - 1)];
+        is_rival_battle = true;
+        show_debug_message("Adventure Battle " + string(global.adventure_encounter + 1) + "/" + string(global.adventure_max_encounters) + " - RIVAL BATTLE");
+    } else {
+        // Regular habitat battle
+        current_habitat_index = global.adventure_habitat_queue[global.adventure_encounter];
+        show_debug_message("Adventure Battle " + string(global.adventure_encounter + 1) + "/" + string(global.adventure_max_encounters) + " - Habitat: " + global.Habitat_Names[current_habitat_index]);
+    }
+
+    // Set habitat for SCR_Wild_Pokemon filtering
+    global.selected_habitat_index = current_habitat_index;
+
+    // Build filtered Pokemon list with weighted spawning
+    SCR_Wild_Pokemon([]);
+
+    // Weighted random selection (matching SCR_Sequencing logic)
+    var rand_pick = random(global.total_spawn_weight);
+    var cumulative_weight = 0;
+    global.wild_pokemon_battle_id = 0; // Default fallback
+
+    for (var i = 0; i < array_length(global.valid_wild_pokemon); i++) {
+        cumulative_weight += global.wild_spawn_weights[i];
+        if (rand_pick < cumulative_weight) {
+            global.wild_pokemon_battle_id = global.valid_wild_pokemon[i];
+            break;
+        }
+    }
+
+    // I-024 Fix: Set up rival trainer battle if this is the final encounter
+    if (is_rival_battle) {
+        // I-028 Fix: Mark as trainer battle - level calculated by OBJ_Battle_Pokemon_Wild
+        global.is_trainer_battle = true;
+        show_debug_message("RIVAL TRAINER BATTLE - Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ")");
+    } else {
+        // I-023 Fix: Ensure trainer battle flag is false for regular wild battles
+        global.is_trainer_battle = false;
+        show_debug_message("Selected wild Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ") from " + global.Habitat_Names[current_habitat_index]);
+    }
+}
+
+// Set background using centralized selection logic (I-027)
+selected_background = SCR_Choose_Background();
+sprite_index = selected_background;
+image_speed = 0; // Stop animation - use frame 0 only
+image_index = 0;
+
+x = 0
+y = 0
+
+// F-029: Dynamic background positioning system
+// Get background name from sprite asset
+var bg_name = sprite_get_name(selected_background);
+var bg_index = SCR_Get_Background_Index(bg_name);
+
+// Use background-specific positions or fallback to defaults
+if (bg_index != -1) {
+    pokemon_b_x = global.background_wild_x[bg_index];    // Wild Pokemon
+    pokemon_b_y = global.background_wild_y[bg_index];
+    pokemon_a_x = global.background_player_x[bg_index];  // Player Pokemon
+    pokemon_a_y = global.background_player_y[bg_index];
+    show_debug_message("Using custom positioning for " + bg_name + " (Wild: " + string(pokemon_b_x) + ", " + string(pokemon_b_y) + " | Player: " + string(pokemon_a_x) + ", " + string(pokemon_a_y) + ")");
+} else {
+    // Fallback to default positions if background not found
+    pokemon_a_x = 650;  // Player Pokemon - bottom right, below info panel
+    pokemon_a_y = 350;
+    pokemon_b_x = 875;  // Wild Pokemon
+    pokemon_b_y = 225;
+    show_debug_message("WARNING: Using default positioning for " + bg_name);
+}
 
 player_pokemon = instance_create_layer(pokemon_a_x, pokemon_a_y, "Instances", OBJ_Battle_Pokemon_Tame);
 wild_pokemon = instance_create_layer(pokemon_b_x, pokemon_b_y, "Instances", OBJ_Battle_Pokemon_Wild);
@@ -83,45 +155,26 @@ flee_animation_duration = 45; // 0.75 seconds
 flee_target_x = 0;
 flee_who = ""; // "player" or "wild"
 
-battle_background[0] = BG_Arena_Battle;
-battle_background[1] = BG_Summer_Battle;
-battle_background[2] = BG_Field_Battle;
-battle_background[3] = BG_Rock_Battle;
-battle_background[4] = BG_Snow_Battle;
-battle_background[5] = BG_Desert_Battle;
-battle_background[6] = BG_Woods_Battle;
-battle_background[7] = BG_Autumn_Battle;
-battle_background[8] = BG_Desert_Town_Battle;
-battle_background[9] = BG_Dungeon_Battle;
+// F-001: Town battles - randomly select habitat from selected biome
+// (Adventure battles already set habitat in lines 1-48)
+if (!global.adventure_active) {
+    var biome_index = global.selected_biome_index;
+    var biome_name = global.Biome_Names[biome_index];
 
-// F-001: Randomly select habitat from selected biome, use habitat's background
-var biome_index = global.selected_biome_index;
-var biome_name = global.Biome_Names[biome_index];
+    // Get all habitats that belong to this biome
+    var available_habitats = SCR_Get_Habitats_For_Biome(biome_index);
 
-// Get all habitats that belong to this biome
-var available_habitats = SCR_Get_Habitats_For_Biome(biome_index);
-
-// Randomly select one habitat from the available habitats
-if (array_length(available_habitats) > 0) {
-    var random_habitat_index = available_habitats[irandom(array_length(available_habitats) - 1)];
-    global.selected_habitat_index = random_habitat_index;
-
-    var habitat_name = global.Habitat_Names[random_habitat_index];
-    var background_name = global.Habitat_Backgrounds[random_habitat_index];
-    selected_background = asset_get_index(background_name);
-
-    show_debug_message("Battle - Biome: " + biome_name + " (index " + string(biome_index) + ") → Habitat: " + habitat_name + " (index " + string(random_habitat_index) + ") → Background: " + background_name);
-} else {
-    // Fallback if no habitats found (shouldn't happen)
-    show_debug_message("ERROR: No habitats found for biome " + biome_name + " - using fallback background");
-    selected_background = BG_Autumn_Battle;
-    global.selected_habitat_index = -1;
+    // Randomly select one habitat from the available habitats
+    if (array_length(available_habitats) > 0) {
+        global.selected_habitat_index = available_habitats[irandom(array_length(available_habitats) - 1)];
+        show_debug_message("Town Battle - Biome: " + biome_name + " → Habitat: " + global.Habitat_Names[global.selected_habitat_index]);
+    } else {
+        // Fallback: use first habitat in Town biome
+        show_debug_message("ERROR: No habitats found for biome " + biome_name);
+        var town_habitats = SCR_Get_Habitats_For_Biome(SCR_Get_Biome_Index("Town"));
+        global.selected_habitat_index = (array_length(town_habitats) > 0) ? town_habitats[0] : 0;
+    }
 }
-
-sprite_index = selected_background;
-
-x = 0
-y = 0
 
 // Check if this is a trainer battle for special handling
 if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {

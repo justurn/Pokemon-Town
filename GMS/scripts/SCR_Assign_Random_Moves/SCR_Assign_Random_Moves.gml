@@ -6,10 +6,16 @@ function SCR_Assign_Random_Moves(pokemon_instance)
     var pokemon_id = pokemon_instance.pokedex_id;
     var primary_type = global.Dex_Primary_Types[pokemon_id];
     var secondary_type = global.Dex_Secondary_Types[pokemon_id];
-    
+
+    // I-032 Fix: Validate primary_type before using it to prevent crashes
+    if (primary_type == undefined || primary_type == "") {
+        primary_type = "Normal"; // Safe default
+        show_debug_message("ERROR: Pokemon ID " + string(pokemon_id) + " has undefined primary type, defaulting to Normal");
+    }
+
     // Get type IDs using the fixed type mapping
     var primary_type_id = ds_map_find_value(global.type_name_to_id, string_lower(primary_type));
-    var secondary_type_id = (secondary_type != "" && secondary_type != "None") ? 
+    var secondary_type_id = (secondary_type != "" && secondary_type != "None") ?
                            ds_map_find_value(global.type_name_to_id, string_lower(secondary_type)) : -1;
     
     // Initialize moves to 0 (no move)

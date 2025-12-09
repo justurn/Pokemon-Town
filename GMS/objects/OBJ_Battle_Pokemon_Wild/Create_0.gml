@@ -29,15 +29,17 @@ var base_spdefence = global.Dex_SPdefence[pokedex_id];
 var base_speed = global.Dex_Speed[pokedex_id];
 var base_hp = global.Dex_Health[pokedex_id];
 
-// Level - preserve rival battle level for trainer battles
+// Level - I-028 Fix: Centralized level calculation for all battle types
 if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
-    // For trainer battles, use the pre-set level (don't randomize)
+    // Trainer battles (town + adventure rivals) - harder than player
+    global.wild_pokemon_level = global.pokemon_level + irandom(global.wild_pokemon_level_gap);
     level = global.wild_pokemon_level;
-    show_debug_message("Trainer battle: using fixed level " + string(level));
+    show_debug_message("Trainer battle: scaled level " + string(level) + " (player: " + string(global.pokemon_level) + ")");
 } else {
-    // For wild Pokemon, randomize level as normal
+    // Wild Pokemon - easier than player
     global.wild_pokemon_level = global.pokemon_level - irandom(global.wild_pokemon_level_gap);
     level = global.wild_pokemon_level;
+    show_debug_message("Wild Pokemon: scaled level " + string(level) + " (player: " + string(global.pokemon_level) + ")");
 }
 
 // Calculate Stats

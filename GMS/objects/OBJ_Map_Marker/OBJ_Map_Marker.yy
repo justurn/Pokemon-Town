@@ -9,8 +9,8 @@
   "name":"OBJ_Map_Marker",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Map Markers",
+    "path":"folders/Objects/Map Markers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

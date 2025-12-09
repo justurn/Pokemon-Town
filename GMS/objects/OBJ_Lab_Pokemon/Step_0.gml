@@ -9,6 +9,8 @@ if just_hatched = true
 		show_debug_message("Rival progress reset - new Pokemon hatched");
 		global.rival_pokemon_id = 0;
 		global.rival_completed_milestones = []; // Clear completed milestones
+		global.rival_encounter_active = false; // I-031 Fix: Prevent rival respawning
+		global.rival_milestone_level = 0; // Clear milestone level
 	}
 	
 	just_hatched = false;

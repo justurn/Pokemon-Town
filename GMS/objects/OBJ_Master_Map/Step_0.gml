@@ -73,45 +73,57 @@ if (array_length(global.markers_array) > 0) {
     if (global.enter && delay > delay_limit) {
         delay = 0;
         var selected_marker_obj = global.markers_array[global.selected_marker];
-        
-        // Check what type of marker was selected
-        if (object_get_name(selected_marker_obj.object_index) == "OBJ_Map_Marker_Town") {
+
+        // Get biome index from the selected marker
+        var biome_index = selected_marker_obj.biome_index;
+        var biome_name = global.Biome_Names[biome_index];
+
+        // Check if Town was selected (return without starting adventure)
+        if (biome_index == SCR_Get_Biome_Index("Town")) {
             // Return to town - refund Adventure Pass since adventure wasn't started
-            global.selected_biome_index = SCR_Get_Biome_Index("Town");
+            global.selected_biome_index = biome_index;
             global.item_held[12] += 1;
             show_debug_message("Returning to town - Adventure Pass refunded");
             room_goto(RM_Town);
-        } else if (object_get_name(selected_marker_obj.object_index) == "OBJ_Map_Marker_Forrest") {
-            // Start forest adventure
-            global.selected_biome_index = SCR_Get_Biome_Index("Forest");
+        } else {
+            // Start adventure for selected biome
+            global.selected_biome_index = biome_index;
 
-            // Generate biome-appropriate Pokemon pool using SCR_Wild_Pokemon with biome filtering
-            SCR_Wild_Pokemon();
+            // Get all habitats for this biome
+            var habitats = SCR_Get_Habitats_For_Biome(biome_index);
 
-            // Select random Pokemon from the filtered pool
-            if (array_length(global.valid_wild_pokemon) > 0) {
-                var random_index = irandom(array_length(global.valid_wild_pokemon) - 1);
-                var forest_pokemon_id = global.valid_wild_pokemon[random_index];
+            if (array_length(habitats) > 0) {
+                // Initialize adventure mode
+                global.adventure_active = true;
+                global.adventure_encounter = 0;
 
-                show_debug_message("Starting forest adventure! Selected Pokemon: " + global.Dex_Names[forest_pokemon_id]);
+                // Create shuffled habitat queue for adventure
+                global.adventure_habitat_queue = [];
+                for (var h = 0; h < array_length(habitats); h++) {
+                    global.adventure_habitat_queue[h] = habitats[h];
+                }
+                SCR_Shuffle_Array(global.adventure_habitat_queue);
 
-                // Set up battle with forest Pokemon (will expand to full adventure sequence)
-                global.wild_pokemon_battle_id = forest_pokemon_id;
-                global.wild_pokemon_level = global.pokemon_level; // Match player level
+                // Set max encounters (all habitats + 1 rival battle)
+                global.adventure_max_encounters = array_length(global.adventure_habitat_queue) + 1;
 
-                // TODO: Implement full 6-encounter adventure sequence
+                show_debug_message("=== STARTING " + biome_name + " ADVENTURE ===");
+                show_debug_message("Total encounters: " + string(global.adventure_max_encounters));
+                show_debug_message("Habitat order: ");
+                for (var h = 0; h < array_length(global.adventure_habitat_queue); h++) {
+                    var hab_idx = global.adventure_habitat_queue[h];
+                    show_debug_message("  " + string(h + 1) + ". " + global.Habitat_Names[hab_idx]);
+                }
+
+                // Start first battle
                 room_goto(RM_Battle);
             } else {
-                show_debug_message("ERROR: No valid Pokemon found for Forest biome!");
-                // Fallback to town if no Pokemon available
+                show_debug_message("ERROR: No habitats found for " + biome_name + " biome!");
+                // Fallback to town if no habitats available
                 global.selected_biome_index = SCR_Get_Biome_Index("Town");
                 global.item_held[12] += 1;
                 room_goto(RM_Town);
             }
-        } else {
-            // Generic biome selection - default to Town
-            global.selected_biome_index = SCR_Get_Biome_Index("Town");
-            show_debug_message("Selected unknown biome marker - defaulting to Town");
         }
     }
 }

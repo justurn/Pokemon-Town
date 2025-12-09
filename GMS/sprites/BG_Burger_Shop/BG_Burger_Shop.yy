@@ -12,21 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"826c9418-8f78-47bf-9162-ec9ec5af20c1","name":"826c9418-8f78-47bf-9162-ec9ec5af20c1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5b1f63e4-9b3e-4437-95a2-10ddee0973b2","name":"5b1f63e4-9b3e-4437-95a2-10ddee0973b2","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":574,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"d44f1cf4-0a4f-46c2-b632-392d0adc2358","blendMode":0,"displayName":"default","isLocked":false,"name":"d44f1cf4-0a4f-46c2-b632-392d0adc2358","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"12a54ba5-a0ed-47f7-be65-381f01d3dc7f","blendMode":0,"displayName":"default","isLocked":false,"name":"12a54ba5-a0ed-47f7-be65-381f01d3dc7f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"BG_Burger_Shop",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Backgrounds",
-    "path":"folders/Sprites/Backgrounds.yy",
+    "name":"Interior Backgrounds",
+    "path":"folders/Sprites/Backgrounds/Interior Backgrounds.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"826c9418-8f78-47bf-9162-ec9ec5af20c1","path":"sprites/BG_Burger_Shop/BG_Burger_Shop.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"08ba011e-6a48-4863-8232-08d53abbc89d","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5b1f63e4-9b3e-4437-95a2-10ddee0973b2","path":"sprites/BG_Burger_Shop/BG_Burger_Shop.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"05cd1515-b011-40dc-a5e9-b63aac8cfe9c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

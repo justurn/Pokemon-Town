@@ -229,11 +229,16 @@ if (battle_state == "WILD_TURN") {
         // Wild Pokemon has configurable chance to flee (but not in trainer battles)
         var wild_flee_roll = irandom(100);
         var is_trainer_battle = variable_global_exists("is_trainer_battle") && global.is_trainer_battle;
+        var is_adventure = variable_global_exists("adventure_active") && global.adventure_active;
         var modified_wild_flee_chance = global.wild_pokemon_flee_chance * global.flee_success_modifier;
         show_debug_message("Wild Pokemon flee attempt: base_chance=" + string(global.wild_pokemon_flee_chance) + ", modified_chance=" + string(modified_wild_flee_chance) + ", roll=" + string(wild_flee_roll));
-        if (wild_flee_roll < modified_wild_flee_chance && !is_trainer_battle) {
+        if (wild_flee_roll < modified_wild_flee_chance && !is_trainer_battle && !is_adventure) {
             // During wild Pokemon's turn, they can always flee regardless of speed
             show_debug_message("Wild Pokemon chose to flee during their turn");
+
+            // I-029 Fix: Save player Pokemon HP before ending battle
+            global.pokemon_health = player_pokemon.current_hp;
+
             // Add message to battle log
             array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
             if (array_length(battle_log) > max_log_messages) {
@@ -756,6 +761,8 @@ if (battle_state == "PLAYER_FAINT") {
             
             // Keep Pokemon fainted after defeat - player must visit Pokemon Center to heal
             global.pokemon_health = 0; // Set to 0 HP to prevent new battles
+
+            // Note: Adventure state and biome/habitat reset handled by OBJ_Master_Town/Other_4 (I-022/I-026)
             room_goto(RM_Town);
             show_debug_message("PLAYER_FAINT -> RM_Town: Manual transition after keypress");
         }

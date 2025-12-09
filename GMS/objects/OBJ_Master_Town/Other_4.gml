@@ -1,5 +1,19 @@
 if room == RM_Town
 {
+	// I-022/I-026 Fix: Reset all adventure and biome state when entering town
+	// Centralizes state reset for victory, defeat, and normal town entry
+	if (global.adventure_active) {
+		show_debug_message("Adventure ended - resetting state");
+		global.adventure_active = false;
+		global.adventure_encounter = 0;
+		global.adventure_habitat_queue = [];
+		global.adventure_max_encounters = 0;
+	}
+
+	global.selected_biome_index = SCR_Get_Biome_Index("Town");
+	global.selected_habitat_index = -1; // Will be set randomly by town spawning logic
+	show_debug_message("Town Room Start - Reset to Town biome");
+
 	room_width = global.town_size;
 	//show_debug_message("Room Width is: " + string(room_width))
 	instance_create_layer(0,0,"Instances",OBJ_Player)

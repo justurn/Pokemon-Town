@@ -1,7 +1,9 @@
 function SCR_Initialise_Globals()
 {
 	// === F-001 BIOME AND HABITAT SYSTEM ===
-	// CRITICAL: Initialize FIRST so habitat indices are available for Pokemon data
+	// F-029: Initialize backgrounds FIRST so background indices are available
+	SCR_Backgrounds();
+	// CRITICAL: Initialize habitats so habitat indices are available for Pokemon data
 	SCR_Biome_Habitats();
 
 	randomize();
@@ -757,5 +759,11 @@ function SCR_Initialise_Globals()
 	// F-001: Initialize default biome/habitat for battle backgrounds (after SCR_Biome_Habitats at top)
 	global.selected_biome_index = SCR_Get_Biome_Index("Town");
 	global.selected_habitat_index = -1;  // Set during battle initialization (random per battle)
+
+	// F-001: Adventure mode globals
+	global.adventure_active = false;
+	global.adventure_encounter = 0;
+	global.adventure_habitat_queue = [];
+	global.adventure_max_encounters = 0;
 }
 

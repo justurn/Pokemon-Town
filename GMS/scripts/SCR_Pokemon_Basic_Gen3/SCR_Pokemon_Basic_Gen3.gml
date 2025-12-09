@@ -27,6 +27,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[252] = "Grass";
     global.Dex_Secondary_Types[252] = "";
     global.Dex_Portrait[252] = ICO_0252;
+    global.Dex_Habitats[252] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 253 - "Grovyle"
     global.Dex_Names[253] = "Grovyle";
@@ -34,6 +35,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[253] = "Grass";
     global.Dex_Secondary_Types[253] = "";
     global.Dex_Portrait[253] = ICO_0253;
+    global.Dex_Habitats[253] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 254 - "Sceptile"
     global.Dex_Names[254] = "Sceptile";
@@ -41,6 +43,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[254] = "Grass";
     global.Dex_Secondary_Types[254] = "";
     global.Dex_Portrait[254] = ICO_0254;
+    global.Dex_Habitats[254] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 255 - "Torchic"
     global.Dex_Names[255] = "Torchic";
@@ -48,6 +51,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[255] = "Fire";
     global.Dex_Secondary_Types[255] = "";
     global.Dex_Portrait[255] = ICO_0255;
+    global.Dex_Habitats[255] = [SCR_Get_Habitat_Index("Savanna"), SCR_Get_Habitat_Index("Volcano")];
 
     // Pokemon 256 - "Combusken"
     global.Dex_Names[256] = "Combusken";
@@ -55,6 +59,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[256] = "Fire";
     global.Dex_Secondary_Types[256] = "Fighting";
     global.Dex_Portrait[256] = ICO_0256;
+    global.Dex_Habitats[256] = [SCR_Get_Habitat_Index("Savanna"), SCR_Get_Habitat_Index("Volcano")];
 
     // Pokemon 257 - "Blaziken"
     global.Dex_Names[257] = "Blaziken";
@@ -62,6 +67,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[257] = "Fire";
     global.Dex_Secondary_Types[257] = "Fighting";
     global.Dex_Portrait[257] = ICO_0257;
+    global.Dex_Habitats[257] = [SCR_Get_Habitat_Index("Savanna"), SCR_Get_Habitat_Index("Volcano")];
 
     // Pokemon 258 - "Mudkip"
     global.Dex_Names[258] = "Mudkip";
@@ -69,6 +75,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[258] = "Water";
     global.Dex_Secondary_Types[258] = "";
     global.Dex_Portrait[258] = ICO_0258;
+    global.Dex_Habitats[258] = [SCR_Get_Habitat_Index("Beach"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 259 - "Marshtomp"
     global.Dex_Names[259] = "Marshtomp";
@@ -76,6 +83,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[259] = "Water";
     global.Dex_Secondary_Types[259] = "Ground";
     global.Dex_Portrait[259] = ICO_0259;
+    global.Dex_Habitats[259] = [SCR_Get_Habitat_Index("Beach"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 260 - "Swampert"
     global.Dex_Names[260] = "Swampert";
@@ -83,6 +91,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[260] = "Water";
     global.Dex_Secondary_Types[260] = "Ground";
     global.Dex_Portrait[260] = ICO_0260;
+    global.Dex_Habitats[260] = [SCR_Get_Habitat_Index("Beach"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 261 - "Poochyena"
     global.Dex_Names[261] = "Poochyena";
@@ -90,6 +99,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[261] = "Dark";
     global.Dex_Secondary_Types[261] = "";
     global.Dex_Portrait[261] = ICO_0261;
+    global.Dex_Habitats[261] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Savanna")];
 
     // Pokemon 262 - "Mightyena"
     global.Dex_Names[262] = "Mightyena";
@@ -97,6 +107,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[262] = "Dark";
     global.Dex_Secondary_Types[262] = "";
     global.Dex_Portrait[262] = ICO_0262;
+    global.Dex_Habitats[262] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Savanna")];
 
     // Pokemon 263 - "Zigzagoon"
     global.Dex_Names[263] = "Zigzagoon";
@@ -104,6 +115,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[263] = "Normal";
     global.Dex_Secondary_Types[263] = "";
     global.Dex_Portrait[263] = ICO_0263;
+    global.Dex_Habitats[263] = [SCR_Get_Habitat_Index("Woodland"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 264 - "Linoone"
     global.Dex_Names[264] = "Linoone";
@@ -111,6 +123,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[264] = "Normal";
     global.Dex_Secondary_Types[264] = "";
     global.Dex_Portrait[264] = ICO_0264;
+    global.Dex_Habitats[264] = [SCR_Get_Habitat_Index("Woodland"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 265 - "Wurmple"
     global.Dex_Names[265] = "Wurmple";
@@ -118,6 +131,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[265] = "Bug";
     global.Dex_Secondary_Types[265] = "";
     global.Dex_Portrait[265] = ICO_0265;
+    global.Dex_Habitats[265] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 266 - "Silcoon"
     global.Dex_Names[266] = "Silcoon";
@@ -125,6 +139,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[266] = "Bug";
     global.Dex_Secondary_Types[266] = "";
     global.Dex_Portrait[266] = ICO_0266;
+    global.Dex_Habitats[266] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 267 - "Beautifly"
     global.Dex_Names[267] = "Beautifly";
@@ -132,6 +147,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[267] = "Bug";
     global.Dex_Secondary_Types[267] = "Flying";
     global.Dex_Portrait[267] = ICO_0267;
+    global.Dex_Habitats[267] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 268 - "Cascoon"
     global.Dex_Names[268] = "Cascoon";
@@ -139,6 +155,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[268] = "Bug";
     global.Dex_Secondary_Types[268] = "";
     global.Dex_Portrait[268] = ICO_0268;
+    global.Dex_Habitats[268] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 269 - "Dustox"
     global.Dex_Names[269] = "Dustox";
@@ -146,6 +163,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[269] = "Bug";
     global.Dex_Secondary_Types[269] = "Poison";
     global.Dex_Portrait[269] = ICO_0269;
+    global.Dex_Habitats[269] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 270 - "Lotad"
     global.Dex_Names[270] = "Lotad";
@@ -153,6 +171,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[270] = "Water";
     global.Dex_Secondary_Types[270] = "Grass";
     global.Dex_Portrait[270] = ICO_0270;
+    global.Dex_Habitats[270] = [SCR_Get_Habitat_Index("Lake")];
 
     // Pokemon 271 - "Lombre"
     global.Dex_Names[271] = "Lombre";
@@ -160,6 +179,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[271] = "Water";
     global.Dex_Secondary_Types[271] = "Grass";
     global.Dex_Portrait[271] = ICO_0271;
+    global.Dex_Habitats[271] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River")];
 
     // Pokemon 272 - "Ludicolo"
     global.Dex_Names[272] = "Ludicolo";
@@ -167,6 +187,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[272] = "Water";
     global.Dex_Secondary_Types[272] = "Grass";
     global.Dex_Portrait[272] = ICO_0272;
+    global.Dex_Habitats[272] = [SCR_Get_Habitat_Index("Lake")];
 
     // Pokemon 273 - "Seedot"
     global.Dex_Names[273] = "Seedot";
@@ -174,6 +195,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[273] = "Grass";
     global.Dex_Secondary_Types[273] = "";
     global.Dex_Portrait[273] = ICO_0273;
+    global.Dex_Habitats[273] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 274 - "Nuzleaf"
     global.Dex_Names[274] = "Nuzleaf";
@@ -181,6 +203,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[274] = "Grass";
     global.Dex_Secondary_Types[274] = "Dark";
     global.Dex_Portrait[274] = ICO_0274;
+    global.Dex_Habitats[274] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 275 - "Shiftry"
     global.Dex_Names[275] = "Shiftry";
@@ -188,6 +211,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[275] = "Grass";
     global.Dex_Secondary_Types[275] = "Dark";
     global.Dex_Portrait[275] = ICO_0275;
+    global.Dex_Habitats[275] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 276 - "Taillow"
     global.Dex_Names[276] = "Taillow";
@@ -195,6 +219,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[276] = "Normal";
     global.Dex_Secondary_Types[276] = "Flying";
     global.Dex_Portrait[276] = ICO_0276;
+    global.Dex_Habitats[276] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 277 - "Swellow"
     global.Dex_Names[277] = "Swellow";
@@ -202,6 +227,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[277] = "Normal";
     global.Dex_Secondary_Types[277] = "Flying";
     global.Dex_Portrait[277] = ICO_0277;
+    global.Dex_Habitats[277] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 278 - "Wingull"
     global.Dex_Names[278] = "Wingull";
@@ -209,6 +235,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[278] = "Water";
     global.Dex_Secondary_Types[278] = "Flying";
     global.Dex_Portrait[278] = ICO_0278;
+    global.Dex_Habitats[278] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Beach")];
 
     // Pokemon 279 - "Pelipper"
     global.Dex_Names[279] = "Pelipper";
@@ -216,6 +243,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[279] = "Water";
     global.Dex_Secondary_Types[279] = "Flying";
     global.Dex_Portrait[279] = ICO_0279;
+    global.Dex_Habitats[279] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Beach")];
 
     // Pokemon 280 - "Ralts"
     global.Dex_Names[280] = "Ralts";
@@ -223,6 +251,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[280] = "Psychic";
     global.Dex_Secondary_Types[280] = "";
     global.Dex_Portrait[280] = ICO_0280;
+    global.Dex_Habitats[280] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 281 - "Kirlia"
     global.Dex_Names[281] = "Kirlia";
@@ -230,6 +259,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[281] = "Psychic";
     global.Dex_Secondary_Types[281] = "";
     global.Dex_Portrait[281] = ICO_0281;
+    global.Dex_Habitats[281] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 282 - "Gardevoir"
     global.Dex_Names[282] = "Gardevoir";
@@ -237,6 +267,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[282] = "Psychic";
     global.Dex_Secondary_Types[282] = "";
     global.Dex_Portrait[282] = ICO_0282;
+    global.Dex_Habitats[282] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 283 - "Surskit"
     global.Dex_Names[283] = "Surskit";
@@ -244,6 +275,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[283] = "Bug";
     global.Dex_Secondary_Types[283] = "Water";
     global.Dex_Portrait[283] = ICO_0283;
+    global.Dex_Habitats[283] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 284 - "Masquerain"
     global.Dex_Names[284] = "Masquerain";
@@ -251,6 +283,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[284] = "Bug";
     global.Dex_Secondary_Types[284] = "Flying";
     global.Dex_Portrait[284] = ICO_0284;
+    global.Dex_Habitats[284] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 285 - "Shroomish"
     global.Dex_Names[285] = "Shroomish";
@@ -258,6 +291,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[285] = "Grass";
     global.Dex_Secondary_Types[285] = "";
     global.Dex_Portrait[285] = ICO_0285;
+    global.Dex_Habitats[285] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 286 - "Breloom"
     global.Dex_Names[286] = "Breloom";
@@ -265,6 +299,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[286] = "Grass";
     global.Dex_Secondary_Types[286] = "Fighting";
     global.Dex_Portrait[286] = ICO_0286;
+    global.Dex_Habitats[286] = [SCR_Get_Habitat_Index("Temperate-Forest")];
 
     // Pokemon 287 - "Slakoth"
     global.Dex_Names[287] = "Slakoth";
@@ -272,6 +307,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[287] = "Normal";
     global.Dex_Secondary_Types[287] = "";
     global.Dex_Portrait[287] = ICO_0287;
+    global.Dex_Habitats[287] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Tropical-Jungle"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 288 - "Vigoroth"
     global.Dex_Names[288] = "Vigoroth";
@@ -279,6 +315,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[288] = "Normal";
     global.Dex_Secondary_Types[288] = "";
     global.Dex_Portrait[288] = ICO_0288;
+    global.Dex_Habitats[288] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Tropical-Jungle"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 289 - "Slaking"
     global.Dex_Names[289] = "Slaking";
@@ -286,6 +323,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[289] = "Normal";
     global.Dex_Secondary_Types[289] = "";
     global.Dex_Portrait[289] = ICO_0289;
+    global.Dex_Habitats[289] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Tropical-Jungle"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 290 - "Nincada"
     global.Dex_Names[290] = "Nincada";
@@ -293,6 +331,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[290] = "Bug";
     global.Dex_Secondary_Types[290] = "Ground";
     global.Dex_Portrait[290] = ICO_0290;
+    global.Dex_Habitats[290] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland"), SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 291 - "Ninjask"
     global.Dex_Names[291] = "Ninjask";
@@ -300,6 +339,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[291] = "Bug";
     global.Dex_Secondary_Types[291] = "Flying";
     global.Dex_Portrait[291] = ICO_0291;
+    global.Dex_Habitats[291] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 292 - "Shedinja"
     global.Dex_Names[292] = "Shedinja";
@@ -307,6 +347,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[292] = "Bug";
     global.Dex_Secondary_Types[292] = "Ghost";
     global.Dex_Portrait[292] = ICO_0292;
+    global.Dex_Habitats[292] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland")];
 
     // Pokemon 293 - "Whismur"
     global.Dex_Names[293] = "Whismur";
@@ -314,6 +355,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[293] = "Normal";
     global.Dex_Secondary_Types[293] = "";
     global.Dex_Portrait[293] = ICO_0293;
+    global.Dex_Habitats[293] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 294 - "Loudred"
     global.Dex_Names[294] = "Loudred";
@@ -321,6 +363,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[294] = "Normal";
     global.Dex_Secondary_Types[294] = "";
     global.Dex_Portrait[294] = ICO_0294;
+    global.Dex_Habitats[294] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 295 - "Exploud"
     global.Dex_Names[295] = "Exploud";
@@ -328,6 +371,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[295] = "Normal";
     global.Dex_Secondary_Types[295] = "";
     global.Dex_Portrait[295] = ICO_0295;
+    global.Dex_Habitats[295] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 296 - "Makuhita"
     global.Dex_Names[296] = "Makuhita";
@@ -335,6 +379,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[296] = "Fighting";
     global.Dex_Secondary_Types[296] = "";
     global.Dex_Portrait[296] = ICO_0296;
+    global.Dex_Habitats[296] = [SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 297 - "Hariyama"
     global.Dex_Names[297] = "Hariyama";
@@ -342,6 +387,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[297] = "Fighting";
     global.Dex_Secondary_Types[297] = "";
     global.Dex_Portrait[297] = ICO_0297;
+    global.Dex_Habitats[297] = [SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 298 - "Azurill"
     global.Dex_Names[298] = "Azurill";
@@ -349,6 +395,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[298] = "Normal";
     global.Dex_Secondary_Types[298] = "";
     global.Dex_Portrait[298] = ICO_0298;
+    global.Dex_Habitats[298] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River")];
 
     // Pokemon 299 - "Nosepass"
     global.Dex_Names[299] = "Nosepass";
@@ -356,6 +403,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[299] = "Rock";
     global.Dex_Secondary_Types[299] = "";
     global.Dex_Portrait[299] = ICO_0299;
+    global.Dex_Habitats[299] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 300 - "Skitty"
     global.Dex_Names[300] = "Skitty";
@@ -363,6 +411,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[300] = "Normal";
     global.Dex_Secondary_Types[300] = "";
     global.Dex_Portrait[300] = ICO_0300;
+    global.Dex_Habitats[300] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 301 - "Delcatty"
     global.Dex_Names[301] = "Delcatty";
@@ -370,6 +419,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[301] = "Normal";
     global.Dex_Secondary_Types[301] = "";
     global.Dex_Portrait[301] = ICO_0301;
+    global.Dex_Habitats[301] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 302 - "Sableye"
     global.Dex_Names[302] = "Sableye";
@@ -377,6 +427,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[302] = "Dark";
     global.Dex_Secondary_Types[302] = "Ghost";
     global.Dex_Portrait[302] = ICO_0302;
+    global.Dex_Habitats[302] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 303 - "Mawile"
     global.Dex_Names[303] = "Mawile";
@@ -384,6 +435,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[303] = "Steel";
     global.Dex_Secondary_Types[303] = "";
     global.Dex_Portrait[303] = ICO_0303;
+    global.Dex_Habitats[303] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 304 - "Aron"
     global.Dex_Names[304] = "Aron";
@@ -391,6 +443,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[304] = "Steel";
     global.Dex_Secondary_Types[304] = "Rock";
     global.Dex_Portrait[304] = ICO_0304;
+    global.Dex_Habitats[304] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 305 - "Lairon"
     global.Dex_Names[305] = "Lairon";
@@ -398,6 +451,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[305] = "Steel";
     global.Dex_Secondary_Types[305] = "Rock";
     global.Dex_Portrait[305] = ICO_0305;
+    global.Dex_Habitats[305] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 306 - "Aggron"
     global.Dex_Names[306] = "Aggron";
@@ -405,6 +459,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[306] = "Steel";
     global.Dex_Secondary_Types[306] = "Rock";
     global.Dex_Portrait[306] = ICO_0306;
+    global.Dex_Habitats[306] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 307 - "Meditite"
     global.Dex_Names[307] = "Meditite";
@@ -412,6 +467,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[307] = "Fighting";
     global.Dex_Secondary_Types[307] = "Psychic";
     global.Dex_Portrait[307] = ICO_0307;
+    global.Dex_Habitats[307] = [SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 308 - "Medicham"
     global.Dex_Names[308] = "Medicham";
@@ -419,6 +475,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[308] = "Fighting";
     global.Dex_Secondary_Types[308] = "Psychic";
     global.Dex_Portrait[308] = ICO_0308;
+    global.Dex_Habitats[308] = [SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 309 - "Electrike"
     global.Dex_Names[309] = "Electrike";
@@ -426,6 +483,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[309] = "Electric";
     global.Dex_Secondary_Types[309] = "";
     global.Dex_Portrait[309] = ICO_0309;
+    global.Dex_Habitats[309] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 310 - "Manectric"
     global.Dex_Names[310] = "Manectric";
@@ -433,6 +491,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[310] = "Electric";
     global.Dex_Secondary_Types[310] = "";
     global.Dex_Portrait[310] = ICO_0310;
+    global.Dex_Habitats[310] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 311 - "Plusle"
     global.Dex_Names[311] = "Plusle";
@@ -440,6 +499,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[311] = "Electric";
     global.Dex_Secondary_Types[311] = "";
     global.Dex_Portrait[311] = ICO_0311;
+    global.Dex_Habitats[311] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 312 - "Minun"
     global.Dex_Names[312] = "Minun";
@@ -447,6 +507,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[312] = "Electric";
     global.Dex_Secondary_Types[312] = "";
     global.Dex_Portrait[312] = ICO_0312;
+    global.Dex_Habitats[312] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 313 - "Volbeat"
     global.Dex_Names[313] = "Volbeat";
@@ -454,6 +515,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[313] = "Bug";
     global.Dex_Secondary_Types[313] = "";
     global.Dex_Portrait[313] = ICO_0313;
+    global.Dex_Habitats[313] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Lake")];
 
     // Pokemon 314 - "Illumise"
     global.Dex_Names[314] = "Illumise";
@@ -461,6 +523,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[314] = "Bug";
     global.Dex_Secondary_Types[314] = "";
     global.Dex_Portrait[314] = ICO_0314;
+    global.Dex_Habitats[314] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Lake")];
 
     // Pokemon 315 - "Roselia"
     global.Dex_Names[315] = "Roselia";
@@ -468,6 +531,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[315] = "Grass";
     global.Dex_Secondary_Types[315] = "Poison";
     global.Dex_Portrait[315] = ICO_0315;
+    global.Dex_Habitats[315] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 316 - "Gulpin"
     global.Dex_Names[316] = "Gulpin";
@@ -475,6 +539,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[316] = "Poison";
     global.Dex_Secondary_Types[316] = "";
     global.Dex_Portrait[316] = ICO_0316;
+    global.Dex_Habitats[316] = [SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Wetland"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 317 - "Swalot"
     global.Dex_Names[317] = "Swalot";
@@ -482,6 +547,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[317] = "Poison";
     global.Dex_Secondary_Types[317] = "";
     global.Dex_Portrait[317] = ICO_0317;
+    global.Dex_Habitats[317] = [SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Wetland"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 318 - "Carvanha"
     global.Dex_Names[318] = "Carvanha";
@@ -489,6 +555,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[318] = "Water";
     global.Dex_Secondary_Types[318] = "Dark";
     global.Dex_Portrait[318] = ICO_0318;
+    global.Dex_Habitats[318] = [SCR_Get_Habitat_Index("River")];
 
     // Pokemon 319 - "Sharpedo"
     global.Dex_Names[319] = "Sharpedo";
@@ -496,6 +563,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[319] = "Water";
     global.Dex_Secondary_Types[319] = "Dark";
     global.Dex_Portrait[319] = ICO_0319;
+    global.Dex_Habitats[319] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 320 - "Wailmer"
     global.Dex_Names[320] = "Wailmer";
@@ -503,6 +571,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[320] = "Water";
     global.Dex_Secondary_Types[320] = "";
     global.Dex_Portrait[320] = ICO_0320;
+    global.Dex_Habitats[320] = [SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Beach")];
 
     // Pokemon 321 - "Wailord"
     global.Dex_Names[321] = "Wailord";
@@ -510,6 +579,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[321] = "Water";
     global.Dex_Secondary_Types[321] = "";
     global.Dex_Portrait[321] = ICO_0321;
+    global.Dex_Habitats[321] = [SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Beach")];
 
     // Pokemon 322 - "Numel"
     global.Dex_Names[322] = "Numel";
@@ -517,6 +587,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[322] = "Fire";
     global.Dex_Secondary_Types[322] = "Ground";
     global.Dex_Portrait[322] = ICO_0322;
+    global.Dex_Habitats[322] = [SCR_Get_Habitat_Index("Volcano")];
 
     // Pokemon 323 - "Camerupt"
     global.Dex_Names[323] = "Camerupt";
@@ -524,6 +595,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[323] = "Fire";
     global.Dex_Secondary_Types[323] = "Ground";
     global.Dex_Portrait[323] = ICO_0323;
+    global.Dex_Habitats[323] = [SCR_Get_Habitat_Index("Volcano")];
 
     // Pokemon 324 - "Torkoal"
     global.Dex_Names[324] = "Torkoal";
@@ -531,6 +603,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[324] = "Fire";
     global.Dex_Secondary_Types[324] = "";
     global.Dex_Portrait[324] = ICO_0324;
+    global.Dex_Habitats[324] = [SCR_Get_Habitat_Index("Volcano")];
 
     // Pokemon 325 - "Spoink"
     global.Dex_Names[325] = "Spoink";
@@ -538,6 +611,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[325] = "Psychic";
     global.Dex_Secondary_Types[325] = "";
     global.Dex_Portrait[325] = ICO_0325;
+    global.Dex_Habitats[325] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 326 - "Grumpig"
     global.Dex_Names[326] = "Grumpig";
@@ -545,6 +619,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[326] = "Psychic";
     global.Dex_Secondary_Types[326] = "";
     global.Dex_Portrait[326] = ICO_0326;
+    global.Dex_Habitats[326] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 327 - "Spinda"
     global.Dex_Names[327] = "Spinda";
@@ -552,6 +627,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[327] = "Normal";
     global.Dex_Secondary_Types[327] = "";
     global.Dex_Portrait[327] = ICO_0327;
+    global.Dex_Habitats[327] = [SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 328 - "Trapinch"
     global.Dex_Names[328] = "Trapinch";
@@ -559,6 +635,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[328] = "Ground";
     global.Dex_Secondary_Types[328] = "";
     global.Dex_Portrait[328] = ICO_0328;
+    global.Dex_Habitats[328] = [SCR_Get_Habitat_Index("Desert")];
 
     // Pokemon 329 - "Vibrava"
     global.Dex_Names[329] = "Vibrava";
@@ -566,6 +643,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[329] = "Ground";
     global.Dex_Secondary_Types[329] = "Dragon";
     global.Dex_Portrait[329] = ICO_0329;
+    global.Dex_Habitats[329] = [SCR_Get_Habitat_Index("Desert")];
 
     // Pokemon 330 - "Flygon"
     global.Dex_Names[330] = "Flygon";
@@ -573,6 +651,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[330] = "Ground";
     global.Dex_Secondary_Types[330] = "Dragon";
     global.Dex_Portrait[330] = ICO_0330;
+    global.Dex_Habitats[330] = [SCR_Get_Habitat_Index("Desert")];
 
     // Pokemon 331 - "Cacnea"
     global.Dex_Names[331] = "Cacnea";
@@ -580,6 +659,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[331] = "Grass";
     global.Dex_Secondary_Types[331] = "";
     global.Dex_Portrait[331] = ICO_0331;
+    global.Dex_Habitats[331] = [SCR_Get_Habitat_Index("Desert")];
 
     // Pokemon 332 - "Cacturne"
     global.Dex_Names[332] = "Cacturne";
@@ -587,6 +667,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[332] = "Grass";
     global.Dex_Secondary_Types[332] = "Dark";
     global.Dex_Portrait[332] = ICO_0332;
+    global.Dex_Habitats[332] = [SCR_Get_Habitat_Index("Desert")];
 
     // Pokemon 333 - "Swablu"
     global.Dex_Names[333] = "Swablu";
@@ -594,6 +675,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[333] = "Normal";
     global.Dex_Secondary_Types[333] = "Flying";
     global.Dex_Portrait[333] = ICO_0333;
+    global.Dex_Habitats[333] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 334 - "Altaria"
     global.Dex_Names[334] = "Altaria";
@@ -601,6 +683,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[334] = "Dragon";
     global.Dex_Secondary_Types[334] = "Flying";
     global.Dex_Portrait[334] = ICO_0334;
+    global.Dex_Habitats[334] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 335 - "Zangoose"
     global.Dex_Names[335] = "Zangoose";
@@ -608,6 +691,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[335] = "Normal";
     global.Dex_Secondary_Types[335] = "";
     global.Dex_Portrait[335] = ICO_0335;
+    global.Dex_Habitats[335] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 336 - "Seviper"
     global.Dex_Names[336] = "Seviper";
@@ -615,6 +699,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[336] = "Poison";
     global.Dex_Secondary_Types[336] = "";
     global.Dex_Portrait[336] = ICO_0336;
+    global.Dex_Habitats[336] = [SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 337 - "Lunatone"
     global.Dex_Names[337] = "Lunatone";
@@ -622,6 +707,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[337] = "Rock";
     global.Dex_Secondary_Types[337] = "Psychic";
     global.Dex_Portrait[337] = ICO_0337;
+    global.Dex_Habitats[337] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 338 - "Solrock"
     global.Dex_Names[338] = "Solrock";
@@ -629,6 +715,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[338] = "Rock";
     global.Dex_Secondary_Types[338] = "Psychic";
     global.Dex_Portrait[338] = ICO_0338;
+    global.Dex_Habitats[338] = [SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 339 - "Barboach"
     global.Dex_Names[339] = "Barboach";
@@ -636,6 +723,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[339] = "Water";
     global.Dex_Secondary_Types[339] = "Ground";
     global.Dex_Portrait[339] = ICO_0339;
+    global.Dex_Habitats[339] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 340 - "Whiscash"
     global.Dex_Names[340] = "Whiscash";
@@ -643,6 +731,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[340] = "Water";
     global.Dex_Secondary_Types[340] = "Ground";
     global.Dex_Portrait[340] = ICO_0340;
+    global.Dex_Habitats[340] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River"), SCR_Get_Habitat_Index("Wetland")];
 
     // Pokemon 341 - "Corphish"
     global.Dex_Names[341] = "Corphish";
@@ -650,6 +739,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[341] = "Water";
     global.Dex_Secondary_Types[341] = "";
     global.Dex_Portrait[341] = ICO_0341;
+    global.Dex_Habitats[341] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River")];
 
     // Pokemon 342 - "Crawdaunt"
     global.Dex_Names[342] = "Crawdaunt";
@@ -657,6 +747,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[342] = "Water";
     global.Dex_Secondary_Types[342] = "Dark";
     global.Dex_Portrait[342] = ICO_0342;
+    global.Dex_Habitats[342] = [SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River")];
 
     // Pokemon 343 - "Baltoy"
     global.Dex_Names[343] = "Baltoy";
@@ -664,6 +755,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[343] = "Ground";
     global.Dex_Secondary_Types[343] = "Psychic";
     global.Dex_Portrait[343] = ICO_0343;
+    global.Dex_Habitats[343] = [SCR_Get_Habitat_Index("Dark-Forest"), SCR_Get_Habitat_Index("Ruins")];
 
     // Pokemon 344 - "Claydol"
     global.Dex_Names[344] = "Claydol";
@@ -671,6 +763,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[344] = "Ground";
     global.Dex_Secondary_Types[344] = "Psychic";
     global.Dex_Portrait[344] = ICO_0344;
+    global.Dex_Habitats[344] = [SCR_Get_Habitat_Index("Dark-Forest"), SCR_Get_Habitat_Index("Ruins")];
 
     // Pokemon 345 - "Lileep"
     global.Dex_Names[345] = "Lileep";
@@ -678,6 +771,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[345] = "Rock";
     global.Dex_Secondary_Types[345] = "Grass";
     global.Dex_Portrait[345] = ICO_0345;
+    global.Dex_Habitats[345] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 346 - "Cradily"
     global.Dex_Names[346] = "Cradily";
@@ -685,6 +779,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[346] = "Rock";
     global.Dex_Secondary_Types[346] = "Grass";
     global.Dex_Portrait[346] = ICO_0346;
+    global.Dex_Habitats[346] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 347 - "Anorith"
     global.Dex_Names[347] = "Anorith";
@@ -692,6 +787,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[347] = "Rock";
     global.Dex_Secondary_Types[347] = "Bug";
     global.Dex_Portrait[347] = ICO_0347;
+    global.Dex_Habitats[347] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 348 - "Armaldo"
     global.Dex_Names[348] = "Armaldo";
@@ -699,6 +795,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[348] = "Rock";
     global.Dex_Secondary_Types[348] = "Bug";
     global.Dex_Portrait[348] = ICO_0348;
+    global.Dex_Habitats[348] = [SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Beach")];
 
     // Pokemon 349 - "Feebas"
     global.Dex_Names[349] = "Feebas";
@@ -706,6 +803,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[349] = "Water";
     global.Dex_Secondary_Types[349] = "";
     global.Dex_Portrait[349] = ICO_0349;
+    global.Dex_Habitats[349] = [SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River")];
 
     // Pokemon 350 - "Milotic"
     global.Dex_Names[350] = "Milotic";
@@ -713,6 +811,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[350] = "Water";
     global.Dex_Secondary_Types[350] = "";
     global.Dex_Portrait[350] = ICO_0350;
+    global.Dex_Habitats[350] = [SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Lake"), SCR_Get_Habitat_Index("River")];
 
     // Pokemon 351 - "Castform"
     global.Dex_Names[351] = "Castform";
@@ -720,6 +819,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[351] = "Normal";
     global.Dex_Secondary_Types[351] = "";
     global.Dex_Portrait[351] = ICO_0351;
+    global.Dex_Habitats[351] = [SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 352 - "Kecleon"
     global.Dex_Names[352] = "Kecleon";
@@ -727,6 +827,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[352] = "Normal";
     global.Dex_Secondary_Types[352] = "";
     global.Dex_Portrait[352] = ICO_0352;
+    global.Dex_Habitats[352] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Tropical-Jungle"), SCR_Get_Habitat_Index("Grassland")];
 
     // Pokemon 353 - "Shuppet"
     global.Dex_Names[353] = "Shuppet";
@@ -734,6 +835,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[353] = "Ghost";
     global.Dex_Secondary_Types[353] = "";
     global.Dex_Portrait[353] = ICO_0353;
+    global.Dex_Habitats[353] = [SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 354 - "Banette"
     global.Dex_Names[354] = "Banette";
@@ -741,6 +843,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[354] = "Ghost";
     global.Dex_Secondary_Types[354] = "";
     global.Dex_Portrait[354] = ICO_0354;
+    global.Dex_Habitats[354] = [SCR_Get_Habitat_Index("Urban")];
 
     // Pokemon 355 - "Duskull"
     global.Dex_Names[355] = "Duskull";
@@ -748,6 +851,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[355] = "Ghost";
     global.Dex_Secondary_Types[355] = "";
     global.Dex_Portrait[355] = ICO_0355;
+    global.Dex_Habitats[355] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland"), SCR_Get_Habitat_Index("Badlands")];
 
     // Pokemon 356 - "Dusclops"
     global.Dex_Names[356] = "Dusclops";
@@ -755,6 +859,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[356] = "Ghost";
     global.Dex_Secondary_Types[356] = "";
     global.Dex_Portrait[356] = ICO_0356;
+    global.Dex_Habitats[356] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Woodland"), SCR_Get_Habitat_Index("Badlands")];
 
     // Pokemon 357 - "Tropius"
     global.Dex_Names[357] = "Tropius";
@@ -762,6 +867,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[357] = "Grass";
     global.Dex_Secondary_Types[357] = "Flying";
     global.Dex_Portrait[357] = ICO_0357;
+    global.Dex_Habitats[357] = [SCR_Get_Habitat_Index("Tropical-Jungle")];
 
     // Pokemon 358 - "Chimecho"
     global.Dex_Names[358] = "Chimecho";
@@ -769,6 +875,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[358] = "Psychic";
     global.Dex_Secondary_Types[358] = "";
     global.Dex_Portrait[358] = ICO_0358;
+    global.Dex_Habitats[358] = [SCR_Get_Habitat_Index("Woodland"), SCR_Get_Habitat_Index("Grassland"), SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 359 - "Absol"
     global.Dex_Names[359] = "Absol";
@@ -776,6 +883,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[359] = "Dark";
     global.Dex_Secondary_Types[359] = "";
     global.Dex_Portrait[359] = ICO_0359;
+    global.Dex_Habitats[359] = [SCR_Get_Habitat_Index("Mountain")];
 
     // Pokemon 360 - "Wynaut"
     global.Dex_Names[360] = "Wynaut";
@@ -783,6 +891,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[360] = "Psychic";
     global.Dex_Secondary_Types[360] = "";
     global.Dex_Portrait[360] = ICO_0360;
+    global.Dex_Habitats[360] = [SCR_Get_Habitat_Index("Temperate-Forest"), SCR_Get_Habitat_Index("Cave")];
 
     // Pokemon 361 - "Snorunt"
     global.Dex_Names[361] = "Snorunt";
@@ -790,6 +899,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[361] = "Ice";
     global.Dex_Secondary_Types[361] = "";
     global.Dex_Portrait[361] = ICO_0361;
+    global.Dex_Habitats[361] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave"), SCR_Get_Habitat_Index("Glacier")];
 
     // Pokemon 362 - "Glalie"
     global.Dex_Names[362] = "Glalie";
@@ -797,6 +907,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[362] = "Ice";
     global.Dex_Secondary_Types[362] = "";
     global.Dex_Portrait[362] = ICO_0362;
+    global.Dex_Habitats[362] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave"), SCR_Get_Habitat_Index("Glacier")];
 
     // Pokemon 363 - "Spheal"
     global.Dex_Names[363] = "Spheal";
@@ -804,6 +915,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[363] = "Ice";
     global.Dex_Secondary_Types[363] = "Water";
     global.Dex_Portrait[363] = ICO_0363;
+    global.Dex_Habitats[363] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave"), SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Polar"), SCR_Get_Habitat_Index("Glacier")];
 
     // Pokemon 364 - "Sealeo"
     global.Dex_Names[364] = "Sealeo";
@@ -811,6 +923,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[364] = "Ice";
     global.Dex_Secondary_Types[364] = "Water";
     global.Dex_Portrait[364] = ICO_0364;
+    global.Dex_Habitats[364] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave"), SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Polar"), SCR_Get_Habitat_Index("Glacier")];
 
     // Pokemon 365 - "Walrein"
     global.Dex_Names[365] = "Walrein";
@@ -818,6 +931,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[365] = "Ice";
     global.Dex_Secondary_Types[365] = "Water";
     global.Dex_Portrait[365] = ICO_0365;
+    global.Dex_Habitats[365] = [SCR_Get_Habitat_Index("Mountain"), SCR_Get_Habitat_Index("Cave"), SCR_Get_Habitat_Index("Ocean"), SCR_Get_Habitat_Index("Polar"), SCR_Get_Habitat_Index("Glacier")];
 
     // Pokemon 366 - "Clamperl"
     global.Dex_Names[366] = "Clamperl";
@@ -825,6 +939,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[366] = "Water";
     global.Dex_Secondary_Types[366] = "";
     global.Dex_Portrait[366] = ICO_0366;
+    global.Dex_Habitats[366] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 367 - "Huntail"
     global.Dex_Names[367] = "Huntail";
@@ -832,6 +947,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[367] = "Water";
     global.Dex_Secondary_Types[367] = "";
     global.Dex_Portrait[367] = ICO_0367;
+    global.Dex_Habitats[367] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 368 - "Gorebyss"
     global.Dex_Names[368] = "Gorebyss";
@@ -839,6 +955,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[368] = "Water";
     global.Dex_Secondary_Types[368] = "";
     global.Dex_Portrait[368] = ICO_0368;
+    global.Dex_Habitats[368] = [SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 369 - "Relicanth"
     global.Dex_Names[369] = "Relicanth";
@@ -846,6 +963,7 @@ function SCR_Pokemon_Basic_Gen3() {
     global.Dex_Primary_Types[369] = "Water";
     global.Dex_Secondary_Types[369] = "Rock";
     global.Dex_Portrait[369] = ICO_0369;
+    global.Dex_Habitats[369] = [SCR_Get_Habitat_Index("Cave"), SCR_Get_Habitat_Index("Ocean")];
 
     // Pokemon 370 - "Luvdisc"
     global.Dex_Names[370] = "Luvdisc";
