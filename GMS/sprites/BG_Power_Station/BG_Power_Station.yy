@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"BG_Power_Station",
   "bboxMode":0,
-  "bbox_bottom":573,
+  "bbox_bottom":575,
   "bbox_left":0,
   "bbox_right":1023,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"180dd3d7-e397-4d05-872e-d2a1f8b169ec","name":"180dd3d7-e397-4d05-872e-d2a1f8b169ec","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"7f6da4b6-1903-4044-8db2-48519d469896","name":"7f6da4b6-1903-4044-8db2-48519d469896","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":574,
+  "height":576,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"946784bf-ec6e-4597-8766-cc2765ed7cc2","blendMode":0,"displayName":"default","isLocked":false,"name":"946784bf-ec6e-4597-8766-cc2765ed7cc2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"60e76722-7b48-4ec9-8acb-ade7b327853f","blendMode":0,"displayName":"default","isLocked":false,"name":"60e76722-7b48-4ec9-8acb-ade7b327853f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"BG_Power_Station",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"180dd3d7-e397-4d05-872e-d2a1f8b169ec","path":"sprites/BG_Power_Station/BG_Power_Station.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7216ae98-d4c1-4ed6-90e4-50928f363b73","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7f6da4b6-1903-4044-8db2-48519d469896","path":"sprites/BG_Power_Station/BG_Power_Station.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"20896f96-fdd1-4169-9808-db9a13f0aa09","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

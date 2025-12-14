@@ -93,30 +93,29 @@ if (array_length(global.markers_array) > 0) {
             var habitats = SCR_Get_Habitats_For_Biome(biome_index);
 
             if (array_length(habitats) > 0) {
-                // Initialize adventure mode
+                // Initialize adventure mode (Phase 4 - Player Choice)
                 global.adventure_active = true;
-                global.adventure_encounter = 0;
 
-                // Create shuffled habitat queue for adventure
-                global.adventure_habitat_queue = [];
+                // Populate remaining habitats (player will choose order)
+                global.adventure_remaining_habitats = [];
                 for (var h = 0; h < array_length(habitats); h++) {
-                    global.adventure_habitat_queue[h] = habitats[h];
+                    global.adventure_remaining_habitats[h] = habitats[h];
                 }
-                SCR_Shuffle_Array(global.adventure_habitat_queue);
 
-                // Set max encounters (all habitats + 1 rival battle)
-                global.adventure_max_encounters = array_length(global.adventure_habitat_queue) + 1;
+                // Initialize selection and completed arrays
+                global.adventure_selected_index = 0;
+                global.adventure_completed_habitats = [];
 
-                show_debug_message("=== STARTING " + biome_name + " ADVENTURE ===");
-                show_debug_message("Total encounters: " + string(global.adventure_max_encounters));
-                show_debug_message("Habitat order: ");
-                for (var h = 0; h < array_length(global.adventure_habitat_queue); h++) {
-                    var hab_idx = global.adventure_habitat_queue[h];
+                show_debug_message("=== STARTING " + biome_name + " ADVENTURE (Phase 4) ===");
+                show_debug_message("Available habitats: " + string(array_length(global.adventure_remaining_habitats)));
+                show_debug_message("Habitat options: ");
+                for (var h = 0; h < array_length(global.adventure_remaining_habitats); h++) {
+                    var hab_idx = global.adventure_remaining_habitats[h];
                     show_debug_message("  " + string(h + 1) + ". " + global.Habitat_Names[hab_idx]);
                 }
 
-                // Start first battle
-                room_goto(RM_Battle);
+                // Show adventure path before first battle
+                room_goto(RM_Adventure_Path);
             } else {
                 show_debug_message("ERROR: No habitats found for " + biome_name + " biome!");
                 // Fallback to town if no habitats available

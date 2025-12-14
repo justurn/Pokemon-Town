@@ -13,7 +13,6 @@
   "For3D":false,
   "frames":[
     {"$GMSpriteFrame":"v1","%Name":"80ed88d7-ace8-4afc-8572-cd6c02254790","name":"80ed88d7-ace8-4afc-8572-cd6c02254790","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"64c147f9-4e6f-46da-94f0-f77aea26a283","name":"64c147f9-4e6f-46da-94f0-f77aea26a283","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -24,7 +23,7 @@
   ],
   "name":"ICO_Wetlands",
   "nineSlice":null,
-  "origin":0,
+  "origin":4,
   "parent":{
     "name":"Icons",
     "path":"folders/Sprites/Backgrounds/Icons.yy",
@@ -50,7 +49,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":2.0,
+    "length":1.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -72,15 +71,12 @@
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"80ed88d7-ace8-4afc-8572-cd6c02254790","path":"sprites/ICO_Wetlands/ICO_Wetlands.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"cd80d85e-04a9-4b42-8ffd-9411047eddc4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"64c147f9-4e6f-46da-94f0-f77aea26a283","path":"sprites/ICO_Wetlands/ICO_Wetlands.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d3c375e9-93ba-4cbd-8a05-967fe549f993","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":20,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

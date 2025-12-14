@@ -42,7 +42,7 @@ function SCR_Biome_Habitats() {
     biome_index++;
     global.biome_town[biome_index] = SCR_Get_Background_Index("BG_Water_Town");       // Water
     biome_index++;
-    global.biome_town[biome_index] = SCR_Get_Background_Index("BG_Town_Town");        // Town (existing main town background)
+    global.biome_town[biome_index] = SCR_Get_Background_Index("BG_Grass_Town");       // Player Town 
     biome_index++;
     global.biome_town[biome_index] = SCR_Get_Background_Index("BG_Snow_Town");        // Ice
     biome_index++;

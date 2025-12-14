@@ -1,26 +1,18 @@
-// I-021 Fix: Select Pokemon for adventure battles BEFORE creating battle objects
-if (global.adventure_active) 
+// F-001 Phase 4: Select Pokemon for adventure battles BEFORE creating battle objects
+if (global.adventure_active)
 {
-    // Get current habitat from adventure queue
-    var current_habitat_index;
-    var is_rival_battle = false;
+    // Phase 4: selected_habitat_index is already set by OBJ_Master_Adventure
+    // global.is_trainer_battle flag indicates boss vs habitat battle
 
-    // I-024 Fix: Check if this is a rival battle (final encounter)
-    if (global.adventure_encounter >= array_length(global.adventure_habitat_queue)) {
-        // Rival battle - use random habitat from queue for variety
-        current_habitat_index = global.adventure_habitat_queue[irandom(array_length(global.adventure_habitat_queue) - 1)];
-        is_rival_battle = true;
-        show_debug_message("Adventure Battle " + string(global.adventure_encounter + 1) + "/" + string(global.adventure_max_encounters) + " - RIVAL BATTLE");
+    if (global.is_trainer_battle) {
+        // Boss battle - use biome town for background (handled by SCR_Choose_Background)
+        show_debug_message("Adventure BOSS BATTLE - Habitat: " + global.Habitat_Names[global.selected_habitat_index]);
     } else {
-        // Regular habitat battle
-        current_habitat_index = global.adventure_habitat_queue[global.adventure_encounter];
-        show_debug_message("Adventure Battle " + string(global.adventure_encounter + 1) + "/" + string(global.adventure_max_encounters) + " - Habitat: " + global.Habitat_Names[current_habitat_index]);
+        // Regular habitat battle - player chose this habitat in adventure path
+        show_debug_message("Adventure Habitat Battle - " + global.Habitat_Names[global.selected_habitat_index]);
     }
 
-    // Set habitat for SCR_Wild_Pokemon filtering
-    global.selected_habitat_index = current_habitat_index;
-
-    // Build filtered Pokemon list with weighted spawning
+    // Build filtered Pokemon list with weighted spawning for the selected habitat
     SCR_Wild_Pokemon([]);
 
     // Weighted random selection (matching SCR_Sequencing logic)
@@ -36,15 +28,31 @@ if (global.adventure_active)
         }
     }
 
-    // I-024 Fix: Set up rival trainer battle if this is the final encounter
-    if (is_rival_battle) {
-        // I-028 Fix: Mark as trainer battle - level calculated by OBJ_Battle_Pokemon_Wild
-        global.is_trainer_battle = true;
-        show_debug_message("RIVAL TRAINER BATTLE - Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ")");
+    if (global.is_trainer_battle) {
+        show_debug_message("BOSS BATTLE - Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ")");
     } else {
-        // I-023 Fix: Ensure trainer battle flag is false for regular wild battles
-        global.is_trainer_battle = false;
-        show_debug_message("Selected wild Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ") from " + global.Habitat_Names[current_habitat_index]);
+        show_debug_message("Selected wild Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ") from " + global.Habitat_Names[global.selected_habitat_index]);
+    }
+}
+
+// I-034 Fix: Town battles - randomly select habitat from selected biome
+// (Adventure battles already set habitat in lines 1-49)
+if (!global.adventure_active) {
+    var biome_index = global.selected_biome_index;
+    var biome_name = global.Biome_Names[biome_index];
+
+    // Get all habitats that belong to this biome
+    var available_habitats = SCR_Get_Habitats_For_Biome(biome_index);
+
+    // Randomly select one habitat from the available habitats
+    if (array_length(available_habitats) > 0) {
+        global.selected_habitat_index = available_habitats[irandom(array_length(available_habitats) - 1)];
+        show_debug_message("Town Battle - Biome: " + biome_name + " → Habitat: " + global.Habitat_Names[global.selected_habitat_index]);
+    } else {
+        // Fallback: use first habitat in Town biome
+        show_debug_message("ERROR: No habitats found for biome " + biome_name);
+        var town_habitats = SCR_Get_Habitats_For_Biome(SCR_Get_Biome_Index("Town"));
+        global.selected_habitat_index = (array_length(town_habitats) > 0) ? town_habitats[0] : 0;
     }
 }
 
@@ -154,27 +162,6 @@ flee_animation_timer = 0;
 flee_animation_duration = 45; // 0.75 seconds
 flee_target_x = 0;
 flee_who = ""; // "player" or "wild"
-
-// F-001: Town battles - randomly select habitat from selected biome
-// (Adventure battles already set habitat in lines 1-48)
-if (!global.adventure_active) {
-    var biome_index = global.selected_biome_index;
-    var biome_name = global.Biome_Names[biome_index];
-
-    // Get all habitats that belong to this biome
-    var available_habitats = SCR_Get_Habitats_For_Biome(biome_index);
-
-    // Randomly select one habitat from the available habitats
-    if (array_length(available_habitats) > 0) {
-        global.selected_habitat_index = available_habitats[irandom(array_length(available_habitats) - 1)];
-        show_debug_message("Town Battle - Biome: " + biome_name + " → Habitat: " + global.Habitat_Names[global.selected_habitat_index]);
-    } else {
-        // Fallback: use first habitat in Town biome
-        show_debug_message("ERROR: No habitats found for biome " + biome_name);
-        var town_habitats = SCR_Get_Habitats_For_Biome(SCR_Get_Biome_Index("Town"));
-        global.selected_habitat_index = (array_length(town_habitats) > 0) ? town_habitats[0] : 0;
-    }
-}
 
 // Check if this is a trainer battle for special handling
 if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {

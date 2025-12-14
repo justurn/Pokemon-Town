@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"BG_Noodle_Shop",
   "bboxMode":0,
-  "bbox_bottom":573,
+  "bbox_bottom":575,
   "bbox_left":0,
   "bbox_right":1023,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"38e4cfc6-1da1-405b-bc0b-4b63dd13b788","name":"38e4cfc6-1da1-405b-bc0b-4b63dd13b788","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"bbc19c58-0e6f-44c7-9b4b-9b72f1716004","name":"bbc19c58-0e6f-44c7-9b4b-9b72f1716004","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":574,
+  "height":576,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"086af559-2c7a-453e-86f5-a7af2c721cbd","blendMode":0,"displayName":"default","isLocked":false,"name":"086af559-2c7a-453e-86f5-a7af2c721cbd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"a78b4f0c-2c18-4636-bf00-0b658464c577","blendMode":0,"displayName":"default","isLocked":false,"name":"a78b4f0c-2c18-4636-bf00-0b658464c577","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"BG_Noodle_Shop",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"38e4cfc6-1da1-405b-bc0b-4b63dd13b788","path":"sprites/BG_Noodle_Shop/BG_Noodle_Shop.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b5757d0d-088c-4aac-9a1e-7c2a39895598","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bbc19c58-0e6f-44c7-9b4b-9b72f1716004","path":"sprites/BG_Noodle_Shop/BG_Noodle_Shop.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e01000ab-6c6b-4735-98e6-dab57e1fbfa4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

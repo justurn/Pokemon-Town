@@ -760,10 +760,10 @@ function SCR_Initialise_Globals()
 	global.selected_biome_index = SCR_Get_Biome_Index("Town");
 	global.selected_habitat_index = -1;  // Set during battle initialization (random per battle)
 
-	// F-001: Adventure mode globals
+	// F-001: Adventure mode globals (Phase 4 - Player Choice)
 	global.adventure_active = false;
-	global.adventure_encounter = 0;
-	global.adventure_habitat_queue = [];
-	global.adventure_max_encounters = 0;
+	global.adventure_remaining_habitats = [];  // Available habitat choices
+	global.adventure_completed_habitats = [];  // Finished battles
+	global.adventure_selected_index = 0;       // Current selection in remaining array
 }
 
