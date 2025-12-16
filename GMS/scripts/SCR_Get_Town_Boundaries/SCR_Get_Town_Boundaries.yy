@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"SCR_Buildings_Restore",
+  "%Name":"SCR_Get_Town_Boundaries",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SCR_Buildings_Restore",
+  "name":"SCR_Get_Town_Boundaries",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

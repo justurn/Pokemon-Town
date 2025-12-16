@@ -19,12 +19,22 @@ function SCR_Initialise_Globals()
 	
 	// Plots and Buildings
 	global.plot_count = 0;
-	global.plot_y = 275; // Fixed Y position for plots
+	global.plot_y = 215; // Fixed Y position for plots (matches trees)
 	global.plots_x = [];
-	global.buildings_x = [];
-	global.buildings_y = [];
+	// F-014: Buildings now tracked by segment (see segment_building array below)
+	// global.buildings_x = [];  // ❌ Removed - replaced by global.segment_building[seg_id]
+	// global.buildings_y = [];  // ❌ Removed - Y is constant (global.plot_y) anyway
 	global.building_count = 1;
 	global.more_buildings = true;
+
+	// F-014: Fixed costs for town expansion (configurable)
+	global.cost_clear_obstacle = 1;   // Cost to clear wild segment to empty plot
+	global.cost_build_foundation = 1; // Cost to build foundation on empty plot
+	global.cost_finish_building = 1;  // Cost to upgrade foundation to finished building
+	global.cost_total_building = global.cost_build_foundation + global.cost_finish_building; // Total cost for complete building
+
+	// Adventure trainer battle power offset (makes boss battles harder)
+	global.adventure_boss_power_offset = 50;  // +50 BST makes significantly stronger opponents more likely
 
 	// Player
 	global.player_y = 440;
@@ -386,12 +396,20 @@ function SCR_Initialise_Globals()
 	global.type_colors[15] = global.c_steel;
 	global.type_colors[16] = global.c_flying;
 	global.type_colors[17] = global.c_dark;
-	
+
+	// F-014: Foundation (starter building, building ID 0)
+	i = 0;
+	global.building_name[i] = "Foundation";
+	global.building_sprites[i] = SPR_Foundation;
+	// global.building_cost[i] = 0;  // ❌ REMOVED - Using global.cost_build_foundation instead
+	global.building_room[i] = -1; // No room - can't enter foundation
+	global.building_item_id[i] = -1; // No item requirement
+
 	// Lab
 	i = 1;
 	global.building_name[i] = "Lab";
 	global.building_sprites[i] = SPR_Lab;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Lab;
 	global.building_item_id[i] = -1; // No item requirement (special case)
 		
@@ -399,7 +417,7 @@ function SCR_Initialise_Globals()
 	i = 2;
 	global.building_name[i] = "Adventure Building";
 	global.building_sprites[i] = SPR_Station;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Map;
 	global.building_item_id[i] = 12; // Adventure Map scroll
 	
@@ -407,7 +425,7 @@ function SCR_Initialise_Globals()
 	i = 3;
 	global.building_name[i] = "Poke Center";
 	global.building_sprites[i] = SPR_Poke_Center;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Poke_Center;
 	global.building_item_id[i] = 2; // Med Kit
 	
@@ -415,7 +433,7 @@ function SCR_Initialise_Globals()
 	i = 4;
 	global.building_name[i] = "Factory";
 	global.building_sprites[i] = SPR_Factory;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Factory;
 	global.building_item_id[i] = 3; // Gears
 
@@ -423,7 +441,7 @@ function SCR_Initialise_Globals()
 	i = 5;
 	global.building_name[i] = "Burger Shop";
 	global.building_sprites[i] = SPR_Burger_Shop;
-	global.building_cost[i] = 2;	
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead	
 	global.building_room[i] = RM_Burger_Shop;
 	global.building_item_id[i] = 4; // Burger
 	
@@ -431,7 +449,7 @@ function SCR_Initialise_Globals()
 	i = 6;
 	global.building_name[i] = "Cafe";
 	global.building_sprites[i] = SPR_Cafe;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Cafe;
 	global.building_item_id[i] = 5; // Coffee
 	
@@ -439,7 +457,7 @@ function SCR_Initialise_Globals()
 	i = 7;
 	global.building_name[i] = "Library";
 	global.building_sprites[i] = SPR_Library;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Library;
 	global.building_item_id[i] = 6; // Book
 	
@@ -447,7 +465,7 @@ function SCR_Initialise_Globals()
 	i = 8;
 	global.building_name[i] = "Power Station";
 	global.building_sprites[i] = SPR_Power_Station;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Power_Station;
 	global.building_item_id[i] = 7; // Battery
 	
@@ -455,7 +473,7 @@ function SCR_Initialise_Globals()
 	i = 9;
 	global.building_name[i] = "Gym";
 	global.building_sprites[i] = SPR_Gym;
-	global.building_cost[i] = 2;
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead
 	global.building_room[i] = RM_Gym;
 	global.building_item_id[i] = 8; // Punch Card
 	
@@ -463,7 +481,7 @@ function SCR_Initialise_Globals()
 	i = 10;
 	global.building_name[i] = "Arcade";
 	global.building_sprites[i] = SPR_Arcade;
-	global.building_cost[i] = 2;	
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead	
 	global.building_room[i] = RM_Arcade;
 	global.building_item_id[i] = 9; // Coin
 	
@@ -471,7 +489,7 @@ function SCR_Initialise_Globals()
 	i = 11;
 	global.building_name[i] = "Noodle Shop";
 	global.building_sprites[i] = SPR_Noodle_Shop;
-	global.building_cost[i] = 2;	
+	// global.building_cost[i] = 2;  // ❌ REMOVED - Using global.cost_finish_building instead	
 	global.building_room[i] = RM_Noodle_Shop;
 	global.building_item_id[i] = 10; // Noodles
 	
@@ -484,12 +502,18 @@ function SCR_Initialise_Globals()
 	
 	var building_limit = array_length(global.building_name) - 1;
 	global.plot_width = 600;
-	global.town_size = building_limit * global.plot_width 
+
+	// F-014: Add wild buffer for Pokemon encounters beyond town
+	var wild_buffer = 5;  // Minimum wild segments to retain for Pokemon encounters
+	var total_segments = building_limit + wild_buffer;  // Total: 16 segments (11 buildings + 5 wild)
+
+	global.town_size = total_segments * global.plot_width;  // 16 * 600 = 9600px
+
 	// F-022: Center player in middle segment instead of town center
-	var middle_segment = floor(building_limit / 2);
+	var middle_segment = floor(total_segments / 2);  // Segment 8 (center of 0-15)
 	global.player_x = middle_segment * global.plot_width + (global.plot_width / 2);
 	var segment_offset = global.plot_width / 2
-    
+
 	// set false entry and build permissives for all buildings and store the x positions of each plot
 	for (i = 1; i <= building_limit; i++)
 	{
@@ -497,22 +521,22 @@ function SCR_Initialise_Globals()
 		global.entry_allowed[i] = false;
 		global.plot_segments[i-1] = (i-1) * global.plot_width + segment_offset;
 	}
-	
+
 	// Shuffle the plot segments array to get a random order
-	SCR_Shuffle_Array(global.plot_segments);   
+	SCR_Shuffle_Array(global.plot_segments);
 	show_debug_message("Plot Segments: " + string(global.plot_segments));
-	
+
 	// F-022: Initialize spawn segment system for dynamic spawning and patrol
-	
+
 	// F-022 Segment constants
 	global.SPAWN_EMPTY = 0;
 	global.SPAWN_ITEM = 1;
 	global.SPAWN_POKEMON_A = 2;
 	global.SPAWN_POKEMON_B = 3;
 	global.SPAWN_RIVAL = 4;
-	
+
 	// Create non-shuffled spawn segments (left to right order)
-	var total_segments = array_length(global.plot_segments);
+	// Now uses total_segments (buildings + wild buffer)
 	global.spawn_segments = array_create(total_segments);
 	
 	// Fill spawn segments in sequential order (not shuffled like plot_segments)
@@ -577,23 +601,28 @@ function SCR_Initialise_Globals()
 		for (var i = 0; i < array_length(global.available_spawn_segments); i++) {
 			var segment_id = global.available_spawn_segments[i];
 			var is_safe = true;
-			
+
+			// Exclude town segments (plots, foundations, buildings) - only spawn in wild areas
+			if (global.segment_building[segment_id] >= -1) {
+				is_safe = false;  // Skip empty plots (-1), foundations (0), and buildings (1+)
+			}
+
 			if (exclude_adjacent && player_segment != -1) {
 				// Find segments spatially adjacent to player (not by ID)
 				var player_x = global.SCR_Get_Segment_Center(player_segment);
 				var segment_x = global.SCR_Get_Segment_Center(segment_id);
-				
+
 				// Exclude if this segment is within one segment width of player
 				if (abs(segment_x - player_x) <= global.plot_width) {
 					is_safe = false;
 				}
 			}
-			
+
 			// Exclude edge segments (leftmost and rightmost positions in town)
 			if (segment_id == leftmost_segment || segment_id == rightmost_segment) {
 				is_safe = false;
 			}
-			
+
 			if (is_safe) {
 				array_push(safe_segments, segment_id);
 			}
@@ -710,10 +739,24 @@ function SCR_Initialise_Globals()
 		var patrol_buffer = 50; // 50px dead zone from segment edges
 		var patrol_left = center_x - (global.plot_width / 2) + patrol_buffer;
 		var patrol_right = center_x + (global.plot_width / 2) - patrol_buffer;
-		
+
 		return [patrol_left, patrol_right];
 	}
-	
+
+	// F-014: Segment-based town expansion system
+	// Leverages existing spawn_segments array from F-022
+	// Note: total_segments already defined above at line 515
+
+	// F-014: Segment state tracking - SINGLE ARRAY for everything!
+	// Values: -2 = wild, -1 = empty plot, 0 = foundation, 1-11 = building_id
+	global.segment_building = array_create(total_segments, -2);   // Default all to wild
+
+	// Initialize: starter segment gets foundation, all others stay wild
+	var starter_segment = floor(total_segments / 2);
+	global.segment_building[starter_segment] = 0;  // Foundation
+
+	show_debug_message("F-014: Initialized town expansion system - starter segment: " + string(starter_segment) + " with foundation (ID 0)");
+
 	// Create an array of indices based on the length of global.types
 	global.shuffled_types = array_create(array_length(global.types));
 

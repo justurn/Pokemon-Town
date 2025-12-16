@@ -151,29 +151,6 @@ if (battle_state == "PLAYER_CHOICE") {
                         return; // Battle ends, wild Pokemon defeated
                     }
                     
-                    // Check if wild Pokemon was attempting to flee after player attack
-                    if (variable_global_exists("wild_attempting_flee") && global.wild_attempting_flee) {
-                        global.wild_attempting_flee = false;
-                        // Add message to battle log
-                        array_push(battle_log, wild_pokemon.pokemon_name + " fled!");
-                        if (array_length(battle_log) > max_log_messages) {
-                            array_delete(battle_log, 0, 1);
-                        }
-                        // Start wild Pokemon flee animation after player attack
-                        flee_animation_active = true;
-                        flee_animation_timer = 0;
-                        flee_target_x = room_width + 100; // Move wild Pokemon off-screen to the right
-                        flee_who = "wild";
-                        battle_ui_state = "BATTLE_TEXT";
-                        show_debug_message("Starting wild Pokemon flee animation after player attack");
-                        // Reset wild Pokemon positions
-                        global.wild_pokemon_a_id = 0;
-                        global.wild_pokemon_a_x = -1;
-                        global.wild_pokemon_b_id = 0;
-                        global.wild_pokemon_b_x = -1;
-                        return;
-                    }
-                    
                     // Player went first, now wild's turn (with delay)
                     show_debug_message("Player finished first attack, now wild Pokemon's turn");
                     battle_state = "WAIT_WILD";
@@ -228,8 +205,8 @@ if (battle_state == "WILD_TURN") {
         
         // Wild Pokemon has configurable chance to flee (but not in trainer battles)
         var wild_flee_roll = irandom(100);
-        var is_trainer_battle = variable_global_exists("is_trainer_battle") && global.is_trainer_battle;
-        var is_adventure = variable_global_exists("adventure_active") && global.adventure_active;
+        var is_trainer_battle = global.is_trainer_battle;
+        var is_adventure = global.adventure_active;
         var modified_wild_flee_chance = global.wild_pokemon_flee_chance * global.flee_success_modifier;
         show_debug_message("Wild Pokemon flee attempt: base_chance=" + string(global.wild_pokemon_flee_chance) + ", modified_chance=" + string(modified_wild_flee_chance) + ", roll=" + string(wild_flee_roll));
         if (wild_flee_roll < modified_wild_flee_chance && !is_trainer_battle && !is_adventure) {
@@ -656,34 +633,56 @@ if (battle_state == "VICTORY_COMPLETE") {
     battle_log = [];
     
     show_debug_message("VICTORY_COMPLETE: Performing cleanup and going to treasure room");
-    
+
     // Handle special rival battle logic
-    if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
-        show_debug_message("Rival battle won!");
-        
-        // Mark milestone as completed
-        var current_level = global.pokemon_level;
-        for (var m = 0; m < array_length(global.rival_battle_milestones); m++) {
-            var milestone_level = global.rival_battle_milestones[m];
-            if (current_level >= milestone_level && 
-                !array_contains(global.rival_completed_milestones, milestone_level)) {
-                
-                array_push(global.rival_completed_milestones, milestone_level);
-                show_debug_message("Milestone " + string(milestone_level) + " marked as completed");
-                break;
+    if (global.is_trainer_battle) {
+        // Check if this is an adventure boss battle or town rival battle
+        var is_adventure = global.adventure_active;
+
+        if (is_adventure) {
+            show_debug_message("Adventure boss battle won!");
+
+            // Adventure complete! All habitats defeated
+            // Set treasure_limit for mega chest reward (5 items)
+            global.treasure_limit_override = 5;
+
+            // Reset trainer battle flag
+            global.is_trainer_battle = false;
+
+            // End the adventure completely
+            global.adventure_active = false;
+            global.adventure_remaining_habitats = [];
+            global.adventure_completed_habitats = [];
+            show_debug_message("Adventure marked as complete - clearing adventure state");
+        } else {
+            show_debug_message("Rival battle won!");
+
+            // Mark milestone as completed
+            var current_level = global.pokemon_level;
+            for (var m = 0; m < array_length(global.rival_battle_milestones); m++) {
+                var milestone_level = global.rival_battle_milestones[m];
+                if (current_level >= milestone_level &&
+                    !array_contains(global.rival_completed_milestones, milestone_level)) {
+
+                    array_push(global.rival_completed_milestones, milestone_level);
+                    show_debug_message("Milestone " + string(milestone_level) + " marked as completed");
+                    break;
+                }
             }
+
+            // Set treasure_limit for mega chest reward (5 items)
+            global.treasure_limit_override = 5;
+
+            // Reset trainer battle flag
+            global.is_trainer_battle = false;
         }
         
-        // Set treasure_limit for mega chest reward (5 items)
-        global.treasure_limit_override = 5;
-        
-        // Reset trainer battle flag
-        global.is_trainer_battle = false;
-        
-        // Restore original wild Pokemon data
-        if (variable_global_exists("temp_wild_pokemon_a_id")) {
+        // Restore original wild Pokemon data (if this was a town rival battle)
+        if (!is_adventure && global.temp_wild_pokemon_a_id != 0) {
             global.wild_pokemon_a_id = global.temp_wild_pokemon_a_id;
             global.wild_pokemon_b_id = global.temp_wild_pokemon_b_id;
+            global.temp_wild_pokemon_a_id = 0;
+            global.temp_wild_pokemon_b_id = 0;
             show_debug_message("Restored wild Pokemon data after rival victory");
         }
         
@@ -725,29 +724,29 @@ if (battle_state == "PLAYER_FAINT") {
     if (player_faint_timer >= player_faint_duration + 30) {
         if (global.enter || global.shift) {
             // Handle trainer battle cleanup (moved from player Pokemon step event)
-            if (variable_global_exists("is_trainer_battle") && global.is_trainer_battle) {
+            if (global.is_trainer_battle) {
                 // Mark this milestone as completed (even though lost) to prevent re-encounter
-                if (variable_global_exists("rival_milestone_level") && global.rival_milestone_level > 0) {
+                if (global.rival_milestone_level > 0) {
                     if (!array_contains(global.rival_completed_milestones, global.rival_milestone_level)) {
                         array_push(global.rival_completed_milestones, global.rival_milestone_level);
                         show_debug_message("Rival battle lost - marked milestone " + string(global.rival_milestone_level) + " as completed to prevent re-encounter");
                     }
                 }
-                
+
                 global.is_trainer_battle = false;
                 global.treasure_limit_override = -1; // Clear any pending treasure override
                 show_debug_message("Rival battle lost - cleaned up trainer battle flags and treasure override");
-                
+
                 // Restore original wild Pokemon data that was stored before battle
-                if (variable_global_exists("temp_wild_pokemon_a_id")) {
+                if (global.temp_wild_pokemon_a_id != 0) {
                     global.wild_pokemon_a_id = global.temp_wild_pokemon_a_id;
                     global.wild_pokemon_b_id = global.temp_wild_pokemon_b_id;
+                    global.temp_wild_pokemon_a_id = 0;
+                    global.temp_wild_pokemon_b_id = 0;
                     show_debug_message("Restored wild Pokemon data after rival defeat");
                 }
-            }
-            
-            // Clear wild Pokemon data for regular battles (similar to victory cleanup)
-            if (!variable_global_exists("is_trainer_battle") || !global.is_trainer_battle) {
+            } else {
+                // Clear wild Pokemon data for regular battles (similar to victory cleanup)
                 // Reset wild Pokemon positions for regular battles
                 global.wild_pokemon_a_id = 0;
                 global.wild_pokemon_a_x = -1;

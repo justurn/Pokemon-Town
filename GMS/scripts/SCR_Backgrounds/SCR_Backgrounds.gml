@@ -39,10 +39,10 @@ function SCR_Backgrounds() {
     // Savanna Town - Fields biome
     global.background_name[bg_index] = "BG_Savanna_Town";
     global.background_icon[bg_index] = ICO_Savanna_Town;
-    global.background_wild_x[bg_index] = 875;
-    global.background_wild_y[bg_index] = 225;
-    global.background_player_x[bg_index] = 650;
-    global.background_player_y[bg_index] = 350;
+    global.background_wild_x[bg_index] = 900;
+    global.background_wild_y[bg_index] = 260;
+    global.background_player_x[bg_index] = 670;
+    global.background_player_y[bg_index] = 420;
     bg_index++;
 
     // Mountain Town - Mountains biome
@@ -95,8 +95,8 @@ function SCR_Backgrounds() {
     // Temperate Forest
     global.background_name[bg_index] = "BG_Temperate_Forest";
     global.background_icon[bg_index] = ICO_Temperate_Forest;
-    global.background_wild_x[bg_index] = 875;
-    global.background_wild_y[bg_index] = 225;
+    global.background_wild_x[bg_index] = 820;
+    global.background_wild_y[bg_index] = 285;
     global.background_player_x[bg_index] = 650;
     global.background_player_y[bg_index] = 350;
     bg_index++;
@@ -162,8 +162,8 @@ function SCR_Backgrounds() {
     // Mountain
     global.background_name[bg_index] = "BG_Mountain";
     global.background_icon[bg_index] = ICO_Mountain;
-    global.background_wild_x[bg_index] = 875;
-    global.background_wild_y[bg_index] = 225;
+    global.background_wild_x[bg_index] = 810;
+    global.background_wild_y[bg_index] = 245;
     global.background_player_x[bg_index] = 650;
     global.background_player_y[bg_index] = 350;
     bg_index++;
@@ -287,8 +287,8 @@ function SCR_Backgrounds() {
     global.background_icon[bg_index] = ICO_Polar;
     global.background_wild_x[bg_index] = 875;
     global.background_wild_y[bg_index] = 225;
-    global.background_player_x[bg_index] = 540;
-    global.background_player_y[bg_index] = 365;
+    global.background_player_x[bg_index] = 600;
+    global.background_player_y[bg_index] = 350;
     bg_index++;
 
     // Glacier

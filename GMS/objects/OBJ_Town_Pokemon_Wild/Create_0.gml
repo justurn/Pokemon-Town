@@ -3,6 +3,8 @@ wild_left = 0;
 wild_right = 0;
 scale_factor = 0;
 
+depth = 70;  // Behind grass (60) so grass appears in front
+
 // F-022: Bounce effect variables (from OBJ_Town_Pokemon)
 bounce = 3;
 count = 0;

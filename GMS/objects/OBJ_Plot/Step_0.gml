@@ -4,51 +4,31 @@ if (OBJ_Player.x  >= plot_left && OBJ_Player.x  <= plot_right)
 	// Get the next building type from the array
     var next_building = string(global.building_sprites[global.building_count]);
 
-	if (global.build_allowed[global.building_count] = true)
+	// F-014: Use fixed foundation cost
+	var has_enough_crates = (global.item_held[1] >= global.cost_build_foundation);
+
+	if (global.build_allowed[global.building_count] = true && has_enough_crates)
 	{
-	    flashing = true;  // The plot should flash if the player is in bounds
+	    flashing = true;  // The plot should flash if the player is in bounds and has enough crates
 
-	    if (global.enter) 
+	    if (global.enter)
 	    {
-			//show_debug_message("New Building:" + string(next_building));
-			
-	        // Create the selected building
-	        var new_building = instance_create_layer(x, y, "Instances", OBJ_Building);
-			
-			// Move the new building into the correct y position
-			new_building.y = y + sprite_height/2;
-			new_building.x = x;
-			new_building.building_id = global.building_count;
-			
-			// Subtract the cost of bulding crates
-			global.item_held[1] -= global.building_cost[global.building_count]
-		
-			global.buildings_x[global.building_count] = new_building.x;
-			global.buildings_y[global.building_count] = new_building.y;
-		
-			var building_name = global.building_name[global.building_count]
-		
-			show_debug_message("Built " + string(building_name) + " at X: " + string(global.buildings_x[global.building_count]))
+			// F-014: Create foundation (building_id = 0) instead of final building
+	        var new_foundation = instance_create_layer(x, y, "Instances", OBJ_Building);
 
-			if (global.building_count < array_length(global.building_sprites) - 1)
-			{
-				global.more_buildings = true
-		        // Create a new plot at a valid position
-		        SCR_Plots_Spawn();
-			}
-			else
-			{
-				global.more_buildings = false;
-				show_debug_message("No more buildings left, skipping new plot");
-				global.item_held[1] = -1; // disable crates, there are no more buildings
-				show_debug_message("Attempted to remove crates");
-			}
-		
-			// Increment index for next plot
-	        global.building_count += 1;
-			
-			// Spawn an egg
-			SCR_Items_Spawn(0,1);
+			// Set building properties (Y adjustment handled automatically by Draw event via just_created flag)
+			new_foundation.x = x;
+			new_foundation.building_id = 0;  // Foundation
+			new_foundation.just_built = true;  // Flag to prevent immediate upgrade
+
+			// F-014: Charge fixed foundation cost
+			global.item_held[1] -= global.cost_build_foundation;
+
+			// F-014: Store foundation in segment
+			var segment_id = floor(new_foundation.x / global.plot_width);
+			global.segment_building[segment_id] = 0;  // Foundation
+
+			show_debug_message("Built foundation on segment " + string(segment_id) + " for " + string(global.cost_build_foundation) + " crates (building " + string(global.building_count) + ")")
 
 	        // Destroy the old plot
 	        instance_destroy(self);

@@ -13,7 +13,9 @@ if (global.adventure_active)
     }
 
     // Build filtered Pokemon list with weighted spawning for the selected habitat
-    SCR_Wild_Pokemon([]);
+    // Boss battles get power offset to select stronger Pokemon
+    var power_offset = global.is_trainer_battle ? global.adventure_boss_power_offset : 0;
+    SCR_Wild_Pokemon([], power_offset);
 
     // Weighted random selection (matching SCR_Sequencing logic)
     var rand_pick = random(global.total_spawn_weight);
@@ -29,7 +31,7 @@ if (global.adventure_active)
     }
 
     if (global.is_trainer_battle) {
-        show_debug_message("BOSS BATTLE - Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ")");
+        show_debug_message("BOSS BATTLE - Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ") with BST power offset +" + string(power_offset));
     } else {
         show_debug_message("Selected wild Pokemon: " + global.Dex_Names[global.wild_pokemon_battle_id] + " (ID " + string(global.wild_pokemon_battle_id) + ") from " + global.Habitat_Names[global.selected_habitat_index]);
     }

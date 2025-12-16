@@ -1,6 +1,8 @@
-pokedex_id = global.pokemon_ID;	            
+pokedex_id = global.pokemon_ID;
 pokemon_name = global.Dex_Names[pokedex_id];
 sprite_index = global.Dex_Sprites[pokedex_id];
+
+depth = 20;  // In front of grass (60), items (30), and wild Pokemon (70)
 
 // Movement Variables
 pokemon_x = x;

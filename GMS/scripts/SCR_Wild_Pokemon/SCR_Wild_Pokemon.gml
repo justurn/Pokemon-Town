@@ -1,4 +1,4 @@
-function SCR_Wild_Pokemon(banned_ids = [])
+function SCR_Wild_Pokemon(banned_ids = [], power_offset = 0)
 {
 	// Calculate minimum possible wild Pokemon level for filtering (worst case scenario)
 	var min_wild_level = global.pokemon_level - global.wild_pokemon_level_gap;
@@ -138,12 +138,13 @@ function SCR_Wild_Pokemon(banned_ids = [])
 	
 	
 	var tamed_id = global.pokemon_ID
-		
-	var tamed_bst = global.Dex_Attack[tamed_id] 
-        + global.Dex_SPattack[tamed_id] 
-        + global.Dex_Defence[tamed_id] 
-        + global.Dex_SPdefence[tamed_id] 
-        + global.Dex_Speed[tamed_id] 
+
+	// Calculate tamed Pokemon BST (base stats + IVs)
+	var tamed_bst = global.Dex_Attack[tamed_id]
+        + global.Dex_SPattack[tamed_id]
+        + global.Dex_Defence[tamed_id]
+        + global.Dex_SPdefence[tamed_id]
+        + global.Dex_Speed[tamed_id]
         + global.Dex_Health[tamed_id]
 		+ global.iv_SPattack
 		+ global.iv_SPdefence
@@ -151,6 +152,14 @@ function SCR_Wild_Pokemon(banned_ids = [])
 		+ global.iv_defence
 		+ global.iv_health
 		+ global.iv_speed;
+
+	// Power offset makes tamed Pokemon appear artificially stronger
+	// This increases likelihood of selecting stronger opponents (smaller bst_diff)
+	tamed_bst += power_offset;
+
+	if (power_offset > 0) {
+		show_debug_message("Trainer Battle - Power offset +" + string(power_offset) + " applied to tamed BST (" + string(tamed_bst) + ")");
+	}
 		
 	show_debug_message("Wild Encounter Weightings")
 	

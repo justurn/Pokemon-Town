@@ -9,4 +9,9 @@ build_right = x;   // Right edge of the building
 flash_color = c_red; // Color used for the flashing effect (you can adjust this to your preference)
 normal_color = c_white; // Normal color of the building (could be the original sprite color)
 
+// F-014: Initialize building_id if not set
+if (!variable_instance_exists(id, "building_id")) {
+	building_id = -1;  // Default unset value
+}
+
 

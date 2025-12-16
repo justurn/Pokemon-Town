@@ -2,13 +2,12 @@ if room == RM_Town
 {
 	// I-022/I-026 Fix: Reset all adventure and biome state when entering town
 	// Centralizes state reset for victory, defeat, and normal town entry
-	// F-001 Phase 4: Updated for player choice system
 	if (global.adventure_active) {
 		show_debug_message("Adventure ended - resetting state");
 		global.adventure_active = false;
-		global.adventure_remaining_habitats = [];
-		global.adventure_completed_habitats = [];
-		global.adventure_selected_index = 0;
+		global.adventure_encounter = 0;
+		global.adventure_habitat_queue = [];
+		global.adventure_max_encounters = 0;
 	}
 
 	global.selected_biome_index = SCR_Get_Biome_Index("Town");
@@ -26,14 +25,15 @@ if room == RM_Town
 	
     if (need_plot_segments)
     {
-		SCR_Plots_Spawn();
+		// F-014: First time setup - spawn initial plot and obstacles
+		SCR_Town_Restore();  // This will spawn starter building, obstacles, and empty plot
+		SCR_Trees_Spawn();   // Spawn segment-dividing trees
         need_plot_segments = false;
     }
 	else
 	{
-		// Rebuild any buildings from stored data
-		SCR_Buildings_Restore();
-		// Rebuild Trees
+		// F-014: Restore town from saved state
+		SCR_Town_Restore();
 		SCR_Trees_Spawn();
 		// Respawn uncollected items.
 		var item_limit = global.item_counter

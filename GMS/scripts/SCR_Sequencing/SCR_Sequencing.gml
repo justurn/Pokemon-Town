@@ -205,29 +205,36 @@ function SCR_Sequencing()
 		// once all the eggs are collected spawn the crates needed for the lab
 		if (global.item_held[1] == -1 && global.building_count == 1)
 		{
-			SCR_Items_Spawn(1, global.building_cost[1]);
+			// Spawn crates for foundation + finishing building (total cost for first building)
+			SCR_Items_Spawn(1, global.cost_total_building);
 			global.item_held[1] = 0;
 		}
 	}
 	
 	
+	// Special case: Lab crate collection (before Lab is built)
+	// building_count == 1 means we're still waiting to build the Lab
+	if (global.building_count == 1 && global.item_held[1] < global.cost_total_building) {
+		global.tip_string = "Crates Left: " + string(global.cost_total_building - global.item_held[1]);
+	}
+
 	// Building Construction Checks
     for (i = 1; i < max_buildings; i++)
     {
 		var item_id = global.building_item_id[i];
-		
+
 		// Initialize item when building becomes available
         if (global.building_count = i + 1  && item_id >= 0 && global.item_held[item_id] == -1)
         {
 			global.item_held[item_id] = 0;
         }
 		// Check if player needs more crates
-		else if (item_id >= 0 && global.item_held[item_id] != -1 && global.building_count == i && global.item_held[1] < global.building_cost[i])
+		else if (item_id >= 0 && global.item_held[item_id] != -1 && global.building_count == i && global.item_held[1] < global.cost_total_building)
 		{
-			global.tip_string = "Crates Left: " + string(global.building_cost[i] - global.item_held[1]);
-		}	
+			global.tip_string = "Crates Left: " + string(global.cost_total_building - global.item_held[1]);
+		}
 		// Allow construction when player has enough crates
-        else if (global.item_held[1] >= global.building_cost[i] && global.building_count == i)
+        else if (global.item_held[1] >= global.cost_total_building && global.building_count == i)
         {
             // Allow construction
             global.build_allowed[i] = true;
